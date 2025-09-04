@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- الرئيسية + البحث -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:title="@string/home"
+            android:icon="@drawable/ic_home" />
+        <item
+            android:id="@+id/nav_search"
+            android:title="@string/search"
+            android:icon="@drawable/ic_search" />
+    </group>
+
+    <!-- الإعدادات والدعم -->
+    <item android:title="@string/settings_and_support">
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:title="@string/setting"
+                android:icon="@drawable/ic_settings" />
+            <item
+                android:id="@+id/help"
+                android:title="@string/help"
+                android:icon="@drawable/ic_help" />
+            <item
+                android:id="@+id/about"
+                android:title="@string/info"
+                android:icon="@drawable/ic_info" />
+            <!-- زر واحد لتغيير اللغة -->
+            <item
+                android:id="@+id/nav_language"
+                android:title="@string/change_language"
+                android:icon="@drawable/ic_language" />
+        </menu>
+    </item>
+
+    <!-- المشاركة والتقييم -->
+    <item android:title="@string/share_and_rate">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:title="@string/share"
+                android:icon="@drawable/ic_share" />
+            <item
+                android:id="@+id/share_qr"
+                android:title="@string/share_qr"
+                android:icon="@drawable/qr_icon" />
+            <item
+                android:id="@+id/rate"
+                android:title="@string/rate_app"
+                android:icon="@drawable/ic_star" />
+            <item
+                android:id="@+id/other_apps"
+                android:title="@string/other_apps"
+                android:icon="@drawable/ic_apps" />
+        </menu>
+    </item>
+
+    <!-- خروج -->
+    <item
+        android:id="@+id/action_exit"
+        android:title="@string/exit"
+        android:icon="@drawable/ic_exit" />
+</menu>

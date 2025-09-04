@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@color/cardBackground"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:textDirection="locale"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/header_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/icon"
+        android:scaleType="centerCrop"
+        android:cropToPadding="true"
+        android:background="@drawable/circle_bg"
+        android:contentDescription="@string/app_logo" />
+
+    <TextView
+        android:id="@+id/header_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/textPrimary" />
+
+    <!-- يُضبط من الموارد: "By: %1$s" / "بواسطة: %1$s" -->
+    <TextView
+        android:id="@+id/header_developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/textSecondary"
+        android:textSize="13sp"
+        android:fontFamily="sans-serif-light" />
+
+    <!-- تاريخا الميلادي/الهجري (نركّبهما برمجيًا أو بسطرين منفصلين) -->
+    <TextView
+        android:id="@+id/gregorianDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/hijriDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif" />
+</LinearLayout>

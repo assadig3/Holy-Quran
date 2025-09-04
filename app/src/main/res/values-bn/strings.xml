@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Information -->
+    <string name="app_name">পবিত্র কুরআন</string>
+    <string name="home">হোম</string>
+    <string name="settings_and_support">সেটিংস ও সহায়তা</string>
+    <string name="setting">সেটিংস</string>
+    <string name="help">সাহায্য</string>
+    <string name="info">অ্যাপ সম্পর্কে</string>
+    <string name="share_and_rate">শেয়ার ও রেট</string>
+    <string name="share">অ্যাপ শেয়ার করুন</string>
+    <string name="share_qr">QR দিয়ে শেয়ার</string>
+    <string name="rate_app">অ্যাপ রেট করুন</string>
+    <string name="other_apps">অন্যান্য অ্যাপ</string>
+    <string name="exit">প্রস্থান</string>
+    <string name="about_app_description">পবিত্র কুরআন — তেলাওয়াত, অনুসন্ধান, প্রিয় তালিকা, নাইট মোডসহ পড়ুন ও শুনুন।</string>
+    <string name="help_title">সাহায্য</string>
+    <string name="help_content">সহায়তা বা জিজ্ঞাসার জন্য FAQ দেখুন অথবা সেটিংস থেকে যোগাযোগ করুন।</string>
+    <string name="app_logo">অ্যাপ লোগো</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">সেটিংস</string>
+    <string name="light">লাইট</string>
+    <string name="dark">ডার্ক</string>
+    <string name="system_default">সিস্টেম ডিফল্ট</string>
+    <string name="choose_font_size">ফন্ট সাইজ নির্বাচন করুন</string>
+    <string name="scan_qr">অ্যাপ ডাউনলোড করতে QR কোড স্ক্যান করুন</string>
+
+    <string name="navigation_drawer_open">ন্যাভিগেশন ড্রয়ার খুলুন</string>
+    <string name="navigation_drawer_close">ন্যাভিগেশন ড্রয়ার বন্ধ করুন</string>
+
+    <!-- Tabs -->
+    <string name="tab_surahs">📖 সূরা</string>
+    <string name="tab_favorites">⭐ পছন্দের</string>
+    <string name="tab_juz">🔢 পারা</string>
+
+    <!-- Advanced Features -->
+    <string name="quran_default_title">পবিত্র কুরআন</string>
+    <string name="downloading_soon">ডাউনলোড ফিচার শীঘ্রই আসছে</string>
+    <string name="choose_tafsir">তাফসির নির্বাচন করুন</string>
+    <string name="tafseer_selected">তাফসির সফলভাবে নির্বাচন করা হয়েছে!</string>
+    <string name="play_error">তেলাওয়াত চালানো যাচ্ছে না</string>
+    <string name="remove_from_favorites">পৃষ্ঠা পছন্দের থেকে সরানো হয়েছে</string>
+    <string name="add_to_favorites">পৃষ্ঠা পছন্দের তালিকায় যুক্ত হয়েছে</string>
+    <string name="repeat_settings">পুনরাবৃত্তি সেটিংস</string>
+    <string name="repeat_assigned">%1$s — %2$d বার পুনরাবৃত্তি</string>
+    <string name="share_tafsir">তাফসির শেয়ার করুন</string>
+    <string name="tafseer_surah_ayah">সূরা %1$s - আয়াত %2%d</string>
+    <string name="ok">ঠিক আছে</string>
+    <string name="close">বন্ধ</string>
+    <string name="select_qari">কারী নির্বাচন করুন</string>
+    <string name="select_tafsir">তাফসির নির্বাচন করুন</string>
+    <string name="ayah_options">আয়াত অপশন</string>
+    <string name="copy">কপি</string>
+    <string name="share_ayah">শেয়ার</string>
+    <string name="tafsir">তাফসির</string>
+    <string name="play">চালু</string>
+    <string name="pause">বিরতি</string>
+    <string name="resume">পুনরায় চালু</string>
+    <string name="stop">বন্ধ করুন</string>
+    <string name="repeat">পুনরাবৃত্তি</string>
+    <string name="favorites">পছন্দের</string>
+    <string name="remove">সরান</string>
+    <string name="add">যোগ করুন</string>
+    <string name="last_visited_pages">সর্বশেষ পৃষ্ঠা</string>
+    <string name="no_last_pages">কোনও সাম্প্রতিক পৃষ্ঠা নেই</string>
+    <string name="go_to_page">পৃষ্ঠা খুলুন</string>
+    <string name="surah">সূরা</string>
+    <string name="ayah">আয়াত</string>
+    <string name="surah_search_hint">সূরার নাম অনুসন্ধান করুন</string>
+    <string name="no_tafsir_available">এই আয়াতের তাফসির নেই</string>
+    <string name="juz">পারা</string>
+    <string name="juz_start_page">পৃষ্ঠা %1$d থেকে শুরু</string>
+    <string name="juz_search_hint">পারা নম্বর বা নাম দিয়ে অনুসন্ধান করুন</string>
+    <string name="menu_clear_all_bookmarks">🗑️ সব বুকমার্ক মুছুন</string>
+    <string name="menu_clear_all_recent">🧹 ইতিহাস মুছুন</string>
+    <string name="recent_pages_title">🕓 সাম্প্রতিক পৃষ্ঠা</string>
+    <string name="favorite_pages_title">⭐ পছন্দের পৃষ্ঠা</string>
+
+    <string name="menu_last_read_juz">📌 সর্বশেষ পাঠ করা পারা</string>
+    <string name="menu_jump_to_juz">পারা খুলুন</string>
+    <string name="menu_jump_to_surah">সূরা খুলুন</string>
+
+    <string name="reset_onboarding_button">অনবোর্ডিং রিসেট</string>
+    <string name="reset_onboarding">অ্যাপ অনবোর্ডিং রিসেট</string>
+    <string name="choose_font">ফন্ট নির্বাচন করুন</string>
+    <string name="choose_language">ভাষা নির্বাচন করুন</string>
+    <string name="change_language">ভাষা পরিবর্তন</string>
+
+    <string name="arabic">আরবি</string>
+    <string name="english">ইংরেজি</string>
+    <string name="choose_theme">থিম নির্বাচন করুন</string>
+    <string name="theme_light">লাইট</string>
+    <string name="theme_dark">ডার্ক</string>
+    <string name="theme_system">সিস্টেম ডিফল্ট</string>
+    <string name="font_small">ছোট</string>
+    <string name="font_medium">মাঝারি</string>
+    <string name="font_large">বড়</string>
+
+    <string name="screen_options">স্ক্রিন অপশন</string>
+    <string name="keep_screen_on">পড়ার সময় স্ক্রিন চালু রাখুন</string>
+    <string name="font_changed">ফন্ট সাইজ পরিবর্তিত হয়েছে</string>
+    <string name="settings_reset">সেটিংস রিসেট হয়েছে!</string>
+
+    <string name="page">পৃষ্ঠা</string>
+    <string name="favorite">পছন্দের</string>
+    <string name="clear_all_favorites">সব পছন্দের মুছুন</string>
+    <string name="clear_all_recent">ব্রাউজিং ইতিহাস মুছুন</string>
+    <string name="favorite_pages">পছন্দের পৃষ্ঠা</string>
+    <string name="recent_pages">সাম্প্রতিক পৃষ্ঠা</string>
+    <string name="no_favorites">কোনও পছন্দের পৃষ্ঠা নেই</string>
+    <string name="tap_to_open_page">পৃষ্ঠা খুলতে ট্যাপ করুন</string>
+    <string name="all_favorites_cleared">সব পছন্দের মুছে ফেলা হয়েছে</string>
+    <string name="all_recent_cleared">ব্রাউজিং ইতিহাস মুছে ফেলা হয়েছে</string>
+    <string name="bookmark_title">🕓 পৃষ্ঠা %1$d</string>
+    <string name="favorite_page_hint">⭐ পৃষ্ঠা %1$d</string>
+    <string name="favorite_page_item">⭐ পৃষ্ঠা %1$d</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">হোম</string>
+    <string name="nav_search">খুঁজুন</string>
+    <string name="nav_settings">সেটিংস</string>
+    <string name="nav_help">সাহায্য</string>
+    <string name="nav_about">সম্পর্কে</string>
+    <string name="nav_share_app">অ্যাপ শেয়ার করুন</string>
+    <string name="nav_share_qr">QR দিয়ে শেয়ার</string>
+    <string name="nav_rate_app">অ্যাপ রেট করুন</string>
+    <string name="nav_other_apps">অন্যান্য অ্যাপ</string>
+
+    <!-- Search -->
+    <string name="search_hint">এখানে খুঁজুন…</string>
+    <string name="search_partial">আংশিক অনুসন্ধান</string>
+    <string name="search_whole">সম্পূর্ণ অনুসন্ধান</string>
+    <string name="match_tashkeel">তাশকীল মিলান</string>
+
+    <!-- Exit -->
+    <string name="exit_confirm_title">প্রস্থান নিশ্চিত করুন</string>
+    <string name="exit_confirm_message">আপনি কি অ্যাপ থেকে বের হতে চান?</string>
+    <string name="yes">হ্যাঁ</string>
+
+    <!-- Version -->
+    <string name="version_loading">ভার্সন যাচাই হচ্ছে…</string>
+    <string name="version_format">ভার্সন %1$s</string>
+    <string name="version_example">ভার্সন 1.0.23</string>
+
+    <!-- Extra -->
+    <string name="search">অনুসন্ধান</string>
+    <string name="search_empty">কোনো শব্দ বা বাক্যাংশ খুঁজুন…</string>
+    <string name="search_results_placeholder">ফলাফল</string>
+    <string name="qr_code">QR কোড</string>
+    <string name="share_qr_hint">QR কোড স্ক্যান করুন বা লিংক শেয়ার করুন</string>
+
+    <string name="header_developer_by">উন্নয়ন: %1$s</string>
+    <string name="header_developer_by_example">উন্নয়ন: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">৭ জুন ২০২৫ • ১০ যিলহজ্জ ১৪৪৬</string>
+
+    <string name="share_message">সওয়াবের উদ্দেশ্যে কুরআন অ্যাপটি শেয়ার করুন: %1$s</string>
+    <string name="share_chooser_title">তাফসির শেয়ার করুন</string>
+
+    <string name="hijri_placeholder">হিজরি তারিখ</string>
+
+    <string name="action_toggle_page_bookmark">পৃষ্ঠা সংরক্ষণ</string>
+    <string name="action_toggle_repeat">পুনরাবৃত্তি</string>
+    <string name="action_download_tafsirs">তাফসির ডাউনলোড</string>
+    <string name="action_select_tafsir">তাফসির নির্বাচন</string>
+
+    <string name="download_title">অনুগ্রহ করে অপেক্ষা করুন, মুসহাফের পৃষ্ঠাগুলি ডাউনলোড হচ্ছে… এ সময়ে যিকির ও দরূদে সময় কাটান ﷺ</string>
+    <string name="download_ready">ডাউনলোডের জন্য প্রস্তুত</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">এখনই ডাউনলোড করুন</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">ডাউনলোড</string>
+
+    <!-- Dialog -->
+    <string name="go_to_surah">সূরা খুলুন</string>
+    <string name="search_surah_hint">🔍 সূরা খুঁজুন</string>
+    <string name="cancel">বাতিল</string>
+
+    <!-- Juz -->
+    <string name="go_to_juz">পারা খুলুন</string>
+    <string name="search_juz_hint">🔍 পারা খুঁজুন</string>
+
+    <!-- Repeat dialog -->
+    <string name="repeat_ayah">আয়াত</string>
+    <string name="repeat_count_label">পুনরাবৃত্তির সংখ্যা:</string>
+
+    <!-- Tafsir dialog -->
+    <string name="tafsir_ayah_title">সূরা ... - আয়াত ...</string>
+    <string name="tafsir_sample_ayah">পরম করুণাময়, অসীম দয়ালু আল্লাহর নামে</string>
+    <string name="tafsir_text_placeholder">এখানে তাফসিরের লেখা থাকবে</string>
+
+    <!-- Pages download UI -->
+    <string name="pages_download_title_marquee">অনুগ্রহ করে অপেক্ষা করুন — মুসহাফের পৃষ্ঠা ডাউনলোড হচ্ছে 🌿</string>
+    <string name="pages_download_starting">ডাউনলোড শুরু…</string>
+    <string name="pages_download_progress">পৃষ্ঠা ডাউনলোড হচ্ছে %1$d / %2$d</string>
+    <string name="pages_download_done">ডাউনলোড সম্পন্ন।</string>
+    <string name="pages_download_failed">ডাউনলোড ব্যর্থ।</string>
+    <string name="pages_download_canceled">বাতিল করা হয়েছে।</string>
+
+    <!-- Repeat UI -->
+    <string name="repeat_settings_title">পুনরাবৃত্তি সেটিংস</string>
+
+    <!-- Audio batch downloader -->
+    <string name="no_recitations_to_download">ডাউনলোডের জন্য কোনো লিংক নেই।</string>
+    <string name="downloading_recitations">তেলাওয়াত ডাউনলোড হচ্ছে…</string>
+    <string name="recitations_saved">তেলাওয়াত সংরক্ষিত!</string>
+    <string name="download_error">ডাউনলোডের সময় ত্রুটি ঘটেছে।</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">আয়াতের লেখা পাওয়া যাচ্ছে না</string>
+
+    <!-- Qari -->
+    <string name="qari_icon">কারী আইকন</string>
+    <string name="qari_selected_toast">%1$s নির্বাচন করা হয়েছে</string>
+    <string name="choose_qari_title">কারী নির্বাচন করুন</string>
+
+    <!-- Languages -->
+    <string name="lang_arabic">আরবি</string>
+    <string name="lang_english">ইংরেজি</string>
+    <string name="lang_turkish">তুর্কি</string>
+    <string name="lang_indonesian">ইন্দোনেশীয়</string>
+    <string name="lang_urdu">উর্দু</string>
+    <string name="lang_persian">ফার্সি</string>
+    <string name="lang_bengali">বাংলা</string>
+    <string name="lang_german">জার্মান</string>
+    <string name="lang_spanish">স্প্যানিশ</string>
+    <string name="lang_french">ফরাসি</string>
+    <string name="lang_russian">রুশ</string>
+    <string name="lang_hindi">হিন্দি</string>
+    <string name="lang_chinese">চীনা</string>
+    <string name="lang_japanese">জাপানি</string>
+    <string name="lang_korean">কোরিয়ান</string>
+    <string name="lang_portuguese">পর্তুগিজ</string>
+    <string name="lang_italian">ইতালীয়</string>
+    <string name="lang_swahili">সোয়াহিলি</string>
+    <string name="lang_thai">থাই</string>
+    <string name="update_preparing">আপডেট যাচাই করা হচ্ছে…</string>
+    <string name="update_downloading">আপডেট ডাউনলোড হচ্ছে…</string>
+    <string name="update_downloaded_tap_to_restart">ডাউনলোড সম্পূর্ণ — রিস্টার্ট করে ইনস্টল করতে ট্যাপ করুন</string>
+    <string name="update_installing">আপডেট ইনস্টল হচ্ছে…</string>
+    <string name="update_available_message">নতুন আপডেট উপলব্ধ। অনুগ্রহ করে সর্বশেষ সংস্করণে আপডেট করুন।</string>
+    <string name="meccan">মাক্কী</string>
+    <string name="medinan">মাদানী</string>
+    <string name="verses">আয়াত</string>
+    <string name="surah_meta_format">%1$s • %2$d %3$s</string>
+    <string name="tab_surah">সুরা</string>
+    <string name="tab_fav">প্রিয়</string>
+
+    <string name="please_rate_app">দয়া করে অ্যাপটি রেট করুন যাতে আমরা আরও উন্নতি করতে পারি 🌟</string>
+</resources>

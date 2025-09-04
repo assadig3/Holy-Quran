@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qari_names">
+        <item>মিশারি রাশিদ আল-আফাসি</item>
+        <item>আবদুর রহমান আস-সুদাইস</item>
+        <item>সাউদ আশ-শুরাইম</item>
+        <item>মাহের আল-মুয়াইকলি</item>
+        <item>ফারেস আব্বাদ</item>
+        <item>আহমদ আল-আজমি</item>
+        <item>হানি আর-রিফাই</item>
+        <item>আলি আল-হুথাইফি</item>
+
+        <item>আব্দুল বাসিত (মুরাত্তাল 64kbps)</item>
+        <item>আব্দুল বাসিত (মুরাত্তাল 192kbps)</item>
+        <item>আব্দুল বাসিত (মুজাওয়াদ 128kbps)</item>
+        <item>আব্দুল বাসিত (কোরআনএক্সপ্লোরার)</item>
+
+        <item>মিনশাওয়ি (মুরাত্তাল 128kbps)</item>
+        <item>মিনশাওয়ি (মুজাওয়াদ 64kbps)</item>
+        <item>মিনশাওয়ি (শিক্ষক 128kbps)</item>
+
+        <item>মাহমুদ খালিল আল-হুসারি (64kbps)</item>
+        <item>মাহমুদ খালিল আল-হুসারি (128kbps)</item>
+        <item>আল-হুসারি মুয়াল্লিম (128kbps)</item>
+        <item>আল-হুসারি মুজাওয়াদ (64kbps)</item>
+
+        <item>আবদুল্লাহ আল-জুহানি (128kbps)</item>
+        <item>আবদুল্লাহ বাসফার (64kbps)</item>
+        <item>আবদুল্লাহ বাসফার (192kbps)</item>
+        <item>আবদুল্লাহ মাতরুদ (128kbps)</item>
+        <item>আলি জাবের (64kbps)</item>
+        <item>আইমান সোয়াইদ (64kbps)</item>
+        <item>সালাহ আল-বুদাইর (128kbps)</item>
+        <item>সালাহ আবু আরাফাহ/বুখাতির (128kbps)</item>
+        <item>ইয়াসির আল-দোসারি (128kbps)</item>
+        <item>ইয়াসির সালামাহ (128kbps)</item>
+        <item>সহল ইয়াসিন (128kbps)</item>
+        <item>নাসির আল-কাতামি (128kbps)</item>
+        <item>হানি আর-রিফাই (192kbps)</item>
+        <item>আলি আল-হুথাইফি (128kbps)</item>
+
+        <item>ইব্রাহিম আল-আখদার (64kbps)</item>
+        <item>আকরাম আল-আলাকমি (128kbps)</item>
+        <item>আলি হাজ্জাজ আস-সুসি (128kbps)</item>
+        <item>মুহাম্মদ আয়্যুব (64kbps)</item>
+        <item>মুহাম্মদ জিবরিল (64kbps)</item>
+        <item>মুহাম্মদ মাহমুদ আত-তাবলাবি (64kbps)</item>
+        <item>মোহসেন আল-কাসিম (192kbps)</item>
+        <item>মুস্তাফা ইসমাইল (48kbps)</item>
+        <item>নবিল আর-রিফাই (48kbps)</item>
+        <item>খলিফা আত-তুনাইজি (64kbps)</item>
+        <item>সাউদ আল-ঘামদি (40kbps)</item>
+        <item>করিম মানসুরি (40kbps)</item>
+        <item>আজিজ আলিলি (128kbps)</item>
+    </string-array>
+</resources>

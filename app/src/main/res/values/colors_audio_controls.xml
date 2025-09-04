@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="icon_primary">#202124</color>
+    <color name="label_secondary">#7A7F85</color>
+
+    <color name="chip_bg">#FFF3F4F6</color>
+    <color name="chip_stroke">#22000000</color>
+    <color name="chip_text">#202124</color>
+
+    <color name="ripple_color">#1F000000</color>
+</resources>

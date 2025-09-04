@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Nomi dei Juz -->
+    <string-array name="juz_names">
+        <item>Parte 1</item>
+        <item>Parte 2</item>
+        <item>Parte 3</item>
+        <item>Parte 4</item>
+        <item>Parte 5</item>
+        <item>Parte 6</item>
+        <item>Parte 7</item>
+        <item>Parte 8</item>
+        <item>Parte 9</item>
+        <item>Parte 10</item>
+        <item>Parte 11</item>
+        <item>Parte 12</item>
+        <item>Parte 13</item>
+        <item>Parte 14</item>
+        <item>Parte 15</item>
+        <item>Parte 16</item>
+        <item>Parte 17</item>
+        <item>Parte 18</item>
+        <item>Parte 19</item>
+        <item>Parte 20</item>
+        <item>Parte 21</item>
+        <item>Parte 22</item>
+        <item>Parte 23</item>
+        <item>Parte 24</item>
+        <item>Parte 25</item>
+        <item>Parte 26</item>
+        <item>Parte 27</item>
+        <item>Parte 28</item>
+        <item>Parte 29</item>
+        <item>Parte 30</item>
+    </string-array>
+
+    <!-- Nomi delle Sure -->
+    <string-array name="surah_names" tools:ignore="ExtraTranslation">
+        <item>Al-Fātiha (L\'Apertura)</item>
+        <item>Al-Baqara (La Giovenca)</item>
+        <item>Āl ʿImrān (La Famiglia di Imran)</item>
+        <item>An-Nisāʾ (Le Donne)</item>
+        <item>Al-Māʾida (La Tavola Imbandita)</item>
+        <item>Al-Anʿām (Il Bestiame)</item>
+        <item>Al-Aʿrāf (Le Alture)</item>
+        <item>Al-Anfāl (Il Bottino)</item>
+        <item>At-Tawba (Il Pentimento)</item>
+        <item>Yūnus (Giona)</item>
+        <item>Hūd (Hud)</item>
+        <item>Yūsuf (Giuseppe)</item>
+        <item>Ar-Raʿd (Il Tuono)</item>
+        <item>Ibrāhīm (Abramo)</item>
+        <item>Al-Ḥidschr (La Regione Rocciosa)</item>
+        <item>An-Naḥl (Le Api)</item>
+        <item>Al-Isrāʾ (Il Viaggio Notturno)</item>
+        <item>Al-Kahf (La Caverna)</item>
+        <item>Maryam (Maria)</item>
+        <item>Ṭā-Hā (Ta-Ha)</item>
+        <item>Al-Anbiyāʾ (I Profeti)</item>
+        <item>Al-Ḥaǧǧ (Il Pellegrinaggio)</item>
+        <item>Al-Muʾminūn (I Credenti)</item>
+        <item>An-Nūr (La Luce)</item>
+        <item>Al-Furqān (Il Discrimine)</item>
+        <item>Aš-Šuʿarāʾ (I Poeti)</item>
+        <item>An-Naml (Le Formiche)</item>
+        <item>Al-Qaṣaṣ (Il Racconto)</item>
+        <item>Al-ʿAnkabūt (Il Ragno)</item>
+        <item>Ar-Rūm (I Romani)</item>
+        <item>Luqmān (Luqman)</item>
+        <item>As-Sadschda (La Prostrazione)</item>
+        <item>Al-Aḥzāb (I Coalizzati)</item>
+        <item>Sabaʾ (Saba)</item>
+        <item>Fāṭir (Il Creatore)</item>
+        <item>Yā-Sīn (Ya-Sin)</item>
+        <item>Aṣ-Ṣāffāt (Coloro che si Schierano)</item>
+        <item>Ṣād (Sad)</item>
+        <item>Az-Zumar (I Gruppi)</item>
+        <item>Ghāfir (Il Perdonatore)</item>
+        <item>Fussilat (Spiegata in Dettaglio)</item>
+        <item>Aš-Šūrā (La Consultazione)</item>
+        <item>Az-Zukhruf (Gli Ornamenti d\'Oro)</item>
+        <item>Ad-Duchān (Il Fumo)</item>
+        <item>Al-Ǧāṯiya (L\'Inginocchiata)</item>
+        <item>Al-Aḥqāf (Le Dune di Sabbia)</item>
+        <item>Muḥammad (Maometto)</item>
+        <item>Al-Fatḥ (La Vittoria)</item>
+        <item>Al-Ḥuǧurāt (Gli Appartamenti)</item>
+        <item>Qāf (Qaf)</item>
+        <item>Ad-Dāriyāt (I Venti Dispersori)</item>
+        <item>Aṭ-Ṭūr (Il Monte)</item>
+        <item>An-Naǧm (La Stella)</item>
+        <item>Al-Qamar (La Luna)</item>
+        <item>Ar-Raḥmān (Il Compassionevole)</item>
+        <item>Al-Wāqiʿa (L’Evento Inevitabile)</item>
+        <item>Al-Ḥadīd (Il Ferro)</item>
+        <item>Al-Muǧādila (La Disputante)</item>
+        <item>Al-Ḥašr (L\'Adunata)</item>
+        <item>Al-Mumtaḥina (L\'Esaminata)</item>
+        <item>Aṣ-Ṣaff (La Schiera)</item>
+        <item>Al-Ǧumʿa (Il Venerdì)</item>
+        <item>Al-Munāfiqūn (Gli Ipocriti)</item>
+        <item>At-Taġābun (La Delusione)</item>
+        <item>Aṭ-Ṭalāq (Il Divorzio)</item>
+        <item>At-Taḥrīm (L\'Interdizione)</item>
+        <item>Al-Mulk (La Sovranità)</item>
+        <item>Al-Qalam (Il Calamo)</item>
+        <item>Al-Ḥāqqa (La Realtà Inevitabile)</item>
+        <item>Al-Maʿāriǧ (I Gradi Ascendenti)</item>
+        <item>Nūḥ (Noè)</item>
+        <item>Al-Ǧinn (I Jinn)</item>
+        <item>Al-Muzzammil (L’Avvolto in un Mantello)</item>
+        <item>Al-Muddaththir (Il Coperto)</item>
+        <item>Al-Qiyāma (La Resurrezione)</item>
+        <item>Al-Insān (L\'Uomo)</item>
+        <item>Al-Mursalāt (Gli Inviati)</item>
+        <item>An-Nabaʾ (L\'Annuncio)</item>
+        <item>An-Nāziʿāt (Coloro che Strappano)</item>
+        <item>ʿAbasa (Inarcò le Sopracciglia)</item>
+        <item>At-Takwīr (L’Avvolgimento)</item>
+        <item>Al-Infiṭār (Lo Spacco)</item>
+        <item>Al-Muṭaffifīn (I Frodatori)</item>
+        <item>Al-Inšiqāq (Lo Scisma)</item>
+        <item>Al-Burūǧ (Le Costellazioni)</item>
+        <item>Aṭ-Ṭāriq (L’Astro Fulgente)</item>
+        <item>Al-Aʿlā (L’Altissimo)</item>
+        <item>Al-Ġāšiya (La Coprente)</item>
+        <item>Al-Faǧr (L\'Alba)</item>
+        <item>Al-Balad (La Città)</item>
+        <item>Aš-Šams (Il Sole)</item>
+        <item>Al-Lail (La Notte)</item>
+        <item>Ad-Ḍuḥā (Il Mattino)</item>
+        <item>Aš-Šarḥ (Il Sollievo)</item>
+        <item>At-Tīn (Il Fico)</item>
+        <item>Al-ʿAlaq (Il Grumo di Sangue)</item>
+        <item>Al-Qadr (Il Decreto)</item>
+        <item>Al-Bayyina (La Prova Chiara)</item>
+        <item>Az-Zalzala (Il Terremoto)</item>
+        <item>Al-ʿĀdiyāt (I Corridori)</item>
+        <item>Al-Qāriʿa (La Calamità)</item>
+        <item>At-Takāṯur (La Gara ad Arricchirsi)</item>
+        <item>Al-ʿAṣr (Il Tempo)</item>
+        <item>Al-Humaza (Il Maldicente)</item>
+        <item>Al-Fīl (L\'Elefante)</item>
+        <item>Quraiš (Quraish)</item>
+        <item>Al-Māʿūn (L’Utile)</item>
+        <item>Al-Kauṯar (L’Abbondanza)</item>
+        <item>Al-Kāfirūn (I Miscredenti)</item>
+        <item>An-Naṣr (L’Aiuto)</item>
+        <item>Al-Masad (Le Fibre di Palma)</item>
+        <item>Al-Iḫlāṣ (La Purezza)</item>
+        <item>Al-Falaq (L\'Alba)</item>
+        <item>An-Nās (Gli Uomini)</item>
+    </string-array>
+</resources>

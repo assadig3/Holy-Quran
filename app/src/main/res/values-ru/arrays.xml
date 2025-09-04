@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Juz Names (Russian) -->
+    <string-array name="juz_names">
+        <item>Джуз 1</item>
+        <item>Джуз 2</item>
+        <item>Джуз 3</item>
+        <item>Джуз 4</item>
+        <item>Джуз 5</item>
+        <item>Джуз 6</item>
+        <item>Джуз 7</item>
+        <item>Джуз 8</item>
+        <item>Джуз 9</item>
+        <item>Джуз 10</item>
+        <item>Джуз 11</item>
+        <item>Джуз 12</item>
+        <item>Джуз 13</item>
+        <item>Джуз 14</item>
+        <item>Джуз 15</item>
+        <item>Джуз 16</item>
+        <item>Джуз 17</item>
+        <item>Джуз 18</item>
+        <item>Джуз 19</item>
+        <item>Джуз 20</item>
+        <item>Джуз 21</item>
+        <item>Джуз 22</item>
+        <item>Джуз 23</item>
+        <item>Джуз 24</item>
+        <item>Джуз 25</item>
+        <item>Джуз 26</item>
+        <item>Джуз 27</item>
+        <item>Джуз 28</item>
+        <item>Джуз 29</item>
+        <item>Джуз 30</item>
+    </string-array>
+
+    <!-- Surah Names (Russian) -->
+    <string-array name="surah_names">
+        <item>Аль-Фатиха</item>
+        <item>Аль-Бакара</item>
+        <item>Али Имран</item>
+        <item>Ан-Ниса</item>
+        <item>Аль-Маида</item>
+        <item>Аль-Ан’ам</item>
+        <item>Аль-Араф</item>
+        <item>Аль-Анфаль</item>
+        <item>Ат-Тауба</item>
+        <item>Юнус</item>
+        <item>Худ</item>
+        <item>Юсуф</item>
+        <item>Ар-Раад</item>
+        <item>Ибрахим</item>
+        <item>Аль-Хиджр</item>
+        <item>Ан-Нахль</item>
+        <item>Аль-Исра</item>
+        <item>Аль-Кахф</item>
+        <item>Марйам</item>
+        <item>Та-Ха</item>
+        <item>Аль-Анбийа</item>
+        <item>Аль-Хадж</item>
+        <item>Аль-Муминун</item>
+        <item>Ан-Нур</item>
+        <item>Аль-Фуркан</item>
+        <item>Аш-Шуара</item>
+        <item>Ан-Намль</item>
+        <item>Аль-Касас</item>
+        <item>Аль-Анкабут</item>
+        <item>Ар-Рум</item>
+        <item>Лукман</item>
+        <item>Ас-Саджда</item>
+        <item>Аль-Ахзаб</item>
+        <item>Саба</item>
+        <item>Фатыр</item>
+        <item>Йа-Син</item>
+        <item>Ас-Саффат</item>
+        <item>Сад</item>
+        <item>Аз-Зумар</item>
+        <item>Гафир</item>
+        <item>Фуссилат</item>
+        <item>Аш-Шура</item>
+        <item>Аз-Зухруф</item>
+        <item>Ад-Духан</item>
+        <item>Аль-Джасия</item>
+        <item>Аль-Ахкаф</item>
+        <item>Мухаммад</item>
+        <item>Аль-Фатх</item>
+        <item>Аль-Худжурат</item>
+        <item>Каф</item>
+        <item>Ад-Дариат</item>
+        <item>Ат-Тур</item>
+        <item>Ан-Наджм</item>
+        <item>Аль-Камар</item>
+        <item>Ар-Рахман</item>
+        <item>Аль-Вак’иа</item>
+        <item>Аль-Хадид</item>
+        <item>Аль-Муджадила</item>
+        <item>Аль-Хашр</item>
+        <item>Аль-Мумтахина</item>
+        <item>Ас-Сафф</item>
+        <item>Аль-Джумуа</item>
+        <item>Аль-Мунафикун</item>
+        <item>Ат-Тагабун</item>
+        <item>Ат-Талак</item>
+        <item>Ат-Тахрим</item>
+        <item>Аль-Мульк</item>
+        <item>Аль-Калам</item>
+        <item>Аль-Хакка</item>
+        <item>Аль-Мааридж</item>
+        <item>Нух</item>
+        <item>Аль-Джинн</item>
+        <item>Аль-Муззаммиль</item>
+        <item>Аль-Муддатир</item>
+        <item>Аль-Кияма</item>
+        <item>Аль-Инсан</item>
+        <item>Аль-Мурсалят</item>
+        <item>Ан-Наба</item>
+        <item>Ан-Назиат</item>
+        <item>Абаса</item>
+        <item>Ат-Такуир</item>
+        <item>Аль-Инфитар</item>
+        <item>Аль-Мутаффифин</item>
+        <item>Аль-Иншикак</item>
+        <item>Аль-Бурудж</item>
+        <item>Ат-Тарик</item>
+        <item>Аль-Аъля</item>
+        <item>Аль-Гашия</item>
+        <item>Аль-Фаджр</item>
+        <item>Аль-Балад</item>
+        <item>Аш-Шамс</item>
+        <item>Аль-Лайл</item>
+        <item>Ад-Духа</item>
+        <item>Аш-Шарх</item>
+        <item>Ат-Тин</item>
+        <item>Аль-Алак</item>
+        <item>Аль-Кадр</item>
+        <item>Аль-Баййина</item>
+        <item>Аз-Зальзала</item>
+        <item>Аль-Адиат</item>
+        <item>Аль-Кариа</item>
+        <item>Ат-Такясур</item>
+        <item>Аль-Аср</item>
+        <item>Аль-Хумаза</item>
+        <item>Аль-Филь</item>
+        <item>Курайш</item>
+        <item>Аль-Маун</item>
+        <item>Аль-Каусар</item>
+        <item>Аль-Кафирун</item>
+        <item>Ан-Наср</item>
+        <item>Аль-Масад</item>
+        <item>Аль-Ихлас</item>
+        <item>Аль-Фалак</item>
+        <item>Ан-Нас</item>
+    </string-array>
+
+</resources>

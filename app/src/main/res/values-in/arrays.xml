@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Nama Juz -->
+    <string-array name="juz_names">
+        <item>Juz 1</item><item>Juz 2</item><item>Juz 3</item><item>Juz 4</item><item>Juz 5</item>
+        <item>Juz 6</item><item>Juz 7</item><item>Juz 8</item><item>Juz 9</item><item>Juz 10</item>
+        <item>Juz 11</item><item>Juz 12</item><item>Juz 13</item><item>Juz 14</item><item>Juz 15</item>
+        <item>Juz 16</item><item>Juz 17</item><item>Juz 18</item><item>Juz 19</item><item>Juz 20</item>
+        <item>Juz 21</item><item>Juz 22</item><item>Juz 23</item><item>Juz 24</item><item>Juz 25</item>
+        <item>Juz 26</item><item>Juz 27</item><item>Juz 28</item><item>Juz 29</item><item>Juz 30</item>
+    </string-array>
+
+    <!-- Nama Surah -->
+    <string-array name="surah_names" tools:ignore="ExtraTranslation">
+        <item>Al-Fātiḥah (Pembukaan)</item>
+        <item>Al-Baqarah (Sapi Betina)</item>
+        <item>Āli ʿImrān (Keluarga Imran)</item>
+        <item>An-Nisā’ (Wanita)</item>
+        <item>Al-Mā’idah (Hidangan)</item>
+        <item>Al-Anʿām (Binatang Ternak)</item>
+        <item>Al-Aʿrāf (Tempat Tertinggi)</item>
+        <item>Al-Anfāl (Rampasan Perang)</item>
+        <item>At-Tawbah (Taubat)</item>
+        <item>Yūnus (Yunus)</item>
+        <item>Hūd (Hud)</item>
+        <item>Yūsuf (Yusuf)</item>
+        <item>Ar-Raʿd (Guruh)</item>
+        <item>Ibrāhīm (Ibrahim)</item>
+        <item>Al-Ḥijr (Daerah Batu)</item>
+        <item>An-Naḥl (Lebah)</item>
+        <item>Al-Isrā’ (Perjalanan Malam)</item>
+        <item>Al-Kahf (Goa)</item>
+        <item>Maryam (Maryam)</item>
+        <item>Ṭā-Hā (Ṭā-Hā)</item>
+        <item>Al-Anbiyā’ (Para Nabi)</item>
+        <item>Al-Ḥajj (Haji)</item>
+        <item>Al-Mu’minūn (Orang Mukmin)</item>
+        <item>An-Nūr (Cahaya)</item>
+        <item>Al-Furqān (Pembeda)</item>
+        <item>Ash-Shuʿarā’ (Para Penyair)</item>
+        <item>An-Naml (Semut)</item>
+        <item>Al-Qaṣaṣ (Kisah-Kisah)</item>
+        <item>Al-ʿAnkabūt (Laba-Laba)</item>
+        <item>Ar-Rūm (Bangsa Romawi)</item>
+        <item>Luqmān (Luqman)</item>
+        <item>As-Sajdah (Sujud)</item>
+        <item>Al-Aḥzāb (Golongan-Golongan)</item>
+        <item>Saba’ (Saba’)</item>
+        <item>Fāṭir (Pencipta)</item>
+        <item>Yā-Sīn (Yā-Sīn)</item>
+        <item>Aṣ-Ṣāffāt (Barisan-Barisan)</item>
+        <item>Ṣād (Ṣād)</item>
+        <item>Az-Zumar (Rombongan)</item>
+        <item>Ghāfir (Yang Mengampuni)</item>
+        <item>Fussilat (Yang Dijelaskan)</item>
+        <item>Ash-Shūrā (Musyawarah)</item>
+        <item>Az-Zukhruf (Perhiasan Emas)</item>
+        <item>Ad-Dukhān (Asap)</item>
+        <item>Al-Jāthiyah (Berlutut)</item>
+        <item>Al-Aḥqāf (Bukit Pasir)</item>
+        <item>Muhammad (Muhammad)</item>
+        <item>Al-Fatḥ (Kemenangan)</item>
+        <item>Al-Ḥujurāt (Kamar-Kamar)</item>
+        <item>Qāf (Qāf)</item>
+        <item>Adh-Dhāriyāt (Angin yang Menerbangkan)</item>
+        <item>At-Ṭūr (Gunung)</item>
+        <item>An-Najm (Bintang)</item>
+        <item>Al-Qamar (Bulan)</item>
+        <item>Ar-Raḥmān (Maha Pemurah)</item>
+        <item>Al-Wāqiʿah (Peristiwa Besar)</item>
+        <item>Al-Ḥadīd (Besi)</item>
+        <item>Al-Mujādilah (Wanita yang Mengajukan Gugatan)</item>
+        <item>Al-Ḥasyr (Pengusiran)</item>
+        <item>Al-Mumtaḥanah (Wanita yang Diuji)</item>
+        <item>Aṣ-Ṣaff (Barisan)</item>
+        <item>Al-Jumuʿah (Jumat)</item>
+        <item>Al-Munāfiqūn (Orang-Orang Munafik)</item>
+        <item>At-Taghābun (Hari Ditampakkan Kesalahan)</item>
+        <item>At-Ṭalāq (Talak)</item>
+        <item>At-Taḥrīm (Pengharaman)</item>
+        <item>Al-Mulk (Kerajaan)</item>
+        <item>Al-Qalam (Pena)</item>
+        <item>Al-Ḥāqqah (Hari Kiamat yang Pasti Terjadi)</item>
+        <item>Al-Maʿārij (Tempat-Tempat Naik)</item>
+        <item>Nūḥ (Nuh)</item>
+        <item>Al-Jinn (Jin)</item>
+        <item>Al-Muzzammil (Orang yang Berselimut)</item>
+        <item>Al-Muddaththir (Orang yang Berselimut Kain)</item>
+        <item>Al-Qiyāmah (Hari Kiamat)</item>
+        <item>Al-Insān (Manusia)</item>
+        <item>Al-Mursalāt (Malaikat yang Diutus)</item>
+        <item>An-Naba’ (Berita Besar)</item>
+        <item>An-Nāziʿāt (Malaikat yang Mencabut dengan Keras)</item>
+        <item>ʿAbasa (Ia Bermuka Masam)</item>
+        <item>At-Takwīr (Menggulung)</item>
+        <item>Al-Infiṭār (Terbelah)</item>
+        <item>Al-Muṭaffifīn (Orang yang Curang dalam Timbangan)</item>
+        <item>Al-Inshiqqāq (Terbelah)</item>
+        <item>Al-Burūj (Gugusan Bintang)</item>
+        <item>At-Ṭāriq (Bintang yang Menyinar Malam)</item>
+        <item>Al-Aʿlā (Yang Maha Tinggi)</item>
+        <item>Al-Ghāshiyah (Peristiwa yang Dahsyat)</item>
+        <item>Al-Fajr (Fajar)</item>
+        <item>Al-Balad (Negeri)</item>
+        <item>Ash-Shams (Matahari)</item>
+        <item>Al-Layl (Malam)</item>
+        <item>Adh-Ḍuḥā (Waktu Dhuha)</item>
+        <item>Ash-Sharḥ (Kelapangan)</item>
+        <item>At-Tīn (Buah Tin)</item>
+        <item>Al-ʿAlaq (Segumpal Darah)</item>
+        <item>Al-Qadr (Kemuliaan)</item>
+        <item>Al-Bayyinah (Bukti yang Nyata)</item>
+        <item>Az-Zalzalah (Gempa)</item>
+        <item>Al-ʿĀdiyāt (Kuda Perang yang Berlari Kencang)</item>
+        <item>Al-Qāriʿah (Hari Kiamat yang Menggetarkan)</item>
+        <item>At-Takāthur (Bermegah-Megahan)</item>
+        <item>Al-ʿAsr (Masa)</item>
+        <item>Al-Humazah (Pengumpat)</item>
+        <item>Al-Fīl (Gajah)</item>
+        <item>Quraysh (Quraisy)</item>
+        <item>Al-Māʿūn (Barang yang Berguna Kecil)</item>
+        <item>Al-Kawthar (Nikmat yang Banyak)</item>
+        <item>Al-Kāfirūn (Orang-Orang Kafir)</item>
+        <item>An-Naṣr (Pertolongan)</item>
+        <item>Al-Masad (Api yang Bernyala-Nyala)</item>
+        <item>Al-Ikhlāṣ (Ikhlas)</item>
+        <item>Al-Falaq (Fajar)</item>
+        <item>An-Nās (Manusia)</item>
+    </string-array>
+
+</resources>

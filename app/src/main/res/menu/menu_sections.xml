@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- زر الانتقال إلى جزء -->
+    <item
+        android:id="@+id/action_jump_to_juz"
+        android:title="@string/menu_jump_to_juz"
+        android:icon="@drawable/ic_jump"
+        app:showAsAction="never" />
+
+    <!-- زر الانتقال إلى سورة -->
+    <item
+        android:id="@+id/action_jump_to_surah"
+        android:title="@string/menu_jump_to_surah"
+        android:icon="@drawable/ic_jump"
+        app:showAsAction="never" />
+</menu>

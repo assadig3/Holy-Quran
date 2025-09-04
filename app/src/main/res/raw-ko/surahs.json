@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "개방 (알-파티하)"
+  },
+  {
+    "number": 2,
+    "name": "암소 (알-바까라)"
+  },
+  {
+    "number": 3,
+    "name": "임란 가문"
+  },
+  {
+    "number": 4,
+    "name": "여성들"
+  },
+  {
+    "number": 5,
+    "name": "식탁"
+  },
+  {
+    "number": 6,
+    "name": "가축"
+  },
+  {
+    "number": 7,
+    "name": "높은 곳"
+  },
+  {
+    "number": 8,
+    "name": "전리품"
+  },
+  {
+    "number": 9,
+    "name": "참회"
+  },
+  {
+    "number": 10,
+    "name": "유누스"
+  },
+  {
+    "number": 11,
+    "name": "후드"
+  },
+  {
+    "number": 12,
+    "name": "유수프"
+  },
+  {
+    "number": 13,
+    "name": "천둥"
+  },
+  {
+    "number": 14,
+    "name": "이브라힘"
+  },
+  {
+    "number": 15,
+    "name": "알-히즈르"
+  },
+  {
+    "number": 16,
+    "name": "벌"
+  },
+  {
+    "number": 17,
+    "name": "밤의 여행"
+  },
+  {
+    "number": 18,
+    "name": "동굴"
+  },
+  {
+    "number": 19,
+    "name": "마르얌"
+  },
+  {
+    "number": 20,
+    "name": "타-하"
+  },
+  {
+    "number": 21,
+    "name": "예언자들"
+  },
+  {
+    "number": 22,
+    "name": "순례"
+  },
+  {
+    "number": 23,
+    "name": "믿는 자들"
+  },
+  {
+    "number": 24,
+    "name": "빛"
+  },
+  {
+    "number": 25,
+    "name": "구별"
+  },
+  {
+    "number": 26,
+    "name": "시인들"
+  },
+  {
+    "number": 27,
+    "name": "개미"
+  },
+  {
+    "number": 28,
+    "name": "이야기"
+  },
+  {
+    "number": 29,
+    "name": "거미"
+  },
+  {
+    "number": 30,
+    "name": "로마인들"
+  },
+  {
+    "number": 31,
+    "name": "루끄만"
+  },
+  {
+    "number": 32,
+    "name": "절"
+  },
+  {
+    "number": 33,
+    "name": "동맹자들"
+  },
+  {
+    "number": 34,
+    "name": "사바"
+  },
+  {
+    "number": 35,
+    "name": "창조주"
+  },
+  {
+    "number": 36,
+    "name": "야-신"
+  },
+  {
+    "number": 37,
+    "name": "정렬된 자들"
+  },
+  {
+    "number": 38,
+    "name": "사드"
+  },
+  {
+    "number": 39,
+    "name": "무리들"
+  },
+  {
+    "number": 40,
+    "name": "용서자"
+  },
+  {
+    "number": 41,
+    "name": "자세히 설명된 것"
+  },
+  {
+    "number": 42,
+    "name": "협의"
+  },
+  {
+    "number": 43,
+    "name": "장식품"
+  },
+  {
+    "number": 44,
+    "name": "연기"
+  },
+  {
+    "number": 45,
+    "name": "무릎 꿇은 자"
+  },
+  {
+    "number": 46,
+    "name": "모래 언덕"
+  },
+  {
+    "number": 47,
+    "name": "무함마드"
+  },
+  {
+    "number": 48,
+    "name": "승리"
+  },
+  {
+    "number": 49,
+    "name": "방들"
+  },
+  {
+    "number": 50,
+    "name": "카프"
+  },
+  {
+    "number": 51,
+    "name": "흩뿌리는 자들"
+  },
+  {
+    "number": 52,
+    "name": "산"
+  },
+  {
+    "number": 53,
+    "name": "별"
+  },
+  {
+    "number": 54,
+    "name": "달"
+  },
+  {
+    "number": 55,
+    "name": "자비로우신 분"
+  },
+  {
+    "number": 56,
+    "name": "불가피한 사건"
+  },
+  {
+    "number": 57,
+    "name": "철"
+  },
+  {
+    "number": 58,
+    "name": "논쟁하는 여자"
+  },
+  {
+    "number": 59,
+    "name": "집합"
+  },
+  {
+    "number": 60,
+    "name": "시험받는 여자"
+  },
+  {
+    "number": 61,
+    "name": "줄"
+  },
+  {
+    "number": 62,
+    "name": "금요일"
+  },
+  {
+    "number": 63,
+    "name": "위선자들"
+  },
+  {
+    "number": 64,
+    "name": "속임수"
+  },
+  {
+    "number": 65,
+    "name": "이혼"
+  },
+  {
+    "number": 66,
+    "name": "금지"
+  },
+  {
+    "number": 67,
+    "name": "왕국"
+  },
+  {
+    "number": 68,
+    "name": "펜"
+  },
+  {
+    "number": 69,
+    "name": "현실"
+  },
+  {
+    "number": 70,
+    "name": "계단"
+  },
+  {
+    "number": 71,
+    "name": "누흐"
+  },
+  {
+    "number": 72,
+    "name": "진"
+  },
+  {
+    "number": 73,
+    "name": "덮인 자"
+  },
+  {
+    "number": 74,
+    "name": "덮여진 자"
+  },
+  {
+    "number": 75,
+    "name": "부활"
+  },
+  {
+    "number": 76,
+    "name": "인간"
+  },
+  {
+    "number": 77,
+    "name": "보낸 자들"
+  },
+  {
+    "number": 78,
+    "name": "큰 소식"
+  },
+  {
+    "number": 79,
+    "name": "잡아끄는 자들"
+  },
+  {
+    "number": 80,
+    "name": "얼굴을 찌푸리다"
+  },
+  {
+    "number": 81,
+    "name": "둘둘 말다"
+  },
+  {
+    "number": 82,
+    "name": "갈라짐"
+  },
+  {
+    "number": 83,
+    "name": "속이는 자들"
+  },
+  {
+    "number": 84,
+    "name": "쪼개짐"
+  },
+  {
+    "number": 85,
+    "name": "별자리"
+  },
+  {
+    "number": 86,
+    "name": "밤의 손님"
+  },
+  {
+    "number": 87,
+    "name": "지극히 높으신 분"
+  },
+  {
+    "number": 88,
+    "name": "덮는 것"
+  },
+  {
+    "number": 89,
+    "name": "새벽"
+  },
+  {
+    "number": 90,
+    "name": "도시"
+  },
+  {
+    "number": 91,
+    "name": "태양"
+  },
+  {
+    "number": 92,
+    "name": "밤"
+  },
+  {
+    "number": 93,
+    "name": "아침"
+  },
+  {
+    "number": 94,
+    "name": "위안"
+  },
+  {
+    "number": 95,
+    "name": "무화과"
+  },
+  {
+    "number": 96,
+    "name": "응혈"
+  },
+  {
+    "number": 97,
+    "name": "운명"
+  },
+  {
+    "number": 98,
+    "name": "분명한 증거"
+  },
+  {
+    "number": 99,
+    "name": "지진"
+  },
+  {
+    "number": 100,
+    "name": "달리는 말들"
+  },
+  {
+    "number": 101,
+    "name": "큰 재앙"
+  },
+  {
+    "number": 102,
+    "name": "재물 경쟁"
+  },
+  {
+    "number": 103,
+    "name": "시대"
+  },
+  {
+    "number": 104,
+    "name": "중상하는 자"
+  },
+  {
+    "number": 105,
+    "name": "코끼리"
+  },
+  {
+    "number": 106,
+    "name": "꾸라이쉬"
+  },
+  {
+    "number": 107,
+    "name": "도움"
+  },
+  {
+    "number": 108,
+    "name": "풍부함"
+  },
+  {
+    "number": 109,
+    "name": "불신자들"
+  },
+  {
+    "number": 110,
+    "name": "원조"
+  },
+  {
+    "number": 111,
+    "name": "야자섬유"
+  },
+  {
+    "number": 112,
+    "name": "성실"
+  },
+  {
+    "number": 113,
+    "name": "새벽"
+  },
+  {
+    "number": 114,
+    "name": "사람들"
+  }
+]

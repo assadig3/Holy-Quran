@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qari_names">
+        <item>Mișari Rașid Alafasi</item>
+        <item>Abdurrahman Es-Sudeys</item>
+        <item>Suud Eş-Şureym</item>
+        <item>Maher El-Muaykili</item>
+        <item>Fares Abbad</item>
+        <item>Ahmed El-Acmi</item>
+        <item>Hani Er-Rifai</item>
+        <item>Ali El-Hudayfi</item>
+
+        <item>Abdulbasit (Tertil 64kbps)</item>
+        <item>Abdulbasit (Tertil 192kbps)</item>
+        <item>Abdulbasit (Tecvidli 128kbps)</item>
+        <item>Abdulbasit (QuranExplorer)</item>
+
+        <item>Minșavi (Tertil 128kbps)</item>
+        <item>Minșavi (Tecvidli 64kbps)</item>
+        <item>Minșavi (Öğretici 128kbps)</item>
+
+        <item>Mahmud Halil El-Husari (64kbps)</item>
+        <item>Mahmud Halil El-Husari (128kbps)</item>
+        <item>Husari (Öğretici 128kbps)</item>
+        <item>Husari (Tecvidli 64kbps)</item>
+
+        <item>Abdullah El-Cuhani (128kbps)</item>
+        <item>Abdullah Basfar (64kbps)</item>
+        <item>Abdullah Basfar (192kbps)</item>
+        <item>Abdullah Matrud (128kbps)</item>
+        <item>Ali Cabir (64kbps)</item>
+        <item>Ayman Suveyd (64kbps)</item>
+        <item>Salah El-Budeyr (128kbps)</item>
+        <item>Salah Bukhatir (128kbps)</item>
+        <item>Yasir Ed-Dosari (128kbps)</item>
+        <item>Yasir Selame (128kbps)</item>
+        <item>Sahl Yasin (128kbps)</item>
+        <item>Nasser El-Katami (128kbps)</item>
+        <item>Hani Er-Rifai (192kbps)</item>
+        <item>Ali El-Hudayfi (128kbps)</item>
+
+        <item>İbrahim El-Ahdar (64kbps)</item>
+        <item>Akram El-Alakmi (128kbps)</item>
+        <item>Ali Haccac Es-Susi (128kbps)</item>
+        <item>Muhammed Eyyub (64kbps)</item>
+        <item>Muhammed Cibril (64kbps)</item>
+        <item>Muhammed Mahmud Et-Tablavi (64kbps)</item>
+        <item>Muhsin El-Kasım (192kbps)</item>
+        <item>Mustafa İsmail (48kbps)</item>
+        <item>Nabil Er-Rifai (48kbps)</item>
+        <item>Halife Et-Tuneyci (64kbps)</item>
+        <item>Suud El-Ghamdi (40kbps)</item>
+        <item>Kerim Mansuri (40kbps)</item>
+        <item>Aziz Alili (128kbps)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Information -->
+    <string name="app_name">古兰经</string>
+    <string name="home">首页</string>
+    <string name="settings_and_support">设置与支持</string>
+    <string name="setting">设置</string>
+    <string name="help">帮助</string>
+    <string name="info">关于应用</string>
+    <string name="share_and_rate">分享与评分</string>
+    <string name="share">分享应用</string>
+    <string name="share_qr">通过二维码分享</string>
+    <string name="rate_app">为应用评分</string>
+    <string name="other_apps">其他应用</string>
+    <string name="exit">退出</string>
+    <string name="about_app_description">古兰经 — 阅读与收听，提供诵读、搜索、收藏、夜间模式等功能。</string>
+    <string name="help_title">帮助</string>
+    <string name="help_content">如需支持或有疑问，请查看常见问题或在设置中联系我们。</string>
+    <string name="app_logo">应用图标</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">设置</string>
+    <string name="light">浅色</string>
+    <string name="dark">深色</string>
+    <string name="system_default">系统默认</string>
+    <string name="choose_font_size">选择字体大小</string>
+    <string name="scan_qr">扫描二维码下载应用</string>
+
+    <string name="navigation_drawer_open">打开导航菜单</string>
+    <string name="navigation_drawer_close">关闭导航菜单</string>
+
+    <!-- Tabs -->
+    <string name="tab_surahs">📖 苏拉</string>
+    <string name="tab_favorites">⭐ 收藏</string>
+    <string name="tab_juz">🔢 卷</string>
+
+    <!-- Advanced Features -->
+    <string name="quran_default_title">古兰经</string>
+    <string name="downloading_soon">下载功能即将上线</string>
+    <string name="choose_tafsir">选择注释</string>
+    <string name="tafseer_selected">注释已选择！</string>
+    <string name="play_error">无法播放诵读</string>
+    <string name="remove_from_favorites">已从收藏中移除</string>
+    <string name="add_to_favorites">已添加到收藏</string>
+    <string name="repeat_settings">重复设置</string>
+    <string name="repeat_assigned">%1$s 已重复 (%2$d 次)</string>
+    <string name="share_tafsir">分享注释</string>
+    <string name="tafseer_surah_ayah">苏拉 %1$s - 节 %2$d</string>
+    <string name="ok">确定</string>
+    <string name="close">关闭</string>
+    <string name="select_qari">选择诵读者</string>
+    <string name="select_tafsir">选择注释</string>
+    <string name="ayah_options">节选项</string>
+    <string name="copy">复制</string>
+    <string name="share_ayah">分享</string>
+    <string name="tafsir">注释</string>
+    <string name="play">播放</string>
+    <string name="pause">暂停</string>
+    <string name="resume">继续</string>
+    <string name="stop">停止</string>
+    <string name="repeat">重复</string>
+    <string name="favorites">收藏</string>
+    <string name="remove">移除</string>
+    <string name="add">添加</string>
+    <string name="last_visited_pages">最近访问的页面</string>
+    <string name="no_last_pages">暂无最近页面</string>
+    <string name="go_to_page">跳转到页面</string>
+    <string name="surah">苏拉</string>
+    <string name="ayah">节</string>
+    <string name="surah_search_hint">搜索苏拉名称</string>
+    <string name="no_tafsir_available">此节暂无注释</string>
+    <string name="juz">卷</string>
+    <string name="juz_start_page">从第 %1$d 页开始</string>
+    <string name="juz_search_hint">按编号或名称搜索卷</string>
+    <string name="menu_clear_all_bookmarks">🗑️ 清除所有书签</string>
+    <string name="menu_clear_all_recent">🧹 清除历史</string>
+    <string name="recent_pages_title">🕓 最近页面</string>
+    <string name="favorite_pages_title">⭐ 收藏页面</string>
+
+    <string name="menu_last_read_juz">📌 最近阅读的卷</string>
+    <string name="menu_jump_to_juz">跳转到卷</string>
+    <string name="menu_jump_to_surah">跳转到苏拉</string>
+
+    <string name="reset_onboarding_button">重置引导</string>
+    <string name="reset_onboarding">重置应用引导</string>
+    <string name="choose_font">选择字体</string>
+    <string name="choose_language">选择语言</string>
+    <string name="arabic">阿拉伯语</string>
+    <string name="english">英语</string>
+    <string name="choose_theme">选择主题</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="theme_system">系统默认</string>
+    <string name="font_small">小</string>
+    <string name="font_medium">中</string>
+    <string name="font_large">大</string>
+    <string name="screen_options">屏幕选项</string>
+    <string name="keep_screen_on">阅读时保持屏幕常亮</string>
+    <string name="font_changed">字体大小已更改</string>
+    <string name="settings_reset">设置已重置！</string>
+
+    <string name="page">页面</string>
+    <string name="favorite">收藏</string>
+    <string name="clear_all_favorites">清除所有收藏</string>
+    <string name="clear_all_recent">清除历史</string>
+    <string name="favorite_pages">收藏页面</string>
+    <string name="recent_pages">最近页面</string>
+    <string name="no_favorites">暂无收藏</string>
+    <string name="tap_to_open_page">点击打开页面</string>
+    <string name="all_favorites_cleared">所有收藏已清除</string>
+    <string name="all_recent_cleared">历史已清除</string>
+    <string name="bookmark_title">🕓 第 %1$d 页</string>
+    <string name="favorite_page_hint">⭐ 第 %1$d 页</string>
+    <string name="favorite_page_item">⭐ 第 %1$d 页</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">首页</string>
+    <string name="nav_search">搜索</string>
+    <string name="nav_settings">设置</string>
+    <string name="nav_help">帮助</string>
+    <string name="nav_about">关于</string>
+    <string name="nav_share_app">分享应用</string>
+    <string name="nav_share_qr">通过二维码分享</string>
+    <string name="nav_rate_app">为应用评分</string>
+    <string name="nav_other_apps">其他应用</string>
+
+    <!-- Search -->
+    <string name="search_hint">请输入搜索内容…</string>
+    <string name="search_partial">部分匹配</string>
+    <string name="search_whole">完全匹配</string>
+    <string name="match_tashkeel">匹配元音符号 (Tashkeel)</string>
+
+    <!-- Exit -->
+    <string name="exit_confirm_title">确认退出</string>
+    <string name="exit_confirm_message">您确定要退出应用吗？</string>
+    <string name="yes">是</string>
+    <string name="cancel">取消</string>
+
+    <!-- Version -->
+    <string name="version_loading">正在检查版本…</string>
+    <string name="version_format">版本 %1$s</string>
+    <string name="version_example">版本 1.0.23</string>
+
+    <!-- Extra -->
+    <string name="search">搜索</string>
+    <string name="search_empty">搜索词或短语…</string>
+    <string name="search_results_placeholder">结果</string>
+    <string name="qr_code">二维码</string>
+    <string name="share_qr_hint">扫描二维码或分享链接</string>
+
+    <string name="header_developer_by">开发者: %1$s</string>
+    <string name="header_developer_by_example">开发者: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">2025年6月7日 • 1446年12月10日</string>
+
+    <string name="share_message">分享古兰经应用以获得善功: %1$s</string>
+    <string name="share_chooser_title">分享注释</string>
+
+    <string name="hijri_placeholder">回历日期</string>
+
+    <string name="action_toggle_page_bookmark">保存页面</string>
+    <string name="action_toggle_repeat">重复</string>
+    <string name="action_download_tafsirs">下载注释</string>
+    <string name="action_select_tafsir">选择注释</string>
+
+    <string name="download_title">请稍候，正在下载古兰经页面… 用赞主和祈祷充实您的时间 ﷺ</string>
+    <string name="download_ready">可下载</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">立即下载</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">下载</string>
+
+    <!-- Dialog -->
+    <string name="go_to_surah">跳转到苏拉</string>
+    <string name="search_surah_hint">🔍 搜索苏拉</string>
+
+    <!-- Juz -->
+    <string name="go_to_juz">跳转到卷</string>
+    <string name="search_juz_hint">🔍 搜索卷</string>
+
+    <!-- Repeat dialog -->
+    <string name="repeat_ayah">节</string>
+    <string name="repeat_count_label">重复次数:</string>
+
+    <!-- Tafsir dialog -->
+    <string name="tafsir_ayah_title">苏拉 ... - 节 ...</string>
+    <string name="tafsir_sample_ayah">奉至仁至慈的真主之名</string>
+    <string name="tafsir_text_placeholder">注释内容</string>
+
+    <!-- Pages download UI -->
+    <string name="pages_download_title_marquee">正在加载古兰经页面 — 用赞主充实时间 🌿</string>
+    <string name="pages_download_starting">开始下载…</string>
+    <string name="pages_download_progress">正在下载页面 %1$d / %2$d</string>
+    <string name="pages_download_done">下载完成。</string>
+    <string name="pages_download_failed">下载失败。</string>
+    <string name="pages_download_canceled">已取消。</string>
+
+    <!-- Repeat UI -->
+    <string name="repeat_settings_title">重复设置</string>
+
+    <!-- Audio batch downloader -->
+    <string name="no_recitations_to_download">暂无可下载的诵读</string>
+    <string name="downloading_recitations">正在下载诵读…</string>
+    <string name="recitations_saved">诵读已保存！</string>
+    <string name="download_error">下载出错</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">暂无节文本</string>
+
+    <string name="qari_icon">诵读者图标</string>
+    <string name="change_language">更改语言</string>
+    <string name="qari_selected_toast">已选择 %1$s</string>
+
+    <string name="choose_qari_title">选择诵读者</string>
+
+    <!-- Languages -->
+    <string name="lang_arabic">阿拉伯语</string>
+    <string name="lang_english">英语</string>
+    <string name="lang_turkish">土耳其语</string>
+    <string name="lang_indonesian">印尼语</string>
+    <string name="lang_urdu">乌尔都语</string>
+    <string name="lang_persian">波斯语</string>
+    <string name="lang_bengali">孟加拉语</string>
+    <string name="lang_german">德语</string>
+    <string name="lang_spanish">西班牙语</string>
+    <string name="lang_french">法语</string>
+    <string name="lang_russian">俄语</string>
+    <string name="lang_hindi">印地语</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_japanese">日语</string>
+    <string name="lang_korean">韩语</string>
+    <string name="lang_portuguese">葡萄牙语</string>
+    <string name="lang_italian">意大利语</string>
+    <string name="lang_swahili">斯瓦西里语</string>
+    <string name="lang_thai">泰语</string>
+
+    <!-- Updates -->
+    <string name="update_preparing">正在检查更新…</string>
+    <string name="update_downloading">正在下载更新…</string>
+    <string name="update_downloaded_tap_to_restart">下载完成 — 点击以重启并安装</string>
+    <string name="update_installing">正在安装更新…</string>
+    <string name="update_available_message">有新版本可用，请更新至最新版本。</string>
+
+    <!-- Tabs -->
+    <string name="tab_surah">苏拉</string>
+    <string name="tab_fav">收藏</string>
+    <string name="please_rate_app">请为应用评分，以帮助我们改进 🌟</string>
+
+</resources>

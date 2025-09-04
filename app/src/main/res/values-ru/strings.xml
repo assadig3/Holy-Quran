@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Общая информация -->
+    <string name="app_name">Священный Коран</string>
+    <string name="home">Главная</string>
+    <string name="settings_and_support">Настройки и Поддержка</string>
+    <string name="setting">Настройки</string>
+    <string name="help">Помощь</string>
+    <string name="info">О приложении</string>
+    <string name="share_and_rate">Поделиться и Оценить</string>
+    <string name="share">Поделиться приложением</string>
+    <string name="share_qr">Поделиться через QR</string>
+    <string name="rate_app">Оценить приложение</string>
+    <string name="other_apps">Другие приложения</string>
+    <string name="exit">Выход</string>
+    <string name="about_app_description">Священный Коран — чтение и прослушивание с функциями рецитации, поиска, избранного, ночного режима и многого другого.</string>
+    <string name="help_title">Помощь</string>
+    <string name="help_content">Для поддержки или вопросов, пожалуйста, обратитесь к разделу FAQ или свяжитесь с нами через настройки.</string>
+    <string name="app_logo">Логотип приложения</string>
+
+    <!-- Экран Настроек -->
+    <string name="settings_title">Настройки</string>
+    <string name="light">Светлая</string>
+    <string name="dark">Тёмная</string>
+    <string name="system_default">Системная</string>
+    <string name="choose_font_size">Выбрать размер шрифта</string>
+    <string name="scan_qr">Сканируйте QR-код, чтобы скачать приложение</string>
+
+    <string name="navigation_drawer_open">Открыть меню навигации</string>
+    <string name="navigation_drawer_close">Закрыть меню навигации</string>
+
+    <!-- Вкладки -->
+    <string name="tab_surahs">📖 Суры</string>
+    <string name="tab_favorites">⭐ Избранное</string>
+    <string name="tab_juz">🔢 Части</string>
+
+    <!-- Дополнительные функции -->
+    <string name="quran_default_title">Священный Коран</string>
+    <string name="downloading_soon">Функция загрузки скоро доступна</string>
+    <string name="choose_tafsir">Выберите тафсир</string>
+    <string name="tafseer_selected">Тафсир успешно выбран!</string>
+    <string name="play_error">Не удалось воспроизвести рецитацию</string>
+    <string name="remove_from_favorites">Страница удалена из избранного</string>
+    <string name="add_to_favorites">Страница добавлена в избранное</string>
+    <string name="repeat_settings">Настройки повтора</string>
+    <string name="repeat_assigned">Повтор %1$s (%2$d раз)</string>
+    <string name="share_tafsir">Поделиться тафсиром</string>
+    <string name="tafseer_surah_ayah">Сура %1$s - Аят %2$d</string>
+    <string name="ok">ОК</string>
+    <string name="close">Закрыть</string>
+    <string name="select_qari">Выберите чтеца</string>
+    <string name="select_tafsir">Выберите тафсир</string>
+    <string name="ayah_options">Опции аята</string>
+    <string name="copy">Копировать</string>
+    <string name="share_ayah">Поделиться</string>
+    <string name="tafsir">Тафсир</string>
+    <string name="play">Воспроизвести</string>
+    <string name="pause">Пауза</string>
+    <string name="resume">Продолжить</string>
+    <string name="stop">Стоп</string>
+    <string name="repeat">Повтор</string>
+    <string name="favorites">Избранное</string>
+    <string name="remove">Удалить</string>
+    <string name="add">Добавить</string>
+    <string name="last_visited_pages">Последние посещенные страницы</string>
+    <string name="no_last_pages">Нет последних страниц</string>
+    <string name="go_to_page">Перейти к странице</string>
+    <string name="surah">Сура</string>
+    <string name="ayah">Аят</string>
+    <string name="surah_search_hint">Поиск по названию суры</string>
+    <string name="no_tafsir_available">Нет тафсира для этого аята</string>
+    <string name="juz">Часть</string>
+    <string name="juz_start_page">Начинается со страницы %1$d</string>
+    <string name="juz_search_hint">Поиск по номеру или названию части</string>
+    <string name="menu_clear_all_bookmarks">🗑️ Очистить все закладки</string>
+    <string name="menu_clear_all_recent">🧹 Очистить историю</string>
+    <string name="recent_pages_title">🕓 Недавние страницы</string>
+    <string name="favorite_pages_title">⭐ Избранные страницы</string>
+
+    <string name="menu_last_read_juz">📌 Последняя прочитанная часть</string>
+    <string name="menu_jump_to_juz">Перейти к части</string>
+    <string name="menu_jump_to_surah">Перейти к суре</string>
+
+    <string name="reset_onboarding_button">Сбросить вводное обучение</string>
+    <string name="reset_onboarding">Сбросить вводное обучение приложения</string>
+    <string name="choose_font">Выбрать шрифт</string>
+    <string name="choose_language">Выбрать язык</string>
+    <string name="arabic">Арабский</string>
+    <string name="english">Английский</string>
+    <string name="choose_theme">Выбрать тему</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="theme_system">Системная</string>
+    <string name="font_small">Маленький</string>
+    <string name="font_medium">Средний</string>
+    <string name="font_large">Большой</string>
+    <string name="screen_options">Настройки экрана</string>
+    <string name="keep_screen_on">Оставлять экран включённым во время чтения</string>
+    <string name="font_changed">Размер шрифта изменен</string>
+    <string name="settings_reset">Настройки сброшены!</string>
+
+    <string name="page">Страница</string>
+    <string name="favorite">Избранное</string>
+    <string name="clear_all_favorites">Очистить избранное</string>
+    <string name="clear_all_recent">Очистить историю</string>
+    <string name="favorite_pages">Избранные страницы</string>
+    <string name="recent_pages">Недавние страницы</string>
+    <string name="no_favorites">Нет избранного</string>
+    <string name="tap_to_open_page">Нажмите, чтобы открыть страницу</string>
+    <string name="all_favorites_cleared">Все избранные удалены</string>
+    <string name="all_recent_cleared">История очищена</string>
+    <string name="bookmark_title">🕓 Страница %1$d</string>
+    <string name="favorite_page_hint">⭐ Страница %1$d</string>
+    <string name="favorite_page_item">⭐ Страница %1$d</string>
+
+    <!-- Навигация -->
+    <string name="nav_home">Главная</string>
+    <string name="nav_search">Поиск</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="nav_help">Помощь</string>
+    <string name="nav_about">О приложении</string>
+    <string name="nav_share_app">Поделиться приложением</string>
+    <string name="nav_share_qr">Поделиться через QR</string>
+    <string name="nav_rate_app">Оценить приложение</string>
+    <string name="nav_other_apps">Другие приложения</string>
+
+    <!-- Поиск -->
+    <string name="search_hint">Искать здесь...</string>
+    <string name="search_partial">Частичный поиск</string>
+    <string name="search_whole">Полный поиск</string>
+    <string name="match_tashkeel">Совпадение с огласовками</string>
+
+    <!-- Выход -->
+    <string name="exit_confirm_title">Подтверждение выхода</string>
+    <string name="exit_confirm_message">Вы действительно хотите выйти из приложения?</string>
+    <string name="yes">Да</string>
+
+    <!-- Версия -->
+    <string name="version_loading">Проверка версии…</string>
+    <string name="version_format">Версия %1$s</string>
+    <string name="version_example">Версия 1.0.23</string>
+
+    <!-- Дополнительно -->
+    <string name="search">Поиск</string>
+    <string name="search_empty">Поиск слова или фразы…</string>
+    <string name="search_results_placeholder">Результаты</string>
+    <string name="qr_code">QR-код</string>
+    <string name="share_qr_hint">Сканируйте QR или поделитесь ссылкой</string>
+
+    <string name="header_developer_by">Разработчик: %1$s</string>
+    <string name="header_developer_by_example">Разработчик: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">7 июня 2025 • 10 Зуль-Хиджжа 1446</string>
+
+    <string name="share_message">Поделитесь приложением Корана, чтобы получить награду: %1$s</string>
+    <string name="share_chooser_title">Поделиться тафсиром</string>
+
+    <string name="hijri_placeholder">Хиджри дата</string>
+
+    <string name="action_toggle_page_bookmark">Сохранить страницу</string>
+    <string name="action_toggle_repeat">Повтор</string>
+    <string name="action_download_tafsirs">Скачать тафсиры</string>
+    <string name="action_select_tafsir">Выбрать тафсир</string>
+
+    <string name="download_title">Пожалуйста, подождите, пока загружаются страницы Корана… Используйте это время для зикра и салавата ﷺ</string>
+    <string name="download_ready">Готово к загрузке</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">Загрузить сейчас</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">Скачать</string>
+
+    <!-- Диалог -->
+    <string name="go_to_surah">Перейти к суре</string>
+    <string name="search_surah_hint">🔍 Искать суру</string>
+    <string name="cancel">Отмена</string>
+
+    <!-- Часть -->
+    <string name="go_to_juz">Перейти к части</string>
+    <string name="search_juz_hint">🔍 Искать часть</string>
+
+    <!-- Диалог Повтора -->
+    <string name="repeat_ayah">Аят</string>
+    <string name="repeat_count_label">Количество повторов:</string>
+
+    <!-- Диалог Тафсира -->
+    <string name="tafsir_ayah_title">Сура ... - Аят ...</string>
+    <string name="tafsir_sample_ayah">С именем Аллаха, Милостивого, Милосердного</string>
+    <string name="tafsir_text_placeholder">Текст тафсира здесь</string>
+
+    <!-- Загрузка страниц -->
+    <string name="pages_download_title_marquee">Пожалуйста, подождите, пока загружаются страницы Корана — Используйте это время для зикра 🌿</string>
+    <string name="pages_download_starting">Начало загрузки…</string>
+    <string name="pages_download_progress">Загрузка страницы %1$d / %2$d</string>
+    <string name="pages_download_done">Загрузка завершена.</string>
+    <string name="pages_download_failed">Ошибка загрузки.</string>
+    <string name="pages_download_canceled">Отменено.</string>
+
+    <!-- Повтор -->
+    <string name="repeat_settings_title">Настройки повтора</string>
+
+    <!-- Загрузчик аудио -->
+    <string name="no_recitations_to_download">Нет ссылок для загрузки.</string>
+    <string name="downloading_recitations">Загрузка рецитаций…</string>
+    <string name="recitations_saved">Рецитации сохранены!</string>
+    <string name="download_error">Ошибка при загрузке.</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">Текст аята недоступен</string>
+
+    <string name="qari_icon">Иконка чтеца</string>
+    <string name="change_language">Изменить язык</string>
+    <string name="qari_selected_toast">%1$s выбран</string>
+
+    <string name="choose_qari_title">Выберите чтеца</string>
+
+    <string name="lang_arabic">Арабский</string>
+    <string name="lang_english">Английский</string>
+    <string name="lang_turkish">Турецкий</string>
+    <string name="lang_indonesian">Индонезийский</string>
+    <string name="lang_urdu">Урду</string>
+    <string name="lang_persian">Персидский</string>
+    <string name="lang_bengali">Бенгальский</string>
+    <string name="lang_german">Немецкий</string>
+    <string name="lang_spanish">Испанский</string>
+    <string name="lang_french">Французский</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_hindi">Хинди</string>
+    <string name="lang_chinese">Китайский</string>
+    <string name="lang_japanese">Японский</string>
+    <string name="lang_korean">Корейский</string>
+    <string name="lang_portuguese">Португальский</string>
+    <string name="lang_italian">Итальянский</string>
+    <string name="lang_swahili">Суахили</string>
+    <string name="lang_thai">Тайский</string>
+    <string name="update_preparing">Проверка обновления…</string>
+    <string name="update_downloading">Загрузка обновления…</string>
+    <string name="update_downloaded_tap_to_restart">Загрузка завершена — нажмите, чтобы перезапустить и установить</string>
+    <string name="update_installing">Установка обновления…</string>
+    <string name="update_available_message">Доступно новое обновление. Пожалуйста, обновите до последней версии.</string>
+    <string name="tab_surah">Суры</string>
+    <string name="tab_fav">Избранное</string>
+    <string name="please_rate_app">Пожалуйста, оцените приложение, чтобы помочь нам стать лучше 🌟</string>
+
+
+</resources>

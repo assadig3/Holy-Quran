@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ثيم الوضع الليلي -->
+    <style name="Theme.AlQuran" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- الألوان الأساسية -->
+        <item name="colorPrimary">@color/colorPrimary</item>           <!-- أسود للأشرطة -->
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>                <!-- النصوص على الأسود -->
+
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorSecondaryVariant">@color/colorAccent</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- الخلفية -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/cardBackground</item>
+        <item name="colorOnBackground">@color/textPrimary</item>
+        <item name="colorOnSurface">@color/textPrimary</item>
+
+        <!-- نصوص عامة -->
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+
+        <!-- بانر الآية -->
+        <item name="ayahBannerGlassBg">#44000000</item>   <!-- أسود شفاف -->
+        <item name="ayahBannerBorder">#33222222</item>    <!-- رمادي باهت -->
+
+        <!-- تخصيص قائمة الثلاث نقاط -->
+        <item name="popupMenuStyle">@style/MyOverflowMenuStyle</item>
+
+        <!-- شريط الحالة والتنقل -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- ستايل لقائمة النقاط (⋮) بخلفية سوداء ونصوص بيضاء -->
+    <style name="MyOverflowMenuStyle" parent="Widget.MaterialComponents.PopupMenu.Overflow">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:popupBackground">#FF000000</item>
+    </style>
+</resources>

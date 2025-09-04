@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Juz Names -->
+    <string-array name="juz_names">
+        <item>پارہ ١</item>
+        <item>پارہ ٢</item>
+        <item>پارہ ٣</item>
+        <item>پارہ ٤</item>
+        <item>پارہ ٥</item>
+        <item>پارہ ٦</item>
+        <item>پارہ ٧</item>
+        <item>پارہ ٨</item>
+        <item>پارہ ٩</item>
+        <item>پارہ ١٠</item>
+        <item>پارہ ١١</item>
+        <item>پارہ ١٢</item>
+        <item>پارہ ١٣</item>
+        <item>پارہ ١٤</item>
+        <item>پارہ ١٥</item>
+        <item>پارہ ١٦</item>
+        <item>پارہ ١٧</item>
+        <item>پارہ ١٨</item>
+        <item>پارہ ١٩</item>
+        <item>پارہ ٢٠</item>
+        <item>پارہ ٢١</item>
+        <item>پارہ ٢٢</item>
+        <item>پارہ ٢٣</item>
+        <item>پارہ ٢٤</item>
+        <item>پارہ ٢٥</item>
+        <item>پارہ ٢٦</item>
+        <item>پارہ ٢٧</item>
+        <item>پارہ ٢٨</item>
+        <item>پارہ ٢٩</item>
+        <item>پارہ ٣٠</item>
+    </string-array>
+
+    <!-- Surah Names -->
+    <string-array name="surah_names" tools:ignore="ExtraTranslation">
+        <item>الفاتحہ (ابتداء)</item>
+        <item>البقرہ (گائے)</item>
+        <item>آل عمران (عمران کا خاندان)</item>
+        <item>النساء (عورتیں)</item>
+        <item>المائدہ (خوان)</item>
+        <item>الانعام (مویشی)</item>
+        <item>الاعراف (اونچی جگہ)</item>
+        <item>الانفال (مال غنیمت)</item>
+        <item>التوبہ (توبہ)</item>
+        <item>یونس (یونس)</item>
+        <item>ہود (ہود)</item>
+        <item>یوسف (یوسف)</item>
+        <item>الرعد (کڑک)</item>
+        <item>ابراہیم (ابراہیم)</item>
+        <item>الحجر (پتھریلا علاقہ)</item>
+        <item>النحل (مکھی)</item>
+        <item>الاسراء (رات کا سفر)</item>
+        <item>الکہف (غار)</item>
+        <item>مریم (مریم)</item>
+        <item>طٰہٰ (طٰہٰ)</item>
+        <item>الانبیاء (انبیاء)</item>
+        <item>الحج (حج)</item>
+        <item>المؤمنون (ایمان والے)</item>
+        <item>النور (روشنی)</item>
+        <item>الفرقان (حق و باطل میں فرق)</item>
+        <item>الشعراء (شعراء)</item>
+        <item>النمل (چیونٹی)</item>
+        <item>القصص (کہانیاں)</item>
+        <item>العنکبوت (مکڑی)</item>
+        <item>الروم (رومی)</item>
+        <item>لقمان (لقمان)</item>
+        <item>السجدہ (سجدہ)</item>
+        <item>الاحزاب (جماعتیں)</item>
+        <item>سبا (سبا)</item>
+        <item>فاطر (پیدا کرنے والا)</item>
+        <item>یٰسٓ (یٰسٓ)</item>
+        <item>الصافات (صف باندھنے والے)</item>
+        <item>صٓ (صٓ)</item>
+        <item>الزمر (جماعتیں)</item>
+        <item>غافر (بخشنے والا)</item>
+        <item>فصلت (تفصیل سے بیان)</item>
+        <item>الشوریٰ (مشورہ)</item>
+        <item>الزخرف (سونے کے زیور)</item>
+        <item>الدخان (دھواں)</item>
+        <item>الجاثیہ (گھٹنوں کے بل)</item>
+        <item>الاحقاف (ریتیلے ٹیلے)</item>
+        <item>محمد (محمد)</item>
+        <item>الفتح (فتح)</item>
+        <item>الحجرات (کمرے)</item>
+        <item>قٓ (قٓ)</item>
+        <item>الذاریات (ہوائیں اڑانے والیاں)</item>
+        <item>الطور (پہاڑ)</item>
+        <item>النجم (ستارہ)</item>
+        <item>القمر (چاند)</item>
+        <item>الرحمن (بڑا مہربان)</item>
+        <item>الواقعہ (واقعہ)</item>
+        <item>الحدید (لوہا)</item>
+        <item>المجادلہ (جھگڑنے والی عورت)</item>
+        <item>الحشر (جمع ہونا)</item>
+        <item>الممتحنہ (جانچنے والی)</item>
+        <item>الصف (صف)</item>
+        <item>الجمعة (جمعہ)</item>
+        <item>المنافقون (منافقین)</item>
+        <item>التغابن (نقصان اور فائدہ)</item>
+        <item>الطلاق (طلاق)</item>
+        <item>التحریم (حرمت)</item>
+        <item>الملک (بادشاہت)</item>
+        <item>القلم (قلم)</item>
+        <item>الحاقہ (یقیناً واقع ہونے والی)</item>
+        <item>المعارج (چڑھنے کی سیڑھیاں)</item>
+        <item>نوح (نوح)</item>
+        <item>الجن (جن)</item>
+        <item>المزمل (اوڑھنے والا)</item>
+        <item>المدثر (چادر اوڑھنے والا)</item>
+        <item>القیامہ (قیامت)</item>
+        <item>الانسان (انسان)</item>
+        <item>المرسلات (بھیجے گئے)</item>
+        <item>النبأ (خبر)</item>
+        <item>النازعات (کھینچنے والیاں)</item>
+        <item>عبس (اس نے تیوری چڑھائی)</item>
+        <item>التکویر (لپیٹ دینا)</item>
+        <item>الانفطار (پھٹنا)</item>
+        <item>المطففین (ناپ تول میں کمی کرنے والے)</item>
+        <item>الانشقاق (پھٹ جانا)</item>
+        <item>البروج (برج)</item>
+        <item>الطارق (رات کو آنے والا)</item>
+        <item>الاعلیٰ (سب سے بلند)</item>
+        <item>الغاشیہ (ڈھانپنے والی)</item>
+        <item>الفجر (صبح)</item>
+        <item>البلد (شہر)</item>
+        <item>الشمس (سورج)</item>
+        <item>اللیل (رات)</item>
+        <item>الضحی (چاشت)</item>
+        <item>الشرح (سینے کا کھلنا)</item>
+        <item>التین (انجیر)</item>
+        <item>العلق (خون کا لوتھڑا)</item>
+        <item>القدر (قدر)</item>
+        <item>البینہ (کھلی دلیل)</item>
+        <item>الزلزال (زلزلہ)</item>
+        <item>العادیات (دوڑنے والے گھوڑے)</item>
+        <item>القارعہ (کھڑکھڑانے والی)</item>
+        <item>التکاثر (زیادتی کی حرص)</item>
+        <item>العصر (زمانہ)</item>
+        <item>الهمزة (عیب جو)</item>
+        <item>الفیل (ہاتھی)</item>
+        <item>قریش (قریش)</item>
+        <item>الماعون (چھوٹی مدد)</item>
+        <item>الکوثر (خیر کثیر)</item>
+        <item>الکافرون (کافر)</item>
+        <item>النصر (مدد)</item>
+        <item>المسد (کھجور کی رسی)</item>
+        <item>الاخلاص (خلوص)</item>
+        <item>الفلق (صبح)</item>
+        <item>الناس (لوگ)</item>
+    </string-array>
+
+</resources>

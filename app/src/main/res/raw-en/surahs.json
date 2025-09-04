@@ -1,0 +1,914 @@
+[
+  {
+    "number": 1,
+    "name": "Al-Fatiha",
+    "englishName": "Al-Fatiha",
+    "type": "Meccan",
+    "ayahCount": 7,
+    "pageNumber": 1
+  },
+  {
+    "number": 2,
+    "name": "Al-Baqarah",
+    "englishName": "Al-Baqarah",
+    "type": "Medinan",
+    "ayahCount": 286,
+    "pageNumber": 2
+  },
+  {
+    "number": 3,
+    "name": "Aal-Imran",
+    "englishName": "Aal-Imran",
+    "type": "Medinan",
+    "ayahCount": 200,
+    "pageNumber": 50
+  },
+  {
+    "number": 4,
+    "name": "An-Nisa",
+    "englishName": "An-Nisa",
+    "type": "Medinan",
+    "ayahCount": 176,
+    "pageNumber": 77
+  },
+  {
+    "number": 5,
+    "name": "Al-Ma'idah",
+    "englishName": "Al-Ma'idah",
+    "type": "Medinan",
+    "ayahCount": 120,
+    "pageNumber": 106
+  },
+  {
+    "number": 6,
+    "name": "Al-An'am",
+    "englishName": "Al-An'am",
+    "type": "Meccan",
+    "ayahCount": 165,
+    "pageNumber": 128
+  },
+  {
+    "number": 7,
+    "name": "Al-A'raf",
+    "englishName": "Al-A'raf",
+    "type": "Meccan",
+    "ayahCount": 206,
+    "pageNumber": 151
+  },
+  {
+    "number": 8,
+    "name": "Al-Anfal",
+    "englishName": "Al-Anfal",
+    "type": "Medinan",
+    "ayahCount": 75,
+    "pageNumber": 177
+  },
+  {
+    "number": 9,
+    "name": "At-Tawbah",
+    "englishName": "At-Tawbah",
+    "type": "Medinan",
+    "ayahCount": 129,
+    "pageNumber": 187
+  },
+  {
+    "number": 10,
+    "name": "Yunus",
+    "englishName": "Yunus",
+    "type": "Meccan",
+    "ayahCount": 109,
+    "pageNumber": 208
+  },
+  {
+    "number": 11,
+    "name": "Hud",
+    "englishName": "Hud",
+    "type": "Meccan",
+    "ayahCount": 123,
+    "pageNumber": 221
+  },
+  {
+    "number": 12,
+    "name": "Yusuf",
+    "englishName": "Yusuf",
+    "type": "Meccan",
+    "ayahCount": 111,
+    "pageNumber": 235
+  },
+  {
+    "number": 13,
+    "name": "Ar-Ra'd",
+    "englishName": "Ar-Ra'd",
+    "type": "Medinan",
+    "ayahCount": 43,
+    "pageNumber": 249
+  },
+  {
+    "number": 14,
+    "name": "Ibrahim",
+    "englishName": "Ibrahim",
+    "type": "Meccan",
+    "ayahCount": 52,
+    "pageNumber": 255
+  },
+  {
+    "number": 15,
+    "name": "Al-Hijr",
+    "englishName": "Al-Hijr",
+    "type": "Meccan",
+    "ayahCount": 99,
+    "pageNumber": 262
+  },
+  {
+    "number": 16,
+    "name": "An-Nahl",
+    "englishName": "An-Nahl",
+    "type": "Meccan",
+    "ayahCount": 128,
+    "pageNumber": 267
+  },
+  {
+    "number": 17,
+    "name": "Al-Isra",
+    "englishName": "Al-Isra",
+    "type": "Meccan",
+    "ayahCount": 111,
+    "pageNumber": 282
+  },
+  {
+    "number": 18,
+    "name": "Al-Kahf",
+    "englishName": "Al-Kahf",
+    "type": "Meccan",
+    "ayahCount": 110,
+    "pageNumber": 293
+  },
+  {
+    "number": 19,
+    "name": "Maryam",
+    "englishName": "Maryam",
+    "type": "Meccan",
+    "ayahCount": 98,
+    "pageNumber": 305
+  },
+  {
+    "number": 20,
+    "name": "Ta-Ha",
+    "englishName": "Ta-Ha",
+    "type": "Meccan",
+    "ayahCount": 135,
+    "pageNumber": 312
+  },
+  {
+    "number": 21,
+    "name": "Al-Anbiya",
+    "englishName": "Al-Anbiya",
+    "type": "Meccan",
+    "ayahCount": 112,
+    "pageNumber": 322
+  },
+  {
+    "number": 22,
+    "name": "Al-Hajj",
+    "englishName": "Al-Hajj",
+    "type": "Medinan",
+    "ayahCount": 78,
+    "pageNumber": 332
+  },
+  {
+    "number": 23,
+    "name": "Al-Mu'minun",
+    "englishName": "Al-Mu'minun",
+    "type": "Meccan",
+    "ayahCount": 118,
+    "pageNumber": 342
+  },
+  {
+    "number": 24,
+    "name": "An-Nur",
+    "englishName": "An-Nur",
+    "type": "Medinan",
+    "ayahCount": 64,
+    "pageNumber": 350
+  },
+  {
+    "number": 25,
+    "name": "Al-Furqan",
+    "englishName": "Al-Furqan",
+    "type": "Meccan",
+    "ayahCount": 77,
+    "pageNumber": 359
+  },
+  {
+    "number": 26,
+    "name": "Ash-Shu'ara",
+    "englishName": "Ash-Shu'ara",
+    "type": "Meccan",
+    "ayahCount": 227,
+    "pageNumber": 367
+  },
+  {
+    "number": 27,
+    "name": "An-Naml",
+    "englishName": "An-Naml",
+    "type": "Meccan",
+    "ayahCount": 93,
+    "pageNumber": 377
+  },
+  {
+    "number": 28,
+    "name": "Al-Qasas",
+    "englishName": "Al-Qasas",
+    "type": "Meccan",
+    "ayahCount": 88,
+    "pageNumber": 385
+  },
+  {
+    "number": 29,
+    "name": "Al-Ankabut",
+    "englishName": "Al-Ankabut",
+    "type": "Meccan",
+    "ayahCount": 69,
+    "pageNumber": 396
+  },
+  {
+    "number": 30,
+    "name": "Ar-Rum",
+    "englishName": "Ar-Rum",
+    "type": "Meccan",
+    "ayahCount": 60,
+    "pageNumber": 404
+  },
+  {
+    "number": 31,
+    "name": "Luqman",
+    "englishName": "Luqman",
+    "type": "Meccan",
+    "ayahCount": 34,
+    "pageNumber": 411
+  },
+  {
+    "number": 32,
+    "name": "As-Sajda",
+    "englishName": "As-Sajda",
+    "type": "Meccan",
+    "ayahCount": 30,
+    "pageNumber": 415
+  },
+  {
+    "number": 33,
+    "name": "Al-Ahzab",
+    "englishName": "Al-Ahzab",
+    "type": "Medinan",
+    "ayahCount": 73,
+    "pageNumber": 418
+  },
+  {
+    "number": 34,
+    "name": "Saba",
+    "englishName": "Saba",
+    "type": "Meccan",
+    "ayahCount": 54,
+    "pageNumber": 428
+  },
+  {
+    "number": 35,
+    "name": "Fatir",
+    "englishName": "Fatir",
+    "type": "Meccan",
+    "ayahCount": 45,
+    "pageNumber": 434
+  },
+  {
+    "number": 36,
+    "name": "Ya-Sin",
+    "englishName": "Ya-Sin",
+    "type": "Meccan",
+    "ayahCount": 83,
+    "pageNumber": 440
+  },
+  {
+    "number": 37,
+    "name": "As-Saffat",
+    "englishName": "As-Saffat",
+    "type": "Meccan",
+    "ayahCount": 182,
+    "pageNumber": 446
+  },
+  {
+    "number": 38,
+    "name": "Sad",
+    "englishName": "Sad",
+    "type": "Meccan",
+    "ayahCount": 88,
+    "pageNumber": 453
+  },
+  {
+    "number": 39,
+    "name": "Az-Zumar",
+    "englishName": "Az-Zumar",
+    "type": "Meccan",
+    "ayahCount": 75,
+    "pageNumber": 458
+  },
+  {
+    "number": 40,
+    "name": "Ghafir",
+    "englishName": "Ghafir",
+    "type": "Meccan",
+    "ayahCount": 85,
+    "pageNumber": 467
+  },
+  {
+    "number": 41,
+    "name": "Fussilat",
+    "englishName": "Fussilat",
+    "type": "Meccan",
+    "ayahCount": 54,
+    "pageNumber": 477
+  },
+  {
+    "number": 42,
+    "name": "Ash-Shura",
+    "englishName": "Ash-Shura",
+    "type": "Meccan",
+    "ayahCount": 53,
+    "pageNumber": 482
+  },
+  {
+    "number": 43,
+    "name": "Az-Zukhruf",
+    "englishName": "Az-Zukhruf",
+    "type": "Meccan",
+    "ayahCount": 89,
+    "pageNumber": 489
+  },
+  {
+    "number": 44,
+    "name": "Ad-Dukhan",
+    "englishName": "Ad-Dukhan",
+    "type": "Meccan",
+    "ayahCount": 59,
+    "pageNumber": 496
+  },
+  {
+    "number": 45,
+    "name": "Al-Jathiya",
+    "englishName": "Al-Jathiya",
+    "type": "Meccan",
+    "ayahCount": 37,
+    "pageNumber": 499
+  },
+  {
+    "number": 46,
+    "name": "Al-Ahqaf",
+    "englishName": "Al-Ahqaf",
+    "type": "Meccan",
+    "ayahCount": 35,
+    "pageNumber": 502
+  },
+  {
+    "number": 47,
+    "name": "Muhammad",
+    "englishName": "Muhammad",
+    "type": "Medinan",
+    "ayahCount": 38,
+    "pageNumber": 507
+  },
+  {
+    "number": 48,
+    "name": "Al-Fath",
+    "englishName": "Al-Fath",
+    "type": "Medinan",
+    "ayahCount": 29,
+    "pageNumber": 511
+  },
+  {
+    "number": 49,
+    "name": "Al-Hujurat",
+    "englishName": "Al-Hujurat",
+    "type": "Medinan",
+    "ayahCount": 18,
+    "pageNumber": 515
+  },
+  {
+    "number": 50,
+    "name": "Qaf",
+    "englishName": "Qaf",
+    "type": "Meccan",
+    "ayahCount": 45,
+    "pageNumber": 518
+  },
+  {
+    "number": 51,
+    "name": "Adh-Dhariyat",
+    "englishName": "Adh-Dhariyat",
+    "type": "Meccan",
+    "ayahCount": 60,
+    "pageNumber": 520
+  },
+  {
+    "number": 52,
+    "name": "At-Tur",
+    "englishName": "At-Tur",
+    "type": "Meccan",
+    "ayahCount": 49,
+    "pageNumber": 523
+  },
+  {
+    "number": 53,
+    "name": "An-Najm",
+    "englishName": "An-Najm",
+    "type": "Meccan",
+    "ayahCount": 62,
+    "pageNumber": 526
+  },
+  {
+    "number": 54,
+    "name": "Al-Qamar",
+    "englishName": "Al-Qamar",
+    "type": "Meccan",
+    "ayahCount": 55,
+    "pageNumber": 528
+  },
+  {
+    "number": 55,
+    "name": "Ar-Rahman",
+    "englishName": "Ar-Rahman",
+    "type": "Medinan",
+    "ayahCount": 78,
+    "pageNumber": 531
+  },
+  {
+    "number": 56,
+    "name": "Al-Waqia",
+    "englishName": "Al-Waqia",
+    "type": "Meccan",
+    "ayahCount": 96,
+    "pageNumber": 534
+  },
+  {
+    "number": 57,
+    "name": "Al-Hadid",
+    "englishName": "Al-Hadid",
+    "type": "Medinan",
+    "ayahCount": 29,
+    "pageNumber": 537
+  },
+  {
+    "number": 58,
+    "name": "Al-Mujadila",
+    "englishName": "Al-Mujadila",
+    "type": "Medinan",
+    "ayahCount": 22,
+    "pageNumber": 542
+  },
+  {
+    "number": 59,
+    "name": "Al-Hashr",
+    "englishName": "Al-Hashr",
+    "type": "Medinan",
+    "ayahCount": 24,
+    "pageNumber": 545
+  },
+  {
+    "number": 60,
+    "name": "Al-Mumtahina",
+    "englishName": "Al-Mumtahina",
+    "type": "Medinan",
+    "ayahCount": 13,
+    "pageNumber": 549
+  },
+  {
+    "number": 61,
+    "name": "As-Saff",
+    "englishName": "As-Saff",
+    "type": "Medinan",
+    "ayahCount": 14,
+    "pageNumber": 551
+  },
+  {
+    "number": 62,
+    "name": "Al-Jumu'a",
+    "englishName": "Al-Jumu'a",
+    "type": "Medinan",
+    "ayahCount": 11,
+    "pageNumber": 553
+  },
+  {
+    "number": 63,
+    "name": "Al-Munafiqun",
+    "englishName": "Al-Munafiqun",
+    "type": "Medinan",
+    "ayahCount": 11,
+    "pageNumber": 554
+  },
+  {
+    "number": 64,
+    "name": "At-Taghabun",
+    "englishName": "At-Taghabun",
+    "type": "Medinan",
+    "ayahCount": 18,
+    "pageNumber": 556
+  },
+  {
+    "number": 65,
+    "name": "At-Talaq",
+    "englishName": "At-Talaq",
+    "type": "Medinan",
+    "ayahCount": 12,
+    "pageNumber": 558
+  },
+  {
+    "number": 66,
+    "name": "At-Tahrim",
+    "englishName": "At-Tahrim",
+    "type": "Medinan",
+    "ayahCount": 12,
+    "pageNumber": 560
+  },
+  {
+    "number": 67,
+    "name": "Al-Mulk",
+    "englishName": "Al-Mulk",
+    "type": "Meccan",
+    "ayahCount": 30,
+    "pageNumber": 562
+  },
+  {
+    "number": 68,
+    "name": "Al-Qalam",
+    "englishName": "Al-Qalam",
+    "type": "Meccan",
+    "ayahCount": 52,
+    "pageNumber": 564
+  },
+  {
+    "number": 69,
+    "name": "Al-Haqqa",
+    "englishName": "Al-Haqqa",
+    "type": "Meccan",
+    "ayahCount": 52,
+    "pageNumber": 566
+  },
+  {
+    "number": 70,
+    "name": "Al-Ma'arij",
+    "englishName": "Al-Ma'arij",
+    "type": "Meccan",
+    "ayahCount": 44,
+    "pageNumber": 568
+  },
+  {
+    "number": 71,
+    "name": "Nuh",
+    "englishName": "Nuh",
+    "type": "Meccan",
+    "ayahCount": 28,
+    "pageNumber": 570
+  },
+  {
+    "number": 72,
+    "name": "Al-Jinn",
+    "englishName": "Al-Jinn",
+    "type": "Meccan",
+    "ayahCount": 28,
+    "pageNumber": 572
+  },
+  {
+    "number": 73,
+    "name": "Al-Muzzammil",
+    "englishName": "Al-Muzzammil",
+    "type": "Meccan",
+    "ayahCount": 20,
+    "pageNumber": 574
+  },
+  {
+    "number": 74,
+    "name": "Al-Muddathir",
+    "englishName": "Al-Muddathir",
+    "type": "Meccan",
+    "ayahCount": 56,
+    "pageNumber": 575
+  },
+  {
+    "number": 75,
+    "name": "Al-Qiyama",
+    "englishName": "Al-Qiyama",
+    "type": "Meccan",
+    "ayahCount": 40,
+    "pageNumber": 577
+  },
+  {
+    "number": 76,
+    "name": "Al-Insan",
+    "englishName": "Al-Insan",
+    "type": "Medinan",
+    "ayahCount": 31,
+    "pageNumber": 578
+  },
+  {
+    "number": 77,
+    "name": "Al-Mursalat",
+    "englishName": "Al-Mursalat",
+    "type": "Meccan",
+    "ayahCount": 50,
+    "pageNumber": 580
+  },
+  {
+    "number": 78,
+    "name": "An-Naba",
+    "englishName": "An-Naba",
+    "type": "Meccan",
+    "ayahCount": 40,
+    "pageNumber": 582
+  },
+  {
+    "number": 79,
+    "name": "An-Nazi'at",
+    "englishName": "An-Nazi'at",
+    "type": "Meccan",
+    "ayahCount": 46,
+    "pageNumber": 583
+  },
+  {
+    "number": 80,
+    "name": "Abasa",
+    "englishName": "Abasa",
+    "type": "Meccan",
+    "ayahCount": 42,
+    "pageNumber": 585
+  },
+  {
+    "number": 81,
+    "name": "At-Takwir",
+    "englishName": "At-Takwir",
+    "type": "Meccan",
+    "ayahCount": 29,
+    "pageNumber": 586
+  },
+  {
+    "number": 82,
+    "name": "Al-Infitar",
+    "englishName": "Al-Infitar",
+    "type": "Meccan",
+    "ayahCount": 19,
+    "pageNumber": 587
+  },
+  {
+    "number": 83,
+    "name": "Al-Mutaffifin",
+    "englishName": "Al-Mutaffifin",
+    "type": "Meccan",
+    "ayahCount": 36,
+    "pageNumber": 587
+  },
+  {
+    "number": 84,
+    "name": "Al-Inshiqaq",
+    "englishName": "Al-Inshiqaq",
+    "type": "Meccan",
+    "ayahCount": 25,
+    "pageNumber": 589
+  },
+  {
+    "number": 85,
+    "name": "Al-Buruj",
+    "englishName": "Al-Buruj",
+    "type": "Meccan",
+    "ayahCount": 22,
+    "pageNumber": 590
+  },
+  {
+    "number": 86,
+    "name": "At-Tariq",
+    "englishName": "At-Tariq",
+    "type": "Meccan",
+    "ayahCount": 17,
+    "pageNumber": 591
+  },
+  {
+    "number": 87,
+    "name": "Al-Ala",
+    "englishName": "Al-Ala",
+    "type": "Meccan",
+    "ayahCount": 19,
+    "pageNumber": 591
+  },
+  {
+    "number": 88,
+    "name": "Al-Ghashiya",
+    "englishName": "Al-Ghashiya",
+    "type": "Meccan",
+    "ayahCount": 26,
+    "pageNumber": 592
+  },
+  {
+    "number": 89,
+    "name": "Al-Fajr",
+    "englishName": "Al-Fajr",
+    "type": "Meccan",
+    "ayahCount": 30,
+    "pageNumber": 593
+  },
+  {
+    "number": 90,
+    "name": "Al-Balad",
+    "englishName": "Al-Balad",
+    "type": "Meccan",
+    "ayahCount": 20,
+    "pageNumber": 594
+  },
+  {
+    "number": 91,
+    "name": "Ash-Shams",
+    "englishName": "Ash-Shams",
+    "type": "Meccan",
+    "ayahCount": 15,
+    "pageNumber": 595
+  },
+  {
+    "number": 92,
+    "name": "Al-Lail",
+    "englishName": "Al-Lail",
+    "type": "Meccan",
+    "ayahCount": 21,
+    "pageNumber": 595
+  },
+  {
+    "number": 93,
+    "name": "Ad-Duha",
+    "englishName": "Ad-Duha",
+    "type": "Meccan",
+    "ayahCount": 11,
+    "pageNumber": 596
+  },
+  {
+    "number": 94,
+    "name": "Ash-Sharh",
+    "englishName": "Ash-Sharh",
+    "type": "Meccan",
+    "ayahCount": 8,
+    "pageNumber": 596
+  },
+  {
+    "number": 95,
+    "name": "At-Tin",
+    "englishName": "At-Tin",
+    "type": "Meccan",
+    "ayahCount": 8,
+    "pageNumber": 597
+  },
+  {
+    "number": 96,
+    "name": "Al-Alaq",
+    "englishName": "Al-Alaq",
+    "type": "Meccan",
+    "ayahCount": 19,
+    "pageNumber": 597
+  },
+  {
+    "number": 97,
+    "name": "Al-Qadr",
+    "englishName": "Al-Qadr",
+    "type": "Meccan",
+    "ayahCount": 5,
+    "pageNumber": 598
+  },
+  {
+    "number": 98,
+    "name": "Al-Bayyina",
+    "englishName": "Al-Bayyina",
+    "type": "Medinan",
+    "ayahCount": 8,
+    "pageNumber": 598
+  },
+  {
+    "number": 99,
+    "name": "Az-Zalzalah",
+    "englishName": "Az-Zalzalah",
+    "type": "Medinan",
+    "ayahCount": 8,
+    "pageNumber": 599
+  },
+  {
+    "number": 100,
+    "name": "Al-Adiyat",
+    "englishName": "Al-Adiyat",
+    "type": "Meccan",
+    "ayahCount": 11,
+    "pageNumber": 599
+  },
+  {
+    "number": 101,
+    "name": "Al-Qaria",
+    "englishName": "Al-Qaria",
+    "type": "Meccan",
+    "ayahCount": 11,
+    "pageNumber": 600
+  },
+  {
+    "number": 102,
+    "name": "At-Takathur",
+    "englishName": "At-Takathur",
+    "type": "Meccan",
+    "ayahCount": 8,
+    "pageNumber": 600
+  },
+  {
+    "number": 103,
+    "name": "Al-Asr",
+    "englishName": "Al-Asr",
+    "type": "Meccan",
+    "ayahCount": 3,
+    "pageNumber": 601
+  },
+  {
+    "number": 104,
+    "name": "Al-Humazah",
+    "englishName": "Al-Humazah",
+    "type": "Meccan",
+    "ayahCount": 9,
+    "pageNumber": 601
+  },
+  {
+    "number": 105,
+    "name": "Al-Fil",
+    "englishName": "Al-Fil",
+    "type": "Meccan",
+    "ayahCount": 5,
+    "pageNumber": 601
+  },
+  {
+    "number": 106,
+    "name": "Quraysh",
+    "englishName": "Quraysh",
+    "type": "Meccan",
+    "ayahCount": 4,
+    "pageNumber": 602
+  },
+  {
+    "number": 107,
+    "name": "Al-Ma'un",
+    "englishName": "Al-Ma'un",
+    "type": "Meccan",
+    "ayahCount": 7,
+    "pageNumber": 602
+  },
+  {
+    "number": 108,
+    "name": "Al-Kawthar",
+    "englishName": "Al-Kawthar",
+    "type": "Meccan",
+    "ayahCount": 3,
+    "pageNumber": 602
+  },
+  {
+    "number": 109,
+    "name": "Al-Kafirun",
+    "englishName": "Al-Kafirun",
+    "type": "Meccan",
+    "ayahCount": 6,
+    "pageNumber": 603
+  },
+  {
+    "number": 110,
+    "name": "An-Nasr",
+    "englishName": "An-Nasr",
+    "type": "Medinan",
+    "ayahCount": 3,
+    "pageNumber": 603
+  },
+  {
+    "number": 111,
+    "name": "Al-Masad",
+    "englishName": "Al-Masad",
+    "type": "Meccan",
+    "ayahCount": 5,
+    "pageNumber": 604
+  },
+  {
+    "number": 112,
+    "name": "Al-Ikhlas",
+    "englishName": "Al-Ikhlas",
+    "type": "Meccan",
+    "ayahCount": 4,
+    "pageNumber": 604
+  },
+  {
+    "number": 113,
+    "name": "Al-Falaq",
+    "englishName": "Al-Falaq",
+    "type": "Meccan",
+    "ayahCount": 5,
+    "pageNumber": 604
+  },
+  {
+    "number": 114,
+    "name": "An-Nas",
+    "englishName": "An-Nas",
+    "type": "Meccan",
+    "ayahCount": 6,
+    "pageNumber": 604
+  }
+]

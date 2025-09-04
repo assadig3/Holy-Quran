@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Juz Names (Japanese) -->
+    <string-array name="juz_names">
+        <item>第1巻 (ジュズ)</item>
+        <item>第2巻 (ジュズ)</item>
+        <item>第3巻 (ジュズ)</item>
+        <item>第4巻 (ジュズ)</item>
+        <item>第5巻 (ジュズ)</item>
+        <item>第6巻 (ジュズ)</item>
+        <item>第7巻 (ジュズ)</item>
+        <item>第8巻 (ジュズ)</item>
+        <item>第9巻 (ジュズ)</item>
+        <item>第10巻 (ジュズ)</item>
+        <item>第11巻 (ジュズ)</item>
+        <item>第12巻 (ジュズ)</item>
+        <item>第13巻 (ジュズ)</item>
+        <item>第14巻 (ジュズ)</item>
+        <item>第15巻 (ジュズ)</item>
+        <item>第16巻 (ジュズ)</item>
+        <item>第17巻 (ジュズ)</item>
+        <item>第18巻 (ジュズ)</item>
+        <item>第19巻 (ジュズ)</item>
+        <item>第20巻 (ジュズ)</item>
+        <item>第21巻 (ジュズ)</item>
+        <item>第22巻 (ジュズ)</item>
+        <item>第23巻 (ジュズ)</item>
+        <item>第24巻 (ジュズ)</item>
+        <item>第25巻 (ジュズ)</item>
+        <item>第26巻 (ジュズ)</item>
+        <item>第27巻 (ジュズ)</item>
+        <item>第28巻 (ジュズ)</item>
+        <item>第29巻 (ジュズ)</item>
+        <item>第30巻 (ジュズ)</item>
+    </string-array>
+
+    <!-- Surah Names (Japanese Transliteration) -->
+    <string-array name="surah_names">
+        <item>アル＝ファーティハ</item>
+        <item>アル＝バカラ</item>
+        <item>アール＝イムラーン</item>
+        <item>アン＝ニサー</item>
+        <item>アル＝マーイダ</item>
+        <item>アル＝アナーム</item>
+        <item>アル＝アラーフ</item>
+        <item>アル＝アンファール</item>
+        <item>アッ＝タウバ</item>
+        <item>ユーヌス</item>
+        <item>フード</item>
+        <item>ユースフ</item>
+        <item>アッ＝ラアド</item>
+        <item>イブラーヒーム</item>
+        <item>アル＝ヒジュル</item>
+        <item>アン＝ナフル</item>
+        <item>アル＝イスラー</item>
+        <item>アル＝カフフ</item>
+        <item>マルヤム</item>
+        <item>ター・ハー</item>
+        <item>アル＝アンビヤー</item>
+        <item>アル＝ハッジ</item>
+        <item>アル＝ムウミヌーン</item>
+        <item>アン＝ヌール</item>
+        <item>アル＝フルカーン</item>
+        <item>アッ＝シュアラー</item>
+        <item>アン＝ナムル</item>
+        <item>アル＝カサス</item>
+        <item>アル＝アンカブート</item>
+        <item>アッ＝ルーム</item>
+        <item>ルクマーン</item>
+        <item>アッ＝サジダ</item>
+        <item>アル＝アハザーブ</item>
+        <item>サバ</item>
+        <item>ファーティル</item>
+        <item>ヤー＝スィーン</item>
+        <item>アッ＝サッファート</item>
+        <item>サード</item>
+        <item>アッ＝ズマル</item>
+        <item>ガーフィル</item>
+        <item>フッスィラト</item>
+        <item>アッ＝シュラー</item>
+        <item>アッ＝ズフルフ</item>
+        <item>アッ＝ドゥハーン</item>
+        <item>アル＝ジャーシヤ</item>
+        <item>アル＝アハカーフ</item>
+        <item>ムハンマド</item>
+        <item>アル＝ファトフ</item>
+        <item>アル＝フジュラート</item>
+        <item>カーフ</item>
+        <item>アッ＝ザリヤート</item>
+        <item>アッ＝トゥール</item>
+        <item>アン＝ナジュム</item>
+        <item>アル＝カマル</item>
+        <item>アッ＝ラフマーン</item>
+        <item>アル＝ワーキア</item>
+        <item>アル＝ハディード</item>
+        <item>アル＝ムジャーディラ</item>
+        <item>アル＝ハシュル</item>
+        <item>アル＝ムムタヒナ</item>
+        <item>アッ＝サフ</item>
+        <item>アル＝ジュムア</item>
+        <item>アル＝ムナーフィクーン</item>
+        <item>アッ＝タガーブン</item>
+        <item>アッ＝タラーク</item>
+        <item>アッ＝タフリーム</item>
+        <item>アル＝ムルク</item>
+        <item>アル＝カラム</item>
+        <item>アル＝ハッカ</item>
+        <item>アル＝マアーリジュ</item>
+        <item>ヌーフ</item>
+        <item>アル＝ジンヌ</item>
+        <item>アル＝ムザンミル</item>
+        <item>アル＝ムッダッスィル</item>
+        <item>アル＝キヤーマ</item>
+        <item>アル＝インサーン</item>
+        <item>アル＝ムルサラート</item>
+        <item>アン＝ナバ</item>
+        <item>アン＝ナーज़ィアート</item>
+        <item>アバサ</item>
+        <item>アッ＝タクウィール</item>
+        <item>アル＝インフィタール</item>
+        <item>アル＝ムタッフィフィーン</item>
+        <item>アル＝インシカーク</item>
+        <item>アル＝ブルージュ</item>
+        <item>アッ＝ターレク</item>
+        <item>アル＝アアラー</item>
+        <item>アル＝ガーシヤ</item>
+        <item>アル＝ファジュル</item>
+        <item>アル＝バラド</item>
+        <item>アッ＝シャムス</item>
+        <item>アル＝ライル</item>
+        <item>アッ＝ドゥハー</item>
+        <item>アッ＝シャルフ</item>
+        <item>アッ＝ティーン</item>
+        <item>アル＝アラカ</item>
+        <item>アル＝カドル</item>
+        <item>アル＝バイヤッナ</item>
+        <item>アッ＝ザルザラ</item>
+        <item>アル＝アーディヤート</item>
+        <item>アル＝カーレア</item>
+        <item>アッ＝タカースル</item>
+        <item>アル＝アスル</item>
+        <item>アル＝フマザ</item>
+        <item>アル＝フィール</item>
+        <item>クライシュ</item>
+        <item>アル＝マウン</item>
+        <item>アル＝カウサル</item>
+        <item>アル＝カーフィルーン</item>
+        <item>アン＝ナスル</item>
+        <item>アル＝マサッド</item>
+        <item>アル＝イクラス</item>
+        <item>アル＝ファラク</item>
+        <item>アン＝ナース</item>
+    </string-array>
+
+</resources>

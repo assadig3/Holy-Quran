@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "L’Ouverture"
+  },
+  {
+    "number": 2,
+    "name": "La Vache"
+  },
+  {
+    "number": 3,
+    "name": "La Famille d’Imran"
+  },
+  {
+    "number": 4,
+    "name": "Les Femmes"
+  },
+  {
+    "number": 5,
+    "name": "La Table servie"
+  },
+  {
+    "number": 6,
+    "name": "Les Bestiaux"
+  },
+  {
+    "number": 7,
+    "name": "Les Murailles"
+  },
+  {
+    "number": 8,
+    "name": "Le Butin"
+  },
+  {
+    "number": 9,
+    "name": "Le Repentir"
+  },
+  {
+    "number": 10,
+    "name": "Jonas"
+  },
+  {
+    "number": 11,
+    "name": "Houd"
+  },
+  {
+    "number": 12,
+    "name": "Joseph"
+  },
+  {
+    "number": 13,
+    "name": "Le Tonnerre"
+  },
+  {
+    "number": 14,
+    "name": "Abraham"
+  },
+  {
+    "number": 15,
+    "name": "Al-Hijr"
+  },
+  {
+    "number": 16,
+    "name": "Les Abeilles"
+  },
+  {
+    "number": 17,
+    "name": "Le Voyage nocturne"
+  },
+  {
+    "number": 18,
+    "name": "La Caverne"
+  },
+  {
+    "number": 19,
+    "name": "Marie"
+  },
+  {
+    "number": 20,
+    "name": "Ta-Ha"
+  },
+  {
+    "number": 21,
+    "name": "Les Prophètes"
+  },
+  {
+    "number": 22,
+    "name": "Le Pèlerinage"
+  },
+  {
+    "number": 23,
+    "name": "Les Croyants"
+  },
+  {
+    "number": 24,
+    "name": "La Lumière"
+  },
+  {
+    "number": 25,
+    "name": "Le Discernement"
+  },
+  {
+    "number": 26,
+    "name": "Les Poètes"
+  },
+  {
+    "number": 27,
+    "name": "La Fourmi"
+  },
+  {
+    "number": 28,
+    "name": "Le Récit"
+  },
+  {
+    "number": 29,
+    "name": "L’Araignée"
+  },
+  {
+    "number": 30,
+    "name": "Les Romains"
+  },
+  {
+    "number": 31,
+    "name": "Luqman"
+  },
+  {
+    "number": 32,
+    "name": "La Prosternation"
+  },
+  {
+    "number": 33,
+    "name": "Les Coalisés"
+  },
+  {
+    "number": 34,
+    "name": "Saba’"
+  },
+  {
+    "number": 35,
+    "name": "Le Créateur"
+  },
+  {
+    "number": 36,
+    "name": "Ya-Sin"
+  },
+  {
+    "number": 37,
+    "name": "Les Rangés"
+  },
+  {
+    "number": 38,
+    "name": "Sad"
+  },
+  {
+    "number": 39,
+    "name": "Les Groupes"
+  },
+  {
+    "number": 40,
+    "name": "Le Pardonneur"
+  },
+  {
+    "number": 41,
+    "name": "Les Versets détaillés"
+  },
+  {
+    "number": 42,
+    "name": "La Consultation"
+  },
+  {
+    "number": 43,
+    "name": "L’Ornement"
+  },
+  {
+    "number": 44,
+    "name": "La Fumée"
+  },
+  {
+    "number": 45,
+    "name": "L’Agenouillée"
+  },
+  {
+    "number": 46,
+    "name": "Les Dunes"
+  },
+  {
+    "number": 47,
+    "name": "Muhammad"
+  },
+  {
+    "number": 48,
+    "name": "La Victoire"
+  },
+  {
+    "number": 49,
+    "name": "Les Appartements"
+  },
+  {
+    "number": 50,
+    "name": "Qaf"
+  },
+  {
+    "number": 51,
+    "name": "Les Éparpilleurs"
+  },
+  {
+    "number": 52,
+    "name": "La Montagne"
+  },
+  {
+    "number": 53,
+    "name": "L’Étoile"
+  },
+  {
+    "number": 54,
+    "name": "La Lune"
+  },
+  {
+    "number": 55,
+    "name": "Le Tout Miséricordieux"
+  },
+  {
+    "number": 56,
+    "name": "L’Inévitable"
+  },
+  {
+    "number": 57,
+    "name": "Le Fer"
+  },
+  {
+    "number": 58,
+    "name": "La Discussion"
+  },
+  {
+    "number": 59,
+    "name": "Le Rassemblement"
+  },
+  {
+    "number": 60,
+    "name": "L’Éprouvée"
+  },
+  {
+    "number": 61,
+    "name": "Les Rangées"
+  },
+  {
+    "number": 62,
+    "name": "Le Vendredi"
+  },
+  {
+    "number": 63,
+    "name": "Les Hypocrites"
+  },
+  {
+    "number": 64,
+    "name": "La Grande Perte"
+  },
+  {
+    "number": 65,
+    "name": "Le Divorce"
+  },
+  {
+    "number": 66,
+    "name": "L’Interdiction"
+  },
+  {
+    "number": 67,
+    "name": "La Royauté"
+  },
+  {
+    "number": 68,
+    "name": "La Plume"
+  },
+  {
+    "number": 69,
+    "name": "L’Inevitable Vérité"
+  },
+  {
+    "number": 70,
+    "name": "Les Degrés"
+  },
+  {
+    "number": 71,
+    "name": "Noé"
+  },
+  {
+    "number": 72,
+    "name": "Les Djinns"
+  },
+  {
+    "number": 73,
+    "name": "L’Enveloppé"
+  },
+  {
+    "number": 74,
+    "name": "Le Revêtu"
+  },
+  {
+    "number": 75,
+    "name": "La Résurrection"
+  },
+  {
+    "number": 76,
+    "name": "L’Homme"
+  },
+  {
+    "number": 77,
+    "name": "Les Envoyés"
+  },
+  {
+    "number": 78,
+    "name": "La Nouvelle"
+  },
+  {
+    "number": 79,
+    "name": "Les Anges qui arrachent"
+  },
+  {
+    "number": 80,
+    "name": "Il s’est renfrogné"
+  },
+  {
+    "number": 81,
+    "name": "L’Obscurcissement"
+  },
+  {
+    "number": 82,
+    "name": "La Déchirure"
+  },
+  {
+    "number": 83,
+    "name": "Les Fraudeurs"
+  },
+  {
+    "number": 84,
+    "name": "La Fission"
+  },
+  {
+    "number": 85,
+    "name": "Les Constellations"
+  },
+  {
+    "number": 86,
+    "name": "L’Astre nocturne"
+  },
+  {
+    "number": 87,
+    "name": "Le Très-Haut"
+  },
+  {
+    "number": 88,
+    "name": "L’Enveloppante"
+  },
+  {
+    "number": 89,
+    "name": "L’Aube"
+  },
+  {
+    "number": 90,
+    "name": "La Cité"
+  },
+  {
+    "number": 91,
+    "name": "Le Soleil"
+  },
+  {
+    "number": 92,
+    "name": "La Nuit"
+  },
+  {
+    "number": 93,
+    "name": "Le Jour montant"
+  },
+  {
+    "number": 94,
+    "name": "L’Ouverture"
+  },
+  {
+    "number": 95,
+    "name": "Le Figuier"
+  },
+  {
+    "number": 96,
+    "name": "L’Adhérence"
+  },
+  {
+    "number": 97,
+    "name": "Le Destin"
+  },
+  {
+    "number": 98,
+    "name": "La Preuve évidente"
+  },
+  {
+    "number": 99,
+    "name": "La Secousse"
+  },
+  {
+    "number": 100,
+    "name": "Les Coursiers"
+  },
+  {
+    "number": 101,
+    "name": "Le Fracas"
+  },
+  {
+    "number": 102,
+    "name": "La Course aux richesses"
+  },
+  {
+    "number": 103,
+    "name": "Le Temps"
+  },
+  {
+    "number": 104,
+    "name": "Les Calomniateurs"
+  },
+  {
+    "number": 105,
+    "name": "L’Éléphant"
+  },
+  {
+    "number": 106,
+    "name": "Les Quraysh"
+  },
+  {
+    "number": 107,
+    "name": "L’Ustensile"
+  },
+  {
+    "number": 108,
+    "name": "L’Abondance"
+  },
+  {
+    "number": 109,
+    "name": "Les Infidèles"
+  },
+  {
+    "number": 110,
+    "name": "Le Secours"
+  },
+  {
+    "number": 111,
+    "name": "Les Fibres"
+  },
+  {
+    "number": 112,
+    "name": "La Pureté"
+  },
+  {
+    "number": 113,
+    "name": "L’Aube naissante"
+  },
+  {
+    "number": 114,
+    "name": "Les Hommes"
+  }
+]

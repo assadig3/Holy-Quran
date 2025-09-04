@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="6dp"
+    android:clickable="true"
+    android:elevation="3dp"
+    android:layout_marginHorizontal="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/cardBackground"
+    app:cardCornerRadius="16dp"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <!-- عنوان المرجعية -->
+        <TextView
+            android:id="@+id/bookmarkTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="⭐ الصفحة 2"
+            android:textSize="13sp"
+            android:textColor="@color/bookmarkTitleColor"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- التلميح -->
+        <TextView
+            android:id="@+id/bookmarkHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اضغط للانتقال"
+            android:textSize="14sp"
+            android:textColor="@color/textSecondary"
+            android:layout_marginStart="8dp"
+            android:maxLines="1" />
+
+        <!-- زر الحذف -->
+        <ImageView
+            android:id="@+id/deleteIcon"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="حذف"
+            android:padding="2dp"
+            app:tint="#F44336"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

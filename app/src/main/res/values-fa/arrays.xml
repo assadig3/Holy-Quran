@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- نام جزء‌ها (فارسی) -->
+    <string-array name="juz_names">
+        <item>جزء ۱</item>
+        <item>جزء ۲</item>
+        <item>جزء ۳</item>
+        <item>جزء ۴</item>
+        <item>جزء ۵</item>
+        <item>جزء ۶</item>
+        <item>جزء ۷</item>
+        <item>جزء ۸</item>
+        <item>جزء ۹</item>
+        <item>جزء ۱۰</item>
+        <item>جزء ۱۱</item>
+        <item>جزء ۱۲</item>
+        <item>جزء ۱۳</item>
+        <item>جزء ۱۴</item>
+        <item>جزء ۱۵</item>
+        <item>جزء ۱۶</item>
+        <item>جزء ۱۷</item>
+        <item>جزء ۱۸</item>
+        <item>جزء ۱۹</item>
+        <item>جزء ۲۰</item>
+        <item>جزء ۲۱</item>
+        <item>جزء ۲۲</item>
+        <item>جزء ۲۳</item>
+        <item>جزء ۲۴</item>
+        <item>جزء ۲۵</item>
+        <item>جزء ۲۶</item>
+        <item>جزء ۲۷</item>
+        <item>جزء ۲۸</item>
+        <item>جزء ۲۹</item>
+        <item>جزء ۳۰</item>
+    </string-array>
+
+    <!-- نام سوره‌ها (فارسی/با حروف فارسی ی و ک) -->
+    <string-array name="surah_names">
+        <item>فاتحه</item>
+        <item>بقره</item>
+        <item>آل عمران</item>
+        <item>نساء</item>
+        <item>مائده</item>
+        <item>انعام</item>
+        <item>اعراف</item>
+        <item>انفال</item>
+        <item>توبه</item>
+        <item>یونس</item>
+        <item>هود</item>
+        <item>یوسف</item>
+        <item>رعد</item>
+        <item>ابراهیم</item>
+        <item>حجر</item>
+        <item>نحل</item>
+        <item>اسراء</item>
+        <item>کهف</item>
+        <item>مریم</item>
+        <item>طه</item>
+        <item>انبیاء</item>
+        <item>حج</item>
+        <item>مؤمنون</item>
+        <item>نور</item>
+        <item>فرقان</item>
+        <item>شعراء</item>
+        <item>نمل</item>
+        <item>قصص</item>
+        <item>عنکبوت</item>
+        <item>روم</item>
+        <item>لقمان</item>
+        <item>سجده</item>
+        <item>احزاب</item>
+        <item>سبأ</item>
+        <item>فاطر</item>
+        <item>یس</item>
+        <item>صافات</item>
+        <item>ص</item>
+        <item>زمر</item>
+        <item>غافر</item>
+        <item>فصلت</item>
+        <item>شوری</item>
+        <item>زخرف</item>
+        <item>دخان</item>
+        <item>جاثیه</item>
+        <item>احقاف</item>
+        <item>محمد</item>
+        <item>فتح</item>
+        <item>حجرات</item>
+        <item>ق</item>
+        <item>ذاریات</item>
+        <item>طور</item>
+        <item>نجم</item>
+        <item>قمر</item>
+        <item>رحمن</item>
+        <item>واقعه</item>
+        <item>حدید</item>
+        <item>مجادله</item>
+        <item>حشر</item>
+        <item>ممتحنه</item>
+        <item>صف</item>
+        <item>جمعه</item>
+        <item>منافقون</item>
+        <item>تغابن</item>
+        <item>طلاق</item>
+        <item>تحریم</item>
+        <item>ملک</item>
+        <item>قلم</item>
+        <item>حاقه</item>
+        <item>معارج</item>
+        <item>نوح</item>
+        <item>جن</item>
+        <item>مزمل</item>
+        <item>مدثر</item>
+        <item>قیامه</item>
+        <item>انسان</item>
+        <item>مرسلات</item>
+        <item>نبأ</item>
+        <item>نازعات</item>
+        <item>عبس</item>
+        <item>تکویر</item>
+        <item>انفطار</item>
+        <item>مطففین</item>
+        <item>انشقاق</item>
+        <item>بروج</item>
+        <item>طارق</item>
+        <item>اعلی</item>
+        <item>غاشیه</item>
+        <item>فجر</item>
+        <item>بلد</item>
+        <item>شمس</item>
+        <item>لیل</item>
+        <item>ضحی</item>
+        <item>شرح</item>
+        <item>تین</item>
+        <item>علق</item>
+        <item>قدر</item>
+        <item>بینه</item>
+        <item>زلزال</item>
+        <item>عادیات</item>
+        <item>قارعه</item>
+        <item>تکاثر</item>
+        <item>عصر</item>
+        <item>همزه</item>
+        <item>فیل</item>
+        <item>قریش</item>
+        <item>ماعون</item>
+        <item>کوثر</item>
+        <item>کافرون</item>
+        <item>نصر</item>
+        <item>مسد</item>
+        <item>اخلاص</item>
+        <item>فلق</item>
+        <item>ناس</item>
+    </string-array>
+
+</resources>

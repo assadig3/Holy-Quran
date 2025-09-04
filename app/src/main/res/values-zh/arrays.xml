@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 📖 部分名称 (中文) -->
+    <string-array name="juz_names">
+        <item>第1卷</item>
+        <item>第2卷</item>
+        <item>第3卷</item>
+        <item>第4卷</item>
+        <item>第5卷</item>
+        <item>第6卷</item>
+        <item>第7卷</item>
+        <item>第8卷</item>
+        <item>第9卷</item>
+        <item>第10卷</item>
+        <item>第11卷</item>
+        <item>第12卷</item>
+        <item>第13卷</item>
+        <item>第14卷</item>
+        <item>第15卷</item>
+        <item>第16卷</item>
+        <item>第17卷</item>
+        <item>第18卷</item>
+        <item>第19卷</item>
+        <item>第20卷</item>
+        <item>第21卷</item>
+        <item>第22卷</item>
+        <item>第23卷</item>
+        <item>第24卷</item>
+        <item>第25卷</item>
+        <item>第26卷</item>
+        <item>第27卷</item>
+        <item>第28卷</item>
+        <item>第29卷</item>
+        <item>第30卷</item>
+    </string-array>
+
+    <!-- 📖 苏拉名称 (中文) -->
+    <string-array name="surah_names">
+        <item>1. الفات哈 (开端章)</item>
+        <item>2. 黄牛章 (黄牛)</item>
+        <item>3. 伊姆兰的家属章 (伊姆兰的家属)</item>
+        <item>4. 妇女章 (妇女)</item>
+        <item>5. 筵席章 (宴席)</item>
+        <item>6. 牲畜章 (牲畜)</item>
+        <item>7. 高处章 (高处)</item>
+        <item>8. 战利品章 (战利品)</item>
+        <item>9. 忏悔章 (忏悔)</item>
+        <item>10. 优努斯章 (优努斯)</item>
+        <item>11. 侯德章 (侯德)</item>
+        <item>12. 优素福章 (优素福)</item>
+        <item>13. 雷霆章 (雷霆)</item>
+        <item>14. 易卜拉欣章 (易卜拉欣)</item>
+        <item>15. 石谷章 (岩石)</item>
+        <item>16. 蜜蜂章 (蜜蜂)</item>
+        <item>17. 夜行章 (夜行)</item>
+        <item>18. 山洞章 (山洞)</item>
+        <item>19. 麦尔彦章 (麦尔彦)</item>
+        <item>20. 塔哈章 (塔哈)</item>
+        <item>21. 众先知章 (先知们)</item>
+        <item>22. 朝觐章 (朝觐)</item>
+        <item>23. 信士章 (信士们)</item>
+        <item>24. 光明章 (光明)</item>
+        <item>25. 辨别章 (标准)</item>
+        <item>26. 诗人章 (诗人们)</item>
+        <item>27. 蚂蚁章 (蚂蚁)</item>
+        <item>28. 故事章 (故事)</item>
+        <item>29. 蜘蛛章 (蜘蛛)</item>
+        <item>30. 罗马人章 (罗马人)</item>
+        <item>31. 鲁格曼章 (鲁格曼)</item>
+        <item>32. 叩头章 (叩头)</item>
+        <item>33. 同盟军章 (同盟军)</item>
+        <item>34. 萨拜章 (萨拜)</item>
+        <item>35. 创造者章 (创造者)</item>
+        <item>36. 雅辛章 (雅辛)</item>
+        <item>37. 排队者章 (排队者)</item>
+        <item>38. 萨德章 (萨德)</item>
+        <item>39. 群集章 (群众)</item>
+        <item>40. 赦宥章 (赦宥者)</item>
+        <item>41. 详明章 (详明)</item>
+        <item>42. 商谈章 (商谈)</item>
+        <item>43. 金饰章 (金饰)</item>
+        <item>44. 烟雾章 (烟雾)</item>
+        <item>45. 跪拜章 (跪拜)</item>
+        <item>46. 沙丘章 (沙丘)</item>
+        <item>47. 穆罕默德章 (穆罕默德)</item>
+        <item>48. 胜利章 (胜利)</item>
+        <item>49. 内室章 (房屋)</item>
+        <item>50. ق章 (ق)</item>
+        <item>51. 播种者章 (播散者)</item>
+        <item>52. 山峰章 (山峰)</item>
+        <item>53. 星宿章 (星宿)</item>
+        <item>54. 月亮章 (月亮)</item>
+        <item>55. 至仁章 (至仁主)</item>
+        <item>56. 大事将临章 (大事将临)</item>
+        <item>57. 铁章 (铁)</item>
+        <item>58. 辩诉章 (辩诉者)</item>
+        <item>59. 集合章 (集合)</item>
+        <item>60. 考验章 (考验)</item>
+        <item>61. 队伍章 (行列)</item>
+        <item>62. 聚礼章 (聚礼)</item>
+        <item>63. 伪信士章 (伪信者)</item>
+        <item>64. 互相欺瞒章 (互相欺瞒)</item>
+        <item>65. 离婚章 (离婚)</item>
+        <item>66. 禁戒章 (禁戒)</item>
+        <item>67. 国权章 (国权)</item>
+        <item>68. 笔章 (笔)</item>
+        <item>69. 大事确凿章 (大事确凿)</item>
+        <item>70. 登阶章 (登阶)</item>
+        <item>71. 努哈章 (努哈)</item>
+        <item>72. 精灵章 (精灵)</item>
+        <item>73. 裹衣者章 (裹衣者)</item>
+        <item>74. 蒙盖者章 (蒙盖者)</item>
+        <item>75. 复活章 (复活)</item>
+        <item>76. 人类章 (人类)</item>
+        <item>77. 差遣者章 (差遣者)</item>
+        <item>78. 大新闻章 (大新闻)</item>
+        <item>79. 拔出者章 (拔出者)</item>
+        <item>80. 他皱眉章 (他皱眉)</item>
+        <item>81. 裹卷章 (裹卷)</item>
+        <item>82. 裂开章 (裂开)</item>
+        <item>83. 欺诈者章 (欺诈者)</item>
+        <item>84. 裂裂章 (裂裂)</item>
+        <item>85. 星座章 (星座)</item>
+        <item>86. 夜行者章 (夜行者)</item>
+        <item>87. 至高章 (至高)</item>
+        <item>88. 笼罩章 (笼罩)</item>
+        <item>89. 黎明章 (黎明)</item>
+        <item>90. 城市章 (城市)</item>
+        <item>91. 太阳章 (太阳)</item>
+        <item>92. 夜晚章 (夜晚)</item>
+        <item>93. 早晨章 (早晨)</item>
+        <item>94. 开拓章 (开拓胸怀)</item>
+        <item>95. 无花果章 (无花果)</item>
+        <item>96. 血块章 (血块)</item>
+        <item>97. 前定章 (前定)</item>
+        <item>98. 明证章 (明证)</item>
+        <item>99. 地震章 (地震)</item>
+        <item>100. 奔马章 (奔马)</item>
+        <item>101. 巨响章 (巨响)</item>
+        <item>102. 竞赛富贵章 (竞赛富贵)</item>
+        <item>103. 光阴章 (光阴)</item>
+        <item>104. 谗言者章 (谗言者)</item>
+        <item>105. 大象章 (大象)</item>
+        <item>106. 古莱什章 (古莱什)</item>
+        <item>107. 小施章 (小施)</item>
+        <item>108. 多福章 (多福)</item>
+        <item>109. 不信道者章 (不信道者)</item>
+        <item>110. 援助章 (援助)</item>
+        <item>111. 棕绳章 (棕绳)</item>
+        <item>112. 纯一章 (纯一)</item>
+        <item>113. 破晓章 (破晓)</item>
+        <item>114. 众人章 (人类)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qari_names">
+        <item>미샤리 라시드 알아파시</item>
+        <item>압두르라흐만 앗수다이스</item>
+        <item>사우드 알슈라이임</item>
+        <item>마헤르 알무아이끌리</item>
+        <item>파레스 압바드</item>
+        <item>아흐마드 알아즈미</item>
+        <item>하니 알리파이</item>
+        <item>알리 알후다이피</item>
+
+        <item>압둘바싯 (타르틸 64kbps)</item>
+        <item>압둘바싯 (타르틸 192kbps)</item>
+        <item>압둘바싯 (타즈위드 포함 128kbps)</item>
+        <item>압둘바싯 (QuranExplorer)</item>
+
+        <item>민샤위 (타르틸 128kbps)</item>
+        <item>민샤위 (타즈위드 포함 64kbps)</item>
+        <item>민샤위 (학습용 128kbps)</item>
+
+        <item>마흐무드 칼릴 알후사리 (64kbps)</item>
+        <item>마흐무드 칼릴 알후사리 (128kbps)</item>
+        <item>후사리 (학습용 128kbps)</item>
+        <item>후사리 (타즈위드 포함 64kbps)</item>
+
+        <item>압둘라 알주하니 (128kbps)</item>
+        <item>압둘라 바스파르 (64kbps)</item>
+        <item>압둘라 바스파르 (192kbps)</item>
+        <item>압둘라 마트루드 (128kbps)</item>
+        <item>알리 자베르 (64kbps)</item>
+        <item>아이만 수와이드 (64kbps)</item>
+        <item>살라 알부다이르 (128kbps)</item>
+        <item>살라 부카티르 (128kbps)</item>
+        <item>야세르 알도사리 (128kbps)</item>
+        <item>야세르 살라마 (128kbps)</item>
+        <item>사흘 야신 (128kbps)</item>
+        <item>나세르 알카타미 (128kbps)</item>
+        <item>하니 알리파이 (192kbps)</item>
+        <item>알리 알후다이피 (128kbps)</item>
+
+        <item>이브라힘 알아크다르 (64kbps)</item>
+        <item>아크람 알아라끄미 (128kbps)</item>
+        <item>알리 하지자 알수시 (128kbps)</item>
+        <item>무함마드 아유브 (64kbps)</item>
+        <item>무함마드 지브릴 (64kbps)</item>
+        <item>무함마드 마흐무드 알타블라위 (64kbps)</item>
+        <item>모흐센 알카심 (192kbps)</item>
+        <item>무스타파 이스마일 (48kbps)</item>
+        <item>나빌 알리파이 (48kbps)</item>
+        <item>칼리파 알투나이지 (64kbps)</item>
+        <item>사우드 알감디 (40kbps)</item>
+        <item>카림 만수리 (40kbps)</item>
+        <item>아지즈 알릴리 (128kbps)</item>
+    </string-array>
+</resources>

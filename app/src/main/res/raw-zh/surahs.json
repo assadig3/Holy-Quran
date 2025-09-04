@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "开端"
+  },
+  {
+    "number": 2,
+    "name": "黄牛"
+  },
+  {
+    "number": 3,
+    "name": "伊姆兰的家属"
+  },
+  {
+    "number": 4,
+    "name": "妇女"
+  },
+  {
+    "number": 5,
+    "name": "筵席"
+  },
+  {
+    "number": 6,
+    "name": "牲畜"
+  },
+  {
+    "number": 7,
+    "name": "高处"
+  },
+  {
+    "number": 8,
+    "name": "战利品"
+  },
+  {
+    "number": 9,
+    "name": "忏悔"
+  },
+  {
+    "number": 10,
+    "name": "优努斯"
+  },
+  {
+    "number": 11,
+    "name": "呼德"
+  },
+  {
+    "number": 12,
+    "name": "优素福"
+  },
+  {
+    "number": 13,
+    "name": "雷霆"
+  },
+  {
+    "number": 14,
+    "name": "易卜拉欣"
+  },
+  {
+    "number": 15,
+    "name": "石谷"
+  },
+  {
+    "number": 16,
+    "name": "蜜蜂"
+  },
+  {
+    "number": 17,
+    "name": "夜行"
+  },
+  {
+    "number": 18,
+    "name": "山洞"
+  },
+  {
+    "number": 19,
+    "name": "麦尔彦"
+  },
+  {
+    "number": 20,
+    "name": "塔哈"
+  },
+  {
+    "number": 21,
+    "name": "众先知"
+  },
+  {
+    "number": 22,
+    "name": "朝觐"
+  },
+  {
+    "number": 23,
+    "name": "信士们"
+  },
+  {
+    "number": 24,
+    "name": "光明"
+  },
+  {
+    "number": 25,
+    "name": "辨别"
+  },
+  {
+    "number": 26,
+    "name": "众诗人"
+  },
+  {
+    "number": 27,
+    "name": "蚂蚁"
+  },
+  {
+    "number": 28,
+    "name": "故事"
+  },
+  {
+    "number": 29,
+    "name": "蜘蛛"
+  },
+  {
+    "number": 30,
+    "name": "罗马人"
+  },
+  {
+    "number": 31,
+    "name": "鲁格曼"
+  },
+  {
+    "number": 32,
+    "name": "叩头"
+  },
+  {
+    "number": 33,
+    "name": "同盟军"
+  },
+  {
+    "number": 34,
+    "name": "赛拜"
+  },
+  {
+    "number": 35,
+    "name": "创造者"
+  },
+  {
+    "number": 36,
+    "name": "雅辛"
+  },
+  {
+    "number": 37,
+    "name": "排队者"
+  },
+  {
+    "number": 38,
+    "name": "萨德"
+  },
+  {
+    "number": 39,
+    "name": "群众"
+  },
+  {
+    "number": 40,
+    "name": "赦宥者"
+  },
+  {
+    "number": 41,
+    "name": "详述"
+  },
+  {
+    "number": 42,
+    "name": "协商"
+  },
+  {
+    "number": 43,
+    "name": "装饰"
+  },
+  {
+    "number": 44,
+    "name": "烟雾"
+  },
+  {
+    "number": 45,
+    "name": "跪拜者"
+  },
+  {
+    "number": 46,
+    "name": "沙丘"
+  },
+  {
+    "number": 47,
+    "name": "穆罕默德"
+  },
+  {
+    "number": 48,
+    "name": "胜利"
+  },
+  {
+    "number": 49,
+    "name": "内室"
+  },
+  {
+    "number": 50,
+    "name": "戛夫"
+  },
+  {
+    "number": 51,
+    "name": "播散者"
+  },
+  {
+    "number": 52,
+    "name": "山岳"
+  },
+  {
+    "number": 53,
+    "name": "星宿"
+  },
+  {
+    "number": 54,
+    "name": "月亮"
+  },
+  {
+    "number": 55,
+    "name": "至仁主"
+  },
+  {
+    "number": 56,
+    "name": "大事"
+  },
+  {
+    "number": 57,
+    "name": "钢铁"
+  },
+  {
+    "number": 58,
+    "name": "争辩的妇人"
+  },
+  {
+    "number": 59,
+    "name": "放逐"
+  },
+  {
+    "number": 60,
+    "name": "受考验的妇人"
+  },
+  {
+    "number": 61,
+    "name": "行列"
+  },
+  {
+    "number": 62,
+    "name": "聚礼日"
+  },
+  {
+    "number": 63,
+    "name": "伪信者"
+  },
+  {
+    "number": 64,
+    "name": "互相欺骗"
+  },
+  {
+    "number": 65,
+    "name": "离婚"
+  },
+  {
+    "number": 66,
+    "name": "禁戒"
+  },
+  {
+    "number": 67,
+    "name": "国权"
+  },
+  {
+    "number": 68,
+    "name": "笔"
+  },
+  {
+    "number": 69,
+    "name": "真实"
+  },
+  {
+    "number": 70,
+    "name": "天梯"
+  },
+  {
+    "number": 71,
+    "name": "努哈"
+  },
+  {
+    "number": 72,
+    "name": "精灵"
+  },
+  {
+    "number": 73,
+    "name": "披衣者"
+  },
+  {
+    "number": 74,
+    "name": "蒙盖者"
+  },
+  {
+    "number": 75,
+    "name": "复活"
+  },
+  {
+    "number": 76,
+    "name": "人类"
+  },
+  {
+    "number": 77,
+    "name": "被派遣者"
+  },
+  {
+    "number": 78,
+    "name": "大消息"
+  },
+  {
+    "number": 79,
+    "name": "扯出者"
+  },
+  {
+    "number": 80,
+    "name": "皱眉"
+  },
+  {
+    "number": 81,
+    "name": "裹卷"
+  },
+  {
+    "number": 82,
+    "name": "破裂"
+  },
+  {
+    "number": 83,
+    "name": "舞弊者"
+  },
+  {
+    "number": 84,
+    "name": "分裂"
+  },
+  {
+    "number": 85,
+    "name": "星座"
+  },
+  {
+    "number": 86,
+    "name": "夜行者"
+  },
+  {
+    "number": 87,
+    "name": "至高者"
+  },
+  {
+    "number": 88,
+    "name": "笼罩者"
+  },
+  {
+    "number": 89,
+    "name": "黎明"
+  },
+  {
+    "number": 90,
+    "name": "城市"
+  },
+  {
+    "number": 91,
+    "name": "太阳"
+  },
+  {
+    "number": 92,
+    "name": "黑夜"
+  },
+  {
+    "number": 93,
+    "name": "白昼"
+  },
+  {
+    "number": 94,
+    "name": "开解"
+  },
+  {
+    "number": 95,
+    "name": "无花果"
+  },
+  {
+    "number": 96,
+    "name": "血块"
+  },
+  {
+    "number": 97,
+    "name": "前定"
+  },
+  {
+    "number": 98,
+    "name": "明证"
+  },
+  {
+    "number": 99,
+    "name": "地震"
+  },
+  {
+    "number": 100,
+    "name": "奔驰者"
+  },
+  {
+    "number": 101,
+    "name": "大难"
+  },
+  {
+    "number": 102,
+    "name": "竞赛财富"
+  },
+  {
+    "number": 103,
+    "name": "时光"
+  },
+  {
+    "number": 104,
+    "name": "讥刺者"
+  },
+  {
+    "number": 105,
+    "name": "大象"
+  },
+  {
+    "number": 106,
+    "name": "古莱氏"
+  },
+  {
+    "number": 107,
+    "name": "小善"
+  },
+  {
+    "number": 108,
+    "name": "富饶"
+  },
+  {
+    "number": 109,
+    "name": "不信道者"
+  },
+  {
+    "number": 110,
+    "name": "援助"
+  },
+  {
+    "number": 111,
+    "name": "棕绳"
+  },
+  {
+    "number": 112,
+    "name": "忠诚"
+  },
+  {
+    "number": 113,
+    "name": "破晓"
+  },
+  {
+    "number": 114,
+    "name": "人类"
+  }
+]

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- كان focusable=true يمنع TextView من أخذ التركيز؛ أبقيناه false -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/centerLoaderRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="false"
+    android:descendantFocusability="afterDescendants"
+    android:background="#80000000">
+
+    <!-- بطاقة زجاجية -->
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_glass_card"
+        android:elevation="12dp"
+        android:clipToPadding="false">
+
+        <!-- شريط متحرّك Marquee -->
+        <TextView
+            android:id="@+id/centerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pages_download_title_marquee"
+            android:textSize="14sp"
+            android:textColor="#202124"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <ProgressBar
+            android:id="@+id/centerProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="12dp"
+            android:indeterminate="false"
+            android:progressTint="@android:color/holo_green_dark"
+            android:progressBackgroundTint="#DDDDDD" />
+
+        <!-- عدّاد + نسبة -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/centerCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 / 604"
+                android:textColor="#5F6368"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/centerPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  (0%)"
+                android:textColor="#5F6368"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- ETA -->
+        <TextView
+            android:id="@+id/centerEta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/remaining_time"
+            android:textColor="#5F6368"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="6dp" />
+
+        <!-- أزرار التحكّم -->
+        <LinearLayout
+            android:id="@+id/controlsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnPause"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="@string/pause" />
+
+            <Space android:layout_width="8dp" android:layout_height="1dp" />
+
+            <Button
+                android:id="@+id/btnResume"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="@string/resume"
+                android:enabled="false" />
+
+            <Space android:layout_width="8dp" android:layout_height="1dp" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="@string/close" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <attr name="ayahBannerGlassBg" format="color"/>
+    <attr name="ayahBannerBorder" format="color"/>
+    <!-- سمة خلفية عامة يعتمدها الليّاوت/الثيم -->
+    <attr name="colorBackground" format="color"/>
+
+
+</resources>

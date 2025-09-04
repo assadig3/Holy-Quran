@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Google Material Colors -->
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- الوضع الليلي - ألوان أساسية -->
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFD700</color>
+    <color name="primary">#000000</color>
+    <color name="primaryDark">#000000</color>
+    <color name="primaryLight">#1A1A1A</color>
+    <color name="gray">#1A1A1A</color>
+    <color name="white">#FAFAFA</color>
+    <color name="black">#000000</color>
+    <color name="gray_text">#A0A0A0</color>
+    <color name="blue_gray_100">#1A1A1A</color>
+    <color name="dialog_shadow">#B0000000</color>
+    <color name="result_bg">#1AFFFFFF</color>
+
+    <!-- بانر الآية -->
+    <color name="glassBannerBackground">#88000000</color>
+    <color name="ayahBannerText">#FFFFFF</color>
+    <color name="ayahBannerIcon">#FFD700</color>
+
+    <!-- إزالة الأزرق الفاتح واستبداله بالأسود -->
+    <color name="skyBlue">#000000</color>
+    <color name="skyBlueDark">#000000</color>
+    <color name="skyBlueText">#CCCCCC</color>
+    <color name="primaryText">#FFFFFF</color>
+    <color name="accent">#FFD700</color>
+    <color name="backgroundLight">#121212</color>
+    <color name="ayahBannerBackground">#000000</color>
+    <color name="bookmarkStar">#FFD700</color>
+    <color name="menu_overflow_text">#FFFFFF</color>
+
+    <!-- إضافات الوضع الليلي -->
+    <color name="dividerColor">#292929</color>
+    <color name="bookmarkTitleColor">#FFD700</color>
+    <color name="juzNameTextColor">#FFD700</color>
+    <color name="colorBackground">#121212</color>
+    <color name="appBackground">#121212</color>
+    <color name="cardBackground">#1A1A1A</color>
+
+    <!-- النصوص -->
+    <color name="textPrimary">#FAFAFA</color>
+    <color name="textSecondary">#B0B0B0</color>
+    <color name="hintText">#9E9E9E</color>
+    <color name="ayahNumberText">#FFD700</color>
+    <color name="ayahTextColor">#FFFFFF</color>
+    <color name="favoritePageText">#FAFAFA</color>
+    <color name="favoritePageSubText">#B0B0B0</color>
+    <color name="favoritePageStar">#FFD700</color>
+
+    <!-- خيارات -->
+    <color name="optionRed">#EF5350</color>
+    <color name="optionPurple">#7C4DFF</color>
+    <color name="optionOrange">#FFB74D</color>
+    <color name="optionGreen">#66BB6A</color>
+    <color name="optionBlue">#29B6F6</color>
+    <color name="optionBackground">#1A1A1A</color>
+    <color name="optionIcon">#FFFFFF</color>
+
+    <!-- التبويبات -->
+    <color name="tabIndicator">#FFD700</color>
+    <color name="tabTextDefault">#FAFAFA</color>
+    <color name="tabTextSelected">#FFD700</color>
+
+    <!-- الأيقونات -->
+    <color name="iconTint">#FFD700</color>
+    <color name="unselectedIconTint">#B0B0B0</color>
+
+    <!-- الحوارات -->
+    <color name="dialogBackground">#1A1A1A</color>
+    <color name="dialogText">#FAFAFA</color>
+    <color name="dialogButton">#333333</color>
+    <color name="dialogButtonText">#FFFFFF</color>
+    <color name="dialogTafsirBox">#1A1A1A</color>
+    <color name="tafsirTitle">#FFFFFF</color>
+    <color name="tafsirAyah">#FFD700</color>
+    <color name="tafsirText">#B0B0B0</color>
+    <color name="audio_controls_bg">#0D0D0D</color>
+
+    <!-- نافذة خيارات الآية -->
+    <color name="ayahDialogBackground">#1A1A1A</color>
+    <color name="ayahOptionBg">#1F1F1F</color>
+    <color name="ayahOptionIcon">#FAFAFA</color>
+    <color name="iconColor">#FAFAFA</color>
+    <color name="menuIconTint">#FFFFFF</color>
+
+    <!-- شريط التنقل السفلي -->
+    <color name="navItemIconChecked">#FFD700</color>
+    <color name="navItemTextChecked">#FFD700</color>
+
+    <!-- أخطاء -->
+    <color name="exo_styled_error_message_background">#B00020</color>
+    <color name="scrim">#B3000000</color>
+    <color name="dialog_surface">#1A1A1A</color>
+    <color name="dialog_title">#EDEDED</color>
+    <color name="dialog_body">#CFD8DC</color>
+
+    <!-- أزرار -->
+    <color name="btn_primary_text">#FFFFFF</color>
+    <color name="btn_danger_text">#FFFFFF</color>
+    <color name="progress_tint">#81C784</color>
+    <color name="dialog_border">#33FFFFFF</color>
+    <color name="btn_primary_bg">#1B5E20</color>
+    <color name="btn_primary_ripple">#552E7D32</color>
+    <color name="btn_danger_bg">#8E0000</color>
+    <color name="btn_danger_ripple">#55C62828</color>
+    <color name="tonal_btn_bg">#2A2F2A</color>
+    <color name="tonal_btn_stroke">#33FFFFFF</color>
+    <color name="tonal_btn_ripple">#552E7D32</color>
+    <color name="pageBackground">#121212</color>
+
+    <!-- Overlay -->
+    <color name="overlay_panel_bg">#E61E1E1E</color>
+    <color name="overlay_panel_stroke">#33FFFFFF</color>
+    <color name="overlay_text">#FFFFFFFF</color>
+    <color name="overlay_icon_tint">#FFFFFFFF</color>
+    <color name="overlay_chip_bg">#262A2A2A</color>
+    <color name="overlay_ripple">#33FFFFFF</color>
+    <color name="overlay_scrim">#66000000</color>
+
+    <!-- Navigation Drawer -->
+    <color name="navItemText">#ECECEC</color>
+    <color name="navItemTextDisabled">#80ECECEC</color>
+    <color name="navItemIcon">#C9CCD1</color>
+    <color name="navItemIconDisabled">#80C9CCD1</color>
+    <color name="navPressedBg">#33111111</color>
+    <color name="navCheckedBg">#22111111</color>
+    <color name="navRipple">#33111111</color>
+    <color name="qariNameColor">#FFFFFF</color>
+    <color name="qariIconTint">#FFFFFF</color>
+    <color name="qariItemBackground">#111111</color>
+    <color name="quran_page_bg">#121212</color>
+
+</resources>

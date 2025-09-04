@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qari_names">
+        <item>मिशारी राशिद अल-अफासी</item>
+        <item>अब्दुर्रहमान अल-सुदैस</item>
+        <item>सऊद अल-शुरैम</item>
+        <item>माहिर अल-मुऐकली</item>
+        <item>फ़ारेस अब्बाद</item>
+        <item>अहमद अल-अज्मी</item>
+        <item>हानी अल-रिफाई</item>
+        <item>अली अल-हुज़ैफी</item>
+
+        <item>अब्दुलबासित (तर्तील 64kbps)</item>
+        <item>अब्दुलबासित (तर्तील 192kbps)</item>
+        <item>अब्दुलबासित (तज्वीद सहित 128kbps)</item>
+        <item>अब्दुलबासित (QuranExplorer)</item>
+
+        <item>मिनशावी (तर्तील 128kbps)</item>
+        <item>मिनशावी (तज्वीद सहित 64kbps)</item>
+        <item>मिनशावी (शिक्षण用 128kbps)</item>
+
+        <item>महमूद खालिल अल-हुसारी (64kbps)</item>
+        <item>महमूद खालिल अल-हुसारी (128kbps)</item>
+        <item>हुसारी (शिक्षण用 128kbps)</item>
+        <item>हुसारी (तज्वीद सहित 64kbps)</item>
+
+        <item>अब्दुल्लाह अल-जुहानी (128kbps)</item>
+        <item>अब्दुल्लाह बासफ़र (64kbps)</item>
+        <item>अब्दुल्लाह बासफ़र (192kbps)</item>
+        <item>अब्दुल्लाह मतरूद (128kbps)</item>
+        <item>अली जाबिर (64kbps)</item>
+        <item>अयमान सुवैद (64kbps)</item>
+        <item>सालह अल-बुदैर (128kbps)</item>
+        <item>सालह बुख़ातिर (128kbps)</item>
+        <item>यासिर अल-दोस्सरी (128kbps)</item>
+        <item>यासिर सलामह (128kbps)</item>
+        <item>सहल यासीन (128kbps)</item>
+        <item>नासिर अल-क़तामी (128kbps)</item>
+        <item>हानी अल-रिफाई (192kbps)</item>
+        <item>अली अल-हुज़ैफी (128kbps)</item>
+
+        <item>इब्राहीम अल-अख़दर (64kbps)</item>
+        <item>अकरम अल-अलक़मी (128kbps)</item>
+        <item>अली हज्जाज अल-सूसी (128kbps)</item>
+        <item>मुहम्मद अय्यूब (64kbps)</item>
+        <item>मुहम्मद जिब्रील (64kbps)</item>
+        <item>मुहम्मद महमूद अल-तब्लावी (64kbps)</item>
+        <item>मोहसिन अल-क़ासिम (192kbps)</item>
+        <item>मुस्तफ़ा इस्माईल (48kbps)</item>
+        <item>नबील अल-रिफाई (48kbps)</item>
+        <item>खलीफ़ा अल-तुनेजी (64kbps)</item>
+        <item>सऊद अल-ग़ामदी (40kbps)</item>
+        <item>करीम मंसूरी (40kbps)</item>
+        <item>अज़ीज़ अलीली (128kbps)</item>
+    </string-array>
+</resources>

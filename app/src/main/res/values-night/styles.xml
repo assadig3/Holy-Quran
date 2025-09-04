@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- تأكد أن ثيم التطبيق يرث من Theme.MaterialComponents / Material3 -->
+    <style name="Widget.Quran.SearchField"
+        parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+        <item name="boxBackgroundMode">filled</item>
+
+        <!-- زوايا -->
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+
+        <!-- ألوان وحدود -->
+        <item name="boxBackgroundColor">@color/search_box_bg</item>
+        <item name="boxStrokeColor">@color/search_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+
+        <!-- أيقونات (أحرف صغيرة صحيحة) -->
+        <item name="startIconTint">@color/search_icon</item>
+        <item name="endIconTint">@color/search_icon</item>
+
+        <!-- لون التلميح داخل الحقل -->
+        <item name="android:textColorHint">@color/search_hint</item>
+    </style>
+
+</resources>

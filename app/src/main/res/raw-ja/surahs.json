@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "開端"
+  },
+  {
+    "number": 2,
+    "name": "雌牛"
+  },
+  {
+    "number": 3,
+    "name": "イムラーン家"
+  },
+  {
+    "number": 4,
+    "name": "女性"
+  },
+  {
+    "number": 5,
+    "name": "食卓"
+  },
+  {
+    "number": 6,
+    "name": "家畜"
+  },
+  {
+    "number": 7,
+    "name": "高地"
+  },
+  {
+    "number": 8,
+    "name": "戦利品"
+  },
+  {
+    "number": 9,
+    "name": "悔悟"
+  },
+  {
+    "number": 10,
+    "name": "ユーヌス"
+  },
+  {
+    "number": 11,
+    "name": "フード"
+  },
+  {
+    "number": 12,
+    "name": "ユースフ"
+  },
+  {
+    "number": 13,
+    "name": "雷鳴"
+  },
+  {
+    "number": 14,
+    "name": "イブラーヒーム"
+  },
+  {
+    "number": 15,
+    "name": "ヒジュル"
+  },
+  {
+    "number": 16,
+    "name": "蜜蜂"
+  },
+  {
+    "number": 17,
+    "name": "夜の旅"
+  },
+  {
+    "number": 18,
+    "name": "洞窟"
+  },
+  {
+    "number": 19,
+    "name": "マリヤム"
+  },
+  {
+    "number": 20,
+    "name": "ター・ハー"
+  },
+  {
+    "number": 21,
+    "name": "預言者たち"
+  },
+  {
+    "number": 22,
+    "name": "巡礼"
+  },
+  {
+    "number": 23,
+    "name": "信者たち"
+  },
+  {
+    "number": 24,
+    "name": "光"
+  },
+  {
+    "number": 25,
+    "name": "基準"
+  },
+  {
+    "number": 26,
+    "name": "詩人たち"
+  },
+  {
+    "number": 27,
+    "name": "蟻"
+  },
+  {
+    "number": 28,
+    "name": "物語"
+  },
+  {
+    "number": 29,
+    "name": "蜘蛛"
+  },
+  {
+    "number": 30,
+    "name": "ローマ人"
+  },
+  {
+    "number": 31,
+    "name": "ルクマーン"
+  },
+  {
+    "number": 32,
+    "name": "ひれ伏し"
+  },
+  {
+    "number": 33,
+    "name": "同盟者たち"
+  },
+  {
+    "number": 34,
+    "name": "サバ"
+  },
+  {
+    "number": 35,
+    "name": "創造者"
+  },
+  {
+    "number": 36,
+    "name": "ヤー・スィーン"
+  },
+  {
+    "number": 37,
+    "name": "整列者たち"
+  },
+  {
+    "number": 38,
+    "name": "サード"
+  },
+  {
+    "number": 39,
+    "name": "群れ"
+  },
+  {
+    "number": 40,
+    "name": "赦し主"
+  },
+  {
+    "number": 41,
+    "name": "詳細に述べられたもの"
+  },
+  {
+    "number": 42,
+    "name": "協議"
+  },
+  {
+    "number": 43,
+    "name": "装飾"
+  },
+  {
+    "number": 44,
+    "name": "煙"
+  },
+  {
+    "number": 45,
+    "name": "ひざまずく者"
+  },
+  {
+    "number": 46,
+    "name": "砂丘"
+  },
+  {
+    "number": 47,
+    "name": "ムハンマド"
+  },
+  {
+    "number": 48,
+    "name": "勝利"
+  },
+  {
+    "number": 49,
+    "name": "私室"
+  },
+  {
+    "number": 50,
+    "name": "カーフ"
+  },
+  {
+    "number": 51,
+    "name": "散布者"
+  },
+  {
+    "number": 52,
+    "name": "山"
+  },
+  {
+    "number": 53,
+    "name": "星"
+  },
+  {
+    "number": 54,
+    "name": "月"
+  },
+  {
+    "number": 55,
+    "name": "慈悲あまねく御方"
+  },
+  {
+    "number": 56,
+    "name": "出来事"
+  },
+  {
+    "number": 57,
+    "name": "鉄"
+  },
+  {
+    "number": 58,
+    "name": "論争する女"
+  },
+  {
+    "number": 59,
+    "name": "集合"
+  },
+  {
+    "number": 60,
+    "name": "試される女"
+  },
+  {
+    "number": 61,
+    "name": "列"
+  },
+  {
+    "number": 62,
+    "name": "金曜"
+  },
+  {
+    "number": 63,
+    "name": "偽信者たち"
+  },
+  {
+    "number": 64,
+    "name": "欺き合い"
+  },
+  {
+    "number": 65,
+    "name": "離婚"
+  },
+  {
+    "number": 66,
+    "name": "禁止"
+  },
+  {
+    "number": 67,
+    "name": "王国"
+  },
+  {
+    "number": 68,
+    "name": "筆"
+  },
+  {
+    "number": 69,
+    "name": "確実な事実"
+  },
+  {
+    "number": 70,
+    "name": "昇階"
+  },
+  {
+    "number": 71,
+    "name": "ヌーフ"
+  },
+  {
+    "number": 72,
+    "name": "ジン"
+  },
+  {
+    "number": 73,
+    "name": "覆われた者"
+  },
+  {
+    "number": 74,
+    "name": "覆いを掛けられた者"
+  },
+  {
+    "number": 75,
+    "name": "復活"
+  },
+  {
+    "number": 76,
+    "name": "人間"
+  },
+  {
+    "number": 77,
+    "name": "遣わされた者たち"
+  },
+  {
+    "number": 78,
+    "name": "知らせ"
+  },
+  {
+    "number": 79,
+    "name": "引き抜く者たち"
+  },
+  {
+    "number": 80,
+    "name": "彼は顔をしかめた"
+  },
+  {
+    "number": 81,
+    "name": "巻き取る"
+  },
+  {
+    "number": 82,
+    "name": "裂け目"
+  },
+  {
+    "number": 83,
+    "name": "ごまかす者たち"
+  },
+  {
+    "number": 84,
+    "name": "裂ける"
+  },
+  {
+    "number": 85,
+    "name": "星座"
+  },
+  {
+    "number": 86,
+    "name": "夜の来訪者"
+  },
+  {
+    "number": 87,
+    "name": "至高者"
+  },
+  {
+    "number": 88,
+    "name": "覆い包む者"
+  },
+  {
+    "number": 89,
+    "name": "暁"
+  },
+  {
+    "number": 90,
+    "name": "町"
+  },
+  {
+    "number": 91,
+    "name": "太陽"
+  },
+  {
+    "number": 92,
+    "name": "夜"
+  },
+  {
+    "number": 93,
+    "name": "朝"
+  },
+  {
+    "number": 94,
+    "name": "開放"
+  },
+  {
+    "number": 95,
+    "name": "いちじく"
+  },
+  {
+    "number": 96,
+    "name": "血の塊"
+  },
+  {
+    "number": 97,
+    "name": "運命"
+  },
+  {
+    "number": 98,
+    "name": "明白な証拠"
+  },
+  {
+    "number": 99,
+    "name": "地震"
+  },
+  {
+    "number": 100,
+    "name": "駆ける馬"
+  },
+  {
+    "number": 101,
+    "name": "衝撃"
+  },
+  {
+    "number": 102,
+    "name": "繁栄競争"
+  },
+  {
+    "number": 103,
+    "name": "時"
+  },
+  {
+    "number": 104,
+    "name": "陰口する者"
+  },
+  {
+    "number": 105,
+    "name": "象"
+  },
+  {
+    "number": 106,
+    "name": "クライシュ族"
+  },
+  {
+    "number": 107,
+    "name": "小物"
+  },
+  {
+    "number": 108,
+    "name": "豊かさ"
+  },
+  {
+    "number": 109,
+    "name": "不信仰者たち"
+  },
+  {
+    "number": 110,
+    "name": "援助"
+  },
+  {
+    "number": 111,
+    "name": "棕櫚繊維"
+  },
+  {
+    "number": 112,
+    "name": "純粋"
+  },
+  {
+    "number": 113,
+    "name": "暁明け"
+  },
+  {
+    "number": 114,
+    "name": "人々"
+  }
+]

@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "A Abertura"
+  },
+  {
+    "number": 2,
+    "name": "A Vaca"
+  },
+  {
+    "number": 3,
+    "name": "A Família de Imran"
+  },
+  {
+    "number": 4,
+    "name": "As Mulheres"
+  },
+  {
+    "number": 5,
+    "name": "A Mesa Servida"
+  },
+  {
+    "number": 6,
+    "name": "O Gado"
+  },
+  {
+    "number": 7,
+    "name": "As Alturas"
+  },
+  {
+    "number": 8,
+    "name": "O Espólio"
+  },
+  {
+    "number": 9,
+    "name": "O Arrependimento"
+  },
+  {
+    "number": 10,
+    "name": "Jonas"
+  },
+  {
+    "number": 11,
+    "name": "Hud"
+  },
+  {
+    "number": 12,
+    "name": "José"
+  },
+  {
+    "number": 13,
+    "name": "O Trovão"
+  },
+  {
+    "number": 14,
+    "name": "Abraão"
+  },
+  {
+    "number": 15,
+    "name": "Al-Hijr"
+  },
+  {
+    "number": 16,
+    "name": "As Abelhas"
+  },
+  {
+    "number": 17,
+    "name": "A Viagem Noturna"
+  },
+  {
+    "number": 18,
+    "name": "A Caverna"
+  },
+  {
+    "number": 19,
+    "name": "Maria"
+  },
+  {
+    "number": 20,
+    "name": "Ta-Ha"
+  },
+  {
+    "number": 21,
+    "name": "Os Profetas"
+  },
+  {
+    "number": 22,
+    "name": "A Peregrinação"
+  },
+  {
+    "number": 23,
+    "name": "Os Crentes"
+  },
+  {
+    "number": 24,
+    "name": "A Luz"
+  },
+  {
+    "number": 25,
+    "name": "O Discernimento"
+  },
+  {
+    "number": 26,
+    "name": "Os Poetas"
+  },
+  {
+    "number": 27,
+    "name": "A Formiga"
+  },
+  {
+    "number": 28,
+    "name": "A Narrativa"
+  },
+  {
+    "number": 29,
+    "name": "A Aranha"
+  },
+  {
+    "number": 30,
+    "name": "Os Romanos"
+  },
+  {
+    "number": 31,
+    "name": "Luqueman"
+  },
+  {
+    "number": 32,
+    "name": "A Prostração"
+  },
+  {
+    "number": 33,
+    "name": "Os Coligados"
+  },
+  {
+    "number": 34,
+    "name": "Sabá"
+  },
+  {
+    "number": 35,
+    "name": "O Criador"
+  },
+  {
+    "number": 36,
+    "name": "Ya-Sin"
+  },
+  {
+    "number": 37,
+    "name": "Os que se alinham"
+  },
+  {
+    "number": 38,
+    "name": "Sad"
+  },
+  {
+    "number": 39,
+    "name": "As Multidões"
+  },
+  {
+    "number": 40,
+    "name": "O Perdoador"
+  },
+  {
+    "number": 41,
+    "name": "Explicado em Detalhe"
+  },
+  {
+    "number": 42,
+    "name": "A Consulta"
+  },
+  {
+    "number": 43,
+    "name": "O Ornamento"
+  },
+  {
+    "number": 44,
+    "name": "A Fumaça"
+  },
+  {
+    "number": 45,
+    "name": "Os que se ajoelham"
+  },
+  {
+    "number": 46,
+    "name": "As Dunas"
+  },
+  {
+    "number": 47,
+    "name": "Maomé"
+  },
+  {
+    "number": 48,
+    "name": "A Vitória"
+  },
+  {
+    "number": 49,
+    "name": "Os Aposentos"
+  },
+  {
+    "number": 50,
+    "name": "Qaf"
+  },
+  {
+    "number": 51,
+    "name": "Os que espalham"
+  },
+  {
+    "number": 52,
+    "name": "A Montanha"
+  },
+  {
+    "number": 53,
+    "name": "A Estrela"
+  },
+  {
+    "number": 54,
+    "name": "A Lua"
+  },
+  {
+    "number": 55,
+    "name": "O Misericordioso"
+  },
+  {
+    "number": 56,
+    "name": "O Inevitável"
+  },
+  {
+    "number": 57,
+    "name": "O Ferro"
+  },
+  {
+    "number": 58,
+    "name": "A Disputante"
+  },
+  {
+    "number": 59,
+    "name": "A Reunião"
+  },
+  {
+    "number": 60,
+    "name": "A Provada"
+  },
+  {
+    "number": 61,
+    "name": "A Fileira"
+  },
+  {
+    "number": 62,
+    "name": "A Sexta-feira"
+  },
+  {
+    "number": 63,
+    "name": "Os Hipócritas"
+  },
+  {
+    "number": 64,
+    "name": "A Perda Mútua"
+  },
+  {
+    "number": 65,
+    "name": "O Divórcio"
+  },
+  {
+    "number": 66,
+    "name": "A Proibição"
+  },
+  {
+    "number": 67,
+    "name": "A Soberania"
+  },
+  {
+    "number": 68,
+    "name": "A Caneta"
+  },
+  {
+    "number": 69,
+    "name": "A Realidade"
+  },
+  {
+    "number": 70,
+    "name": "As Escadas"
+  },
+  {
+    "number": 71,
+    "name": "Noé"
+  },
+  {
+    "number": 72,
+    "name": "Os Jinn"
+  },
+  {
+    "number": 73,
+    "name": "O Envolto"
+  },
+  {
+    "number": 74,
+    "name": "O Encapuzado"
+  },
+  {
+    "number": 75,
+    "name": "A Ressurreição"
+  },
+  {
+    "number": 76,
+    "name": "O Homem"
+  },
+  {
+    "number": 77,
+    "name": "Os Enviados"
+  },
+  {
+    "number": 78,
+    "name": "A Notícia"
+  },
+  {
+    "number": 79,
+    "name": "Os que arrancam"
+  },
+  {
+    "number": 80,
+    "name": "Ele franzou o cenho"
+  },
+  {
+    "number": 81,
+    "name": "O Escurecimento"
+  },
+  {
+    "number": 82,
+    "name": "A Fenda"
+  },
+  {
+    "number": 83,
+    "name": "Os Fraudadores"
+  },
+  {
+    "number": 84,
+    "name": "A Fissura"
+  },
+  {
+    "number": 85,
+    "name": "As Constelações"
+  },
+  {
+    "number": 86,
+    "name": "O Visitante Noturno"
+  },
+  {
+    "number": 87,
+    "name": "O Altíssimo"
+  },
+  {
+    "number": 88,
+    "name": "A Cobertura"
+  },
+  {
+    "number": 89,
+    "name": "A Alvorada"
+  },
+  {
+    "number": 90,
+    "name": "A Cidade"
+  },
+  {
+    "number": 91,
+    "name": "O Sol"
+  },
+  {
+    "number": 92,
+    "name": "A Noite"
+  },
+  {
+    "number": 93,
+    "name": "A Manhã"
+  },
+  {
+    "number": 94,
+    "name": "O Alívio"
+  },
+  {
+    "number": 95,
+    "name": "O Figo"
+  },
+  {
+    "number": 96,
+    "name": "O Coágulo"
+  },
+  {
+    "number": 97,
+    "name": "O Decreto"
+  },
+  {
+    "number": 98,
+    "name": "A Prova Evidente"
+  },
+  {
+    "number": 99,
+    "name": "O Tremor"
+  },
+  {
+    "number": 100,
+    "name": "Os Corcéis"
+  },
+  {
+    "number": 101,
+    "name": "A Calamidade"
+  },
+  {
+    "number": 102,
+    "name": "A Competição"
+  },
+  {
+    "number": 103,
+    "name": "O Tempo"
+  },
+  {
+    "number": 104,
+    "name": "O Difamador"
+  },
+  {
+    "number": 105,
+    "name": "O Elefante"
+  },
+  {
+    "number": 106,
+    "name": "Os Coraixitas"
+  },
+  {
+    "number": 107,
+    "name": "A Ajuda"
+  },
+  {
+    "number": 108,
+    "name": "A Abundância"
+  },
+  {
+    "number": 109,
+    "name": "Os Incrédulos"
+  },
+  {
+    "number": 110,
+    "name": "O Socorro"
+  },
+  {
+    "number": 111,
+    "name": "A Fibra"
+  },
+  {
+    "number": 112,
+    "name": "A Sinceridade"
+  },
+  {
+    "number": 113,
+    "name": "A Alvorada"
+  },
+  {
+    "number": 114,
+    "name": "As Pessoas"
+  }
+]

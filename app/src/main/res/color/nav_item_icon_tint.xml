@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- مفعّل/محدّد -->
+    <item android:state_checked="true" android:color="#80D8FF"/>
+    <item android:state_pressed="true" android:color="#80D8FF"/>
+    <!-- الحالة الافتراضية -->
+    <item android:color="#60707A"/> <!-- رمادي هادئ للأيقونات غير المحددة -->
+</selector>

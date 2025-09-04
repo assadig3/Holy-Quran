@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qari_names">
+        <item>米沙里·拉希德·阿拉法西</item>
+        <item>阿卜杜勒·拉赫曼·苏代斯</item>
+        <item>苏德·舒赖姆</item>
+        <item>马赫尔·穆艾克利</item>
+        <item>法里斯·阿巴德</item>
+        <item>艾哈迈德·阿吉米</item>
+        <item>哈尼·里法伊</item>
+        <item>阿里·胡代菲</item>
+
+        <item>阿卜杜勒巴西特 (塔尔蒂勒 64kbps)</item>
+        <item>阿卜杜勒巴西特 (塔尔蒂勒 192kbps)</item>
+        <item>阿卜杜勒巴西特 (含泰基德 128kbps)</item>
+        <item>阿卜杜勒巴西特 (QuranExplorer)</item>
+
+        <item>敏沙维 (塔尔蒂勒 128kbps)</item>
+        <item>敏沙维 (含泰基德 64kbps)</item>
+        <item>敏沙维 (教学 128kbps)</item>
+
+        <item>马哈茂德·哈利勒·胡萨里 (64kbps)</item>
+        <item>马哈茂德·哈利勒·胡萨里 (128kbps)</item>
+        <item>胡萨里 (教学 128kbps)</item>
+        <item>胡萨里 (含泰基德 64kbps)</item>
+
+        <item>阿卜杜拉·朱哈尼 (128kbps)</item>
+        <item>阿卜杜拉·巴斯法尔 (64kbps)</item>
+        <item>阿卜杜拉·巴斯法尔 (192kbps)</item>
+        <item>阿卜杜拉·马特鲁德 (128kbps)</item>
+        <item>阿里·贾比尔 (64kbps)</item>
+        <item>艾曼·苏韦德 (64kbps)</item>
+        <item>萨拉赫·布代尔 (128kbps)</item>
+        <item>萨拉赫·布哈提尔 (128kbps)</item>
+        <item>亚瑟尔·多萨里 (128kbps)</item>
+        <item>亚瑟尔·萨拉马 (128kbps)</item>
+        <item>萨赫勒·亚辛 (128kbps)</item>
+        <item>纳赛尔·卡塔米 (128kbps)</item>
+        <item>哈尼·里法伊 (192kbps)</item>
+        <item>阿里·胡代菲 (128kbps)</item>
+
+        <item>易卜拉欣·阿赫达尔 (64kbps)</item>
+        <item>阿克拉姆·阿拉克米 (128kbps)</item>
+        <item>阿里·哈贾吉·苏西 (128kbps)</item>
+        <item>穆罕默德·阿尤布 (64kbps)</item>
+        <item>穆罕默德·吉布里勒 (64kbps)</item>
+        <item>穆罕默德·马哈茂德·塔布拉维 (64kbps)</item>
+        <item>穆赫辛·卡西姆 (192kbps)</item>
+        <item>穆斯塔法·伊斯梅尔 (48kbps)</item>
+        <item>纳比勒·里法伊 (48kbps)</item>
+        <item>哈利法·图奈吉 (64kbps)</item>
+        <item>苏德·加姆迪 (40kbps)</item>
+        <item>卡里姆·曼苏里 (40kbps)</item>
+        <item>阿齐兹·阿利利 (128kbps)</item>
+    </string-array>
+</resources>

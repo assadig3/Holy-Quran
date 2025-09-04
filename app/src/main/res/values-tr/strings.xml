@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Information -->
+    <string name="app_name">Kur’an-ı Kerim</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="settings_and_support">Ayarlar ve Destek</string>
+    <string name="setting">Ayarlar</string>
+    <string name="help">Yardım</string>
+    <string name="info">Hakkında</string>
+    <string name="share_and_rate">Paylaş ve Puanla</string>
+    <string name="share">Uygulamayı Paylaş</string>
+    <string name="share_qr">QR ile Paylaş</string>
+    <string name="rate_app">Uygulamayı Puanla</string>
+    <string name="other_apps">Diğer Uygulamalar</string>
+    <string name="exit">Çıkış</string>
+    <string name="about_app_description">Kur’an-ı Kerim — Kıraat, arama, favoriler, gece modu ve daha fazlasıyla okuma ve dinleme.</string>
+    <string name="help_title">Yardım</string>
+    <string name="help_content">Destek veya sorular için SSS bölümüne bakın ya da ayarlar üzerinden bizimle iletişime geçin.</string>
+    <string name="app_logo">Uygulama Logosu</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Ayarlar</string>
+    <string name="light">Açık</string>
+    <string name="dark">Koyu</string>
+    <string name="system_default">Sistem varsayılanı</string>
+    <string name="choose_font_size">Yazı tipi boyutunu seç</string>
+    <string name="scan_qr">Uygulamayı indirmek için QR tara</string>
+
+    <string name="navigation_drawer_open">Gezinme menüsünü aç</string>
+    <string name="navigation_drawer_close">Gezinme menüsünü kapat</string>
+
+    <!-- Tabs -->
+    <string name="tab_surahs">📖 Sureler</string>
+    <string name="tab_favorites">⭐ Favoriler</string>
+    <string name="tab_juz">🔢 Cüzler</string>
+
+    <!-- Advanced Features -->
+    <string name="quran_default_title">Kur’an-ı Kerim</string>
+    <string name="downloading_soon">İndirme özelliği yakında</string>
+    <string name="choose_tafsir">Tefsir seç</string>
+    <string name="tafseer_selected">Tefsir başarıyla seçildi!</string>
+    <string name="play_error">Kıraat oynatılamadı</string>
+    <string name="remove_from_favorites">Sayfa favorilerden kaldırıldı</string>
+    <string name="add_to_favorites">Sayfa favorilere eklendi</string>
+    <string name="repeat_settings">Tekrar ayarları</string>
+    <string name="repeat_assigned">Tekrar %1$s (%2$d kez)</string>
+    <string name="share_tafsir">Tefsiri paylaş</string>
+    <string name="tafseer_surah_ayah">Sure %1$s - Ayet %2$d</string>
+    <string name="ok">Tamam</string>
+    <string name="close">Kapat</string>
+    <string name="select_qari">Kârî seç</string>
+    <string name="select_tafsir">Tefsir seç</string>
+    <string name="ayah_options">Ayet seçenekleri</string>
+    <string name="copy">Kopyala</string>
+    <string name="share_ayah">Paylaş</string>
+    <string name="tafsir">Tefsir</string>
+    <string name="play">Oynat</string>
+    <string name="pause">Duraklat</string>
+    <string name="resume">Sürdür</string>
+    <string name="stop">Durdur</string>
+    <string name="repeat">Tekrar</string>
+    <string name="favorites">Favoriler</string>
+    <string name="remove">Kaldır</string>
+    <string name="add">Ekle</string>
+    <string name="last_visited_pages">Son sayfalar</string>
+    <string name="no_last_pages">Son sayfa yok</string>
+    <string name="go_to_page">Sayfaya git</string>
+    <string name="surah">Sure</string>
+    <string name="ayah">Ayet</string>
+    <string name="surah_search_hint">Sure adını ara</string>
+    <string name="no_tafsir_available">Bu ayet için tefsir yok</string>
+    <string name="juz">Cüz</string>
+    <string name="juz_start_page">Başlangıç sayfası %1$d</string>
+    <string name="juz_search_hint">Cüz numarası veya adıyla ara</string>
+    <string name="menu_clear_all_bookmarks">🗑️ Tüm yer imlerini temizle</string>
+    <string name="menu_clear_all_recent">🧹 Geçmişi temizle</string>
+    <string name="recent_pages_title">🕓 Son sayfalar</string>
+    <string name="favorite_pages_title">⭐ Favori sayfalar</string>
+
+    <string name="menu_last_read_juz">📌 Son okunan cüz</string>
+    <string name="menu_jump_to_juz">Cüze git</string>
+    <string name="menu_jump_to_surah">Sureye git</string>
+
+    <string name="reset_onboarding_button">Tanıtımı sıfırla</string>
+    <string name="reset_onboarding">Uygulama tanıtımını sıfırla</string>
+    <string name="choose_font">Yazı tipi boyutunu seç</string>
+    <string name="choose_language">Dili seç</string>
+    <string name="arabic">Arapça</string>
+    <string name="english">İngilizce</string>
+    <string name="choose_theme">Temayı seç</string>
+    <string name="theme_light">Açık</string>
+    <string name="theme_dark">Koyu</string>
+    <string name="theme_system">Sistem varsayılanı</string>
+    <string name="font_small">Küçük</string>
+    <string name="font_medium">Orta</string>
+    <string name="font_large">Büyük</string>
+    <string name="screen_options">Ekran seçenekleri</string>
+    <string name="keep_screen_on">Okuma sırasında ekranı açık tut</string>
+    <string name="font_changed">Yazı tipi boyutu değiştirildi</string>
+    <string name="settings_reset">Ayarlar sıfırlandı!</string>
+
+    <string name="page">Sayfa</string>
+    <string name="favorite">Favori</string>
+    <string name="clear_all_favorites">Tüm favorileri temizle</string>
+    <string name="clear_all_recent">Son geçmişi temizle</string>
+    <string name="favorite_pages">Favori sayfalar</string>
+    <string name="recent_pages">Son sayfalar</string>
+    <string name="no_favorites">Favori yok</string>
+    <string name="tap_to_open_page">Sayfayı açmak için dokunun</string>
+    <string name="all_favorites_cleared">Tüm favoriler temizlendi</string>
+    <string name="all_recent_cleared">Tüm geçmiş temizlendi</string>
+    <string name="bookmark_title">🕓 Sayfa %1$d</string>
+    <string name="favorite_page_hint">⭐ Sayfa %1$d</string>
+    <string name="favorite_page_item">⭐ Sayfa %1$d</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Ana Sayfa</string>
+    <string name="nav_search">Arama</string>
+    <string name="nav_settings">Ayarlar</string>
+    <string name="nav_help">Yardım</string>
+    <string name="nav_about">Hakkında</string>
+    <string name="nav_share_app">Uygulamayı Paylaş</string>
+    <string name="nav_share_qr">QR ile Paylaş</string>
+    <string name="nav_rate_app">Uygulamayı Puanla</string>
+    <string name="nav_other_apps">Diğer Uygulamalar</string>
+
+    <!-- Exit -->
+    <string name="exit_confirm_title">Çıkışı onayla</string>
+    <string name="exit_confirm_message">Uygulamadan çıkmak istiyor musunuz?</string>
+    <string name="yes">Evet</string>
+
+    <!-- Version -->
+    <string name="version_loading">Sürüm kontrol ediliyor…</string>
+    <string name="version_format">Sürüm %1$s</string>
+    <string name="version_example">Sürüm 1.0.23</string>
+
+    <!-- Extra -->
+    <string name="search">Arama</string>
+    <string name="search_empty">Bir kelime ya da ifade ara…</string>
+    <string name="search_results_placeholder">Sonuçlar</string>
+    <string name="qr_code">QR kodu</string>
+    <string name="share_qr_hint">QR’yi tara veya bağlantıyı paylaş</string>
+
+    <string name="header_developer_by">Geliştirici: %1$s</string>
+    <string name="header_developer_by_example">Geliştirici: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">7 Haziran 2025 • 10 Zilhicce 1446</string>
+
+    <string name="share_message">Sevap için Kur’an uygulamasını paylaşın: %1$s</string>
+    <string name="share_chooser_title">Tefsiri paylaş</string>
+
+    <string name="hijri_placeholder">Hicrî tarih</string>
+
+    <string name="action_toggle_page_bookmark">Sayfayı işaretle</string>
+    <string name="action_toggle_repeat">Tekrar</string>
+    <string name="action_download_tafsirs">Tefsirleri indir</string>
+    <string name="action_select_tafsir">Tefsir seç</string>
+
+    <string name="download_title">Kur’an sayfaları indirilirken lütfen bekleyin… Bu arada zikir edip Peygamber’e ﷺ salavat getirebilirsiniz</string>
+    <string name="download_ready">İndirmeye hazır</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">Şimdi indir</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">İndir</string>
+
+    <!-- Dialog -->
+    <string name="go_to_surah">Sureye git</string>
+    <string name="search_surah_hint">🔍 Sure ara</string>
+    <string name="cancel">İptal</string>
+
+    <!-- Juz -->
+    <string name="go_to_juz">Cüze git</string>
+    <string name="search_juz_hint">🔍 Cüz ara</string>
+
+    <!-- Repeat dialog -->
+    <string name="repeat_ayah">Ayet</string>
+    <string name="repeat_count_label">Tekrar sayısı:</string>
+
+    <!-- Tafsir dialog -->
+    <string name="tafsir_ayah_title">Sure … - Ayet …</string>
+    <string name="tafsir_sample_ayah">Bismillahirrahmanirrahim</string>
+    <string name="tafsir_text_placeholder">Tefsir metni buraya</string>
+
+    <!-- Pages download UI -->
+    <string name="pages_download_starting">İndirme başlatılıyor…</string>
+    <string name="pages_download_progress">Sayfa %1$d / %2$d indiriliyor</string>
+    <string name="pages_download_done">İndirme tamamlandı.</string>
+    <string name="pages_download_failed">İndirme başarısız.</string>
+    <string name="pages_download_canceled">İptal edildi.</string>
+
+    <!-- Repeat UI -->
+    <string name="repeat_settings_title">Tekrar ayarları</string>
+
+    <!-- Audio batch downloader -->
+    <string name="no_recitations_to_download">İndirilecek bağlantı yok.</string>
+    <string name="downloading_recitations">Kıraatlar indiriliyor…</string>
+    <string name="recitations_saved">Kıraatlar kaydedildi!</string>
+    <string name="download_error">İndirme sırasında hata oluştu.</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">Ayet metni mevcut değil</string>
+
+    <string name="qari_icon">Kârî simgesi</string>
+    <string name="change_language">Dili değiştir</string>
+    <string name="qari_selected_toast">Seçildi: %1$s</string>
+
+    <string name="choose_qari_title">Kârî seç</string>
+
+    <string name="choose_language_title">Uygulama dilini seç</string>
+    <string name="choose_language_subtitle">Dili daha sonra Ayarlar’dan değiştirebilirsiniz</string>
+    <string name="continue_btn">Devam</string>
+    <string name="device_language_option">Cihaz dilini kullan</string>
+
+    <!-- ✅ Language names -->
+    <string name="lang_arabic">Arapça</string>
+    <string name="lang_english">İngilizce</string>
+    <string name="lang_turkish">Türkçe</string>
+    <string name="lang_indonesian">Endonezce</string>
+    <string name="lang_urdu">Urduca</string>
+    <string name="lang_persian">Farsça</string>
+    <string name="lang_bengali">Bengalce</string>
+    <string name="lang_german">Almanca</string>
+    <string name="lang_spanish">İspanyolca</string>
+    <string name="lang_french">Fransızca</string>
+    <string name="lang_russian">Rusça</string>
+    <string name="lang_hindi">Hintçe</string>
+    <string name="lang_chinese">Çince</string>
+    <string name="lang_japanese">Japonca</string>
+    <string name="lang_korean">Korece</string>
+    <string name="lang_portuguese">Portekizce</string>
+    <string name="lang_italian">İtalyanca</string>
+    <string name="lang_swahili">Svahili</string>
+    <string name="lang_thai">Tayca</string>
+
+    <string name="continue_text">Devam</string>
+    <string name="language_selection_title">Dil seçimi</string>
+
+    <!-- Search screen -->
+    <string name="search_title">Arama</string>
+    <string name="search_button">Ara</string>
+    <string name="tab_surah">Sureler</string>
+    <string name="tab_fav">Favoriler</string>
+
+    <string name="update_preparing">Güncelleme kontrol ediliyor…</string>
+    <string name="update_downloading">Güncelleme indiriliyor…</string>
+    <string name="update_downloaded_tap_to_restart">İndirme tamamlandı — yeniden başlatıp yüklemek için dokunun</string>
+    <string name="update_installing">Güncelleme yükleniyor…</string>
+    <string name="update_available_message">Yeni güncelleme mevcut. Lütfen en son sürüme güncelleyin.</string>
+
+    <string name="search_hint">Arama metni yazın…</string>
+    <string name="search_counter_format">Sonuç sayısı: %1$d</string>
+    <string name="no_internet_short">İnternet yok</string>
+
+    <!-- Marquee while downloading pages -->
+    <string name="pages_download_title_marquee">Kur’an sayfaları yüklenirken lütfen bekleyin — Zikre devam edin 🌿</string>
+
+    <!-- General -->
+    <string name="downloading_quran_pages">Kur’an sayfaları indiriliyor…</string>
+    <string name="remaining_time">Kalan süre: …</string>
+    <string name="please_rate_app">Lütfen uygulamayı değerlendirerek geliştirmemize yardımcı olun 🌟</string>
+    <string name="juz_format">Cüz %1$d</string>
+
+    <!-- Buttons -->
+    <string name="btn_cancel">İptal</string>
+    <string name="btn_ok">Tamam</string>
+
+</resources>

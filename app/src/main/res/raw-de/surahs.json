@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "Die Eröffnung"
+  },
+  {
+    "number": 2,
+    "name": "Die Kuh"
+  },
+  {
+    "number": 3,
+    "name": "Die Familie Imran"
+  },
+  {
+    "number": 4,
+    "name": "Die Frauen"
+  },
+  {
+    "number": 5,
+    "name": "Der Tisch"
+  },
+  {
+    "number": 6,
+    "name": "Das Vieh"
+  },
+  {
+    "number": 7,
+    "name": "Die Höhen"
+  },
+  {
+    "number": 8,
+    "name": "Die Beute"
+  },
+  {
+    "number": 9,
+    "name": "Die Reue"
+  },
+  {
+    "number": 10,
+    "name": "Jonas"
+  },
+  {
+    "number": 11,
+    "name": "Hud"
+  },
+  {
+    "number": 12,
+    "name": "Joseph"
+  },
+  {
+    "number": 13,
+    "name": "Der Donner"
+  },
+  {
+    "number": 14,
+    "name": "Abraham"
+  },
+  {
+    "number": 15,
+    "name": "Der Felsen"
+  },
+  {
+    "number": 16,
+    "name": "Die Biene"
+  },
+  {
+    "number": 17,
+    "name": "Die Nachtreise"
+  },
+  {
+    "number": 18,
+    "name": "Die Höhle"
+  },
+  {
+    "number": 19,
+    "name": "Maria"
+  },
+  {
+    "number": 20,
+    "name": "Ta-Ha"
+  },
+  {
+    "number": 21,
+    "name": "Die Propheten"
+  },
+  {
+    "number": 22,
+    "name": "Die Pilgerfahrt"
+  },
+  {
+    "number": 23,
+    "name": "Die Gläubigen"
+  },
+  {
+    "number": 24,
+    "name": "Das Licht"
+  },
+  {
+    "number": 25,
+    "name": "Die Unterscheidung"
+  },
+  {
+    "number": 26,
+    "name": "Die Dichter"
+  },
+  {
+    "number": 27,
+    "name": "Die Ameise"
+  },
+  {
+    "number": 28,
+    "name": "Die Geschichte"
+  },
+  {
+    "number": 29,
+    "name": "Die Spinne"
+  },
+  {
+    "number": 30,
+    "name": "Die Römer"
+  },
+  {
+    "number": 31,
+    "name": "Luqman"
+  },
+  {
+    "number": 32,
+    "name": "Die Niederwerfung"
+  },
+  {
+    "number": 33,
+    "name": "Die Parteien"
+  },
+  {
+    "number": 34,
+    "name": "Saba"
+  },
+  {
+    "number": 35,
+    "name": "Der Schöpfer"
+  },
+  {
+    "number": 36,
+    "name": "Ya-Sin"
+  },
+  {
+    "number": 37,
+    "name": "Die sich in Reihen Aufstellenden"
+  },
+  {
+    "number": 38,
+    "name": "Sad"
+  },
+  {
+    "number": 39,
+    "name": "Die Scharen"
+  },
+  {
+    "number": 40,
+    "name": "Der Vergeber"
+  },
+  {
+    "number": 41,
+    "name": "Ausführlich dargelegt"
+  },
+  {
+    "number": 42,
+    "name": "Die Beratung"
+  },
+  {
+    "number": 43,
+    "name": "Der Schmuck"
+  },
+  {
+    "number": 44,
+    "name": "Der Rauch"
+  },
+  {
+    "number": 45,
+    "name": "Das Knieen"
+  },
+  {
+    "number": 46,
+    "name": "Die Dünen"
+  },
+  {
+    "number": 47,
+    "name": "Muhammad"
+  },
+  {
+    "number": 48,
+    "name": "Der Sieg"
+  },
+  {
+    "number": 49,
+    "name": "Die Gemächer"
+  },
+  {
+    "number": 50,
+    "name": "Qaf"
+  },
+  {
+    "number": 51,
+    "name": "Die Aufstreuenden"
+  },
+  {
+    "number": 52,
+    "name": "Der Berg"
+  },
+  {
+    "number": 53,
+    "name": "Der Stern"
+  },
+  {
+    "number": 54,
+    "name": "Der Mond"
+  },
+  {
+    "number": 55,
+    "name": "Der Barmherzige"
+  },
+  {
+    "number": 56,
+    "name": "Das Unvermeidliche"
+  },
+  {
+    "number": 57,
+    "name": "Das Eisen"
+  },
+  {
+    "number": 58,
+    "name": "Die Streitende"
+  },
+  {
+    "number": 59,
+    "name": "Die Versammlung"
+  },
+  {
+    "number": 60,
+    "name": "Die Geprüfte"
+  },
+  {
+    "number": 61,
+    "name": "Die Reihe"
+  },
+  {
+    "number": 62,
+    "name": "Das Freitagsgebet"
+  },
+  {
+    "number": 63,
+    "name": "Die Heuchler"
+  },
+  {
+    "number": 64,
+    "name": "Der Betrug"
+  },
+  {
+    "number": 65,
+    "name": "Die Scheidung"
+  },
+  {
+    "number": 66,
+    "name": "Das Verbot"
+  },
+  {
+    "number": 67,
+    "name": "Die Herrschaft"
+  },
+  {
+    "number": 68,
+    "name": "Das Schreibrohr"
+  },
+  {
+    "number": 69,
+    "name": "Die Wirklichkeit"
+  },
+  {
+    "number": 70,
+    "name": "Die Himmelsleitern"
+  },
+  {
+    "number": 71,
+    "name": "Noah"
+  },
+  {
+    "number": 72,
+    "name": "Die Dschinn"
+  },
+  {
+    "number": 73,
+    "name": "Der Eingehüllte"
+  },
+  {
+    "number": 74,
+    "name": "Der Bedeckte"
+  },
+  {
+    "number": 75,
+    "name": "Die Auferstehung"
+  },
+  {
+    "number": 76,
+    "name": "Der Mensch"
+  },
+  {
+    "number": 77,
+    "name": "Die Entsandten"
+  },
+  {
+    "number": 78,
+    "name": "Die Kunde"
+  },
+  {
+    "number": 79,
+    "name": "Die Herausziehenden"
+  },
+  {
+    "number": 80,
+    "name": "Er runzelte die Stirn"
+  },
+  {
+    "number": 81,
+    "name": "Das Zusammenrollen"
+  },
+  {
+    "number": 82,
+    "name": "Das Aufbrechen"
+  },
+  {
+    "number": 83,
+    "name": "Die Betrüger"
+  },
+  {
+    "number": 84,
+    "name": "Das Spalten"
+  },
+  {
+    "number": 85,
+    "name": "Die Sternbilder"
+  },
+  {
+    "number": 86,
+    "name": "Der Morgenstern"
+  },
+  {
+    "number": 87,
+    "name": "Der Höchste"
+  },
+  {
+    "number": 88,
+    "name": "Die Überdeckende"
+  },
+  {
+    "number": 89,
+    "name": "Die Morgendämmerung"
+  },
+  {
+    "number": 90,
+    "name": "Die Stadt"
+  },
+  {
+    "number": 91,
+    "name": "Die Sonne"
+  },
+  {
+    "number": 92,
+    "name": "Die Nacht"
+  },
+  {
+    "number": 93,
+    "name": "Der Vormittag"
+  },
+  {
+    "number": 94,
+    "name": "Die Öffnung"
+  },
+  {
+    "number": 95,
+    "name": "Die Feige"
+  },
+  {
+    "number": 96,
+    "name": "Das Blutgerinnsel"
+  },
+  {
+    "number": 97,
+    "name": "Die Bestimmung"
+  },
+  {
+    "number": 98,
+    "name": "Der klare Beweis"
+  },
+  {
+    "number": 99,
+    "name": "Das Beben"
+  },
+  {
+    "number": 100,
+    "name": "Die Rennenden"
+  },
+  {
+    "number": 101,
+    "name": "Das Schreckliche Ereignis"
+  },
+  {
+    "number": 102,
+    "name": "Die Vermehrung"
+  },
+  {
+    "number": 103,
+    "name": "Die Zeit"
+  },
+  {
+    "number": 104,
+    "name": "Der Verleumder"
+  },
+  {
+    "number": 105,
+    "name": "Der Elefant"
+  },
+  {
+    "number": 106,
+    "name": "Die Quraisch"
+  },
+  {
+    "number": 107,
+    "name": "Die Hilfeleistung"
+  },
+  {
+    "number": 108,
+    "name": "Die Fülle"
+  },
+  {
+    "number": 109,
+    "name": "Die Ungläubigen"
+  },
+  {
+    "number": 110,
+    "name": "Der Sieg"
+  },
+  {
+    "number": 111,
+    "name": "Die Palmfaser"
+  },
+  {
+    "number": 112,
+    "name": "Die Aufrichtigkeit"
+  },
+  {
+    "number": 113,
+    "name": "Der Tagesanbruch"
+  },
+  {
+    "number": 114,
+    "name": "Die Menschen"
+  }
+]

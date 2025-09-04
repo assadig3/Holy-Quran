@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "Ufunguzi"
+  },
+  {
+    "number": 2,
+    "name": "Ng'ombe"
+  },
+  {
+    "number": 3,
+    "name": "Familia ya Imran"
+  },
+  {
+    "number": 4,
+    "name": "Wanawake"
+  },
+  {
+    "number": 5,
+    "name": "Meza Iliyoandaliwa"
+  },
+  {
+    "number": 6,
+    "name": "Mifugo"
+  },
+  {
+    "number": 7,
+    "name": "Vilele"
+  },
+  {
+    "number": 8,
+    "name": "Nyara"
+  },
+  {
+    "number": 9,
+    "name": "Toba"
+  },
+  {
+    "number": 10,
+    "name": "Yunus"
+  },
+  {
+    "number": 11,
+    "name": "Hud"
+  },
+  {
+    "number": 12,
+    "name": "Yusuf"
+  },
+  {
+    "number": 13,
+    "name": "Radi"
+  },
+  {
+    "number": 14,
+    "name": "Ibrahim"
+  },
+  {
+    "number": 15,
+    "name": "Hijr"
+  },
+  {
+    "number": 16,
+    "name": "Nyuki"
+  },
+  {
+    "number": 17,
+    "name": "Safari ya Usiku"
+  },
+  {
+    "number": 18,
+    "name": "Pango"
+  },
+  {
+    "number": 19,
+    "name": "Maryam"
+  },
+  {
+    "number": 20,
+    "name": "Ta-Ha"
+  },
+  {
+    "number": 21,
+    "name": "Manabii"
+  },
+  {
+    "number": 22,
+    "name": "Hija"
+  },
+  {
+    "number": 23,
+    "name": "Waumini"
+  },
+  {
+    "number": 24,
+    "name": "Nuru"
+  },
+  {
+    "number": 25,
+    "name": "Utofauti"
+  },
+  {
+    "number": 26,
+    "name": "Washairi"
+  },
+  {
+    "number": 27,
+    "name": "Chungu"
+  },
+  {
+    "number": 28,
+    "name": "Hadithi"
+  },
+  {
+    "number": 29,
+    "name": "Buibui"
+  },
+  {
+    "number": 30,
+    "name": "Warumi"
+  },
+  {
+    "number": 31,
+    "name": "Luqman"
+  },
+  {
+    "number": 32,
+    "name": "Sujudu"
+  },
+  {
+    "number": 33,
+    "name": "Washirika"
+  },
+  {
+    "number": 34,
+    "name": "Sheba"
+  },
+  {
+    "number": 35,
+    "name": "Muumba"
+  },
+  {
+    "number": 36,
+    "name": "Ya-Sin"
+  },
+  {
+    "number": 37,
+    "name": "Waliopangwa"
+  },
+  {
+    "number": 38,
+    "name": "Sad"
+  },
+  {
+    "number": 39,
+    "name": "Makundi"
+  },
+  {
+    "number": 40,
+    "name": "Msamehevu"
+  },
+  {
+    "number": 41,
+    "name": "Iliyofafanuliwa kwa Kina"
+  },
+  {
+    "number": 42,
+    "name": "Ushauri"
+  },
+  {
+    "number": 43,
+    "name": "Mapambo"
+  },
+  {
+    "number": 44,
+    "name": "Moshi"
+  },
+  {
+    "number": 45,
+    "name": "Aliyepiga Magoti"
+  },
+  {
+    "number": 46,
+    "name": "Vilima vya Mchanga"
+  },
+  {
+    "number": 47,
+    "name": "Muhammad"
+  },
+  {
+    "number": 48,
+    "name": "Ushindi"
+  },
+  {
+    "number": 49,
+    "name": "Vyumba"
+  },
+  {
+    "number": 50,
+    "name": "Qaf"
+  },
+  {
+    "number": 51,
+    "name": "Watawanyaji"
+  },
+  {
+    "number": 52,
+    "name": "Mlima"
+  },
+  {
+    "number": 53,
+    "name": "Nyota"
+  },
+  {
+    "number": 54,
+    "name": "Mwezi"
+  },
+  {
+    "number": 55,
+    "name": "Mwenye Rehema"
+  },
+  {
+    "number": 56,
+    "name": "Isiyoweza Kuepukika"
+  },
+  {
+    "number": 57,
+    "name": "Chuma"
+  },
+  {
+    "number": 58,
+    "name": "Mwanamke Anayebishana"
+  },
+  {
+    "number": 59,
+    "name": "Kukusanyika"
+  },
+  {
+    "number": 60,
+    "name": "Aliyejaribiwa"
+  },
+  {
+    "number": 61,
+    "name": "Mstari"
+  },
+  {
+    "number": 62,
+    "name": "Ijumaa"
+  },
+  {
+    "number": 63,
+    "name": "Wanafiki"
+  },
+  {
+    "number": 64,
+    "name": "Hasara"
+  },
+  {
+    "number": 65,
+    "name": "Talaka"
+  },
+  {
+    "number": 66,
+    "name": "Marufuku"
+  },
+  {
+    "number": 67,
+    "name": "Ufalme"
+  },
+  {
+    "number": 68,
+    "name": "Kalamu"
+  },
+  {
+    "number": 69,
+    "name": "Uhakika"
+  },
+  {
+    "number": 70,
+    "name": "Ngazi"
+  },
+  {
+    "number": 71,
+    "name": "Nuhu"
+  },
+  {
+    "number": 72,
+    "name": "Majini"
+  },
+  {
+    "number": 73,
+    "name": "Aliyefunikwa"
+  },
+  {
+    "number": 74,
+    "name": "Aliyevikwa"
+  },
+  {
+    "number": 75,
+    "name": "Kufufuka"
+  },
+  {
+    "number": 76,
+    "name": "Binadamu"
+  },
+  {
+    "number": 77,
+    "name": "Waliotumwa"
+  },
+  {
+    "number": 78,
+    "name": "Habari"
+  },
+  {
+    "number": 79,
+    "name": "Wanaoondoa"
+  },
+  {
+    "number": 80,
+    "name": "Alikunja Uso"
+  },
+  {
+    "number": 81,
+    "name": "Kufunika"
+  },
+  {
+    "number": 82,
+    "name": "Kupasuka"
+  },
+  {
+    "number": 83,
+    "name": "Wadanganyifu"
+  },
+  {
+    "number": 84,
+    "name": "Kupasuka"
+  },
+  {
+    "number": 85,
+    "name": "Nyota"
+  },
+  {
+    "number": 86,
+    "name": "Mgeni wa Usiku"
+  },
+  {
+    "number": 87,
+    "name": "Aliye Juu"
+  },
+  {
+    "number": 88,
+    "name": "Aliyefunika"
+  },
+  {
+    "number": 89,
+    "name": "Alfajiri"
+  },
+  {
+    "number": 90,
+    "name": "Mji"
+  },
+  {
+    "number": 91,
+    "name": "Jua"
+  },
+  {
+    "number": 92,
+    "name": "Usiku"
+  },
+  {
+    "number": 93,
+    "name": "Asubuhi"
+  },
+  {
+    "number": 94,
+    "name": "Faraja"
+  },
+  {
+    "number": 95,
+    "name": "Tini"
+  },
+  {
+    "number": 96,
+    "name": "Pande la Damu"
+  },
+  {
+    "number": 97,
+    "name": "Qadr"
+  },
+  {
+    "number": 98,
+    "name": "Ushahidi Wazi"
+  },
+  {
+    "number": 99,
+    "name": "Mtikisiko"
+  },
+  {
+    "number": 100,
+    "name": "Farasi Wanaokimbia"
+  },
+  {
+    "number": 101,
+    "name": "Mshtuko Mkubwa"
+  },
+  {
+    "number": 102,
+    "name": "Mashindano ya Mali"
+  },
+  {
+    "number": 103,
+    "name": "Wakati"
+  },
+  {
+    "number": 104,
+    "name": "Mchongeaji"
+  },
+  {
+    "number": 105,
+    "name": "Ndovu"
+  },
+  {
+    "number": 106,
+    "name": "Waquraishi"
+  },
+  {
+    "number": 107,
+    "name": "Msaada"
+  },
+  {
+    "number": 108,
+    "name": "Wingi"
+  },
+  {
+    "number": 109,
+    "name": "Wakafiri"
+  },
+  {
+    "number": 110,
+    "name": "Msaada"
+  },
+  {
+    "number": 111,
+    "name": "Nyuzinyuzi"
+  },
+  {
+    "number": 112,
+    "name": "Uaminifu"
+  },
+  {
+    "number": 113,
+    "name": "Alfajiri"
+  },
+  {
+    "number": 114,
+    "name": "Watu"
+  }
+]

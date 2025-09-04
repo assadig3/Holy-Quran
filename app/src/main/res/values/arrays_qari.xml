@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- أسماء القرّاء (تُترجم إن أحببت عبر نسخ الملف في values-en/ …الخ) -->
+    <string-array name="qari_names">
+        <item>مشاري راشد العفاسي</item>
+        <item>عبدالرحمن السديس</item>
+        <item>سعود الشريم</item>
+        <item>ماهر المعيقلي</item>
+        <item>فارس عباد</item>
+        <item>أحمد العجمي</item>
+        <item>هاني الرفاعي</item>
+        <item>علي الحذيفي</item>
+
+        <item>عبدالباسط (مرتل 64kbps)</item>
+        <item>عبدالباسط (مرتل 192kbps)</item>
+        <item>عبدالباسط (مجوّد 128kbps)</item>
+        <item>عبدالباسط (QuranExplorer)</item>
+
+        <item>المنشاوي (مرتل 128kbps)</item>
+        <item>المنشاوي (مجوّد 64kbps)</item>
+        <item>المنشاوي (المعلّم 128kbps)</item>
+
+        <item>محمود خليل الحصري (64kbps)</item>
+        <item>محمود خليل الحصري (128kbps)</item>
+        <item>الحصري المُعلِّم (128kbps)</item>
+        <item>الحصري مجوّد (64kbps)</item>
+
+        <item>عبدالله الجهني (128kbps)</item>
+        <item>عبدالله بصفر (64kbps)</item>
+        <item>عبدالله بصفر (192kbps)</item>
+        <item>عبدالله مطرود (128kbps)</item>
+        <item>علي جابر (64kbps)</item>
+        <item>أيمن سويد (64kbps)</item>
+        <item>صلاح البدير (128kbps)</item>
+        <item>صلاح أبو عرفة/البُخَيتِر (128kbps)</item>
+        <item>ياسر الدوسري (128kbps)</item>
+        <item>ياسر سلامة (128kbps)</item>
+        <item>سهل ياسين (128kbps)</item>
+        <item>ناصر القطامي (128kbps)</item>
+        <item>هاني الرفاعي (192kbps)</item>
+        <item>علي الحذيفي (128kbps)</item>
+
+        <item>إبراهيم الأخضر (64kbps)</item>
+        <item>أكرم العلاقمي (128kbps)</item>
+        <item>علي حجاج السّوسي (128kbps)</item>
+        <item>محمد أيوب (64kbps)</item>
+        <item>محمد جبريل (64kbps)</item>
+        <item>محمد محمود الطبلاوي (64kbps)</item>
+        <item>محسن القاسم (192kbps)</item>
+        <item>مصطفى إسماعيل (48kbps)</item>
+        <item>نبيل الرفاعي (48kbps)</item>
+        <item>خليفة الطنيجي (64kbps)</item>
+        <item>سعود الغامدي (40kbps)</item>
+        <item>كريم منصوري (40kbps)</item>
+        <item>عزيز عليلي (128kbps)</item>
+    </string-array>
+
+    <!-- معرفات القرّاء (لا تُترجم) -->
+    <string-array name="qari_ids" translatable="false">
+        <item>alafasy</item>
+        <item>sudais</item>
+        <item>shuraym</item>
+        <item>muaiqly</item>
+        <item>fares</item>
+        <item>ajamy</item>
+        <item>rifai_hani</item>
+        <item>hudhaify</item>
+
+        <item>abdulbasit_murattal64</item>
+        <item>abdulbasit_murattal192</item>
+        <item>abdulbasit_mujawwad128</item>
+        <item>abdulsamad_qe64</item>
+
+        <item>minshawy_murattal128</item>
+        <item>minshawy_mujawwad64</item>
+        <item>minshawy_teacher128</item>
+
+        <item>husary_64</item>
+        <item>husary_128</item>
+        <item>husary_muallim128</item>
+        <item>husary_mujawwad64</item>
+
+        <item>juhany128</item>
+        <item>basfar64</item>
+        <item>basfar192</item>
+        <item>matroud128</item>
+        <item>ali_jaber64</item>
+        <item>ayman_sowaid64</item>
+        <item>budair128</item>
+        <item>bukhatir128</item>
+        <item>dossary128</item>
+        <item>salamah128</item>
+        <item>sahl_yassin128</item>
+        <item>nasser_alqatami128</item>
+        <item>hani_rifai192</item>
+        <item>hudhaify128</item>
+
+        <item>ibrahim_akhdar64</item>
+        <item>akram_alaqimy128</item>
+        <item>ali_suesy128</item>
+        <item>muhammad_ayyoub64</item>
+        <item>muhammad_jibreel64</item>
+        <item>tablawi64</item>
+        <item>muhsin_qasim192</item>
+        <item>mustafa_ismail48</item>
+        <item>nabil_rifai48</item>
+        <item>khalifa_tunaiji64</item>
+        <item>ghamdi40</item>
+        <item>karim_mansoori40</item>
+        <item>aziz_alili128</item>
+    </string-array>
+
+    <!-- روابط مجلدات القرّاء (لا تُترجم) -->
+    <string-array name="qari_urls" translatable="false">
+        <item>https://everyayah.com/data/Alafasy_64kbps/</item>
+        <item>https://everyayah.com/data/Abdurrahmaan_As-Sudais_64kbps/</item>
+        <item>https://everyayah.com/data/Saood_ash-Shuraym_64kbps/</item>
+        <item>https://everyayah.com/data/Maher_AlMuaiqly_64kbps/</item>
+        <item>https://everyayah.com/data/Fares_Abbad_64kbps/</item>
+        <item>https://everyayah.com/data/Ahmed_ibn_Ali_al-Ajamy_64kbps_QuranExplorer.Com/</item>
+        <item>https://everyayah.com/data/Hani_Rifai_64kbps/</item>
+        <item>https://everyayah.com/data/Hudhaify_64kbps/</item>
+
+        <item>https://everyayah.com/data/Abdul_Basit_Murattal_64kbps/</item>
+        <item>https://everyayah.com/data/Abdul_Basit_Murattal_192kbps/</item>
+        <item>https://everyayah.com/data/Abdul_Basit_Mujawwad_128kbps/</item>
+        <item>https://everyayah.com/data/AbdulSamad_64kbps_QuranExplorer.Com/</item>
+
+        <item>https://everyayah.com/data/Minshawy_Murattal_128kbps/</item>
+        <item>https://everyayah.com/data/Minshawy_Mujawwad_64kbps/</item>
+        <item>https://everyayah.com/data/Minshawy_Teacher_128kbps/</item>
+
+        <item>https://everyayah.com/data/Husary_64kbps/</item>
+        <item>https://everyayah.com/data/Husary_128kbps/</item>
+        <item>https://everyayah.com/data/Husary_Muallim_128kbps/</item>
+        <item>https://everyayah.com/data/Husary_Mujawwad_64kbps/</item>
+
+        <item>https://everyayah.com/data/Abdullaah_3awwaad_Al-Juhaynee_128kbps/</item>
+        <item>https://everyayah.com/data/Abdullah_Basfar_64kbps/</item>
+        <item>https://everyayah.com/data/Abdullah_Basfar_192kbps/</item>
+        <item>https://everyayah.com/data/Abdullah_Matroud_128kbps/</item>
+        <item>https://everyayah.com/data/Ali_Jaber_64kbps/</item>
+        <item>https://everyayah.com/data/Ayman_Sowaid_64kbps/</item>
+        <item>https://everyayah.com/data/Salah_Al_Budair_128kbps/</item>
+        <item>https://everyayah.com/data/Salaah_AbdulRahman_Bukhatir_128kbps/</item>
+        <item>https://everyayah.com/data/Yasser_Ad-Dussary_128kbps/</item>
+        <item>https://everyayah.com/data/Yaser_Salamah_128kbps/</item>
+        <item>https://everyayah.com/data/Sahl_Yassin_128kbps/</item>
+        <item>https://everyayah.com/data/Nasser_Alqatami_128kbps/</item>
+        <item>https://everyayah.com/data/Hani_Rifai_192kbps/</item>
+        <item>https://everyayah.com/data/Hudhaify_128kbps/</item>
+
+        <item>https://everyayah.com/data/Ibrahim_Akhdar_64kbps/</item>
+        <item>https://everyayah.com/data/Akram_AlAlaqimy_128kbps/</item>
+        <item>https://everyayah.com/data/Ali_Hajjaj_AlSuesy_128kbps/</item>
+        <item>https://everyayah.com/data/Muhammad_Ayyoub_64kbps/</item>
+        <item>https://everyayah.com/data/Muhammad_Jibreel_64kbps/</item>
+        <item>https://everyayah.com/data/Mohammad_al_Tablaway_64kbps/</item>
+        <item>https://everyayah.com/data/Muhsin_Al_Qasim_192kbps/</item>
+        <item>https://everyayah.com/data/Mustafa_Ismail_48kbps/</item>
+        <item>https://everyayah.com/data/Nabil_Rifa3i_48kbps/</item>
+        <item>https://everyayah.com/data/khalefa_al_tunaiji_64kbps/</item>
+        <item>https://everyayah.com/data/Ghamadi_40kbps/</item>
+        <item>https://everyayah.com/data/Karim_Mansoori_40kbps/</item>
+        <item>https://everyayah.com/data/aziz_alili_128kbps/</item>
+    </string-array>
+
+</resources>

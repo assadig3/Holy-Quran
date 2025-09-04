@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_last_read"
+        android:icon="@drawable/ic_bookmark"
+        android:title="@string/menu_last_read_juz"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_jump_to_juz"
+        android:icon="@drawable/ic_jump"
+        android:title="@string/menu_jump_to_juz"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_jump_to_surah"
+        android:icon="@drawable/ic_jump"
+        android:title="@string/menu_jump_to_surah"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "Pembukaan"
+  },
+  {
+    "number": 2,
+    "name": "Sapi Betina"
+  },
+  {
+    "number": 3,
+    "name": "Keluarga Imran"
+  },
+  {
+    "number": 4,
+    "name": "Wanita"
+  },
+  {
+    "number": 5,
+    "name": "Hidangan"
+  },
+  {
+    "number": 6,
+    "name": "Binatang Ternak"
+  },
+  {
+    "number": 7,
+    "name": "Tempat yang Tinggi"
+  },
+  {
+    "number": 8,
+    "name": "Rampasan Perang"
+  },
+  {
+    "number": 9,
+    "name": "Pengampunan"
+  },
+  {
+    "number": 10,
+    "name": "Yunus"
+  },
+  {
+    "number": 11,
+    "name": "Hud"
+  },
+  {
+    "number": 12,
+    "name": "Yusuf"
+  },
+  {
+    "number": 13,
+    "name": "Guruh"
+  },
+  {
+    "number": 14,
+    "name": "Ibrahim"
+  },
+  {
+    "number": 15,
+    "name": "Al-Hijr (Daerah Berbatu)"
+  },
+  {
+    "number": 16,
+    "name": "Lebah"
+  },
+  {
+    "number": 17,
+    "name": "Perjalanan Malam"
+  },
+  {
+    "number": 18,
+    "name": "Goa"
+  },
+  {
+    "number": 19,
+    "name": "Maryam"
+  },
+  {
+    "number": 20,
+    "name": "Tha-Ha"
+  },
+  {
+    "number": 21,
+    "name": "Nabi-Nabi"
+  },
+  {
+    "number": 22,
+    "name": "Haji"
+  },
+  {
+    "number": 23,
+    "name": "Orang-Orang Mukmin"
+  },
+  {
+    "number": 24,
+    "name": "Cahaya"
+  },
+  {
+    "number": 25,
+    "name": "Pembeda"
+  },
+  {
+    "number": 26,
+    "name": "Penyair"
+  },
+  {
+    "number": 27,
+    "name": "Semut"
+  },
+  {
+    "number": 28,
+    "name": "Kisah"
+  },
+  {
+    "number": 29,
+    "name": "Laba-laba"
+  },
+  {
+    "number": 30,
+    "name": "Romawi"
+  },
+  {
+    "number": 31,
+    "name": "Luqman"
+  },
+  {
+    "number": 32,
+    "name": "Sujud"
+  },
+  {
+    "number": 33,
+    "name": "Golongan yang Bersekutu"
+  },
+  {
+    "number": 34,
+    "name": "Saba"
+  },
+  {
+    "number": 35,
+    "name": "Pencipta"
+  },
+  {
+    "number": 36,
+    "name": "Yasin"
+  },
+  {
+    "number": 37,
+    "name": "Barisan"
+  },
+  {
+    "number": 38,
+    "name": "Sad"
+  },
+  {
+    "number": 39,
+    "name": "Rombongan"
+  },
+  {
+    "number": 40,
+    "name": "Maha Pengampun"
+  },
+  {
+    "number": 41,
+    "name": "Yang Dijelaskan Terperinci"
+  },
+  {
+    "number": 42,
+    "name": "Musyawarah"
+  },
+  {
+    "number": 43,
+    "name": "Perhiasan"
+  },
+  {
+    "number": 44,
+    "name": "Asap"
+  },
+  {
+    "number": 45,
+    "name": "Yang Berlutut"
+  },
+  {
+    "number": 46,
+    "name": "Bukit Pasir"
+  },
+  {
+    "number": 47,
+    "name": "Muhammad"
+  },
+  {
+    "number": 48,
+    "name": "Kemenangan"
+  },
+  {
+    "number": 49,
+    "name": "Kamar-Kamar"
+  },
+  {
+    "number": 50,
+    "name": "Qaf"
+  },
+  {
+    "number": 51,
+    "name": "Angin yang Menerbangkan"
+  },
+  {
+    "number": 52,
+    "name": "Bukit"
+  },
+  {
+    "number": 53,
+    "name": "Bintang"
+  },
+  {
+    "number": 54,
+    "name": "Bulan"
+  },
+  {
+    "number": 55,
+    "name": "Yang Maha Pengasih"
+  },
+  {
+    "number": 56,
+    "name": "Peristiwa Besar"
+  },
+  {
+    "number": 57,
+    "name": "Besi"
+  },
+  {
+    "number": 58,
+    "name": "Wanita yang Membantah"
+  },
+  {
+    "number": 59,
+    "name": "Pengusiran"
+  },
+  {
+    "number": 60,
+    "name": "Wanita yang Diuji"
+  },
+  {
+    "number": 61,
+    "name": "Barisan"
+  },
+  {
+    "number": 62,
+    "name": "Jumat"
+  },
+  {
+    "number": 63,
+    "name": "Orang Munafik"
+  },
+  {
+    "number": 64,
+    "name": "Kerugian"
+  },
+  {
+    "number": 65,
+    "name": "Talak"
+  },
+  {
+    "number": 66,
+    "name": "Pengharaman"
+  },
+  {
+    "number": 67,
+    "name": "Kerajaan"
+  },
+  {
+    "number": 68,
+    "name": "Pena"
+  },
+  {
+    "number": 69,
+    "name": "Kenyataan"
+  },
+  {
+    "number": 70,
+    "name": "Tempat Naik"
+  },
+  {
+    "number": 71,
+    "name": "Nuh"
+  },
+  {
+    "number": 72,
+    "name": "Jin"
+  },
+  {
+    "number": 73,
+    "name": "Orang yang Berselimut"
+  },
+  {
+    "number": 74,
+    "name": "Orang yang Berselubung"
+  },
+  {
+    "number": 75,
+    "name": "Kebangkitan"
+  },
+  {
+    "number": 76,
+    "name": "Manusia"
+  },
+  {
+    "number": 77,
+    "name": "Malaikat yang Diutus"
+  },
+  {
+    "number": 78,
+    "name": "Berita Besar"
+  },
+  {
+    "number": 79,
+    "name": "Yang Mencabut"
+  },
+  {
+    "number": 80,
+    "name": "Ia Bermuka Masam"
+  },
+  {
+    "number": 81,
+    "name": "Menggulung"
+  },
+  {
+    "number": 82,
+    "name": "Terbelah"
+  },
+  {
+    "number": 83,
+    "name": "Orang-Orang Curang"
+  },
+  {
+    "number": 84,
+    "name": "Terbelah"
+  },
+  {
+    "number": 85,
+    "name": "Gugusan Bintang"
+  },
+  {
+    "number": 86,
+    "name": "Bintang Malam"
+  },
+  {
+    "number": 87,
+    "name": "Yang Maha Tinggi"
+  },
+  {
+    "number": 88,
+    "name": "Yang Meliputi"
+  },
+  {
+    "number": 89,
+    "name": "Fajar"
+  },
+  {
+    "number": 90,
+    "name": "Negeri"
+  },
+  {
+    "number": 91,
+    "name": "Matahari"
+  },
+  {
+    "number": 92,
+    "name": "Malam"
+  },
+  {
+    "number": 93,
+    "name": "Pagi"
+  },
+  {
+    "number": 94,
+    "name": "Kelapangan"
+  },
+  {
+    "number": 95,
+    "name": "Buah Tin"
+  },
+  {
+    "number": 96,
+    "name": "Segumpal Darah"
+  },
+  {
+    "number": 97,
+    "name": "Kemuliaan"
+  },
+  {
+    "number": 98,
+    "name": "Bukti Nyata"
+  },
+  {
+    "number": 99,
+    "name": "Kegoncangan"
+  },
+  {
+    "number": 100,
+    "name": "Kuda Perang"
+  },
+  {
+    "number": 101,
+    "name": "Malapetaka Besar"
+  },
+  {
+    "number": 102,
+    "name": "Bermegah-Megahan"
+  },
+  {
+    "number": 103,
+    "name": "Masa"
+  },
+  {
+    "number": 104,
+    "name": "Pengumpat"
+  },
+  {
+    "number": 105,
+    "name": "Gajah"
+  },
+  {
+    "number": 106,
+    "name": "Quraisy"
+  },
+  {
+    "number": 107,
+    "name": "Bantuan"
+  },
+  {
+    "number": 108,
+    "name": "Nikmat yang Berlimpah"
+  },
+  {
+    "number": 109,
+    "name": "Orang-Orang Kafir"
+  },
+  {
+    "number": 110,
+    "name": "Pertolongan"
+  },
+  {
+    "number": 111,
+    "name": "Sabut"
+  },
+  {
+    "number": 112,
+    "name": "Ikhlas"
+  },
+  {
+    "number": 113,
+    "name": "Fajar"
+  },
+  {
+    "number": 114,
+    "name": "Manusia"
+  }
+]

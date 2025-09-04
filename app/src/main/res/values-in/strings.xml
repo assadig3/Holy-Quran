@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Informasi Umum -->
+    <string name="app_name">Al-Qur’an</string>
+    <string name="home">Beranda</string>
+    <string name="settings_and_support">Pengaturan &amp; Bantuan</string>
+    <string name="setting">Pengaturan</string>
+    <string name="help">Bantuan</string>
+    <string name="info">Tentang Aplikasi</string>
+    <string name="share_and_rate">Bagikan &amp; Nilai</string>
+    <string name="share">Bagikan Aplikasi</string>
+    <string name="share_qr">Bagikan via QR</string>
+    <string name="rate_app">Beri Nilai</string>
+    <string name="other_apps">Aplikasi Lain</string>
+    <string name="exit">Keluar</string>
+    <string name="about_app_description">Al-Qur’an — Baca &amp; Dengarkan dengan tilawah, pencarian, favorit, mode malam, dan lainnya.</string>
+    <string name="help_title">Bantuan</string>
+    <string name="help_content">Untuk dukungan atau pertanyaan, silakan lihat bagian FAQ atau hubungi melalui pengaturan.</string>
+    <string name="app_logo">Logo Aplikasi</string>
+
+    <!-- Layar Pengaturan -->
+    <string name="settings_title">Pengaturan</string>
+    <string name="light">Terang</string>
+    <string name="dark">Gelap</string>
+    <string name="system_default">Default Sistem</string>
+    <string name="choose_font_size">Pilih Ukuran Font</string>
+    <string name="scan_qr">Pindai Kode QR untuk Mengunduh Aplikasi</string>
+
+    <string name="navigation_drawer_open">Buka Menu Navigasi</string>
+    <string name="navigation_drawer_close">Tutup Menu Navigasi</string>
+
+    <!-- Tab -->
+    <string name="tab_surahs">📖 Surah</string>
+    <string name="tab_favorites">⭐ Favorit</string>
+    <string name="tab_juz">🔢 Juz</string>
+
+    <!-- Fitur Lanjutan -->
+    <string name="quran_default_title">Al-Qur’an</string>
+    <string name="downloading_soon">Fitur unduh segera hadir</string>
+    <string name="choose_tafsir">Pilih Tafsir</string>
+    <string name="tafseer_selected">Tafsir berhasil dipilih!</string>
+    <string name="play_error">Tilawah tidak dapat diputar</string>
+    <string name="remove_from_favorites">Halaman dihapus dari favorit</string>
+    <string name="add_to_favorites">Halaman ditambahkan ke favorit</string>
+    <string name="repeat_settings">Pengaturan Ulang</string>
+    <string name="repeat_assigned">%1$s diulang (%2$d kali)</string>
+    <string name="share_tafsir">Bagikan Tafsir</string>
+    <string name="tafseer_surah_ayah">Surah %1$s - Ayat %2$d</string>
+    <string name="ok">OK</string>
+    <string name="close">Tutup</string>
+    <string name="select_qari">Pilih Qari</string>
+    <string name="select_tafsir">Pilih Tafsir</string>
+    <string name="ayah_options">Opsi Ayat</string>
+    <string name="copy">Salin</string>
+    <string name="share_ayah">Bagikan</string>
+    <string name="tafsir">Tafsir</string>
+    <string name="play">Putar</string>
+    <string name="pause">Jeda</string>
+    <string name="resume">Lanjutkan</string>
+    <string name="stop">Berhenti</string>
+    <string name="repeat">Ulangi</string>
+    <string name="favorites">Favorit</string>
+    <string name="remove">Hapus</string>
+    <string name="add">Tambah</string>
+    <string name="last_visited_pages">Halaman Terakhir</string>
+    <string name="no_last_pages">Tidak ada kunjungan terbaru</string>
+    <string name="go_to_page">Pergi ke Halaman</string>
+    <string name="surah">Surah</string>
+    <string name="ayah">Ayat</string>
+    <string name="surah_search_hint">Cari nama surah</string>
+    <string name="no_tafsir_available">Tidak ada tafsir untuk ayat ini</string>
+    <string name="juz">Juz</string>
+    <string name="juz_start_page">Dimulai dari halaman %1$d</string>
+    <string name="juz_search_hint">Cari dengan nomor atau nama Juz</string>
+    <string name="menu_clear_all_bookmarks">🗑️ Hapus Semua Penanda</string>
+    <string name="menu_clear_all_recent">🧹 Hapus Riwayat</string>
+    <string name="recent_pages_title">🕓 Halaman Terbaru</string>
+    <string name="favorite_pages_title">⭐ Halaman Favorit</string>
+
+    <string name="menu_last_read_juz">📌 Juz Terakhir Dibaca</string>
+    <string name="menu_jump_to_juz">Lompat ke Juz</string>
+    <string name="menu_jump_to_surah">Lompat ke Surah</string>
+
+    <string name="reset_onboarding_button">Atur Ulang Pengenalan</string>
+    <string name="reset_onboarding">Atur ulang pengenalan aplikasi</string>
+    <string name="choose_font">Pilih Ukuran Font</string>
+    <string name="choose_language">Pilih Bahasa</string>
+    <string name="arabic">Arab</string>
+    <string name="english">Inggris</string>
+    <string name="choose_theme">Pilih Tema</string>
+    <string name="theme_light">Terang</string>
+    <string name="theme_dark">Gelap</string>
+    <string name="theme_system">Default Sistem</string>
+    <string name="font_small">Kecil</string>
+    <string name="font_medium">Sedang</string>
+    <string name="font_large">Besar</string>
+    <string name="screen_options">Opsi Layar</string>
+    <string name="keep_screen_on">Biarkan layar menyala saat membaca</string>
+    <string name="font_changed">Ukuran font diubah</string>
+    <string name="settings_reset">Pengaturan diatur ulang!</string>
+
+    <string name="page">Halaman</string>
+    <string name="favorite">Favorit</string>
+    <string name="clear_all_favorites">Hapus Semua Favorit</string>
+    <string name="clear_all_recent">Hapus Riwayat</string>
+    <string name="favorite_pages">Halaman Favorit</string>
+    <string name="recent_pages">Halaman Terbaru</string>
+    <string name="no_favorites">Tidak ada halaman favorit</string>
+    <string name="tap_to_open_page">Ketuk untuk membuka halaman</string>
+    <string name="all_favorites_cleared">Semua favorit dihapus</string>
+    <string name="all_recent_cleared">Riwayat dihapus</string>
+    <string name="bookmark_title">🕓 Halaman %1$d</string>
+    <string name="favorite_page_hint">⭐ Halaman %1$d</string>
+    <string name="favorite_page_item">⭐ Halaman %1$d</string>
+
+    <!-- Navigasi -->
+    <string name="nav_home">Beranda</string>
+    <string name="nav_search">Cari</string>
+    <string name="nav_settings">Pengaturan</string>
+    <string name="nav_help">Bantuan</string>
+    <string name="nav_about">Tentang</string>
+    <string name="nav_share_app">Bagikan Aplikasi</string>
+    <string name="nav_share_qr">Bagikan via QR</string>
+    <string name="nav_rate_app">Beri Nilai</string>
+    <string name="nav_other_apps">Aplikasi Lain</string>
+
+    <!-- Keluar -->
+    <string name="exit_confirm_title">Konfirmasi Keluar</string>
+    <string name="exit_confirm_message">Apakah Anda ingin keluar dari aplikasi?</string>
+    <string name="yes">Ya</string>
+
+    <!-- Versi -->
+    <string name="version_loading">Memeriksa versi…</string>
+    <string name="version_format">Versi %1$s</string>
+    <string name="version_example">Versi 1.0.23</string>
+
+    <!-- Tambahan -->
+    <string name="search">Cari</string>
+    <string name="search_empty">Cari kata atau frasa…</string>
+    <string name="search_results_placeholder">Hasil</string>
+    <string name="qr_code">Kode QR</string>
+    <string name="share_qr_hint">Pindai kode QR atau bagikan tautan</string>
+
+    <string name="header_developer_by">Oleh: %1$s</string>
+    <string name="header_developer_by_example">Oleh: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">7 Juni 2025 • 10 Dzulhijjah 1446</string>
+
+    <string name="share_message">Bagikan aplikasi Al-Qur’an untuk mendapatkan pahala: %1$s</string>
+    <string name="share_chooser_title">Bagikan Tafsir</string>
+
+    <string name="hijri_placeholder">Tanggal Hijriah</string>
+
+    <string name="action_toggle_page_bookmark">Simpan Halaman</string>
+    <string name="action_toggle_repeat">Ulangi</string>
+    <string name="action_download_tafsirs">Unduh Tafsir</string>
+    <string name="action_select_tafsir">Pilih Tafsir</string>
+
+    <string name="download_title">Harap tunggu saat halaman Al-Qur’an sedang diunduh… Isi waktu Anda dengan dzikir dan shalawat ﷺ</string>
+    <string name="download_ready">Siap untuk diunduh</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">Unduh Sekarang</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">Unduh</string>
+
+    <!-- Dialog -->
+    <string name="go_to_surah">Pergi ke Surah</string>
+    <string name="search_surah_hint">🔍 Cari Surah</string>
+    <string name="cancel">Batal</string>
+
+    <!-- Juz -->
+    <string name="go_to_juz">Pergi ke Juz</string>
+    <string name="search_juz_hint">🔍 Cari Juz</string>
+
+    <!-- Dialog Ulang -->
+    <string name="repeat_ayah">Ayat</string>
+    <string name="repeat_count_label">Jumlah Ulang:</string>
+
+    <!-- Dialog Tafsir -->
+    <string name="tafsir_ayah_title">Surah ... - Ayat ...</string>
+    <string name="tafsir_sample_ayah">Bismillahirrahmanirrahim</string>
+    <string name="tafsir_text_placeholder">Teks tafsir di sini</string>
+
+    <!-- Unduh Halaman -->
+    <string name="pages_download_starting">Memulai unduhan…</string>
+    <string name="pages_download_progress">Mengunduh halaman %1$d / %2$d</string>
+    <string name="pages_download_done">Unduhan selesai.</string>
+    <string name="pages_download_failed">Unduhan gagal.</string>
+    <string name="pages_download_canceled">Unduhan dibatalkan.</string>
+
+    <!-- UI Ulang -->
+    <string name="repeat_settings_title">Pengaturan Ulang</string>
+
+    <!-- Pengunduh Tilawah -->
+    <string name="no_recitations_to_download">Tidak ada tilawah untuk diunduh.</string>
+    <string name="downloading_recitations">Mengunduh tilawah…</string>
+    <string name="recitations_saved">Tilawah disimpan!</string>
+    <string name="download_error">Terjadi kesalahan saat mengunduh.</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">Teks ayat tidak tersedia</string>
+
+    <string name="qari_icon">Ikon Qari</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="qari_selected_toast">%1$s dipilih</string>
+
+    <string name="choose_qari_title">Pilih Qari</string>
+
+    <string name="choose_language_title">Pilih Bahasa Aplikasi</string>
+    <string name="choose_language_subtitle">Anda dapat mengubah bahasa nanti di pengaturan</string>
+    <string name="continue_btn">Lanjutkan</string>
+    <string name="device_language_option">Gunakan Bahasa Perangkat</string>
+
+    <!-- Bahasa -->
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_english">English</string>
+    <string name="lang_turkish">Türkçe</string>
+    <string name="lang_indonesian">Bahasa Indonesia</string>
+    <string name="lang_urdu">اردو</string>
+    <string name="lang_persian">فارسی</string>
+    <string name="lang_bengali">বাংলা</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_hindi">हिन्दी</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_portuguese">Português</string>
+    <string name="lang_italian">Italiano</string>
+    <string name="lang_swahili">Kiswahili</string>
+    <string name="lang_thai">ไทย</string>
+
+    <string name="continue_text">Lanjutkan</string>
+    <string name="language_selection_title">Pilih Bahasa</string>
+
+    <!-- Pencarian -->
+    <string name="search_title">Cari</string>
+    <string name="search_button">Cari</string>
+    <string name="tab_surah">Surah</string>
+    <string name="tab_fav">Favorit</string>
+    <string name="update_preparing">Memeriksa pembaruan…</string>
+    <string name="update_downloading">Mengunduh pembaruan…</string>
+    <string name="update_downloaded_tap_to_restart">Unduhan selesai — ketuk untuk memulai ulang dan memasang pembaruan</string>
+    <string name="update_installing">Memasang pembaruan…</string>
+    <string name="update_available_message">Pembaruan baru tersedia. Harap perbarui ke versi terbaru.</string>
+    <string name="search_hint">Ketik teks untuk mencari…</string>
+    <string name="search_counter_format">Jumlah hasil: %1$d</string>
+    <string name="no_internet_short">Tidak ada internet</string>
+
+    <!-- Marquee Unduhan -->
+    <string name="pages_download_title_marquee">Harap tunggu saat halaman Qur’an dimuat — Isi waktu Anda dengan dzikir 🌿</string>
+
+    <!-- Umum -->
+    <string name="downloading_quran_pages">Mengunduh halaman Qur’an…</string>
+    <string name="remaining_time">Sisa waktu: …</string>
+    <string name="please_rate_app">Silakan beri rating aplikasi ini untuk membantu kami meningkatkan 🌟</string>
+
+</resources>

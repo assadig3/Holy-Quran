@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Majina ya Juzuu (Swahili) -->
+    <string-array name="juz_names">
+        <item>Juzuu 1</item>
+        <item>Juzuu 2</item>
+        <item>Juzuu 3</item>
+        <item>Juzuu 4</item>
+        <item>Juzuu 5</item>
+        <item>Juzuu 6</item>
+        <item>Juzuu 7</item>
+        <item>Juzuu 8</item>
+        <item>Juzuu 9</item>
+        <item>Juzuu 10</item>
+        <item>Juzuu 11</item>
+        <item>Juzuu 12</item>
+        <item>Juzuu 13</item>
+        <item>Juzuu 14</item>
+        <item>Juzuu 15</item>
+        <item>Juzuu 16</item>
+        <item>Juzuu 17</item>
+        <item>Juzuu 18</item>
+        <item>Juzuu 19</item>
+        <item>Juzuu 20</item>
+        <item>Juzuu 21</item>
+        <item>Juzuu 22</item>
+        <item>Juzuu 23</item>
+        <item>Juzuu 24</item>
+        <item>Juzuu 25</item>
+        <item>Juzuu 26</item>
+        <item>Juzuu 27</item>
+        <item>Juzuu 28</item>
+        <item>Juzuu 29</item>
+        <item>Juzuu 30</item>
+    </string-array>
+
+    <!-- Majina ya Surah (Swahili Transliterated + tafsiri ndogo) -->
+    <string-array name="surah_names" tools:ignore="ExtraTranslation">
+        <item>Al-Fātiha (Ufunguzi)</item>
+        <item>Al-Baqara (Ng’ombe)</item>
+        <item>Āl ʿImrān (Familia ya Imran)</item>
+        <item>An-Nisā’ (Wanawake)</item>
+        <item>Al-Mā’ida (Meza ya Chakula)</item>
+        <item>Al-Anʿām (Wanyama)</item>
+        <item>Al-Aʿrāf (Sehemu za Juu)</item>
+        <item>Al-Anfāl (Vitu vya Nyara)</item>
+        <item>At-Tawba (Toba)</item>
+        <item>Yūnus (Yunus)</item>
+        <item>Hūd (Hud)</item>
+        <item>Yūsuf (Yusuf)</item>
+        <item>Ar-Raʿd (Radi)</item>
+        <item>Ibrāhīm (Ibrahim)</item>
+        <item>Al-Ḥijr (Jiwe)</item>
+        <item>An-Naḥl (Nyuki)</item>
+        <item>Al-Isrā’ (Safari ya Usiku)</item>
+        <item>Al-Kahf (Pango)</item>
+        <item>Maryam (Maryam)</item>
+        <item>Ṭā-Hā (Taha)</item>
+        <item>Al-Anbiyā’ (Manabii)</item>
+        <item>Al-Ḥajj (Hija)</item>
+        <item>Al-Mu’minūn (Waumini)</item>
+        <item>An-Nūr (Nuru)</item>
+        <item>Al-Furqān (Utoaji wa Haki na Batili)</item>
+        <item>Ash-Shuʿarā’ (Washairi)</item>
+        <item>An-Naml (Chungu)</item>
+        <item>Al-Qaṣaṣ (Hadithi)</item>
+        <item>Al-ʿAnkabūt (Buibui)</item>
+        <item>Ar-Rūm (Warumi)</item>
+        <item>Luqmān (Luqman)</item>
+        <item>As-Sajda (Kusujudu)</item>
+        <item>Al-Aḥzāb (Makundi)</item>
+        <item>Saba’ (Saba)</item>
+        <item>Fāṭir (Muumbaji)</item>
+        <item>Yā-Sīn (Ya-Sin)</item>
+        <item>As-Ṣāffāt (Wanaopanga Mistari)</item>
+        <item>Ṣād (Sad)</item>
+        <item>Az-Zumar (Makundi)</item>
+        <item>Ghāfir (Msamehevu)</item>
+        <item>Fussilat (Zilizofafanuliwa)</item>
+        <item>Ash-Shūrā (Ushauri)</item>
+        <item>Az-Zukhruf (Mapambo ya Dhahabu)</item>
+        <item>Ad-Dukhān (Moshi)</item>
+        <item>Al-Jāthiya (Waliopiga Magoti)</item>
+        <item>Al-Aḥqāf (Vilima vya Mchanga)</item>
+        <item>Muhammad (Muhammad)</item>
+        <item>Al-Fatḥ (Ushindi)</item>
+        <item>Al-Ḥujurāt (Vyumba)</item>
+        <item>Qāf (Qaf)</item>
+        <item>Adh-Dhāriyāt (Wapeperushaji)</item>
+        <item>At-Ṭūr (Mlima)</item>
+        <item>An-Najm (Nyota)</item>
+        <item>Al-Qamar (Mwezi)</item>
+        <item>Ar-Raḥmān (Mwingi wa Rehema)</item>
+        <item>Al-Wāqiʿa (Tukio)</item>
+        <item>Al-Ḥadīd (Chuma)</item>
+        <item>Al-Mujādila (Mjadiliano)</item>
+        <item>Al-Ḥashr (Kukusanyika)</item>
+        <item>Al-Mumtaḥana (Aliyejaribiwa)</item>
+        <item>As-Ṣaff (Safu)</item>
+        <item>Al-Jumuʿa (Ijumaa)</item>
+        <item>Al-Munāfiqūn (Wanafiki)</item>
+        <item>At-Taghābun (Hasara na Faida)</item>
+        <item>At-Ṭalāq (Talaka)</item>
+        <item>At-Taḥrīm (Uharamu)</item>
+        <item>Al-Mulk (Ufalme)</item>
+        <item>Al-Qalam (Kalamu)</item>
+        <item>Al-Ḥāqqa (Hakika)</item>
+        <item>Al-Maʿārij (Ngazi)</item>
+        <item>Nūḥ (Nuhu)</item>
+        <item>Al-Jinn (Majini)</item>
+        <item>Al-Muzzammil (Aliyejifunika)</item>
+        <item>Al-Muddaththir (Aliyejifunika nguo)</item>
+        <item>Al-Qiyāma (Kiyama)</item>
+        <item>Al-Insān (Binadamu)</item>
+        <item>Al-Mursalāt (Waliotumwa)</item>
+        <item>An-Naba’ (Habari)</item>
+        <item>An-Nāziʿāt (Wavuto)</item>
+        <item>ʿAbasa (Alikunja Uso)</item>
+        <item>At-Takwīr (Kufungwa)</item>
+        <item>Al-Infiṭār (Kufunjika)</item>
+        <item>Al-Muṭaffifīn (Wapunguzaji)</item>
+        <item>Al-Inshiqāq (Kupasuka)</item>
+        <item>Al-Burūj (Nyota Kubwa)</item>
+        <item>At-Ṭāriq (Mwenye Kuja Usiku)</item>
+        <item>Al-Aʿlā (Aliye Juu)</item>
+        <item>Al-Ghāshiya (Funiko Kubwa)</item>
+        <item>Al-Fajr (Alfajiri)</item>
+        <item>Al-Balad (Mji)</item>
+        <item>Ash-Shams (Jua)</item>
+        <item>Al-Layl (Usiku)</item>
+        <item>Ad-Ḍuḥā (Asubuhi)</item>
+        <item>Ash-Sharḥ (Faraja)</item>
+        <item>At-Tīn (Tini)</item>
+        <item>Al-ʿAlaq (Pande la Damu)</item>
+        <item>Al-Qadr (Kadirio)</item>
+        <item>Al-Bayyina (Ubayani)</item>
+        <item>Az-Zalzala (Tetemeko)</item>
+        <item>Al-ʿĀdiyāt (Wapiga Mbio)</item>
+        <item>Al-Qāriʿa (Mshtuko)</item>
+        <item>At-Takāthur (Mashindano ya Mali)</item>
+        <item>Al-ʿAṣr (Wakati)</item>
+        <item>Al-Humaza (Mchongezi)</item>
+        <item>Al-Fīl (Ndovu)</item>
+        <item>Quraysh (Quraysh)</item>
+        <item>Al-Māʿūn (Msaada Mdogo)</item>
+        <item>Al-Kawthar (Neema Tele)</item>
+        <item>Al-Kāfirūn (Wakafiri)</item>
+        <item>An-Naṣr (Ushindi)</item>
+        <item>Al-Masad (Kamba ya Majani)</item>
+        <item>Al-Ikhlāṣ (Utakaso)</item>
+        <item>Al-Falaq (Alfajiri)</item>
+        <item>An-Nās (Watu)</item>
+    </string-array>
+
+</resources>

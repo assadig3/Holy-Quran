@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qari_names">
+        <item>مشاری راشد العفاسی</item>
+        <item>عبدالرحمٰن السدیس</item>
+        <item>سعود الشریم</item>
+        <item>ماہر المیقلی</item>
+        <item>فارس عباد</item>
+        <item>احمد العجمی</item>
+        <item>ہانی الرفاعی</item>
+        <item>علی الحذیفی</item>
+
+        <item>عبدالباسط (ترتیل 64kbps)</item>
+        <item>عبدالباسط (ترتیل 192kbps)</item>
+        <item>عبدالباسط (تجوید کے ساتھ 128kbps)</item>
+        <item>عبدالباسط (QuranExplorer)</item>
+
+        <item>منشاوی (ترتیل 128kbps)</item>
+        <item>منشاوی (تجوید کے ساتھ 64kbps)</item>
+        <item>منشاوی (تعلیمی 128kbps)</item>
+
+        <item>محمود خلیل الحسری (64kbps)</item>
+        <item>محمود خلیل الحسری (128kbps)</item>
+        <item>حسری (تعلیمی 128kbps)</item>
+        <item>حسری (تجوید کے ساتھ 64kbps)</item>
+
+        <item>عبداللہ الجہنی (128kbps)</item>
+        <item>عبداللہ بصفر (64kbps)</item>
+        <item>عبداللہ بصفر (192kbps)</item>
+        <item>عبداللہ مطرود (128kbps)</item>
+        <item>علی جابر (64kbps)</item>
+        <item>ایمن سویعد (64kbps)</item>
+        <item>صالح البدیر (128kbps)</item>
+        <item>صالح بخاطر (128kbps)</item>
+        <item>یاسر الدوسری (128kbps)</item>
+        <item>یاسر سلامہ (128kbps)</item>
+        <item>سہل یاسین (128kbps)</item>
+        <item>ناصر القطامی (128kbps)</item>
+        <item>ہانی الرفاعی (192kbps)</item>
+        <item>علی الحذیفی (128kbps)</item>
+
+        <item>ابراہیم الاخضر (64kbps)</item>
+        <item>اکرم العلقمی (128kbps)</item>
+        <item>علی حجاج السوسی (128kbps)</item>
+        <item>محمد ایوب (64kbps)</item>
+        <item>محمد جبریل (64kbps)</item>
+        <item>محمد محمود الطبلاوی (64kbps)</item>
+        <item>محسن القاسم (192kbps)</item>
+        <item>مصطفیٰ اسماعیل (48kbps)</item>
+        <item>نبیل الرفاعی (48kbps)</item>
+        <item>خلیفہ التنجی (64kbps)</item>
+        <item>سعود الغامدی (40kbps)</item>
+        <item>کریم منصوری (40kbps)</item>
+        <item>عزیز علیلی (128kbps)</item>
+    </string-array>
+</resources>

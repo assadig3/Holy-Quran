@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- أسماء الأجزاء (هندية) -->
+    <string-array name="juz_names">
+        <item>भाग 1</item>
+        <item>भाग 2</item>
+        <item>भाग 3</item>
+        <item>भाग 4</item>
+        <item>भाग 5</item>
+        <item>भाग 6</item>
+        <item>भाग 7</item>
+        <item>भाग 8</item>
+        <item>भाग 9</item>
+        <item>भाग 10</item>
+        <item>भाग 11</item>
+        <item>भाग 12</item>
+        <item>भाग 13</item>
+        <item>भाग 14</item>
+        <item>भाग 15</item>
+        <item>भाग 16</item>
+        <item>भाग 17</item>
+        <item>भाग 18</item>
+        <item>भाग 19</item>
+        <item>भाग 20</item>
+        <item>भाग 21</item>
+        <item>भाग 22</item>
+        <item>भाग 23</item>
+        <item>भाग 24</item>
+        <item>भाग 25</item>
+        <item>भाग 26</item>
+        <item>भाग 27</item>
+        <item>भाग 28</item>
+        <item>भाग 29</item>
+        <item>भाग 30</item>
+    </string-array>
+
+    <!-- أسماء السور (هندية) -->
+    <string-array name="surah_names">
+        <item>अल-फ़ातिहा</item>
+        <item>अल-बकरा</item>
+        <item>आल-इमरान</item>
+        <item>अन-निसा</item>
+        <item>अल-माइदा</item>
+        <item>अल-अनआम</item>
+        <item>अल-आराफ़</item>
+        <item>अल-अनफ़ाल</item>
+        <item>अत-तौबा</item>
+        <item>यूनुस</item>
+        <item>हूद</item>
+        <item>यूसुफ़</item>
+        <item>अर-रअद</item>
+        <item>इब्राहीम</item>
+        <item>अल-हिज्र</item>
+        <item>अन-नहल</item>
+        <item>अल-इस्रा</item>
+        <item>अल-कहफ़</item>
+        <item>मरयम</item>
+        <item>ताहा</item>
+        <item>अल-अंबिया</item>
+        <item>अल-हज</item>
+        <item>अल-मुमिनून</item>
+        <item>अन-नूर</item>
+        <item>अल-फ़ुरक़ान</item>
+        <item>अश-शुअरा</item>
+        <item>अन-नम्ल</item>
+        <item>अल-क़सस</item>
+        <item>अल-अनक़बूत</item>
+        <item>अर-रूम</item>
+        <item>लुक़मान</item>
+        <item>अस-सज्दा</item>
+        <item>अल-अहज़ाब</item>
+        <item>सबा</item>
+        <item>फ़ातिर</item>
+        <item>या-सीन</item>
+        <item>अस-साफ्फ़ात</item>
+        <item>साद</item>
+        <item>अज़-ज़ुमर</item>
+        <item>ग़ाफ़िर</item>
+        <item>फ़ुस्सिलत</item>
+        <item>अश-शूरा</item>
+        <item>अज़-ज़ुख़रुफ़</item>
+        <item>अद-दुख़ान</item>
+        <item>अल-जातिया</item>
+        <item>अल-अहक़ाफ़</item>
+        <item>मुहम्मद</item>
+        <item>अल-फ़तह</item>
+        <item>अल-हुजुरात</item>
+        <item>क़ाफ़</item>
+        <item>अध-धारियात</item>
+        <item>अत-तूर</item>
+        <item>अन-नज्म</item>
+        <item>अल-क़मर</item>
+        <item>अर-रहमान</item>
+        <item>अल-वाक़िआ</item>
+        <item>अल-हदीद</item>
+        <item>अल-मुजादिला</item>
+        <item>अल-हश्र</item>
+        <item>अल-मुम्तहना</item>
+        <item>अस-्सफ़</item>
+        <item>अल-जुमुआ</item>
+        <item>अल-मुनाफ़िक़ून</item>
+        <item>अत-तग़ाबुन</item>
+        <item>अत-तलाक़</item>
+        <item>अत-तहरीम</item>
+        <item>अल-मुल्क</item>
+        <item>अल-क़लम</item>
+        <item>अल-ह़ाक़्क़ा</item>
+        <item>अल-मआरिज़</item>
+        <item>नूह</item>
+        <item>अल-जिन</item>
+        <item>अल-मुज़म्मिल</item>
+        <item>अल-मुद्दस्सिर</item>
+        <item>अल-क़ियामा</item>
+        <item>अल-इन्सान</item>
+        <item>अल-मुरसालात</item>
+        <item>अन-नबा</item>
+        <item>अन-नाज़िआत</item>
+        <item>अबसा</item>
+        <item>अत-तक़्वीर</item>
+        <item>अल-इन्फितार</item>
+        <item>अल-मुतफ़्फ़िफ़ीन</item>
+        <item>अल-इन्शिक़ाक़</item>
+        <item>अल-बुरूज</item>
+        <item>अत-तारिक़</item>
+        <item>अल-आ\'ला</item>
+        <item>अल-ग़ाशिया</item>
+        <item>अल-फ़ज्र</item>
+        <item>अल-बलद</item>
+        <item>अश-शम्स</item>
+        <item>अल-लैल</item>
+        <item>अद-दुहा</item>
+        <item>अल-इनशिराह</item>
+        <item>अत-तिन</item>
+        <item>अल-अलक़</item>
+        <item>अल-क़द्र</item>
+        <item>अल-बय्यिना</item>
+        <item>अज़-ज़लज़ला</item>
+        <item>अल-आदियात</item>
+        <item>अल-क़ारिआ</item>
+        <item>अत-तकासुर</item>
+        <item>अल-असर</item>
+        <item>अल-हुमज़ा</item>
+        <item>अल-फ़ील</item>
+        <item>क़ुरैश</item>
+        <item>अल-माऊन</item>
+        <item>अल-कौसर</item>
+        <item>अल-काफ़िरून</item>
+        <item>अन-नसर</item>
+        <item>अल-मसद</item>
+        <item>अल-इख़लास</item>
+        <item>अल-फ़लक़</item>
+        <item>अन-नास</item>
+    </string-array>
+
+</resources>

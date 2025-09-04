@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qari_names">
+        <item>مشاري راشد العفاسي</item>
+        <item>عبدالرحمن السديس</item>
+        <item>سعود الشريم</item>
+        <item>ماهر المعيقلي</item>
+        <item>فارس عباد</item>
+        <item>أحمد العجمي</item>
+        <item>هاني الرفاعي</item>
+        <item>علي الحذيفي</item>
+
+        <item>عبدالباسط (مرتّل 64kbps)</item>
+        <item>عبدالباسط (مرتّل 192kbps)</item>
+        <item>عبدالباسط (مجود 128kbps)</item>
+        <item>عبدالباسط (QuranExplorer)</item>
+
+        <item>المنشاوي (مرتّل 128kbps)</item>
+        <item>المنشاوي (مجود 64kbps)</item>
+        <item>المنشاوي (معلم 128kbps)</item>
+
+        <item>محمود خليل الحصري (64kbps)</item>
+        <item>محمود خليل الحصري (128kbps)</item>
+        <item>الحصري معلم (128kbps)</item>
+        <item>الحصري مجود (64kbps)</item>
+
+        <item>عبدالله الجهني (128kbps)</item>
+        <item>عبدالله بصفر (64kbps)</item>
+        <item>عبدالله بصفر (192kbps)</item>
+        <item>عبدالله مطرود (128kbps)</item>
+        <item>علي جابر (64kbps)</item>
+        <item>أيمن سويد (64kbps)</item>
+        <item>صلاح البدير (128kbps)</item>
+        <item>صلاح أبو عرفة/أبو بكر الشاطري (128kbps)</item>
+        <item>ياسر الدوسري (128kbps)</item>
+        <item>ياسر سلامة (128kbps)</item>
+        <item>سهل ياسين (128kbps)</item>
+        <item>ناصر القطامي (128kbps)</item>
+        <item>هاني الرفاعي (192kbps)</item>
+        <item>علي الحذيفي (128kbps)</item>
+
+        <item>إبراهيم الأخضر (64kbps)</item>
+        <item>أكرم العلاقمي (128kbps)</item>
+        <item>علي حجاج السويسي (128kbps)</item>
+        <item>محمد أيوب (64kbps)</item>
+        <item>محمد جبريل (64kbps)</item>
+        <item>محمد محمود الطبلاوي (64kbps)</item>
+        <item>محسن القاسم (192kbps)</item>
+        <item>مصطفى إسماعيل (48kbps)</item>
+        <item>نبيل الرفاعي (48kbps)</item>
+        <item>خليفة الطنيجي (64kbps)</item>
+        <item>سعود الغامدي (40kbps)</item>
+        <item>كريم منصوري (40kbps)</item>
+        <item>عزيز عليلي (128kbps)</item>
+    </string-array>
+</resources>

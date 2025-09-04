@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Information -->
+    <string name="app_name">อัลกุรอาน</string>
+    <string name="home">หน้าหลัก</string>
+    <string name="settings_and_support">การตั้งค่าและการสนับสนุน</string>
+    <string name="setting">การตั้งค่า</string>
+    <string name="help">ความช่วยเหลือ</string>
+    <string name="info">เกี่ยวกับแอป</string>
+    <string name="share_and_rate">แชร์และให้คะแนน</string>
+    <string name="share">แชร์แอป</string>
+    <string name="share_qr">แชร์ผ่าน QR</string>
+    <string name="rate_app">ให้คะแนนแอป</string>
+    <string name="other_apps">แอปอื่น ๆ</string>
+    <string name="exit">ออก</string>
+    <string name="about_app_description">อัลกุรอาน — อ่านและฟัง พร้อมฟังก์ชันการอ่าน การค้นหา รายการโปรด โหมดกลางคืน และอื่น ๆ</string>
+    <string name="help_title">ความช่วยเหลือ</string>
+    <string name="help_content">สำหรับการสนับสนุนหรือคำถาม โปรดตรวจสอบคำถามที่พบบ่อยหรือ ติดต่อผ่านการตั้งค่า</string>
+    <string name="app_logo">ไอคอนแอป</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">การตั้งค่า</string>
+    <string name="light">สว่าง</string>
+    <string name="dark">มืด</string>
+    <string name="system_default">ค่าเริ่มต้นของระบบ</string>
+    <string name="choose_font_size">เลือกขนาดตัวอักษร</string>
+    <string name="scan_qr">สแกนรหัส QR เพื่อดาวน์โหลดแอป</string>
+
+    <string name="navigation_drawer_open">เปิดเมนูนำทาง</string>
+    <string name="navigation_drawer_close">ปิดเมนูนำทาง</string>
+
+    <!-- Tabs -->
+    <string name="tab_surahs">📖 ซูเราะห์</string>
+    <string name="tab_favorites">⭐ รายการโปรด</string>
+    <string name="tab_juz">🔢 ญุซ</string>
+
+    <!-- Advanced Features -->
+    <string name="quran_default_title">อัลกุรอาน</string>
+    <string name="downloading_soon">ฟีเจอร์ดาวน์โหลดจะพร้อมใช้งานเร็ว ๆ นี้</string>
+    <string name="choose_tafsir">เลือกตัฟซีร</string>
+    <string name="tafseer_selected">เลือกตัฟซีรสำเร็จ!</string>
+    <string name="play_error">ไม่สามารถเล่นการอ่านได้</string>
+    <string name="remove_from_favorites">ลบหน้าออกจากรายการโปรดแล้ว</string>
+    <string name="add_to_favorites">เพิ่มหน้าไปยังรายการโปรดแล้ว</string>
+    <string name="repeat_settings">การตั้งค่าการทำซ้ำ</string>
+    <string name="repeat_assigned">ทำซ้ำ %1$s (%2$d ครั้ง)</string>
+    <string name="share_tafsir">แชร์ตัฟซีร</string>
+    <string name="tafseer_surah_ayah">ซูเราะห์ %1$s - อายะห์ %2$d</string>
+    <string name="ok">ตกลง</string>
+    <string name="close">ปิด</string>
+    <string name="select_qari">เลือกผู้อ่าน</string>
+    <string name="select_tafsir">เลือกตัฟซีร</string>
+    <string name="ayah_options">ตัวเลือกอายะห์</string>
+    <string name="copy">คัดลอก</string>
+    <string name="share_ayah">แชร์</string>
+    <string name="tafsir">ตัฟซีร</string>
+    <string name="play">เล่น</string>
+    <string name="pause">หยุดชั่วคราว</string>
+    <string name="resume">ต่อจากเดิม</string>
+    <string name="stop">หยุด</string>
+    <string name="repeat">ทำซ้ำ</string>
+    <string name="favorites">รายการโปรด</string>
+    <string name="remove">ลบ</string>
+    <string name="add">เพิ่ม</string>
+    <string name="last_visited_pages">หน้าที่เข้าชมล่าสุด</string>
+    <string name="no_last_pages">ยังไม่มีหน้าล่าสุด</string>
+    <string name="go_to_page">ไปที่หน้า</string>
+    <string name="surah">ซูเราะห์</string>
+    <string name="ayah">อายะห์</string>
+    <string name="surah_search_hint">ค้นหาชื่อซูเราะห์</string>
+    <string name="no_tafsir_available">ไม่มีตัฟซีรสำหรับอายะห์นี้</string>
+    <string name="juz">ญุซ</string>
+    <string name="juz_start_page">เริ่มที่หน้า %1$d</string>
+    <string name="juz_search_hint">ค้นหาด้วยหมายเลขหรือชื่อญุซ</string>
+    <string name="menu_clear_all_bookmarks">🗑️ ลบที่คั่นหน้าทั้งหมด</string>
+    <string name="menu_clear_all_recent">🧹 ลบประวัติ</string>
+    <string name="recent_pages_title">🕓 หน้าล่าสุด</string>
+    <string name="favorite_pages_title">⭐ หน้าที่ชื่นชอบ</string>
+
+    <string name="menu_last_read_juz">📌 ญุซที่อ่านล่าสุด</string>
+    <string name="menu_jump_to_juz">ไปที่ญุซ</string>
+    <string name="menu_jump_to_surah">ไปที่ซูเราะห์</string>
+
+    <string name="reset_onboarding_button">รีเซ็ตบทนำ</string>
+    <string name="reset_onboarding">รีเซ็ตบทนำของแอป</string>
+    <string name="choose_font">เลือกแบบอักษร</string>
+    <string name="choose_language">เลือกภาษา</string>
+    <string name="arabic">อาหรับ</string>
+    <string name="english">อังกฤษ</string>
+    <string name="choose_theme">เลือกธีม</string>
+    <string name="theme_light">สว่าง</string>
+    <string name="theme_dark">มืด</string>
+    <string name="theme_system">ค่าเริ่มต้นของระบบ</string>
+    <string name="font_small">เล็ก</string>
+    <string name="font_medium">ปานกลาง</string>
+    <string name="font_large">ใหญ่</string>
+    <string name="screen_options">ตัวเลือกหน้าจอ</string>
+    <string name="keep_screen_on">ให้หน้าจอติดอยู่ระหว่างการอ่าน</string>
+    <string name="font_changed">มีการเปลี่ยนขนาดตัวอักษรแล้ว</string>
+    <string name="settings_reset">รีเซ็ตการตั้งค่าเรียบร้อย!</string>
+
+    <string name="page">หน้า</string>
+    <string name="favorite">รายการโปรด</string>
+    <string name="clear_all_favorites">ลบรายการโปรดทั้งหมด</string>
+    <string name="clear_all_recent">ลบประวัติการท่องเว็บ</string>
+    <string name="favorite_pages">หน้าที่ชื่นชอบ</string>
+    <string name="recent_pages">หน้าล่าสุด</string>
+    <string name="no_favorites">ยังไม่มีรายการโปรด</string>
+    <string name="tap_to_open_page">แตะเพื่อเปิดหน้า</string>
+    <string name="all_favorites_cleared">ลบรายการโปรดทั้งหมดแล้ว</string>
+    <string name="all_recent_cleared">ลบประวัติการท่องเว็บแล้ว</string>
+    <string name="bookmark_title">🕓 หน้า %1$d</string>
+    <string name="favorite_page_hint">⭐ หน้า %1$d</string>
+    <string name="favorite_page_item">⭐ หน้า %1$d</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">หน้าหลัก</string>
+    <string name="nav_search">ค้นหา</string>
+    <string name="nav_settings">การตั้งค่า</string>
+    <string name="nav_help">ความช่วยเหลือ</string>
+    <string name="nav_about">เกี่ยวกับ</string>
+    <string name="nav_share_app">แชร์แอป</string>
+    <string name="nav_share_qr">แชร์ผ่าน QR</string>
+    <string name="nav_rate_app">ให้คะแนนแอป</string>
+    <string name="nav_other_apps">แอปอื่น ๆ</string>
+
+    <!-- Search -->
+    <string name="search_hint">ค้นหาที่นี่...</string>
+    <string name="search_partial">ค้นหาบางส่วน</string>
+    <string name="search_whole">ค้นหาทั้งหมด</string>
+    <string name="match_tashkeel">ตรงกับเครื่องหมายสระ (Tashkeel)</string>
+
+    <!-- Exit -->
+    <string name="exit_confirm_title">ยืนยันการออก</string>
+    <string name="exit_confirm_message">ต้องการออกจากแอปหรือไม่?</string>
+    <string name="yes">ใช่</string>
+
+    <!-- Version -->
+    <string name="version_loading">กำลังตรวจสอบเวอร์ชัน…</string>
+    <string name="version_format">เวอร์ชัน %1$s</string>
+    <string name="version_example">เวอร์ชัน 1.0.23</string>
+
+    <!-- Extra -->
+    <string name="search">ค้นหา</string>
+    <string name="search_empty">ค้นหาคำหรือวลี…</string>
+    <string name="search_results_placeholder">ผลลัพธ์</string>
+    <string name="qr_code">รหัส QR</string>
+    <string name="share_qr_hint">สแกน QR หรือแชร์ลิงก์</string>
+
+    <string name="header_developer_by">โดย: %1$s</string>
+    <string name="header_developer_by_example">โดย: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">7 มิถุนายน 2025 • 10 ซุลฮิจญะฮ์ 1446</string>
+
+    <string name="share_message">แชร์แอปอัลกุรอานเพื่อรับผลบุญ: %1$s</string>
+    <string name="share_chooser_title">แชร์ตัฟซีร</string>
+
+    <string name="hijri_placeholder">วันที่ฮิจเราะฮ์</string>
+
+    <string name="action_toggle_page_bookmark">บันทึกหน้า</string>
+    <string name="action_toggle_repeat">ทำซ้ำ</string>
+    <string name="action_download_tafsirs">ดาวน์โหลดตัฟซีร</string>
+    <string name="action_select_tafsir">เลือกตัฟซีร</string>
+
+    <string name="download_title">โปรดรอระหว่างกำลังดาวน์โหลดหน้ามุศฮัฟ… ใช้เวลานี้ทำซิกรฺและส่งศ็อละวาตแด่ท่านนบี ﷺ</string>
+    <string name="download_ready">พร้อมดาวน์โหลด</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">ดาวน์โหลดตอนนี้</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">ดาวน์โหลด</string>
+
+    <!-- Dialog -->
+    <string name="go_to_surah">ไปที่ซูเราะห์</string>
+    <string name="search_surah_hint">🔍 ค้นหาซูเราะห์</string>
+    <string name="cancel">ยกเลิก</string>
+
+    <!-- Juz -->
+    <string name="go_to_juz">ไปที่ญุซ</string>
+    <string name="search_juz_hint">🔍 ค้นหาญุซ</string>
+
+    <!-- Repeat dialog -->
+    <string name="repeat_ayah">อายะห์</string>
+    <string name="repeat_count_label">จำนวนครั้งที่ทำซ้ำ:</string>
+
+    <!-- Tafsir dialog -->
+    <string name="tafsir_ayah_title">ซูเราะห์ ... - อายะห์ ...</string>
+    <string name="tafsir_sample_ayah">ด้วยพระนามของอัลลอฮ์ ผู้ทรงกรุณาเมตตาเสมอ</string>
+    <string name="tafsir_text_placeholder">เนื้อหาตัฟซีร</string>
+
+    <!-- Pages download UI -->
+    <string name="pages_download_title_marquee">กำลังโหลดหน้าคัมภีร์กุรอาน — ใช้เวลานี้ทำซิกรฺ 🌿</string>
+    <string name="pages_download_starting">กำลังเริ่มดาวน์โหลด…</string>
+    <string name="pages_download_progress">กำลังดาวน์โหลดหน้า %1$d / %2$d</string>
+    <string name="pages_download_done">ดาวน์โหลดเสร็จสิ้น.</string>
+    <string name="pages_download_failed">การดาวน์โหลดล้มเหลว.</string>
+    <string name="pages_download_canceled">ยกเลิกแล้ว.</string>
+
+    <!-- Repeat UI -->
+    <string name="repeat_settings_title">การตั้งค่าการทำซ้ำ</string>
+
+    <!-- Audio batch downloader -->
+    <string name="no_recitations_to_download">ไม่มีลิงก์สำหรับดาวน์โหลด</string>
+    <string name="downloading_recitations">กำลังดาวน์โหลดการอ่าน…</string>
+    <string name="recitations_saved">บันทึกการอ่านแล้ว!</string>
+    <string name="download_error">เกิดข้อผิดพลาดระหว่างการดาวน์โหลด</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">ไม่มีข้อความของอายะห์</string>
+
+    <string name="qari_icon">ไอคอนผู้อ่าน</string>
+    <string name="change_language">เปลี่ยนภาษา</string>
+    <string name="qari_selected_toast">เลือก %1$s แล้ว</string>
+
+    <string name="choose_qari_title">เลือกผู้อ่าน</string>
+
+    <string name="lang_arabic">อาหรับ</string>
+    <string name="lang_english">อังกฤษ</string>
+    <string name="lang_turkish">ตุรกี</string>
+    <string name="lang_indonesian">อินโดนีเซีย</string>
+    <string name="lang_urdu">อูรดู</string>
+    <string name="lang_persian">เปอร์เซีย</string>
+    <string name="lang_bengali">เบงกาลี</string>
+    <string name="lang_german">เยอรมัน</string>
+    <string name="lang_spanish">สเปน</string>
+    <string name="lang_french">ฝรั่งเศส</string>
+    <string name="lang_russian">รัสเซีย</string>
+    <string name="lang_hindi">ฮินดี</string>
+    <string name="lang_chinese">จีน</string>
+    <string name="lang_japanese">ญี่ปุ่น</string>
+    <string name="lang_korean">เกาหลี</string>
+    <string name="lang_portuguese">โปรตุเกส</string>
+    <string name="lang_italian">อิตาลี</string>
+    <string name="lang_swahili">สวาฮีลี</string>
+    <string name="lang_thai">ไทย</string>
+    <string name="update_preparing">กำลังตรวจสอบการอัปเดต…</string>
+    <string name="update_downloading">กำลังดาวน์โหลดการอัปเดต…</string>
+    <string name="update_downloaded_tap_to_restart">ดาวน์โหลดเสร็จสิ้น — แตะเพื่อรีสตาร์ทและติดตั้ง</string>
+    <string name="update_installing">กำลังติดตั้งการอัปเดต…</string>
+    <string name="update_available_message">มีการอัปเดตใหม่ โปรดอัปเดตเป็นเวอร์ชันล่าสุด</string>
+    <string name="tab_surah">ซูเราะห์</string>
+    <string name="tab_fav">รายการโปรด</string>
+    <string name="please_rate_app">กรุณาให้คะแนนแอปเพื่อช่วยให้เราปรับปรุง 🌟</string>
+
+</resources>

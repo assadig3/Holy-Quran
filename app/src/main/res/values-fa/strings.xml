@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Information -->
+    <string name="app_name">قرآن کریم</string>
+    <string name="home">خانه</string>
+    <string name="settings_and_support">تنظیمات و پشتیبانی</string>
+    <string name="setting">تنظیمات</string>
+    <string name="help">راهنما</string>
+    <string name="info">درباره برنامه</string>
+    <string name="share_and_rate">اشتراک‌گذاری و امتیازدهی</string>
+    <string name="share">اشتراک‌گذاری برنامه</string>
+    <string name="share_qr">اشتراک از طریق QR</string>
+    <string name="rate_app">امتیاز به برنامه</string>
+    <string name="other_apps">برنامه‌های دیگر</string>
+    <string name="exit">خروج</string>
+    <string name="about_app_description">قرآن کریم — تلاوت و قرائت همراه با امکانات جستجو، مورد علاقه‌ها، حالت شب و بیشتر.</string>
+    <string name="help_title">راهنما</string>
+    <string name="help_content">برای پشتیبانی یا پرسش، لطفاً به بخش پرسش‌های متداول مراجعه کنید یا از طریق تنظیمات با ما تماس بگیرید.</string>
+    <string name="app_logo">لوگوی برنامه</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">تنظیمات</string>
+    <string name="light">روشن</string>
+    <string name="dark">تیره</string>
+    <string name="system_default">پیش‌فرض سیستم</string>
+    <string name="choose_font_size">انتخاب اندازه فونت</string>
+    <string name="scan_qr">برای دانلود برنامه کد QR را اسکن کنید</string>
+
+    <string name="navigation_drawer_open">باز کردن منوی ناوبری</string>
+    <string name="navigation_drawer_close">بستن منوی ناوبری</string>
+
+    <!-- Tabs -->
+    <string name="tab_surahs">📖 سوره‌ها</string>
+    <string name="tab_favorites">⭐ علاقه‌مندی‌ها</string>
+    <string name="tab_juz">🔢 جزءها</string>
+
+    <!-- Advanced Features -->
+    <string name="quran_default_title">قرآن کریم</string>
+    <string name="downloading_soon">ویژگی دانلود به‌زودی</string>
+    <string name="choose_tafsir">انتخاب تفسیر</string>
+    <string name="tafseer_selected">تفسیر با موفقیت انتخاب شد!</string>
+    <string name="play_error">پخش تلاوت انجام نشد</string>
+    <string name="remove_from_favorites">صفحه از علاقه‌مندی‌ها حذف شد</string>
+    <string name="add_to_favorites">صفحه به علاقه‌مندی‌ها اضافه شد</string>
+    <string name="repeat_settings">تنظیمات تکرار</string>
+    <string name="repeat_assigned">تکرار %1$s (%2$d بار)</string>
+    <string name="share_tafsir">اشتراک‌گذاری تفسیر</string>
+    <string name="tafseer_surah_ayah">سوره %1$s - آیه %2$d</string>
+    <string name="ok">تأیید</string>
+    <string name="close">بستن</string>
+    <string name="select_qari">انتخاب قاری</string>
+    <string name="select_tafsir">انتخاب تفسیر</string>
+    <string name="ayah_options">گزینه‌های آیه</string>
+    <string name="copy">کپی</string>
+    <string name="share_ayah">اشتراک‌گذاری</string>
+    <string name="tafsir">تفسیر</string>
+    <string name="play">پخش</string>
+    <string name="pause">توقف موقت</string>
+    <string name="resume">ادامه</string>
+    <string name="stop">توقف</string>
+    <string name="repeat">تکرار</string>
+    <string name="favorites">علاقه‌مندی‌ها</string>
+    <string name="remove">حذف</string>
+    <string name="add">افزودن</string>
+    <string name="last_visited_pages">آخرین صفحات</string>
+    <string name="no_last_pages">صفحه اخیر وجود ندارد</string>
+    <string name="go_to_page">رفتن به صفحه</string>
+    <string name="surah">سوره</string>
+    <string name="ayah">آیه</string>
+    <string name="surah_search_hint">جستجوی نام سوره</string>
+    <string name="no_tafsir_available">برای این آیه تفسیری موجود نیست</string>
+    <string name="juz">جزء</string>
+    <string name="juz_start_page">شروع از صفحه %1$d</string>
+    <string name="juz_search_hint">جستجو بر اساس شماره یا نام جزء</string>
+    <string name="menu_clear_all_bookmarks">🗑️ حذف همه نشان‌ها</string>
+    <string name="menu_clear_all_recent">🧹 پاک کردن تاریخچه</string>
+    <string name="recent_pages_title">🕓 صفحات اخیر</string>
+    <string name="favorite_pages_title">⭐ صفحات مورد علاقه</string>
+
+    <string name="menu_last_read_juz">📌 آخرین جزء خوانده‌شده</string>
+    <string name="menu_jump_to_juz">پرش به جزء</string>
+    <string name="menu_jump_to_surah">پرش به سوره</string>
+
+    <string name="reset_onboarding_button">بازنشانی معرفی</string>
+    <string name="reset_onboarding">بازنشانی معرفی برنامه</string>
+    <string name="choose_font">انتخاب اندازه فونت</string>
+    <string name="choose_language">انتخاب زبان</string>
+    <string name="arabic">عربی</string>
+    <string name="english">انگلیسی</string>
+    <string name="choose_theme">انتخاب تم</string>
+    <string name="theme_light">روشن</string>
+    <string name="theme_dark">تیره</string>
+    <string name="theme_system">پیش‌فرض سیستم</string>
+    <string name="font_small">کوچک</string>
+    <string name="font_medium">متوسط</string>
+    <string name="font_large">بزرگ</string>
+    <string name="screen_options">گزینه‌های صفحه</string>
+    <string name="keep_screen_on">هنگام مطالعه صفحه روشن بماند</string>
+    <string name="font_changed">اندازه فونت تغییر یافت</string>
+    <string name="settings_reset">تنظیمات بازنشانی شد!</string>
+
+    <string name="page">صفحه</string>
+    <string name="favorite">مورد علاقه</string>
+    <string name="clear_all_favorites">حذف همه علاقه‌مندی‌ها</string>
+    <string name="clear_all_recent">پاک کردن تاریخچه مرور</string>
+    <string name="favorite_pages">صفحات مورد علاقه</string>
+    <string name="recent_pages">صفحات اخیر</string>
+    <string name="no_favorites">صفحه مورد علاقه‌ای وجود ندارد</string>
+    <string name="tap_to_open_page">برای باز کردن صفحه ضربه بزنید</string>
+    <string name="all_favorites_cleared">همه علاقه‌مندی‌ها حذف شدند</string>
+    <string name="all_recent_cleared">تاریخچه مرور پاک شد</string>
+    <string name="bookmark_title">🕓 صفحه %1$d</string>
+    <string name="favorite_page_hint">⭐ صفحه %1$d</string>
+    <string name="favorite_page_item">⭐ صفحه %1$d</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">خانه</string>
+    <string name="nav_search">جستجو</string>
+    <string name="nav_settings">تنظیمات</string>
+    <string name="nav_help">راهنما</string>
+    <string name="nav_about">درباره</string>
+    <string name="nav_share_app">اشتراک‌گذاری برنامه</string>
+    <string name="nav_share_qr">اشتراک از طریق QR</string>
+    <string name="nav_rate_app">امتیاز به برنامه</string>
+    <string name="nav_other_apps">برنامه‌های دیگر</string>
+
+    <!-- Exit -->
+    <string name="exit_confirm_title">تأیید خروج</string>
+    <string name="exit_confirm_message">آیا می‌خواهید از برنامه خارج شوید؟</string>
+    <string name="yes">بله</string>
+
+    <!-- Version -->
+    <string name="version_loading">در حال بررسی نسخه…</string>
+    <string name="version_format">نسخه %1$s</string>
+    <string name="version_example">نسخه 1.0.23</string>
+
+    <!-- Extra -->
+    <string name="search">جستجو</string>
+    <string name="search_empty">کلمه یا عبارت جستجو کنید…</string>
+    <string name="search_results_placeholder">نتایج</string>
+    <string name="qr_code">کد QR</string>
+    <string name="share_qr_hint">کد QR را اسکن کنید یا لینک را به اشتراک بگذارید</string>
+
+    <string name="header_developer_by">توسط: %1$s</string>
+    <string name="header_developer_by_example">توسط: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">۷ ژوئن ۲۰۲۵ • ۱۰ ذوالحجه ۱۴۴۶</string>
+
+    <string name="share_message">برنامه قرآن کریم را به اشتراک بگذارید تا ثواب ببرید: %1$s</string>
+    <string name="share_chooser_title">اشتراک‌گذاری تفسیر</string>
+
+    <string name="hijri_placeholder">تاریخ هجری</string>
+
+    <string name="action_toggle_page_bookmark">ذخیره صفحه</string>
+    <string name="action_toggle_repeat">تکرار</string>
+    <string name="action_download_tafsirs">دانلود تفاسیر</string>
+    <string name="action_select_tafsir">انتخاب تفسیر</string>
+
+    <string name="download_title">لطفاً منتظر بمانید، صفحات قرآن در حال دانلود هستند… وقت خود را با ذکر و صلوات ﷺ پر کنید</string>
+    <string name="download_ready">آماده دانلود</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">اکنون دانلود کنید</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">دانلود</string>
+
+    <!-- Dialog -->
+    <string name="go_to_surah">رفتن به سوره</string>
+    <string name="search_surah_hint">🔍 جستجوی سوره</string>
+    <string name="cancel">لغو</string>
+
+    <!-- Juz -->
+    <string name="go_to_juz">رفتن به جزء</string>
+    <string name="search_juz_hint">🔍 جستجوی جزء</string>
+
+    <!-- Repeat dialog -->
+    <string name="repeat_ayah">آیه</string>
+    <string name="repeat_count_label">تعداد تکرار:</string>
+
+    <!-- Tafsir dialog -->
+    <string name="tafsir_ayah_title">سوره ... - آیه ...</string>
+    <string name="tafsir_sample_ayah">بسم الله الرحمن الرحیم</string>
+    <string name="tafsir_text_placeholder">متن تفسیر در اینجا</string>
+
+    <!-- Pages download UI -->
+    <string name="pages_download_starting">شروع دانلود…</string>
+    <string name="pages_download_progress">در حال دانلود صفحه %1$d / %2$d</string>
+    <string name="pages_download_done">دانلود کامل شد.</string>
+    <string name="pages_download_failed">دانلود انجام نشد.</string>
+    <string name="pages_download_canceled">دانلود لغو شد.</string>
+
+    <!-- Repeat UI -->
+    <string name="repeat_settings_title">تنظیمات تکرار</string>
+
+    <!-- Audio batch downloader -->
+    <string name="no_recitations_to_download">هیچ تلاوتی برای دانلود وجود ندارد.</string>
+    <string name="downloading_recitations">در حال دانلود تلاوت‌ها…</string>
+    <string name="recitations_saved">تلاوت‌ها ذخیره شدند!</string>
+    <string name="download_error">خطایی هنگام دانلود رخ داد.</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">متن آیه موجود نیست</string>
+
+    <string name="qari_icon">آیکون قاری</string>
+    <string name="change_language">تغییر زبان</string>
+    <string name="qari_selected_toast">%1$s انتخاب شد</string>
+
+    <string name="choose_qari_title">انتخاب قاری</string>
+
+    <string name="choose_language_title">انتخاب زبان برنامه</string>
+    <string name="choose_language_subtitle">بعداً می‌توانید از تنظیمات زبان را تغییر دهید</string>
+    <string name="continue_btn">ادامه</string>
+    <string name="device_language_option">استفاده از زبان دستگاه</string>
+
+    <string name="continue_text">ادامه</string>
+    <string name="language_selection_title">انتخاب زبان</string>
+
+    <!-- Search Screen -->
+    <string name="search_title">جستجو</string>
+    <string name="search_button">جستجو</string>
+    <string name="tab_surah">سوره‌ها</string>
+    <string name="tab_fav">علاقه‌مندی‌ها</string>
+    <string name="update_preparing">در حال بررسی به‌روزرسانی…</string>
+    <string name="update_downloading">در حال دانلود به‌روزرسانی…</string>
+    <string name="update_downloaded_tap_to_restart">دانلود کامل شد — برای راه‌اندازی مجدد و نصب ضربه بزنید</string>
+    <string name="update_installing">در حال نصب به‌روزرسانی…</string>
+    <string name="update_available_message">یک به‌روزرسانی جدید موجود است. لطفاً به آخرین نسخه به‌روزرسانی کنید.</string>
+    <string name="search_hint">متنی برای جستجو بنویسید…</string>
+    <string name="search_counter_format">تعداد نتایج: %1$d</string>
+    <string name="no_internet_short">اتصال به اینترنت وجود ندارد</string>
+
+    <!-- Download marquee -->
+    <string name="pages_download_title_marquee">لطفاً صبر کنید، صفحات قرآن در حال بارگذاری هستند — وقت خود را با ذکر پر کنید 🌿</string>
+
+    <!-- General -->
+    <string name="downloading_quran_pages">در حال دانلود صفحات قرآن…</string>
+    <string name="remaining_time">زمان باقی‌مانده: …</string>
+    <string name="please_rate_app">لطفاً برنامه را ارزیابی کنید تا به ما در بهبود کمک کنید 🌟</string>
+
+</resources>

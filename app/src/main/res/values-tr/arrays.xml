@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Cüz isimleri (Türkçe) -->
+    <string-array name="juz_names">
+        <item>1. Cüz</item>
+        <item>2. Cüz</item>
+        <item>3. Cüz</item>
+        <item>4. Cüz</item>
+        <item>5. Cüz</item>
+        <item>6. Cüz</item>
+        <item>7. Cüz</item>
+        <item>8. Cüz</item>
+        <item>9. Cüz</item>
+        <item>10. Cüz</item>
+        <item>11. Cüz</item>
+        <item>12. Cüz</item>
+        <item>13. Cüz</item>
+        <item>14. Cüz</item>
+        <item>15. Cüz</item>
+        <item>16. Cüz</item>
+        <item>17. Cüz</item>
+        <item>18. Cüz</item>
+        <item>19. Cüz</item>
+        <item>20. Cüz</item>
+        <item>21. Cüz</item>
+        <item>22. Cüz</item>
+        <item>23. Cüz</item>
+        <item>24. Cüz</item>
+        <item>25. Cüz</item>
+        <item>26. Cüz</item>
+        <item>27. Cüz</item>
+        <item>28. Cüz</item>
+        <item>29. Cüz</item>
+        <item>30. Cüz</item>
+    </string-array>
+
+    <!-- Sure isimleri (Türkçe) -->
+    <string-array name="surah_names" tools:ignore="ExtraTranslation">
+        <item>Fâtiha</item>
+        <item>Bakara</item>
+        <item>Âl-i İmrân</item>
+        <item>Nisâ</item>
+        <item>Mâide</item>
+        <item>En’âm</item>
+        <item>A’râf</item>
+        <item>Enfâl</item>
+        <item>Tevbe</item>
+        <item>Yûnus</item>
+        <item>Hûd</item>
+        <item>Yûsuf</item>
+        <item>Ra’d</item>
+        <item>İbrâhîm</item>
+        <item>Hicr</item>
+        <item>Nahl</item>
+        <item>İsrâ</item>
+        <item>Kehf</item>
+        <item>Meryem</item>
+        <item>Tâhâ</item>
+        <item>Enbiyâ</item>
+        <item>Hac</item>
+        <item>Mü’minûn</item>
+        <item>Nûr</item>
+        <item>Furkân</item>
+        <item>Şuarâ</item>
+        <item>Neml</item>
+        <item>Kasas</item>
+        <item>Ankebût</item>
+        <item>Rûm</item>
+        <item>Lokmân</item>
+        <item>Secde</item>
+        <item>Ahzâb</item>
+        <item>Sebe</item>
+        <item>Fâtır</item>
+        <item>Yâsîn</item>
+        <item>Sâffât</item>
+        <item>Sâd</item>
+        <item>Zümer</item>
+        <item>Ğâfir</item>
+        <item>Fussilet</item>
+        <item>Şûrâ</item>
+        <item>Zuhruf</item>
+        <item>Duhân</item>
+        <item>Câsiye</item>
+        <item>Ahkâf</item>
+        <item>Muhammed</item>
+        <item>Fetih</item>
+        <item>Hucurât</item>
+        <item>Kaf</item>
+        <item>Zâriyât</item>
+        <item>Tûr</item>
+        <item>Necm</item>
+        <item>Kamer</item>
+        <item>Rahmân</item>
+        <item>Vâkıa</item>
+        <item>Hadîd</item>
+        <item>Mücâdele</item>
+        <item>Haşr</item>
+        <item>Mümtehine</item>
+        <item>Saff</item>
+        <item>Cuma</item>
+        <item>Münâfikûn</item>
+        <item>Tegâbun</item>
+        <item>Talâk</item>
+        <item>Tahrîm</item>
+        <item>Mülk</item>
+        <item>Kalem</item>
+        <item>Hâkka</item>
+        <item>Meâric</item>
+        <item>Nûh</item>
+        <item>Cin</item>
+        <item>Müzzemmil</item>
+        <item>Müddessir</item>
+        <item>Kıyâme</item>
+        <item>İnsân</item>
+        <item>Mürselât</item>
+        <item>Nebe</item>
+        <item>Nâziât</item>
+        <item>Abese</item>
+        <item>Tekvîr</item>
+        <item>İnfitâr</item>
+        <item>Mutaffifîn</item>
+        <item>İnşikâk</item>
+        <item>Burûc</item>
+        <item>Târık</item>
+        <item>A’lâ</item>
+        <item>Ğâşiye</item>
+        <item>Fecr</item>
+        <item>Beled</item>
+        <item>Şems</item>
+        <item>Leyl</item>
+        <item>Duha</item>
+        <item>İnşirah</item>
+        <item>Tîn</item>
+        <item>Alak</item>
+        <item>Kadr</item>
+        <item>Beyyine</item>
+        <item>Zilzâl</item>
+        <item>Âdiyât</item>
+        <item>Kâria</item>
+        <item>Tekâsür</item>
+        <item>Asr</item>
+        <item>Hümeze</item>
+        <item>Fîl</item>
+        <item>Kureyş</item>
+        <item>Maûn</item>
+        <item>Kevser</item>
+        <item>Kâfirûn</item>
+        <item>Nasr</item>
+        <item>Leheb</item>
+        <item>İhlâs</item>
+        <item>Felak</item>
+        <item>Nâs</item>
+    </string-array>
+
+</resources>

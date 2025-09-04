@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bar_min_height">44dp</dimen>
+    <dimen name="bar_btn">32dp</dimen>
+    <dimen name="bar_text_h">32dp</dimen>
+    <dimen name="bar_gap">6dp</dimen>
+    <dimen name="bar_padding">4dp</dimen>
+    <dimen name="bar_corner_radius">16dp</dimen>
+    <dimen name="bar_stroke_width">1dp</dimen>
+    <dimen name="toolbar_padding_top">8dp</dimen>
+
+</resources>

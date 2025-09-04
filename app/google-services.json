@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "861463336784",
+    "project_id": "alquran-alkarim-19d39",
+    "storage_bucket": "alquran-alkarim-19d39.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861463336784:android:21ca7730d27d0bfd2ebe55",
+        "android_client_info": {
+          "package_name": "com.hag.al_quran"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaGYy58A7z_CSXXBWvBPjLrap2-lVXq9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

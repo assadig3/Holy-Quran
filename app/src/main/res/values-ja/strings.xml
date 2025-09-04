@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Information -->
+    <string name="app_name">クルアーン</string>
+    <string name="home">ホーム</string>
+    <string name="settings_and_support">設定とサポート</string>
+    <string name="setting">設定</string>
+    <string name="help">ヘルプ</string>
+    <string name="info">アプリについて</string>
+    <string name="share_and_rate">共有と評価</string>
+    <string name="share">アプリを共有</string>
+    <string name="share_qr">QRで共有</string>
+    <string name="rate_app">アプリを評価</string>
+    <string name="other_apps">その他のアプリ</string>
+    <string name="exit">終了</string>
+    <string name="about_app_description">クルアーン — 読書と聴取、朗読、検索、お気に入り、ナイトモードなどの機能付き。</string>
+    <string name="help_title">ヘルプ</string>
+    <string name="help_content">サポートや質問は、FAQをご覧いただくか、設定からお問い合わせください。</string>
+    <string name="app_logo">アプリのロゴ</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">設定</string>
+    <string name="light">ライト</string>
+    <string name="dark">ダーク</string>
+    <string name="system_default">システムデフォルト</string>
+    <string name="choose_font_size">フォントサイズを選択</string>
+    <string name="scan_qr">QRコードをスキャンしてアプリをダウンロード</string>
+
+    <string name="navigation_drawer_open">ナビゲーションメニューを開く</string>
+    <string name="navigation_drawer_close">ナビゲーションメニューを閉じる</string>
+
+    <!-- Tabs -->
+    <string name="tab_surahs">📖 スーラ</string>
+    <string name="tab_favorites">⭐ お気に入り</string>
+    <string name="tab_juz">🔢 ジュズ</string>
+
+    <!-- Advanced Features -->
+    <string name="quran_default_title">クルアーン</string>
+    <string name="downloading_soon">近日追加予定の機能</string>
+    <string name="choose_tafsir">タフスィールを選択</string>
+    <string name="tafseer_selected">タフスィールが選択されました！</string>
+    <string name="play_error">朗読を再生できません</string>
+    <string name="remove_from_favorites">ページがお気に入りから削除されました</string>
+    <string name="add_to_favorites">ページがお気に入りに追加されました</string>
+    <string name="repeat_settings">リピート設定</string>
+    <string name="repeat_assigned">%1$s を %2$d 回繰り返す</string>
+    <string name="share_tafsir">タフスィールを共有</string>
+    <string name="tafseer_surah_ayah">スーラ %1$s - アーヤ %2$d</string>
+    <string name="ok">OK</string>
+    <string name="close">閉じる</string>
+    <string name="select_qari">カーリを選択</string>
+    <string name="select_tafsir">タフスィールを選択</string>
+    <string name="ayah_options">アーヤのオプション</string>
+    <string name="copy">コピー</string>
+    <string name="share_ayah">共有</string>
+    <string name="tafsir">タフスィール</string>
+    <string name="play">再生</string>
+    <string name="pause">一時停止</string>
+    <string name="resume">再開</string>
+    <string name="stop">停止</string>
+    <string name="repeat">繰り返し</string>
+    <string name="favorites">お気に入り</string>
+    <string name="remove">削除</string>
+    <string name="add">追加</string>
+    <string name="last_visited_pages">最近のページ</string>
+    <string name="no_last_pages">最近のページはありません</string>
+    <string name="go_to_page">ページへ移動</string>
+    <string name="surah">スーラ</string>
+    <string name="ayah">アーヤ</string>
+    <string name="surah_search_hint">スーラ名を検索</string>
+    <string name="no_tafsir_available">このアーヤにはタフスィールがありません</string>
+    <string name="juz">ジュズ</string>
+    <string name="juz_start_page">ページ %1$d から開始</string>
+    <string name="juz_search_hint">番号または名前でジュズを検索</string>
+    <string name="menu_clear_all_bookmarks">🗑️ すべてのブックマークを削除</string>
+    <string name="menu_clear_all_recent">🧹 履歴を削除</string>
+    <string name="recent_pages_title">🕓 最近のページ</string>
+    <string name="favorite_pages_title">⭐ お気に入りのページ</string>
+
+    <string name="menu_last_read_juz">📌 最後に読んだジュズ</string>
+    <string name="menu_jump_to_juz">ジュズへ移動</string>
+    <string name="menu_jump_to_surah">スーラへ移動</string>
+
+    <string name="reset_onboarding_button">イントロをリセット</string>
+    <string name="reset_onboarding">アプリのイントロをリセット</string>
+    <string name="choose_font">フォントを選択</string>
+    <string name="choose_language">言語を選択</string>
+    <string name="arabic">アラビア語</string>
+    <string name="english">英語</string>
+    <string name="choose_theme">テーマを選択</string>
+    <string name="theme_light">ライト</string>
+    <string name="theme_dark">ダーク</string>
+    <string name="theme_system">システムデフォルト</string>
+    <string name="font_small">小</string>
+    <string name="font_medium">中</string>
+    <string name="font_large">大</string>
+    <string name="screen_options">画面オプション</string>
+    <string name="keep_screen_on">読書中に画面をオンに保つ</string>
+    <string name="font_changed">フォントサイズが変更されました</string>
+    <string name="settings_reset">設定がリセットされました！</string>
+
+    <string name="page">ページ</string>
+    <string name="favorite">お気に入り</string>
+    <string name="clear_all_favorites">すべてのお気に入りを削除</string>
+    <string name="clear_all_recent">履歴を削除</string>
+    <string name="favorite_pages">お気に入りのページ</string>
+    <string name="recent_pages">最近のページ</string>
+    <string name="no_favorites">お気に入りはありません</string>
+    <string name="tap_to_open_page">タップしてページを開く</string>
+    <string name="all_favorites_cleared">すべてのお気に入りが削除されました</string>
+    <string name="all_recent_cleared">履歴が削除されました</string>
+    <string name="bookmark_title">🕓 ページ %1$d</string>
+    <string name="favorite_page_hint">⭐ ページ %1$d</string>
+    <string name="favorite_page_item">⭐ ページ %1$d</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">ホーム</string>
+    <string name="nav_search">検索</string>
+    <string name="nav_settings">設定</string>
+    <string name="nav_help">ヘルプ</string>
+    <string name="nav_about">情報</string>
+    <string name="nav_share_app">アプリを共有</string>
+    <string name="nav_share_qr">QRで共有</string>
+    <string name="nav_rate_app">アプリを評価</string>
+    <string name="nav_other_apps">その他のアプリ</string>
+
+    <!-- Exit -->
+    <string name="exit_confirm_title">終了確認</string>
+    <string name="exit_confirm_message">アプリを終了しますか？</string>
+    <string name="yes">はい</string>
+
+    <!-- Version -->
+    <string name="version_loading">バージョンを確認中…</string>
+    <string name="version_format">バージョン %1$s</string>
+    <string name="version_example">バージョン 1.0.23</string>
+
+    <!-- Extra -->
+    <string name="search">検索</string>
+    <string name="search_empty">単語やフレーズを検索…</string>
+    <string name="search_results_placeholder">結果</string>
+    <string name="qr_code">QRコード</string>
+    <string name="share_qr_hint">QRをスキャンまたはリンクを共有</string>
+
+    <string name="header_developer_by">開発者: %1$s</string>
+    <string name="header_developer_by_example">開発者: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">2025年6月7日 • 1446年ズルヒッジャ10日</string>
+
+    <string name="share_message">報奨を得るためにクルアーンアプリを共有してください: %1$s</string>
+    <string name="share_chooser_title">タフスィールを共有</string>
+
+    <string name="hijri_placeholder">ヒジュラ暦</string>
+
+    <string name="action_toggle_page_bookmark">ページを保存</string>
+    <string name="action_toggle_repeat">繰り返し</string>
+    <string name="action_download_tafsirs">タフスィールをダウンロード</string>
+    <string name="action_select_tafsir">タフスィールを選択</string>
+
+    <string name="download_title">クルアーンのページをダウンロード中… この時間をズィクルと祈りで満たしてください ﷺ</string>
+    <string name="download_ready">ダウンロード準備完了</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">今すぐダウンロード</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">ダウンロード</string>
+
+    <!-- Dialog -->
+    <string name="go_to_surah">スーラへ移動</string>
+    <string name="search_surah_hint">🔍 スーラを検索</string>
+    <string name="cancel">キャンセル</string>
+
+    <!-- Juz -->
+    <string name="go_to_juz">ジュズへ移動</string>
+    <string name="search_juz_hint">🔍 ジュズを検索</string>
+
+    <!-- Repeat dialog -->
+    <string name="repeat_ayah">アーヤ</string>
+    <string name="repeat_count_label">繰り返し回数:</string>
+
+    <!-- Tafsir dialog -->
+    <string name="tafsir_ayah_title">スーラ ... - アーヤ ...</string>
+    <string name="tafsir_sample_ayah">بسم الله الرحمن الرحيم</string>
+    <string name="tafsir_text_placeholder">ここにタフスィールのテキスト</string>
+
+    <!-- Pages download UI -->
+    <string name="pages_download_starting">ダウンロード開始…</string>
+    <string name="pages_download_progress">ページ %1$d / %2$d をダウンロード中</string>
+    <string name="pages_download_done">ダウンロード完了。</string>
+    <string name="pages_download_failed">ダウンロードに失敗しました。</string>
+    <string name="pages_download_canceled">キャンセルされました。</string>
+
+    <!-- Repeat UI -->
+    <string name="repeat_settings_title">リピート設定</string>
+
+    <!-- Audio batch downloader -->
+    <string name="no_recitations_to_download">ダウンロードするリンクがありません。</string>
+    <string name="downloading_recitations">朗読をダウンロード中…</string>
+    <string name="recitations_saved">朗読が保存されました！</string>
+    <string name="download_error">ダウンロード中にエラーが発生しました。</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">アーヤのテキストは利用できません</string>
+
+    <string name="qari_icon">カーリのアイコン</string>
+    <string name="change_language">言語を変更</string>
+    <string name="qari_selected_toast">%1$s が選択されました</string>
+
+    <string name="choose_qari_title">カーリを選択</string>
+
+    <string name="choose_language_title">アプリの言語を選択</string>
+    <string name="choose_language_subtitle">後で設定から変更できます</string>
+    <string name="continue_btn">続行</string>
+    <string name="device_language_option">デバイスの言語を使用</string>
+
+    <!-- ✅ 言語名 -->
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_english">English</string>
+    <string name="lang_turkish">Türkçe</string>
+    <string name="lang_indonesian">Bahasa Indonesia</string>
+    <string name="lang_urdu">اردو</string>
+    <string name="lang_persian">فارسی</string>
+    <string name="lang_bengali">বাংলা</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_hindi">हिन्दी</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_portuguese">Português</string>
+    <string name="lang_italian">Italiano</string>
+    <string name="lang_swahili">Kiswahili</string>
+    <string name="lang_thai">ไทย</string>
+    <string name="continue_text">続行</string>
+    <string name="language_selection_title">言語を選択</string>
+
+    <!-- Search -->
+    <string name="search_title">検索</string>
+    <string name="search_button">検索</string>
+    <string name="tab_surah">スーラ</string>
+    <string name="tab_fav">お気に入り</string>
+    <string name="update_preparing">アップデートを確認中…</string>
+    <string name="update_downloading">アップデートをダウンロード中…</string>
+    <string name="update_downloaded_tap_to_restart">ダウンロード完了 — 再起動してインストール</string>
+    <string name="update_installing">アップデートをインストール中…</string>
+    <string name="update_available_message">新しいアップデートが利用可能です。最新版に更新してください。</string>
+    <string name="search_hint">検索テキストを入力…</string>
+    <string name="search_counter_format">結果数: %1$d</string>
+    <string name="no_internet_short">インターネット接続なし</string>
+
+    <!-- Download Marquee -->
+    <string name="pages_download_title_marquee">クルアーンのページをダウンロード中 — この時間をズィクルで満たしてください 🌿</string>
+
+    <!-- Extra -->
+    <string name="downloading_quran_pages">クルアーンのページをダウンロード中…</string>
+    <string name="remaining_time">残り時間: …</string>
+    <string name="please_rate_app">アプリを評価していただき、改善にご協力ください 🌟</string>
+
+</resources>

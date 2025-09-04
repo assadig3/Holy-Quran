@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "L'Apertura"
+  },
+  {
+    "number": 2,
+    "name": "La Giovenca"
+  },
+  {
+    "number": 3,
+    "name": "La Famiglia di Imran"
+  },
+  {
+    "number": 4,
+    "name": "Le Donne"
+  },
+  {
+    "number": 5,
+    "name": "La Tavola Imbandita"
+  },
+  {
+    "number": 6,
+    "name": "Il Bestiame"
+  },
+  {
+    "number": 7,
+    "name": "Le Alture"
+  },
+  {
+    "number": 8,
+    "name": "Il Bottino"
+  },
+  {
+    "number": 9,
+    "name": "Il Pentimento"
+  },
+  {
+    "number": 10,
+    "name": "Giona"
+  },
+  {
+    "number": 11,
+    "name": "Hud"
+  },
+  {
+    "number": 12,
+    "name": "Giuseppe"
+  },
+  {
+    "number": 13,
+    "name": "Il Tuono"
+  },
+  {
+    "number": 14,
+    "name": "Abramo"
+  },
+  {
+    "number": 15,
+    "name": "Al-Hijr"
+  },
+  {
+    "number": 16,
+    "name": "L'Ape"
+  },
+  {
+    "number": 17,
+    "name": "Il Viaggio Notturno"
+  },
+  {
+    "number": 18,
+    "name": "La Caverna"
+  },
+  {
+    "number": 19,
+    "name": "Maria"
+  },
+  {
+    "number": 20,
+    "name": "Ta-Ha"
+  },
+  {
+    "number": 21,
+    "name": "I Profeti"
+  },
+  {
+    "number": 22,
+    "name": "Il Pellegrinaggio"
+  },
+  {
+    "number": 23,
+    "name": "I Credenti"
+  },
+  {
+    "number": 24,
+    "name": "La Luce"
+  },
+  {
+    "number": 25,
+    "name": "Il Discrimine"
+  },
+  {
+    "number": 26,
+    "name": "I Poeti"
+  },
+  {
+    "number": 27,
+    "name": "La Formica"
+  },
+  {
+    "number": 28,
+    "name": "Il Racconto"
+  },
+  {
+    "number": 29,
+    "name": "Il Ragno"
+  },
+  {
+    "number": 30,
+    "name": "I Romani"
+  },
+  {
+    "number": 31,
+    "name": "Luqmān"
+  },
+  {
+    "number": 32,
+    "name": "La Prostrazione"
+  },
+  {
+    "number": 33,
+    "name": "I Coalizzati"
+  },
+  {
+    "number": 34,
+    "name": "Saba’"
+  },
+  {
+    "number": 35,
+    "name": "Il Creatore"
+  },
+  {
+    "number": 36,
+    "name": "Ya-Sin"
+  },
+  {
+    "number": 37,
+    "name": "Coloro che sono in File"
+  },
+  {
+    "number": 38,
+    "name": "Sad"
+  },
+  {
+    "number": 39,
+    "name": "Le Schiere"
+  },
+  {
+    "number": 40,
+    "name": "Il Perdonatore"
+  },
+  {
+    "number": 41,
+    "name": "Spiegato in Dettaglio"
+  },
+  {
+    "number": 42,
+    "name": "La Consultazione"
+  },
+  {
+    "number": 43,
+    "name": "L'Ornamento"
+  },
+  {
+    "number": 44,
+    "name": "Il Fumo"
+  },
+  {
+    "number": 45,
+    "name": "L'Inginocchiata"
+  },
+  {
+    "number": 46,
+    "name": "Le Dune"
+  },
+  {
+    "number": 47,
+    "name": "Muhammad"
+  },
+  {
+    "number": 48,
+    "name": "La Vittoria"
+  },
+  {
+    "number": 49,
+    "name": "Gli Appartamenti"
+  },
+  {
+    "number": 50,
+    "name": "Qaf"
+  },
+  {
+    "number": 51,
+    "name": "I Disseminatori"
+  },
+  {
+    "number": 52,
+    "name": "Il Monte"
+  },
+  {
+    "number": 53,
+    "name": "La Stella"
+  },
+  {
+    "number": 54,
+    "name": "La Luna"
+  },
+  {
+    "number": 55,
+    "name": "Il Compassionevole"
+  },
+  {
+    "number": 56,
+    "name": "L'Inevitabile"
+  },
+  {
+    "number": 57,
+    "name": "Il Ferro"
+  },
+  {
+    "number": 58,
+    "name": "La Donna che Discute"
+  },
+  {
+    "number": 59,
+    "name": "L'Adunata"
+  },
+  {
+    "number": 60,
+    "name": "La Messa alla Prova"
+  },
+  {
+    "number": 61,
+    "name": "La Fila"
+  },
+  {
+    "number": 62,
+    "name": "Il Venerdì"
+  },
+  {
+    "number": 63,
+    "name": "Gli Ipocriti"
+  },
+  {
+    "number": 64,
+    "name": "La Perdita"
+  },
+  {
+    "number": 65,
+    "name": "Il Divorzio"
+  },
+  {
+    "number": 66,
+    "name": "La Proibizione"
+  },
+  {
+    "number": 67,
+    "name": "La Sovranità"
+  },
+  {
+    "number": 68,
+    "name": "La Penna"
+  },
+  {
+    "number": 69,
+    "name": "La Realtà"
+  },
+  {
+    "number": 70,
+    "name": "Le Scale Ascendenti"
+  },
+  {
+    "number": 71,
+    "name": "Noè"
+  },
+  {
+    "number": 72,
+    "name": "I Jinn"
+  },
+  {
+    "number": 73,
+    "name": "L'Avvolto"
+  },
+  {
+    "number": 74,
+    "name": "Il Rivestito"
+  },
+  {
+    "number": 75,
+    "name": "La Resurrezione"
+  },
+  {
+    "number": 76,
+    "name": "L'Uomo"
+  },
+  {
+    "number": 77,
+    "name": "Gli Inviati"
+  },
+  {
+    "number": 78,
+    "name": "La Notizia"
+  },
+  {
+    "number": 79,
+    "name": "Coloro che Strappano"
+  },
+  {
+    "number": 80,
+    "name": "Si Accigliò"
+  },
+  {
+    "number": 81,
+    "name": "L'Oscuramento"
+  },
+  {
+    "number": 82,
+    "name": "La Fenditura"
+  },
+  {
+    "number": 83,
+    "name": "I Frodi"
+  },
+  {
+    "number": 84,
+    "name": "La Spaccatura"
+  },
+  {
+    "number": 85,
+    "name": "Le Costellazioni"
+  },
+  {
+    "number": 86,
+    "name": "L'Astro Notturno"
+  },
+  {
+    "number": 87,
+    "name": "L'Altissimo"
+  },
+  {
+    "number": 88,
+    "name": "L'Avvolgente"
+  },
+  {
+    "number": 89,
+    "name": "L'Alba"
+  },
+  {
+    "number": 90,
+    "name": "La Città"
+  },
+  {
+    "number": 91,
+    "name": "Il Sole"
+  },
+  {
+    "number": 92,
+    "name": "La Notte"
+  },
+  {
+    "number": 93,
+    "name": "Il Mattino"
+  },
+  {
+    "number": 94,
+    "name": "Il Sollievo"
+  },
+  {
+    "number": 95,
+    "name": "Il Fico"
+  },
+  {
+    "number": 96,
+    "name": "L'Aderenza"
+  },
+  {
+    "number": 97,
+    "name": "Il Decreto"
+  },
+  {
+    "number": 98,
+    "name": "La Prova Evidente"
+  },
+  {
+    "number": 99,
+    "name": "Il Terremoto"
+  },
+  {
+    "number": 100,
+    "name": "I Corridori"
+  },
+  {
+    "number": 101,
+    "name": "La Calamità"
+  },
+  {
+    "number": 102,
+    "name": "La Gara ai Beni"
+  },
+  {
+    "number": 103,
+    "name": "Il Tempo"
+  },
+  {
+    "number": 104,
+    "name": "Il Diffamatore"
+  },
+  {
+    "number": 105,
+    "name": "L'Elefante"
+  },
+  {
+    "number": 106,
+    "name": "I Quraysh"
+  },
+  {
+    "number": 107,
+    "name": "L'Utenza"
+  },
+  {
+    "number": 108,
+    "name": "L'Abbondanza"
+  },
+  {
+    "number": 109,
+    "name": "I Miscredenti"
+  },
+  {
+    "number": 110,
+    "name": "L'Aiuto"
+  },
+  {
+    "number": 111,
+    "name": "Le Fibre"
+  },
+  {
+    "number": 112,
+    "name": "La Purezza"
+  },
+  {
+    "number": 113,
+    "name": "L'Alba"
+  },
+  {
+    "number": 114,
+    "name": "Gli Uomini"
+  }
+]

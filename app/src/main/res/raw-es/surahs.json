@@ -1,0 +1,458 @@
+[
+  {
+    "number": 1,
+    "name": "La Apertura"
+  },
+  {
+    "number": 2,
+    "name": "La Vaca"
+  },
+  {
+    "number": 3,
+    "name": "La Familia de Imran"
+  },
+  {
+    "number": 4,
+    "name": "Las Mujeres"
+  },
+  {
+    "number": 5,
+    "name": "La Mesa Servida"
+  },
+  {
+    "number": 6,
+    "name": "Los Ganados"
+  },
+  {
+    "number": 7,
+    "name": "Los Lugares Elevados"
+  },
+  {
+    "number": 8,
+    "name": "El Botín"
+  },
+  {
+    "number": 9,
+    "name": "El Arrepentimiento"
+  },
+  {
+    "number": 10,
+    "name": "Jonás"
+  },
+  {
+    "number": 11,
+    "name": "Hud"
+  },
+  {
+    "number": 12,
+    "name": "José"
+  },
+  {
+    "number": 13,
+    "name": "El Trueno"
+  },
+  {
+    "number": 14,
+    "name": "Abraham"
+  },
+  {
+    "number": 15,
+    "name": "La Roca"
+  },
+  {
+    "number": 16,
+    "name": "La Abeja"
+  },
+  {
+    "number": 17,
+    "name": "El Viaje Nocturno"
+  },
+  {
+    "number": 18,
+    "name": "La Cueva"
+  },
+  {
+    "number": 19,
+    "name": "María"
+  },
+  {
+    "number": 20,
+    "name": "Ta-Ha"
+  },
+  {
+    "number": 21,
+    "name": "Los Profetas"
+  },
+  {
+    "number": 22,
+    "name": "La Peregrinación"
+  },
+  {
+    "number": 23,
+    "name": "Los Creyentes"
+  },
+  {
+    "number": 24,
+    "name": "La Luz"
+  },
+  {
+    "number": 25,
+    "name": "El Discernimiento"
+  },
+  {
+    "number": 26,
+    "name": "Los Poetas"
+  },
+  {
+    "number": 27,
+    "name": "La Hormiga"
+  },
+  {
+    "number": 28,
+    "name": "Los Relatos"
+  },
+  {
+    "number": 29,
+    "name": "La Araña"
+  },
+  {
+    "number": 30,
+    "name": "Los Romanos"
+  },
+  {
+    "number": 31,
+    "name": "Luqman"
+  },
+  {
+    "number": 32,
+    "name": "La Postración"
+  },
+  {
+    "number": 33,
+    "name": "Los Confederados"
+  },
+  {
+    "number": 34,
+    "name": "Saba"
+  },
+  {
+    "number": 35,
+    "name": "El Originador"
+  },
+  {
+    "number": 36,
+    "name": "Ya-Sin"
+  },
+  {
+    "number": 37,
+    "name": "Los que se Ponen en Filas"
+  },
+  {
+    "number": 38,
+    "name": "Sad"
+  },
+  {
+    "number": 39,
+    "name": "Los Grupos"
+  },
+  {
+    "number": 40,
+    "name": "El Perdonador"
+  },
+  {
+    "number": 41,
+    "name": "Explicado en Detalle"
+  },
+  {
+    "number": 42,
+    "name": "La Consulta"
+  },
+  {
+    "number": 43,
+    "name": "El Adorno"
+  },
+  {
+    "number": 44,
+    "name": "El Humo"
+  },
+  {
+    "number": 45,
+    "name": "La Postración de Rodillas"
+  },
+  {
+    "number": 46,
+    "name": "Las Dunas"
+  },
+  {
+    "number": 47,
+    "name": "Mahoma"
+  },
+  {
+    "number": 48,
+    "name": "La Victoria"
+  },
+  {
+    "number": 49,
+    "name": "Las Habitaciones"
+  },
+  {
+    "number": 50,
+    "name": "Qaf"
+  },
+  {
+    "number": 51,
+    "name": "Los que esparcen"
+  },
+  {
+    "number": 52,
+    "name": "El Monte"
+  },
+  {
+    "number": 53,
+    "name": "La Estrella"
+  },
+  {
+    "number": 54,
+    "name": "La Luna"
+  },
+  {
+    "number": 55,
+    "name": "El Misericordioso"
+  },
+  {
+    "number": 56,
+    "name": "El Acontecimiento"
+  },
+  {
+    "number": 57,
+    "name": "El Hierro"
+  },
+  {
+    "number": 58,
+    "name": "La Que Discute"
+  },
+  {
+    "number": 59,
+    "name": "La Reunión"
+  },
+  {
+    "number": 60,
+    "name": "La Examinada"
+  },
+  {
+    "number": 61,
+    "name": "La Fila"
+  },
+  {
+    "number": 62,
+    "name": "El Viernes"
+  },
+  {
+    "number": 63,
+    "name": "Los Hipócritas"
+  },
+  {
+    "number": 64,
+    "name": "El Engaño Mutuo"
+  },
+  {
+    "number": 65,
+    "name": "El Divorcio"
+  },
+  {
+    "number": 66,
+    "name": "La Prohibición"
+  },
+  {
+    "number": 67,
+    "name": "La Soberanía"
+  },
+  {
+    "number": 68,
+    "name": "La Pluma"
+  },
+  {
+    "number": 69,
+    "name": "La Realidad"
+  },
+  {
+    "number": 70,
+    "name": "Las Escaleras"
+  },
+  {
+    "number": 71,
+    "name": "Noé"
+  },
+  {
+    "number": 72,
+    "name": "Los Genios"
+  },
+  {
+    "number": 73,
+    "name": "El Envuelto"
+  },
+  {
+    "number": 74,
+    "name": "El Cubierto"
+  },
+  {
+    "number": 75,
+    "name": "La Resurrección"
+  },
+  {
+    "number": 76,
+    "name": "El Hombre"
+  },
+  {
+    "number": 77,
+    "name": "Los Enviados"
+  },
+  {
+    "number": 78,
+    "name": "La Noticia"
+  },
+  {
+    "number": 79,
+    "name": "Los que Arrancan"
+  },
+  {
+    "number": 80,
+    "name": "Frunció el Ceño"
+  },
+  {
+    "number": 81,
+    "name": "El Oscurecimiento"
+  },
+  {
+    "number": 82,
+    "name": "La Ruptura"
+  },
+  {
+    "number": 83,
+    "name": "Los Defraudadores"
+  },
+  {
+    "number": 84,
+    "name": "La Grieta"
+  },
+  {
+    "number": 85,
+    "name": "Las Constelaciones"
+  },
+  {
+    "number": 86,
+    "name": "El Astro Nocturno"
+  },
+  {
+    "number": 87,
+    "name": "El Altísimo"
+  },
+  {
+    "number": 88,
+    "name": "El Abrumador"
+  },
+  {
+    "number": 89,
+    "name": "El Alba"
+  },
+  {
+    "number": 90,
+    "name": "La Ciudad"
+  },
+  {
+    "number": 91,
+    "name": "El Sol"
+  },
+  {
+    "number": 92,
+    "name": "La Noche"
+  },
+  {
+    "number": 93,
+    "name": "La Mañana"
+  },
+  {
+    "number": 94,
+    "name": "La Expansión"
+  },
+  {
+    "number": 95,
+    "name": "La Higuera"
+  },
+  {
+    "number": 96,
+    "name": "El Coágulo"
+  },
+  {
+    "number": 97,
+    "name": "El Decreto"
+  },
+  {
+    "number": 98,
+    "name": "La Evidencia"
+  },
+  {
+    "number": 99,
+    "name": "El Temblor"
+  },
+  {
+    "number": 100,
+    "name": "Los Corceles"
+  },
+  {
+    "number": 101,
+    "name": "El Golpe Terrible"
+  },
+  {
+    "number": 102,
+    "name": "La Rivalidad"
+  },
+  {
+    "number": 103,
+    "name": "El Tiempo"
+  },
+  {
+    "number": 104,
+    "name": "El Murmurador"
+  },
+  {
+    "number": 105,
+    "name": "El Elefante"
+  },
+  {
+    "number": 106,
+    "name": "La tribu de Quraysh"
+  },
+  {
+    "number": 107,
+    "name": "La Ayuda"
+  },
+  {
+    "number": 108,
+    "name": "La Abundancia"
+  },
+  {
+    "number": 109,
+    "name": "Los Incrédulos"
+  },
+  {
+    "number": 110,
+    "name": "La Victoria"
+  },
+  {
+    "number": 111,
+    "name": "La Fibra de Palmera"
+  },
+  {
+    "number": 112,
+    "name": "La Sinceridad"
+  },
+  {
+    "number": 113,
+    "name": "El Alba"
+  },
+  {
+    "number": 114,
+    "name": "La Humanidad"
+  }
+]

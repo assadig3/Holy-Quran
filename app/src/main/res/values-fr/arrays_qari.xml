@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qari_names">
+        <item>Mishary Rashid Alafasy</item>
+        <item>Abdurrahman Al-Sudais</item>
+        <item>Saud Al-Shuraim</item>
+        <item>Maher Al-Muaiqly</item>
+        <item>Fares Abbad</item>
+        <item>Ahmed Al-Ajmi</item>
+        <item>Hani Al-Rifai</item>
+        <item>Ali Al-Hudhaifi</item>
+
+        <item>Abdulbasit (Murattal 64 kbps – récitation lente)</item>
+        <item>Abdulbasit (Murattal 192 kbps – récitation lente)</item>
+        <item>Abdulbasit (Mujawwad 128 kbps – récitation mélodique)</item>
+        <item>Abdulbasit (QuranExplorer)</item>
+
+        <item>Minshawi (Murattal 128 kbps – récitation lente)</item>
+        <item>Minshawi (Mujawwad 64 kbps – récitation mélodique)</item>
+        <item>Minshawi (Professeur 128 kbps – style d’apprentissage)</item>
+
+        <item>Mahmoud Khalil Al-Husary (64 kbps)</item>
+        <item>Mahmoud Khalil Al-Husary (128 kbps)</item>
+        <item>Husary (Professeur 128 kbps – style d’apprentissage)</item>
+        <item>Husary (Mujawwad 64 kbps – récitation mélodique)</item>
+
+        <item>Abdullah Al-Juhany (128 kbps)</item>
+        <item>Abdullah Basfar (64 kbps)</item>
+        <item>Abdullah Basfar (192 kbps)</item>
+        <item>Abdullah Matroud (128 kbps)</item>
+        <item>Ali Jaber (64 kbps)</item>
+        <item>Ayman Sowaid (64 kbps)</item>
+        <item>Salah Al-Budair (128 kbps)</item>
+        <item>Salah Bukhatir (128 kbps)</item>
+        <item>Yasser Al-Dossary (128 kbps)</item>
+        <item>Yasser Salamah (128 kbps)</item>
+        <item>Sahl Yaseen (128 kbps)</item>
+        <item>Nasser Al-Qatami (128 kbps)</item>
+        <item>Hani Al-Rifai (192 kbps)</item>
+        <item>Ali Al-Hudhaifi (128 kbps)</item>
+
+        <item>Ibrahim Al-Akhdar (64 kbps)</item>
+        <item>Akram Al-Alaqmi (128 kbps)</item>
+        <item>Ali Hajjaj Al-Sousi (128 kbps)</item>
+        <item>Muhammad Ayoub (64 kbps)</item>
+        <item>Muhammad Jibreel (64 kbps)</item>
+        <item>Muhammad Mahmoud Al-Tablawi (64 kbps)</item>
+        <item>Mohsen Al-Qasim (192 kbps)</item>
+        <item>Mustafa Ismail (48 kbps)</item>
+        <item>Nabil Al-Rifai (48 kbps)</item>
+        <item>Khalifa Al-Tunaiji (64 kbps)</item>
+        <item>Saud Al-Ghamdi (40 kbps)</item>
+        <item>Karim Mansoori (40 kbps)</item>
+        <item>Aziz Alili (128 kbps)</item>
+    </string-array>
+</resources>

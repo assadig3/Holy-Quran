@@ -1,0 +1,10 @@
+<resources>
+    <item name="animating_tag" type="id"/>
+    <item type="id" name="recitationBar"/>
+    <item type="id" name="bottomRecitationBar"/>
+    <item type="id" name="ayahBar"/>
+    <item type="id" name="bottomAyahBar"/>
+    <item name="tag_is_animating" type="id"/>
+
+
+</resources>

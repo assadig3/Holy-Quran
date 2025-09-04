@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Information -->
+    <string name="app_name">꾸란</string>
+    <string name="home">홈</string>
+    <string name="settings_and_support">설정 및 지원</string>
+    <string name="setting">설정</string>
+    <string name="help">도움말</string>
+    <string name="info">앱 정보</string>
+    <string name="share_and_rate">공유 및 평가</string>
+    <string name="share">앱 공유</string>
+    <string name="share_qr">QR로 공유</string>
+    <string name="rate_app">앱 평가하기</string>
+    <string name="other_apps">다른 앱</string>
+    <string name="exit">종료</string>
+    <string name="about_app_description">꾸란 — 낭독, 검색, 즐겨찾기, 야간 모드 등 다양한 기능을 갖춘 읽기 및 청취 앱입니다.</string>
+    <string name="help_title">도움말</string>
+    <string name="help_content">지원 또는 문의는 FAQ 섹션을 참조하거나 설정을 통해 문의해 주세요.</string>
+    <string name="app_logo">앱 로고</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">설정</string>
+    <string name="light">밝음</string>
+    <string name="dark">어두움</string>
+    <string name="system_default">시스템 기본값</string>
+    <string name="choose_font_size">글꼴 크기 선택</string>
+    <string name="scan_qr">앱 다운로드를 위해 QR 코드 스캔</string>
+
+    <string name="navigation_drawer_open">내비게이션 열기</string>
+    <string name="navigation_drawer_close">내비게이션 닫기</string>
+
+    <!-- Tabs -->
+    <string name="tab_surahs">📖 수라</string>
+    <string name="tab_favorites">⭐ 즐겨찾기</string>
+    <string name="tab_juz">🔢 주즈</string>
+
+    <!-- Advanced Features -->
+    <string name="quran_default_title">꾸란</string>
+    <string name="downloading_soon">다운로드 기능 준비 중</string>
+    <string name="choose_tafsir">해설 선택</string>
+    <string name="tafseer_selected">해설이 성공적으로 선택되었습니다!</string>
+    <string name="play_error">낭독을 재생할 수 없습니다</string>
+    <string name="remove_from_favorites">즐겨찾기에서 제거됨</string>
+    <string name="add_to_favorites">즐겨찾기에 추가됨</string>
+    <string name="repeat_settings">반복 설정</string>
+    <string name="repeat_assigned">%1$s 반복 (%2$d회)</string>
+    <string name="share_tafsir">해설 공유</string>
+    <string name="tafseer_surah_ayah">수라 %1$s - 아야 %2$d</string>
+    <string name="ok">확인</string>
+    <string name="close">닫기</string>
+    <string name="select_qari">낭독자 선택</string>
+    <string name="select_tafsir">해설 선택</string>
+    <string name="ayah_options">아야 옵션</string>
+    <string name="copy">복사</string>
+    <string name="share_ayah">공유</string>
+    <string name="tafsir">해설</string>
+    <string name="play">재생</string>
+    <string name="pause">일시 정지</string>
+    <string name="resume">계속</string>
+    <string name="stop">정지</string>
+    <string name="repeat">반복</string>
+    <string name="favorites">즐겨찾기</string>
+    <string name="remove">제거</string>
+    <string name="add">추가</string>
+    <string name="last_visited_pages">최근 본 페이지</string>
+    <string name="no_last_pages">최근 페이지가 없습니다</string>
+    <string name="go_to_page">페이지로 이동</string>
+    <string name="surah">수라</string>
+    <string name="ayah">아야</string>
+    <string name="surah_search_hint">수라 이름 검색</string>
+    <string name="no_tafsir_available">이 아야에 대한 해설이 없습니다</string>
+    <string name="juz">주즈</string>
+    <string name="juz_start_page">%1$d페이지에서 시작</string>
+    <string name="juz_search_hint">주즈 번호 또는 이름으로 검색</string>
+    <string name="menu_clear_all_bookmarks">🗑️ 모든 북마크 삭제</string>
+    <string name="menu_clear_all_recent">🧹 기록 삭제</string>
+    <string name="recent_pages_title">🕓 최근 페이지</string>
+    <string name="favorite_pages_title">⭐ 즐겨찾기 페이지</string>
+
+    <string name="menu_last_read_juz">📌 마지막으로 읽은 주즈</string>
+    <string name="menu_jump_to_juz">주즈로 이동</string>
+    <string name="menu_jump_to_surah">수라로 이동</string>
+
+    <string name="reset_onboarding_button">온보딩 초기화</string>
+    <string name="reset_onboarding">앱 온보딩 초기화</string>
+    <string name="choose_font">글꼴 크기 선택</string>
+    <string name="choose_language">언어 선택</string>
+    <string name="arabic">아랍어</string>
+    <string name="english">영어</string>
+    <string name="choose_theme">테마 선택</string>
+    <string name="theme_light">밝음</string>
+    <string name="theme_dark">어두움</string>
+    <string name="theme_system">시스템 기본값</string>
+    <string name="font_small">작게</string>
+    <string name="font_medium">보통</string>
+    <string name="font_large">크게</string>
+    <string name="screen_options">화면 옵션</string>
+    <string name="keep_screen_on">읽는 동안 화면 켜기 유지</string>
+    <string name="font_changed">글꼴 크기가 변경되었습니다</string>
+    <string name="settings_reset">설정이 초기화되었습니다!</string>
+
+    <string name="page">페이지</string>
+    <string name="favorite">즐겨찾기</string>
+    <string name="clear_all_favorites">모든 즐겨찾기 삭제</string>
+    <string name="clear_all_recent">기록 삭제</string>
+    <string name="favorite_pages">즐겨찾기 페이지</string>
+    <string name="recent_pages">최근 페이지</string>
+    <string name="no_favorites">즐겨찾기가 없습니다</string>
+    <string name="tap_to_open_page">페이지 열기</string>
+    <string name="all_favorites_cleared">모든 즐겨찾기가 삭제되었습니다</string>
+    <string name="all_recent_cleared">모든 기록이 삭제되었습니다</string>
+    <string name="bookmark_title">🕓 페이지 %1$d</string>
+    <string name="favorite_page_hint">⭐ 페이지 %1$d</string>
+    <string name="favorite_page_item">⭐ 페이지 %1$d</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">홈</string>
+    <string name="nav_search">검색</string>
+    <string name="nav_settings">설정</string>
+    <string name="nav_help">도움말</string>
+    <string name="nav_about">정보</string>
+    <string name="nav_share_app">앱 공유</string>
+    <string name="nav_share_qr">QR로 공유</string>
+    <string name="nav_rate_app">앱 평가하기</string>
+    <string name="nav_other_apps">다른 앱</string>
+
+    <!-- Exit -->
+    <string name="exit_confirm_title">종료 확인</string>
+    <string name="exit_confirm_message">앱을 종료하시겠습니까?</string>
+    <string name="yes">예</string>
+
+    <!-- Version -->
+    <string name="version_loading">버전 확인 중…</string>
+    <string name="version_format">버전 %1$s</string>
+    <string name="version_example">버전 1.0.23</string>
+
+    <!-- Extra -->
+    <string name="search">검색</string>
+    <string name="search_empty">단어 또는 구문 검색…</string>
+    <string name="search_results_placeholder">결과</string>
+    <string name="qr_code">QR 코드</string>
+    <string name="share_qr_hint">QR 코드 스캔 또는 링크 공유</string>
+
+    <string name="header_developer_by">개발자: %1$s</string>
+    <string name="header_developer_by_example">개발자: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">2025년 6월 7일 • 1446년 12월 10일</string>
+
+    <string name="share_message">꾸란 앱을 공유하여 보상을 받으세요: %1$s</string>
+    <string name="share_chooser_title">해설 공유</string>
+
+    <string name="hijri_placeholder">히즈리 달력</string>
+
+    <string name="action_toggle_page_bookmark">페이지 저장</string>
+    <string name="action_toggle_repeat">반복</string>
+    <string name="action_download_tafsirs">해설 다운로드</string>
+    <string name="action_select_tafsir">해설 선택</string>
+
+    <string name="download_title">꾸란 페이지를 다운로드하는 동안 기다려 주세요… 시간을 기도와 꾸란 낭독으로 채우세요</string>
+    <string name="download_ready">다운로드 준비 완료</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">지금 다운로드</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">다운로드</string>
+
+    <!-- Dialog -->
+    <string name="go_to_surah">수라로 이동</string>
+    <string name="search_surah_hint">🔍 수라 검색</string>
+    <string name="cancel">취소</string>
+
+    <!-- Juz -->
+    <string name="go_to_juz">주즈로 이동</string>
+    <string name="search_juz_hint">🔍 주즈 검색</string>
+
+    <!-- Repeat dialog -->
+    <string name="repeat_ayah">아야</string>
+    <string name="repeat_count_label">반복 횟수:</string>
+
+    <!-- Tafsir dialog -->
+    <string name="tafsir_ayah_title">수라 … - 아야 …</string>
+    <string name="tafsir_sample_ayah">بسم الله الرحمن الرحيم</string>
+    <string name="tafsir_text_placeholder">여기에 해설 텍스트</string>
+
+    <!-- Pages download UI -->
+    <string name="pages_download_starting">다운로드 시작…</string>
+    <string name="pages_download_progress">%1$d / %2$d 페이지 다운로드 중</string>
+    <string name="pages_download_done">다운로드 완료.</string>
+    <string name="pages_download_failed">다운로드 실패.</string>
+    <string name="pages_download_canceled">취소되었습니다.</string>
+
+    <!-- Repeat UI -->
+    <string name="repeat_settings_title">반복 설정</string>
+
+    <!-- Audio batch downloader -->
+    <string name="no_recitations_to_download">다운로드할 낭독이 없습니다.</string>
+    <string name="downloading_recitations">낭독 다운로드 중…</string>
+    <string name="recitations_saved">낭독이 저장되었습니다!</string>
+    <string name="download_error">다운로드 중 오류 발생.</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">아야 텍스트를 사용할 수 없음</string>
+
+    <string name="qari_icon">낭독자 아이콘</string>
+    <string name="change_language">언어 변경</string>
+    <string name="qari_selected_toast">%1$s 선택됨</string>
+
+    <string name="choose_qari_title">낭독자 선택</string>
+
+    <string name="choose_language_title">앱 언어 선택</string>
+    <string name="choose_language_subtitle">설정에서 언제든 변경 가능합니다</string>
+    <string name="continue_btn">계속</string>
+    <string name="device_language_option">기기 언어 사용</string>
+
+    <!-- Names of languages -->
+    <string name="lang_arabic">العربية</string>
+    <string name="lang_english">English</string>
+    <string name="lang_turkish">Türkçe</string>
+    <string name="lang_indonesian">Bahasa Indonesia</string>
+    <string name="lang_urdu">اردو</string>
+    <string name="lang_persian">فارسی</string>
+    <string name="lang_bengali">বাংলা</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_hindi">हिन्दी</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_portuguese">Português</string>
+    <string name="lang_italian">Italiano</string>
+    <string name="lang_swahili">Kiswahili</string>
+    <string name="lang_thai">ไทย</string>
+
+    <string name="continue_text">계속</string>
+    <string name="language_selection_title">언어 선택</string>
+
+    <!-- Search screen -->
+    <string name="search_title">검색</string>
+    <string name="search_button">검색</string>
+    <string name="tab_surah">수라</string>
+    <string name="tab_fav">즐겨찾기</string>
+    <string name="update_preparing">업데이트 확인 중…</string>
+    <string name="update_downloading">업데이트 다운로드 중…</string>
+    <string name="update_downloaded_tap_to_restart">다운로드 완료 — 다시 시작하여 업데이트 설치</string>
+    <string name="update_installing">업데이트 설치 중…</string>
+    <string name="update_available_message">새로운 업데이트가 있습니다. 최신 버전으로 업데이트하세요.</string>
+    <string name="search_hint">검색어 입력…</string>
+    <string name="search_counter_format">검색 결과 수: %1$d</string>
+    <string name="no_internet_short">인터넷 연결 없음</string>
+
+    <!-- Title bar while downloading pages -->
+    <string name="pages_download_title_marquee">꾸란 페이지를 다운로드하는 동안 기다려 주세요 — 시간을 기도로 채우세요 🌿</string>
+
+    <!-- General texts -->
+    <string name="downloading_quran_pages">꾸란 페이지 다운로드 중…</string>
+    <string name="remaining_time">남은 시간: …</string>
+    <string name="please_rate_app">앱을 평가해 주시면 개선에 도움이 됩니다 🌟</string>
+
+</resources>

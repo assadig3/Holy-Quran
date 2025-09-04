@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- सामान्य जानकारी -->
+    <string name="app_name">पवित्र कुरआन</string>
+    <string name="home">होम</string>
+    <string name="settings_and_support">सेटिंग्स और सहायता</string>
+    <string name="setting">सेटिंग्स</string>
+    <string name="help">सहायता</string>
+    <string name="info">एप के बारे में</string>
+    <string name="share_and_rate">शेयर और रेट करें</string>
+    <string name="share">एप शेयर करें</string>
+    <string name="share_qr">QR के माध्यम से शेयर करें</string>
+    <string name="rate_app">एप रेट करें</string>
+    <string name="other_apps">अन्य एप्स</string>
+    <string name="exit">बाहर निकलें</string>
+    <string name="about_app_description">पवित्र कुरआन — पढ़ें और सुनें, तिलावत, खोज, पसंदीदा, नाइट मोड और अधिक सुविधाओं के साथ।</string>
+    <string name="help_title">सहायता</string>
+    <string name="help_content">सहायता या पूछताछ के लिए कृपया FAQ देखें या सेटिंग्स के माध्यम से संपर्क करें।</string>
+    <string name="app_logo">एप लोगो</string>
+
+    <!-- सेटिंग्स -->
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="light">हल्का</string>
+    <string name="dark">गहरा</string>
+    <string name="system_default">सिस्टम डिफॉल्ट</string>
+    <string name="choose_font_size">फ़ॉन्ट आकार चुनें</string>
+    <string name="scan_qr">एप डाउनलोड करने के लिए QR कोड स्कैन करें</string>
+
+    <string name="navigation_drawer_open">नेविगेशन खोलें</string>
+    <string name="navigation_drawer_close">नेविगेशन बंद करें</string>
+
+    <!-- टैब -->
+    <string name="tab_surahs">📖 सूरह</string>
+    <string name="tab_favorites">⭐ पसंदीदा</string>
+    <string name="tab_juz">🔢 पारा</string>
+
+    <!-- उन्नत सुविधाएँ -->
+    <string name="quran_default_title">पवित्र कुरआन</string>
+    <string name="downloading_soon">डाउनलोड सुविधा जल्द आ रही है</string>
+    <string name="choose_tafsir">तफ़सीर चुनें</string>
+    <string name="tafseer_selected">तफ़सीर सफलतापूर्वक चुनी गई!</string>
+    <string name="play_error">तिलावत चलाने में असमर्थ</string>
+    <string name="remove_from_favorites">पृष्ठ पसंदीदा से हटाया गया</string>
+    <string name="add_to_favorites">पृष्ठ पसंदीदा में जोड़ा गया</string>
+    <string name="repeat_settings">दोहराव सेटिंग्स</string>
+    <string name="repeat_assigned">दोहराएँ %1$s (%2$d बार)</string>
+    <string name="share_tafsir">तफ़सीर शेयर करें</string>
+    <string name="tafseer_surah_ayah">सूरह %1$s - आयत %2$d</string>
+    <string name="ok">ठीक है</string>
+    <string name="close">बंद करें</string>
+    <string name="select_qari">क़ारी चुनें</string>
+    <string name="select_tafsir">तफ़सीर चुनें</string>
+    <string name="ayah_options">आयत विकल्प</string>
+    <string name="copy">कॉपी करें</string>
+    <string name="share_ayah">शेयर करें</string>
+    <string name="tafsir">तफ़सीर</string>
+    <string name="play">चलाएँ</string>
+    <string name="pause">रोकें</string>
+    <string name="resume">पुनः प्रारंभ करें</string>
+    <string name="stop">बंद करें</string>
+    <string name="repeat">दोहराएँ</string>
+    <string name="favorites">पसंदीदा</string>
+    <string name="remove">हटाएँ</string>
+    <string name="add">जोड़ें</string>
+    <string name="last_visited_pages">हाल की पृष्ठ</string>
+    <string name="no_last_pages">कोई हाल का पृष्ठ नहीं</string>
+    <string name="go_to_page">पृष्ठ पर जाएँ</string>
+    <string name="surah">सूरह</string>
+    <string name="ayah">आयत</string>
+    <string name="surah_search_hint">सूरह का नाम खोजें</string>
+    <string name="no_tafsir_available">इस आयत के लिए कोई तफ़सीर उपलब्ध नहीं</string>
+    <string name="juz">पारा</string>
+    <string name="juz_start_page">पृष्ठ %1$d से प्रारंभ</string>
+    <string name="juz_search_hint">पारा संख्या या नाम से खोजें</string>
+    <string name="menu_clear_all_bookmarks">🗑️ सभी बुकमार्क हटाएँ</string>
+    <string name="menu_clear_all_recent">🧹 इतिहास साफ करें</string>
+    <string name="recent_pages_title">🕓 हाल के पृष्ठ</string>
+    <string name="favorite_pages_title">⭐ पसंदीदा पृष्ठ</string>
+
+    <string name="menu_last_read_juz">📌 आख़िरी पढ़ा गया पारा</string>
+    <string name="menu_jump_to_juz">पारा पर जाएँ</string>
+    <string name="menu_jump_to_surah">सूरह पर जाएँ</string>
+
+    <string name="reset_onboarding_button">रीसेट करें</string>
+    <string name="reset_onboarding">एप परिचय रीसेट करें</string>
+    <string name="choose_font">फ़ॉन्ट चुनें</string>
+    <string name="choose_language">भाषा चुनें</string>
+    <string name="arabic">अरबी</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="choose_theme">थीम चुनें</string>
+    <string name="theme_light">हल्का</string>
+    <string name="theme_dark">गहरा</string>
+    <string name="theme_system">सिस्टम डिफॉल्ट</string>
+    <string name="font_small">छोटा</string>
+    <string name="font_medium">मध्यम</string>
+    <string name="font_large">बड़ा</string>
+    <string name="screen_options">स्क्रीन विकल्प</string>
+    <string name="keep_screen_on">पढ़ते समय स्क्रीन चालू रखें</string>
+    <string name="font_changed">फ़ॉन्ट आकार बदला गया</string>
+    <string name="settings_reset">सेटिंग्स रीसेट!</string>
+
+    <string name="page">पृष्ठ</string>
+    <string name="favorite">पसंदीदा</string>
+    <string name="clear_all_favorites">सभी पसंदीदा हटाएँ</string>
+    <string name="clear_all_recent">इतिहास साफ करें</string>
+    <string name="favorite_pages">पसंदीदा पृष्ठ</string>
+    <string name="recent_pages">हाल के पृष्ठ</string>
+    <string name="no_favorites">कोई पसंदीदा पृष्ठ नहीं</string>
+    <string name="tap_to_open_page">पृष्ठ खोलने के लिए टैप करें</string>
+    <string name="all_favorites_cleared">सभी पसंदीदा हटाए गए</string>
+    <string name="all_recent_cleared">इतिहास साफ किया गया</string>
+    <string name="bookmark_title">🕓 पृष्ठ %1$d</string>
+    <string name="favorite_page_hint">⭐ पृष्ठ %1$d</string>
+    <string name="favorite_page_item">⭐ पृष्ठ %1$d</string>
+
+    <!-- नेविगेशन -->
+    <string name="nav_home">होम</string>
+    <string name="nav_search">खोज</string>
+    <string name="nav_settings">सेटिंग्स</string>
+    <string name="nav_help">सहायता</string>
+    <string name="nav_about">जानकारी</string>
+    <string name="nav_share_app">एप शेयर करें</string>
+    <string name="nav_share_qr">QR के माध्यम से शेयर करें</string>
+    <string name="nav_rate_app">एप रेट करें</string>
+    <string name="nav_other_apps">अन्य एप्स</string>
+
+    <!-- प्रस्थान -->
+    <string name="exit_confirm_title">बाहर निकलने की पुष्टि</string>
+    <string name="exit_confirm_message">क्या आप एप से बाहर निकलना चाहते हैं?</string>
+    <string name="yes">हाँ</string>
+
+    <!-- संस्करण -->
+    <string name="version_loading">संस्करण जाँच हो रहा है…</string>
+    <string name="version_format">संस्करण %1$s</string>
+    <string name="version_example">संस्करण 1.0.23</string>
+
+    <!-- अतिरिक्त -->
+    <string name="search">खोज</string>
+    <string name="search_empty">शब्द या वाक्यांश खोजें…</string>
+    <string name="search_results_placeholder">परिणाम</string>
+    <string name="qr_code">QR कोड</string>
+    <string name="share_qr_hint">QR कोड स्कैन करें या लिंक शेयर करें</string>
+
+    <string name="header_developer_by">द्वारा: %1$s</string>
+    <string name="header_developer_by_example">द्वारा: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">7 जून 2025 • 10 ज़िलहिज्जा 1446</string>
+
+    <string name="share_message">सवाब कमाने के लिए पवित्र कुरआन एप शेयर करें: %1$s</string>
+    <string name="share_chooser_title">तफ़सीर शेयर करें</string>
+
+    <string name="hijri_placeholder">हिजरी तिथि</string>
+
+    <string name="action_toggle_page_bookmark">पृष्ठ सहेजें</string>
+    <string name="action_toggle_repeat">दोहराएँ</string>
+    <string name="action_download_tafsirs">तफ़सीर डाउनलोड करें</string>
+    <string name="action_select_tafsir">तफ़सीर चुनें</string>
+
+    <string name="download_title">कृपया प्रतीक्षा करें जब तक क़ुरआन के पृष्ठ डाउनलोड हो रहे हैं… समय को ज़िक्र और दुरूद में लगाएँ ﷺ</string>
+    <string name="download_ready">डाउनलोड के लिए तैयार</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">अभी डाउनलोड करें</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">डाउनलोड</string>
+
+    <!-- डायलॉग -->
+    <string name="go_to_surah">सूरह पर जाएँ</string>
+    <string name="search_surah_hint">🔍 सूरह खोजें</string>
+    <string name="cancel">रद्द करें</string>
+
+    <!-- पारा -->
+    <string name="go_to_juz">पारा पर जाएँ</string>
+    <string name="search_juz_hint">🔍 पारा खोजें</string>
+
+    <!-- दोहराव -->
+    <string name="repeat_ayah">आयत</string>
+    <string name="repeat_count_label">दोहराव संख्या:</string>
+
+    <!-- तफ़सीर -->
+    <string name="tafsir_ayah_title">सूरह ... - आयत ...</string>
+    <string name="tafsir_sample_ayah">अल्लाह के नाम से, जो रहमान और रहीम है</string>
+    <string name="tafsir_text_placeholder">यहाँ तफ़सीर का पाठ होगा</string>
+
+    <!-- डाउनलोड -->
+    <string name="pages_download_starting">डाउनलोड शुरू हो रहा है…</string>
+    <string name="pages_download_progress">पृष्ठ डाउनलोड हो रहा है %1$d / %2$d</string>
+    <string name="pages_download_done">डाउनलोड पूरा हुआ।</string>
+    <string name="pages_download_failed">डाउनलोड असफल।</string>
+    <string name="pages_download_canceled">डाउनलोड रद्द।</string>
+
+    <!-- दोहराव UI -->
+    <string name="repeat_settings_title">दोहराव सेटिंग्स</string>
+
+    <!-- ऑडियो बैच डाउनलोडर -->
+    <string name="no_recitations_to_download">कोई तिलावत उपलब्ध नहीं।</string>
+    <string name="downloading_recitations">तिलावत डाउनलोड हो रही है…</string>
+    <string name="recitations_saved">तिलावत सहेजी गई!</string>
+    <string name="download_error">डाउनलोड में त्रुटि हुई।</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">आयत का पाठ उपलब्ध नहीं</string>
+
+    <string name="qari_icon">क़ारी आइकन</string>
+    <string name="change_language">भाषा बदलें</string>
+    <string name="qari_selected_toast">%1$s चुना गया</string>
+
+    <string name="choose_qari_title">क़ारी चुनें</string>
+
+    <string name="choose_language_title">एप की भाषा चुनें</string>
+    <string name="choose_language_subtitle">आप बाद में सेटिंग्स से बदल सकते हैं</string>
+    <string name="continue_btn">जारी रखें</string>
+    <string name="device_language_option">डिवाइस की भाषा का उपयोग करें</string>
+
+    <!-- भाषाएँ -->
+    <string name="lang_arabic">Arabic</string>
+    <string name="lang_english">English</string>
+    <string name="lang_turkish">Türkçe</string>
+    <string name="lang_indonesian">Bahasa Indonesia</string>
+    <string name="lang_urdu">اردو</string>
+    <string name="lang_persian">فارسی</string>
+    <string name="lang_bengali">বাংলা</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_hindi">हिन्दी</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_portuguese">Português</string>
+    <string name="lang_italian">Italiano</string>
+    <string name="lang_swahili">Kiswahili</string>
+    <string name="lang_thai">ไทย</string>
+
+    <string name="continue_text">जारी रखें</string>
+    <string name="language_selection_title">भाषा चयन</string>
+
+    <!-- खोज -->
+    <string name="search_title">खोज</string>
+    <string name="search_button">खोज</string>
+    <string name="tab_surah">सूरह</string>
+    <string name="tab_fav">पसंदीदा</string>
+    <string name="update_preparing">अपडेट जाँच हो रही है…</string>
+    <string name="update_downloading">अपडेट डाउनलोड हो रहा है…</string>
+    <string name="update_downloaded_tap_to_restart">डाउनलोड पूरा — पुनः आरंभ कर अपडेट इंस्टॉल करें</string>
+    <string name="update_installing">अपडेट इंस्टॉल हो रहा है…</string>
+    <string name="update_available_message">नया अपडेट उपलब्ध है। कृपया नवीनतम संस्करण में अपडेट करें।</string>
+    <string name="search_hint">खोजने के लिए लिखें…</string>
+    <string name="search_counter_format">परिणामों की संख्या: %1$d</string>
+    <string name="no_internet_short">कोई इंटरनेट कनेक्शन नहीं</string>
+
+    <!-- डाउनलोड marquee -->
+    <string name="pages_download_title_marquee">कुरआन के पृष्ठ लोड हो रहे हैं — समय को ज़िक्र में लगाएँ 🌿</string>
+
+    <!-- सामान्य -->
+    <string name="downloading_quran_pages">कुरआन के पृष्ठ डाउनलोड हो रहे हैं…</string>
+    <string name="remaining_time">शेष समय: …</string>
+    <string name="please_rate_app">कृपया ऐप को रेट करें ताकि हम बेहतर बना सकें 🌟</string>
+
+</resources>

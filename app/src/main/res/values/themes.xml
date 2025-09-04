@@ -1,0 +1,29 @@
+<resources>
+    <style name="Theme.AlQuran" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/quranFrameBlue</item>
+        <item name="colorPrimaryVariant">@color/quranFrameBlue</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- نصوص -->
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+
+        <!-- خلفية الوضع الليلي -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <!-- جعل نصوص القوائم والأيقونات بيضاء -->
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+
+        <item name="ayahBannerGlassBg">#BBFFFFFF</item>    <!-- أبيض شفاف 73% -->
+        <item name="ayahBannerBorder">#3396C5F7</item>    <!-- أزرق فاتح شفاف -->
+
+
+        <!-- دعم الوضع الليلي الافتراضي -->
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

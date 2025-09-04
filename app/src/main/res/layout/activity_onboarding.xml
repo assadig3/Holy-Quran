@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:background="#F1F3F4"
+    android:fillViewport="true"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout 
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView 
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <TextView 
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:paddingBottom="24dp"
+            android:textColor="#333"
+            android:text="مرحبًا بك في تطبيق القرآن الكريم"
+            android:textStyle="bold" />
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="اختر اللغة"
+            android:textStyle="bold" />
+        <RadioGroup 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/languageGroup">
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:id="@+id/lang_ar"
+                android:text="العربية" />
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lang_en"
+                android:text="English" />
+        </RadioGroup>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="اختر المظهر"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+        <RadioGroup 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/themeGroup">
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/theme_light"
+                android:text="نهاري" />
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/theme_dark"
+                android:text="ليلي" />
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:id="@+id/theme_system"
+                android:text="حسب النظام" />
+        </RadioGroup>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="اختر حجم الخط"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+        <RadioGroup 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/fontGroup">
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/font_small"
+                android:text="صغير" />
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:id="@+id/font_medium"
+                android:text="متوسط" />
+            <RadioButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/font_large"
+                android:text="كبير" />
+        </RadioGroup>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="32dp"
+            android:id="@+id/startButton"
+            android:text="ابدأ" />
+    </LinearLayout>
+</ScrollView>

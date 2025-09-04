@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="qari_names">
+        <item>มิเชารี ราชิด อัล-อะฟาซี</item>
+        <item>อับดุรเราะห์มาน อัส-ซุดัยส์</item>
+        <item>ซาอูด อัล-ชุรอยม์</item>
+        <item>มาเฮอร์ อัล-มุอัยกิลี</item>
+        <item>ฟาเรส อับบัด</item>
+        <item>อาห์หมัด อัล-อาจ์มี</item>
+        <item>ฮานี อัล-ริฟาอี</item>
+        <item>อะลี อัล-ฮุไดย์ฟี</item>
+
+        <item>อับดุลบาซิต (ตาร์ตีล 64kbps)</item>
+        <item>อับดุลบาซิต (ตาร์ตีล 192kbps)</item>
+        <item>อับดุลบาซิต (พร้อมตัจวีด 128kbps)</item>
+        <item>อับดุลบาซิต (QuranExplorer)</item>
+
+        <item>มินชาวี (ตาร์ตีล 128kbps)</item>
+        <item>มินชาวี (พร้อมตัจวีด 64kbps)</item>
+        <item>มินชาวี (ผู้สอน 128kbps)</item>
+
+        <item>มาห์มูด คอลิล อัล-ฮุซารี (64kbps)</item>
+        <item>มาห์มูด คอลิล อัล-ฮุซารี (128kbps)</item>
+        <item>ฮุซารี (ผู้สอน 128kbps)</item>
+        <item>ฮุซารี (พร้อมตัจวีด 64kbps)</item>
+
+        <item>อับดุลลอฮ์ อัล-ญุฮานี (128kbps)</item>
+        <item>อับดุลลอฮ์ บัสฟัร (64kbps)</item>
+        <item>อับดุลลอฮ์ บัสฟัร (192kbps)</item>
+        <item>อับดุลลอฮ์ มัตรูด (128kbps)</item>
+        <item>อะลี ญาเบอร์ (64kbps)</item>
+        <item>ไอย์มัน ซูวัยด์ (64kbps)</item>
+        <item>ศอลาฮ์ อัล-บุดัยร์ (128kbps)</item>
+        <item>ศอลาฮ์ บุคอฏีร (128kbps)</item>
+        <item>ยาเซอร์ อัล-ดอซซารี (128kbps)</item>
+        <item>ยาเซอร์ ศอลามะฮ์ (128kbps)</item>
+        <item>ซาฮล์ ยาซีน (128kbps)</item>
+        <item>นาสเซอร์ อัล-กอตามี (128kbps)</item>
+        <item>ฮานี อัล-ริฟาอี (192kbps)</item>
+        <item>อะลี อัล-ฮุไดย์ฟี (128kbps)</item>
+
+        <item>อิบรอฮีม อัล-อัคดัร (64kbps)</item>
+        <item>อัครัม อัล-อะลักมี (128kbps)</item>
+        <item>อะลี ฮัจญาจ อัส-ซูซี (128kbps)</item>
+        <item>มุฮัมมัด อัยยูบ (64kbps)</item>
+        <item>มุฮัมมัด ญิบรีล (64kbps)</item>
+        <item>มุฮัมมัด มะห์มูด อัล-ตับลาวี (64kbps)</item>
+        <item>มุฮ์ซิน อัล-กอซิม (192kbps)</item>
+        <item>มุสตอฟา อิสมาอีล (48kbps)</item>
+        <item>นาบิล อัล-ริฟาอี (48kbps)</item>
+        <item>คอลีฟะฮ์ อัล-ตุนัยญี (64kbps)</item>
+        <item>ซาอูด อัล-ฆอมดี (40kbps)</item>
+        <item>การีม มันซูรี (40kbps)</item>
+        <item>อาซีซ อะลิลี (128kbps)</item>
+    </string-array>
+</resources>

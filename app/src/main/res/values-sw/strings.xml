@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Maelezo ya Jumla -->
+    <string name="app_name">Qurani Tukufu</string>
+    <string name="home">Nyumbani</string>
+    <string name="settings_and_support">Mipangilio &amp; Usaidizi</string>
+    <string name="setting">Mipangilio</string>
+    <string name="help">Msaada</string>
+    <string name="info">Kuhusu Programu</string>
+    <string name="share_and_rate">Shiriki &amp; Kadiria</string>
+    <string name="share">Shiriki Programu</string>
+    <string name="share_qr">Shiriki kupitia QR</string>
+    <string name="rate_app">Kadiria Programu</string>
+    <string name="other_apps">Programu Nyingine</string>
+    <string name="exit">Toka</string>
+    <string name="about_app_description">Qurani Tukufu — Soma &amp; Sikiliza kwa tilawa, utafutaji, vipendwa, hali ya usiku na mengine mengi.</string>
+    <string name="help_title">Msaada</string>
+    <string name="help_content">Kwa usaidizi au maswali, tafadhali tazama sehemu ya Maswali Yanayoulizwa Mara kwa Mara (FAQ) au wasiliana kupitia mipangilio.</string>
+    <string name="app_logo">Nembo ya Programu</string>
+
+    <!-- Skrini ya Mipangilio -->
+    <string name="settings_title">Mipangilio</string>
+    <string name="light">Nuru</string>
+    <string name="dark">Giza</string>
+    <string name="system_default">Chaguo-msingi la Mfumo</string>
+    <string name="choose_font_size">Chagua Ukubwa wa Fonti</string>
+    <string name="scan_qr">Changanua Msimbo wa QR ili kupakua programu</string>
+
+    <string name="navigation_drawer_open">Fungua Urambazaji</string>
+    <string name="navigation_drawer_close">Funga Urambazaji</string>
+
+    <!-- Vichupo -->
+    <string name="tab_surahs">📖 Sura</string>
+    <string name="tab_favorites">⭐ Vipendwa</string>
+    <string name="tab_juz">🔢 Juzuu</string>
+
+    <!-- Vipengele vya Juu -->
+    <string name="quran_default_title">Qurani Tukufu</string>
+    <string name="downloading_soon">Kipengele cha upakuaji kinakuja hivi karibuni</string>
+    <string name="choose_tafsir">Chagua Tafsiri</string>
+    <string name="tafseer_selected">Tafsiri imechaguliwa kwa mafanikio!</string>
+    <string name="play_error">Haiwezi kucheza tilawa</string>
+    <string name="remove_from_favorites">Ukurasa umeondolewa kwenye vipendwa</string>
+    <string name="add_to_favorites">Ukurasa umeongezwa kwenye vipendwa</string>
+    <string name="repeat_settings">Mipangilio ya Kurudia</string>
+    <string name="repeat_assigned">Rudia %1$s (%2$d mara)</string>
+    <string name="share_tafsir">Shiriki Tafsiri</string>
+    <string name="tafseer_surah_ayah">Sura %1$s - Aya %2$d</string>
+    <string name="ok">Sawa</string>
+    <string name="close">Funga</string>
+    <string name="select_qari">Chagua Qari</string>
+    <string name="select_tafsir">Chagua Tafsiri</string>
+    <string name="ayah_options">Chaguo za Aya</string>
+    <string name="copy">Nakili</string>
+    <string name="share_ayah">Shiriki</string>
+    <string name="tafsir">Tafsiri</string>
+    <string name="play">Cheza</string>
+    <string name="pause">Sitisha</string>
+    <string name="resume">Endelea</string>
+    <string name="stop">Acha</string>
+    <string name="repeat">Rudia</string>
+    <string name="favorites">Vipendwa</string>
+    <string name="remove">Ondoa</string>
+    <string name="add">Ongeza</string>
+    <string name="last_visited_pages">Kurasa za Mwisho</string>
+    <string name="no_last_pages">Hakuna kurasa za hivi karibuni</string>
+    <string name="go_to_page">Nenda kwenye ukurasa</string>
+    <string name="surah">Sura</string>
+    <string name="ayah">Aya</string>
+    <string name="surah_search_hint">Tafuta jina la sura</string>
+    <string name="no_tafsir_available">Hakuna tafsiri kwa aya hii</string>
+    <string name="juz">Juzuu</string>
+    <string name="juz_start_page">Inaanzia ukurasa %1$d</string>
+
+    <string name="juz_search_hint">Tafuta kwa namba au jina la Juzuu</string>
+    <string name="menu_clear_all_bookmarks">🗑️ Futa alamisho zote</string>
+    <string name="menu_clear_all_recent">🧹 Futa historia</string>
+    <string name="recent_pages_title">🕓 Kurasa za hivi karibuni</string>
+    <string name="favorite_pages_title">⭐ Kurasa pendwa</string>
+
+    <string name="menu_last_read_juz">📌 Juzuu iliyosomwa mwisho</string>
+    <string name="menu_jump_to_juz">Nenda kwenye Juzuu</string>
+    <string name="menu_jump_to_surah">Nenda kwenye Sura</string>
+
+    <string name="reset_onboarding_button">Weka upya</string>
+    <string name="reset_onboarding">Weka upya utangulizi wa programu</string>
+    <string name="choose_font">Chagua fonti</string>
+    <string name="choose_language">Chagua lugha</string>
+    <string name="arabic">Kiarabu</string>
+    <string name="english">Kiingereza</string>
+    <string name="choose_theme">Chagua mandhari</string>
+    <string name="theme_light">Nuru</string>
+    <string name="theme_dark">Giza</string>
+    <string name="theme_system">Chaguo-msingi la mfumo</string>
+    <string name="font_small">Ndogo</string>
+    <string name="font_medium">Wastani</string>
+    <string name="font_large">Kubwa</string>
+    <string name="screen_options">Chaguo za skrini</string>
+    <string name="keep_screen_on">Weka skrini iwake wakati wa kusoma</string>
+    <string name="font_changed">Ukubwa wa fonti umebadilishwa</string>
+    <string name="settings_reset">Mipangilio imewekwa upya!</string>
+
+    <string name="page">Ukurasa</string>
+    <string name="favorite">Pendwa</string>
+    <string name="clear_all_favorites">Futa vipendwa vyote</string>
+    <string name="clear_all_recent">Futa historia</string>
+    <string name="favorite_pages">Kurasa pendwa</string>
+    <string name="recent_pages">Kurasa za hivi karibuni</string>
+    <string name="no_favorites">Hakuna kurasa pendwa</string>
+    <string name="tap_to_open_page">Gusa kufungua ukurasa</string>
+    <string name="all_favorites_cleared">Vipendwa vyote vimefutwa</string>
+    <string name="all_recent_cleared">Historia imefutwa</string>
+    <string name="bookmark_title">🕓 Ukurasa %1$d</string>
+    <string name="favorite_page_hint">⭐ Ukurasa %1$d</string>
+    <string name="favorite_page_item">⭐ Ukurasa %1$d</string>
+
+    <!-- Urambazaji -->
+    <string name="nav_home">Nyumbani</string>
+    <string name="nav_search">Tafuta</string>
+    <string name="nav_settings">Mipangilio</string>
+    <string name="nav_help">Msaada</string>
+    <string name="nav_about">Kuhusu</string>
+    <string name="nav_share_app">Shiriki programu</string>
+    <string name="nav_share_qr">Shiriki kupitia QR</string>
+    <string name="nav_rate_app">Kadiria programu</string>
+    <string name="nav_other_apps">Programu nyingine</string>
+
+    <!-- Kutoka -->
+    <string name="exit_confirm_title">Thibitisha kutoka</string>
+    <string name="exit_confirm_message">Unataka kutoka kwenye programu?</string>
+    <string name="yes">Ndiyo</string>
+
+    <!-- Toleo -->
+    <string name="version_loading">Inakagua toleo…</string>
+    <string name="version_format">Toleo %1$s</string>
+    <string name="version_example">Toleo 1.0.23</string>
+
+    <!-- Ziada -->
+    <string name="search">Tafuta</string>
+    <string name="search_empty">Tafuta neno au kifungu…</string>
+    <string name="search_results_placeholder">Matokeo</string>
+    <string name="qr_code">Msimbo wa QR</string>
+    <string name="share_qr_hint">Changanua msimbo wa QR au shiriki kiungo</string>
+
+    <string name="header_developer_by">Na: %1$s</string>
+    <string name="header_developer_by_example">Na: Sadiq Hassan</string>
+    <string name="header_dates">%1$s • %2$s</string>
+    <string name="header_dates_example">7 Juni 2025 • 10 Dhul-Hijjah 1446</string>
+
+    <string name="share_message">Shiriki Programu ya Qurani Tukufu kupata thawabu: %1$s</string>
+    <string name="share_chooser_title">Shiriki Tafsiri</string>
+
+    <string name="hijri_placeholder">Tarehe ya Hijri</string>
+
+    <string name="action_toggle_page_bookmark">Hifadhi ukurasa</string>
+    <string name="action_toggle_repeat">Rudia</string>
+    <string name="action_download_tafsirs">Pakua tafsiri</string>
+    <string name="action_select_tafsir">Chagua tafsiri</string>
+
+    <string name="download_title">Tafadhali subiri kurasa za Qurani zinapopakuliwa… Tumia muda wako kwa dhikr na salawat ﷺ</string>
+    <string name="download_ready">Tayari kupakua</string>
+    <string name="download_progress">%1$d%%</string>
+    <string name="download_now">Pakua sasa</string>
+    <string name="of_pages">%1$d / %2$d</string>
+    <string name="download">Pakua</string>
+
+    <!-- Vidialogi -->
+    <string name="go_to_surah">Nenda kwenye sura</string>
+    <string name="search_surah_hint">🔍 Tafuta sura</string>
+    <string name="cancel">Ghairi</string>
+
+    <!-- Juzuu -->
+    <string name="go_to_juz">Nenda kwenye Juzuu</string>
+    <string name="search_juz_hint">🔍 Tafuta Juzuu</string>
+
+    <!-- Kurudia -->
+    <string name="repeat_ayah">Aya</string>
+    <string name="repeat_count_label">Idadi ya marudio:</string>
+
+    <!-- Tafsiri -->
+    <string name="tafsir_ayah_title">Sura ... - Aya ...</string>
+    <string name="tafsir_sample_ayah">Kwa jina la Mwenyezi Mungu, Mwingi wa Rehema, Mwenye Kurehemu</string>
+    <string name="tafsir_text_placeholder">Maandishi ya tafsiri hapa</string>
+
+    <!-- Upakuaji wa Kurasa -->
+    <string name="pages_download_starting">Inaanza kupakua…</string>
+    <string name="pages_download_progress">Inapakua ukurasa %1$d / %2$d</string>
+    <string name="pages_download_done">Upakuaji umekamilika.</string>
+    <string name="pages_download_failed">Upakuaji umeshindikana.</string>
+    <string name="pages_download_canceled">Upakuaji umeghairiwa.</string>
+
+    <!-- UI ya Kurudia -->
+    <string name="repeat_settings_title">Mipangilio ya kurudia</string>
+
+    <!-- Upakuaji wa Tilawa -->
+    <string name="no_recitations_to_download">Hakuna tilawa za kupakua.</string>
+    <string name="downloading_recitations">Inapakua tilawa…</string>
+    <string name="recitations_saved">Tilawa zimehifadhiwa!</string>
+    <string name="download_error">Kosa limetokea wakati wa kupakua.</string>
+
+    <!-- BoundsRepo -->
+    <string name="ayah_text_unavailable">Maandishi ya aya hayapatikani</string>
+
+    <string name="qari_icon">Aikoni ya Qari</string>
+    <string name="change_language">Badilisha lugha</string>
+    <string name="qari_selected_toast">%1$s imechaguliwa</string>
+
+    <string name="choose_qari_title">Chagua Qari</string>
+
+    <string name="choose_language_title">Chagua lugha ya programu</string>
+    <string name="choose_language_subtitle">Unaweza kubadilisha baadaye kupitia mipangilio</string>
+    <string name="continue_btn">Endelea</string>
+    <string name="device_language_option">Tumia lugha ya kifaa</string>
+
+    <!-- Lugha (majina كما تظهر في القائمة) -->
+    <string name="lang_arabic">Kiarabu</string>
+    <string name="lang_english">English</string>
+    <string name="lang_turkish">Türkçe</string>
+    <string name="lang_indonesian">Bahasa Indonesia</string>
+    <string name="lang_urdu">اردو</string>
+    <string name="lang_persian">فارسی</string>
+    <string name="lang_bengali">বাংলা</string>
+    <string name="lang_german">Deutsch</string>
+    <string name="lang_spanish">Español</string>
+    <string name="lang_french">Français</string>
+    <string name="lang_russian">Русский</string>
+    <string name="lang_hindi">हिन्दी</string>
+    <string name="lang_chinese">中文</string>
+    <string name="lang_japanese">日本語</string>
+    <string name="lang_korean">한국어</string>
+    <string name="lang_portuguese">Português</string>
+    <string name="lang_italian">Italiano</string>
+    <string name="lang_swahili">Kiswahili</string>
+    <string name="lang_thai">ไทย</string>
+
+    <string name="continue_text">Endelea</string>
+    <string name="language_selection_title">Uteuzi wa Lugha</string>
+
+    <!-- Utafutaji -->
+    <string name="search_title">Tafuta</string>
+    <string name="search_button">Tafuta</string>
+    <string name="tab_surah">Sura</string>
+    <string name="tab_fav">Vipendwa</string>
+    <string name="update_preparing">Inakagua masasisho…</string>
+    <string name="update_downloading">Inapakua sasisho…</string>
+    <string name="update_downloaded_tap_to_restart">Upakuaji umekamilika — gusa kuanzisha tena na kusakinisha sasisho</string>
+    <string name="update_installing">Inasakinisha sasisho…</string>
+    <string name="update_available_message">Sasisho jipya linapatikana. Tafadhali sasisha hadi toleo jipya.</string>
+    <string name="search_hint">Andika maandishi kutafuta…</string>
+    <string name="search_counter_format">Idadi ya matokeo: %1$d</string>
+    <string name="no_internet_short">Hakuna muunganisho wa intaneti</string>
+
+    <!-- Marquee ya Upakuaji -->
+    <string name="pages_download_title_marquee">Tafadhali subiri kurasa za Qurani zinapopakiwa — tumia muda kwa dhikr 🌿</string>
+
+    <!-- Jumla -->
+    <string name="downloading_quran_pages">Inapakua kurasa za Qurani…</string>
+    <string name="remaining_time">Muda uliosalia: …</string>
+    <string name="please_rate_app">Tafadhali piga kura ya maoni kuhusu programu hii ili kutusaidia kuboresha 🌟</string>
+
+</resources>
