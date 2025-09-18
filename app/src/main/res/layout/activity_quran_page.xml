@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/quran_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
     android:clipChildren="false"
     android:clipToPadding="false"
-    android:keepScreenOn="true">
+    android:keepScreenOn="true"
+    tools:ignore="ExtraText">
 
     <!-- صفحات المصحف -->
     <androidx.viewpager2.widget.ViewPager2
@@ -15,21 +17,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="never"
-        android:background="@color/quran_page_bg" />
+        android:background="@color/quran_page_bg"
+        android:clipToPadding="false" />
 
-    <!-- شريط علوي يطفو فوق الصفحة -->
+    <!-- شريط علوي -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_gravity="top"
         android:background="@color/colorPrimary"
+        app:backgroundTint="@color/colorPrimary"
         app:titleTextColor="@android:color/white"
         app:navigationIconTint="@android:color/white"
         app:contentInsetStartWithNavigation="0dp"
-        app:titleTextAppearance="@style/ToolbarTitleLarge" />
+        app:titleTextAppearance="@style/ToolbarTitleLarge"
+        app:titleCentered="true"
+        app:popupTheme="@style/ThemeOverlay.Quran.Popup.Dark" />
 
-    <!-- الحاوية السفلية (Overlay) -->
+    <!-- الحاوية السفلية -->
     <LinearLayout
         android:id="@+id/bottomOverlays"
         android:layout_width="match_parent"
@@ -43,16 +49,17 @@
         android:clipChildren="false"
         android:clipToPadding="false">
 
-        <!-- شريط خيارات الآية -->
+        <!-- شريط خيارات الآية (مخفي دائمًا) -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/ayahOptionsBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:visibility="gone"
-            app:cardBackgroundColor="@color/overlay_panel_bg"
+            android:elevation="8dp"
             app:cardCornerRadius="16dp"
-            app:cardElevation="2dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
             app:strokeColor="@color/overlay_panel_stroke"
             app:strokeWidth="1dp">
 
@@ -60,53 +67,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:background="@color/colorPrimaryTransparent"
+                android:clipToPadding="false">
 
+                <!-- صف الأزرار -->
                 <LinearLayout
+                    android:id="@+id/ayahButtonsRow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="8dp">
 
                     <ImageButton
                         android:id="@+id/btnCloseOptions"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:background="@drawable/bg_button_sky_blue"
                         android:contentDescription="@string/close"
                         android:padding="6dp"
                         android:src="@drawable/ic_close"
-                        app:tint="@color/overlay_icon_tint" />
+                        app:tint="@color/colorPrimaryDark" />
 
                     <Space
                         android:layout_width="6dp"
                         android:layout_height="1dp" />
 
-                    <!-- زر "تفسير" كنص يفتح PopupMenu -->
+                    <!-- زر "تفسير" (نص أزرق غامق) -->
                     <TextView
                         android:id="@+id/btnTafsirMenu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_text_chip_blue"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
                         android:paddingTop="6dp"
                         android:paddingBottom="6dp"
-                        android:background="@drawable/bg_icon_button_tonal"
                         android:text="@string/tafsir"
-                        android:textColor="@color/overlay_text"
-                        android:textSize="14sp" />
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textSize="13sp" />
 
-                    <!-- (اختياري) زر تنزيل ملفات التفسير -->
                     <ImageButton
                         android:id="@+id/btnDownloadTafsir"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_marginStart="6dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:background="@drawable/bg_button_sky_blue"
                         android:contentDescription="@string/download"
                         android:padding="6dp"
                         android:src="@drawable/ic_download"
-                        app:tint="@color/overlay_icon_tint" />
+                        app:tint="@color/colorPrimaryDark" />
 
                     <Space
                         android:layout_width="0dp"
@@ -118,48 +133,45 @@
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:layout_marginStart="6dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:background="@drawable/bg_button_sky_blue"
                         android:contentDescription="@string/play_ayah"
                         android:padding="6dp"
                         android:src="@drawable/ic_play"
-                        app:tint="@color/overlay_icon_tint" />
+                        app:tint="@color/colorPrimaryDark" />
 
                     <ImageButton
                         android:id="@+id/btnCopyAyah"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:layout_marginStart="2dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/bg_button_sky_blue"
                         android:contentDescription="@string/copy"
                         android:padding="6dp"
                         android:src="@drawable/ic_copy"
-                        app:tint="@color/overlay_icon_tint" />
+                        app:tint="@color/colorPrimaryDark" />
 
                     <ImageButton
                         android:id="@+id/btnShareAyah"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:layout_marginStart="2dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/bg_button_sky_blue"
                         android:contentDescription="@string/share"
                         android:padding="6dp"
                         android:src="@drawable/ic_share"
-                        app:tint="@color/overlay_icon_tint" />
+                        app:tint="@color/colorPrimaryDark" />
                 </LinearLayout>
 
+                <!-- نص الآية (موجود لدعم الكود لكنه مخفي) -->
                 <TextView
                     android:id="@+id/ayahPreview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:ellipsize="marquee"
-                    android:fadingEdgeLength="16dp"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:padding="4dp"
-                    android:scrollHorizontally="true"
-                    android:singleLine="true"
-                    android:textColor="@color/overlay_text"
-                    android:textSize="15sp" />
+                    android:visibility="gone"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:padding="8dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -168,101 +180,118 @@
             android:id="@+id/audioControlsCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/overlay_panel_bg"
             app:cardCornerRadius="16dp"
-            app:cardElevation="2dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:elevation="8dp"
             app:strokeColor="@color/overlay_panel_stroke"
             app:strokeWidth="1dp">
 
             <LinearLayout
-                android:id="@+id/audioControls"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingStart="10dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="8dp">
+                android:orientation="vertical"
+                android:background="@color/colorPrimaryTransparent">
 
-                <TextView
-                    android:id="@+id/btnQari"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:id="@+id/audioControls"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/btnQari"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_text_chip_blue"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:text="@string/reader"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:textSize="13sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnRepeat"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bg_button_sky_blue"
+                        android:contentDescription="@string/repeat_off"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_repeat"
+                        app:tint="@color/colorPrimaryDark" />
+
+                    <ImageButton
+                        android:id="@+id/btnPlayPause"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_button_sky_blue"
+                        android:contentDescription="@string/play_pause"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_play"
+                        app:tint="@color/colorPrimaryDark" />
+
+                    <ImageButton
+                        android:id="@+id/audio_download"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_button_sky_blue"
+                        android:contentDescription="@string/download"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_download"
+                        app:tint="@color/colorPrimaryDark" />
+
+                    <ImageButton
+                        android:id="@+id/btnCloseAudioBar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_button_sky_blue"
+                        android:contentDescription="@string/close"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_close"
+                        app:tint="@color/colorPrimaryDark" />
+                </LinearLayout>
+
+                <!-- صف التحميل -->
+                <LinearLayout
+                    android:id="@+id/downloadRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:paddingTop="6dp"
-                    android:paddingBottom="6dp"
-                    android:background="@drawable/bg_icon_button_tonal"
-                    android:text="@string/reader"
-                    android:textColor="@color/overlay_text"
-                    android:textSize="14sp" />
+                    android:paddingBottom="10dp"
+                    android:visibility="gone">
 
-                <!-- زر التكرار الجديد -->
-                <ImageButton
-                    android:id="@+id/btnRepeat"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="6dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/repeat_off"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_repeat"
-                    app:tint="@color/overlay_icon_tint" />
+                    <ProgressBar
+                        android:id="@+id/downloadProgress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1" />
 
-                <ImageButton
-                    android:id="@+id/btnPlayPause"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/play_pause"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_play"
-                    app:tint="@color/overlay_icon_tint" />
-
-                <ImageButton
-                    android:id="@+id/audio_download"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="6dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="@string/download"
-                    android:padding="8dp"
-                    android:src="@drawable/ic_download"
-                    app:tint="@color/overlay_icon_tint" />
+                    <TextView
+                        android:id="@+id/downloadLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/downloading_ellipsis"
+                        android:textColor="@color/overlay_text"
+                        android:textSize="12sp" />
+                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
-        <!-- صف التحميل داخل شريط التلاوة -->
-        <LinearLayout
-            android:id="@+id/downloadRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@color/overlay_panel_bg"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:visibility="gone">
-
-            <ProgressBar
-                android:id="@+id/downloadProgress"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="0dp"
-                android:layout_height="8dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/downloadLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/downloading_ellipsis"
-                android:textColor="@color/overlay_text"
-                android:textSize="13sp" />
-        </LinearLayout>
     </LinearLayout>
-
 </FrameLayout>

@@ -280,6 +280,7 @@ class AudioPlaybackManager private constructor(private val appCtx: Context) {
             val nextPage = (currentPageForQueue + 1).coerceAtMost(totalPages)
             if (nextPage != currentPageForQueue) {
                 onAdvanceToPage?.invoke(nextPage) // يخبر الـActivity لينتقل في الـViewPager
+
                 startPagePlayback(nextPage)      // يبني طابور الصفحة التالية ويكمل تلقائيًا
                 return
             }

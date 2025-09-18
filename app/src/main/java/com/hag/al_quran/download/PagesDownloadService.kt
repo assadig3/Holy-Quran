@@ -89,44 +89,86 @@ class PagesDownloadService : Service() {
     }
 
     // ====== التنزيل الوهمي (مثال) ======
+    private fun waitIfPaused() {
+        synchronized(pauseLock) {
+            while (isPaused && !isCancelled) {
+                try { pauseLock.wait(200) } catch (_: InterruptedException) { break }
+            }
+        }
+    }
+
     private fun startDownload() {
         isCancelled = false
         isPaused = false
 
         Thread {
             val startMs = SystemClock.elapsedRealtime()
-            var done = 0
-            while (done < totalPages && !isCancelled) {
-                // إيقاف مؤقت
-                synchronized(pauseLock) {
-                    while (isPaused && !isCancelled) pauseLock.wait(200)
-                }
-                if (isCancelled) break
+            val total = totalPages
+            val parallel = parallelism.coerceIn(1, 8)
 
-                // .. حمّل صفحة (ضع منطقك الحقيقي هنا) ..
-                SystemClock.sleep(40) // محاكاة
+            // نعدّ نجاح الصفحات السليمة فقط
+            val successCount = java.util.concurrent.atomic.AtomicInteger(0)
+            val exec = java.util.concurrent.Executors.newFixedThreadPool(parallel)
 
-                done++
-
-                // ETA بسيط
-                val elapsedSec = max(1L, ((SystemClock.elapsedRealtime() - startMs) / 1000f).roundToLong())
-                val rate = done.toFloat() / elapsedSec.toFloat()
-                val remaining = (totalPages - done).coerceAtLeast(0)
+            // تحديث الإشعار (يعتمد على عدد النجاحات فقط)
+            fun updateProgressUI() {
+                val ok = successCount.get()
+                val elapsedSec = kotlin.math.max(
+                    1L,
+                    ((SystemClock.elapsedRealtime() - startMs) / 1000f).roundToLong()
+                )
+                val rate = ok.toFloat() / elapsedSec.toFloat()        // صفحات/ثانية
+                val remaining = (total - ok).coerceAtLeast(0)
                 val etaSec = if (rate > 0f) (remaining / rate).roundToLong() else Long.MAX_VALUE
                 val etaText = if (etaSec == Long.MAX_VALUE) "…" else formatEta(etaSec)
 
                 updateNotification(
                     paused   = isPaused,
-                    progress = done,
-                    total    = totalPages,
+                    progress = ok,          // ✅ تقدّم يعتمد على الصفحات السليمة فقط
+                    total    = total,
                     etaText  = etaText
                 )
             }
 
+            // جدولة كل الصفحات
+            for (page in 1..total) {
+                exec.execute {
+                    if (isCancelled) return@execute
+                    waitIfPaused()
+                    if (isCancelled) return@execute
+
+                    try {
+                        // استخدم أيًا من الطريقتين حسب ما عندك:
+                        // 1) لو عندك PageBulkPrefetch (النسخة المحسّنة):
+                        val ok = com.hag.al_quran.ui.PageBulkPrefetch.prefetchPageRetry(applicationContext, page)
+
+                        // 2) أو لو تفضّل Glide عبر PageImageLoader:
+                        // var ok = false
+                        // com.hag.al_quran.ui.PageImageLoader.prefetchPageRetry(applicationContext, page) { s -> ok = s }
+
+                        if (ok) {
+                            val c = successCount.incrementAndGet()
+                            if (c % 3 == 0) { // تقليل عدد تحديثات الإشعار
+                                updateProgressUI()
+                            }
+                        }
+                    } catch (_: Throwable) {
+                        // نتجاهل — سنحاول مصادر بديلة داخل الدوال
+                    }
+                }
+            }
+
+            // إغلاق المجمّع والانتظار
+            exec.shutdown()
+            try { exec.awaitTermination(45, java.util.concurrent.TimeUnit.MINUTES) } catch (_: InterruptedException) {}
+
+            // تحديث أخير
+            updateProgressUI()
+
+            // إنهاء الخدمة
             stopSelf()
         }.start()
     }
-
     // ====== الإشعارات ======
     private fun createChannelIfNeeded() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

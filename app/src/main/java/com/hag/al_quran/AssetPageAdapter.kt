@@ -1,3 +1,4 @@
+// File: app/src/main/java/com/hag/al_quran/AssetPageAdapter.kt
 package com.hag.al_quran
 
 import android.annotation.SuppressLint
@@ -5,6 +6,7 @@ import android.content.Context
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.RectF
+import android.os.SystemClock
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
@@ -114,7 +116,8 @@ class AssetPageAdapter(
             overScrollMode = View.OVER_SCROLL_NEVER
         }
         val root = FrameLayout(parent.context).apply {
-            layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT)
+            // لمنع فراغ علوي مؤقت عند أول رسم
+            layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT)
         }
         val photo = PhotoView(parent.context).apply {
             id = View.generateViewId()
@@ -208,10 +211,6 @@ class AssetPageAdapter(
 
             val att = holder.photoView.attacher
             val boundsList = ayahBoundsMap[pageNumber] ?: emptyList()
-            if (boundsList.isEmpty()) {
-                holder.overlay.setRects(emptyList())
-                return@waitForDisplayRect
-            }
 
             val (BASE_W, BASE_H) = baseSizeFor(boundsList)
             val roi = RoiMap.forPage(pageNumber)
@@ -221,7 +220,6 @@ class AssetPageAdapter(
             val highlightColor = if (isNight) Color.argb(110, 80, 220, 140) else Color.argb(100, 52, 199, 89)
             holder.overlay.setColor(highlightColor)
 
-            // ✅ هنا تم إصلاح النوع: نحول seg إلى utils.Seg قبل تمريـره
             fun toScreenRects(ab: AyahBounds?): List<RectF> =
                 ab?.segs?.map { seg -> mapSegToViewRect(att, toUtilsSeg(seg), BASE_W, BASE_H, roi) } ?: emptyList()
 
@@ -231,67 +229,74 @@ class AssetPageAdapter(
                 holder.overlay.setRects(toScreenRects(selected))
             } ?: holder.overlay.setRects(emptyList())
 
-            fun handleTap(tapX: Float, tapY: Float) {
-                val dr = att.displayRect ?: return
-                val content = RectF(
-                    dr.left + roi.l * dr.width(),
-                    dr.top + roi.t * dr.height(),
-                    dr.right - (1f - roi.r) * dr.width(),
-                    dr.bottom - (1f - roi.b) * dr.height()
-                )
-                if (!content.contains(tapX, tapY)) { onImageTap(); return }
-
-                val rx = (tapX - content.left) / content.width()
-                val ry = (tapY - content.top) / content.height()
-                val imgX = rx * BASE_W
-                val imgY = ry * BASE_H
-
-                var hit: AyahBounds? = null
-                loop@ for (ab in boundsList) {
-                    for (s in ab.segs) {
-                        if (imgX >= s.x && imgX <= s.x + s.w &&
-                            imgY >= s.y && imgY <= s.y + s.h
-                        ) { hit = ab; break@loop }
-                    }
-                }
-
-                if (hit != null) {
-                    val oldR = toScreenRects(selected)
-                    selected = hit
-                    selectionByPage[pageNumber] = hit.sura_id to hit.aya_id
-                    val newR = toScreenRects(selected)
-
-                    if (oldR.isNotEmpty() && newR.isNotEmpty() && oldR.size == newR.size)
-                        holder.overlay.animateTo(newR, 160)
-                    else
-                        holder.overlay.setRects(newR)
-
-                    onAyahClick(
-                        hit.sura_id,
-                        hit.aya_id,
-                        BoundsRepo.getAyahText(context, hit.sura_id, hit.aya_id)
-                    )
-                } else onImageTap()
-            }
-
-            holder.photoView.setOnPhotoTapListener { _, xPerc, yPerc ->
-                val dr = att.displayRect ?: return@setOnPhotoTapListener
-                val tapX = dr.left + xPerc * dr.width()
-                val tapY = dr.top + yPerc * dr.height()
-                handleTap(tapX, tapY)
-            }
-            holder.photoView.setOnViewTapListener { _, x, y -> handleTap(x, y) }
+            // ====== Gesture: نقرة = Toggle Bars (debounce) | ضغط مطول = تظليل آية ======
+            var lastToggleAt = 0L
+            val TAP_DEBOUNCE_MS = 400L
 
             val detector = GestureDetector(holder.photoView.context,
                 object : GestureDetector.SimpleOnGestureListener() {
+
                     override fun onDown(e: MotionEvent): Boolean = true
+
                     override fun onSingleTapConfirmed(e: MotionEvent): Boolean {
-                        handleTap(e.x, e.y); return true
+                        val now = SystemClock.uptimeMillis()
+                        if (now - lastToggleAt < TAP_DEBOUNCE_MS) return true
+                        lastToggleAt = now
+                        onImageTap()   // ← فقط إظهار/إخفاء الأشرطة
+                        return true     // نستهلك الحدث لمنع مروره للأب
+                    }
+
+                    override fun onLongPress(e: MotionEvent) {
+                        val dr = att.displayRect ?: return
+                        val content = RectF(
+                            dr.left + roi.l * dr.width(),
+                            dr.top + roi.t * dr.height(),
+                            dr.right - (1f - roi.r) * dr.width(),
+                            dr.bottom - (1f - roi.b) * dr.height()
+                        )
+                        if (!content.contains(e.x, e.y)) return
+
+                        val rx = (e.x - content.left) / content.width()
+                        val ry = (e.y - content.top)  / content.height()
+                        val imgX = rx * BASE_W
+                        val imgY = ry * BASE_H
+
+                        var hit: AyahBounds? = null
+                        loop@ for (ab in boundsList) {
+                            for (s in ab.segs) {
+                                if (imgX >= s.x && imgX <= s.x + s.w &&
+                                    imgY >= s.y && imgY <= s.y + s.h
+                                ) { hit = ab; break@loop }
+                            }
+                        }
+                        if (hit != null) {
+                            val oldR = toScreenRects(selected)
+                            selected = hit
+                            selectionByPage[pageNumber] = hit.sura_id to hit.aya_id
+                            val newR = toScreenRects(selected)
+
+                            if (oldR.isNotEmpty() && newR.isNotEmpty() && oldR.size == newR.size)
+                                holder.overlay.animateTo(newR, 160)
+                            else
+                                holder.overlay.setRects(newR)
+
+                            onAyahClick(
+                                hit.sura_id,
+                                hit.aya_id,
+                                BoundsRepo.getAyahText(context, hit.sura_id, hit.aya_id)
+                            )
+                        }
                     }
                 })
+
+            // لا نستخدم PhotoTap/ViewTap حتى لا تتداخل
+            holder.photoView.setOnPhotoTapListener(null)
+            holder.photoView.setOnViewTapListener(null)
+
+            // استهلاك اللمس لو تمّت معالجته لتجنّب وصوله للأب وإحداث toggle ثانٍ
             holder.photoView.setOnTouchListener { _, ev ->
-                detector.onTouchEvent(ev)
-                false
+                val handled = detector.onTouchEvent(ev)
+                if (handled) true else false
             }
 
             var firstMatrix = true

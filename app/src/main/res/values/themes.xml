@@ -13,7 +13,6 @@
         <item name="android:textColorSecondary">@color/textSecondary</item>
 
         <!-- خلفية الوضع الليلي -->
-        <item name="android:windowBackground">@color/colorBackground</item>
 
         <!-- جعل نصوص القوائم والأيقونات بيضاء -->
         <item name="android:actionMenuTextColor">@android:color/white</item>
@@ -21,7 +20,10 @@
 
         <item name="ayahBannerGlassBg">#BBFFFFFF</item>    <!-- أبيض شفاف 73% -->
         <item name="ayahBannerBorder">#3396C5F7</item>    <!-- أزرق فاتح شفاف -->
-
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/quran_page_bg</item>
 
         <!-- دعم الوضع الليلي الافتراضي -->
         <item name="android:forceDarkAllowed">false</item>

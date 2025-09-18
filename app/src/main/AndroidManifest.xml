@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- ===== Permissions ===== -->
-    <!-- اتصال وتحميل -->
+    <!-- أذونات -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- منع النوم أثناء التحميل -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <!-- خدمات Foreground عامة (Android 9+) -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <!-- نوع خدمة Foreground خاص بمزامنة/تنزيل البيانات (Android 14+) -->
-    <uses-permission
-        android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"
-        tools:targetApi="34" />
-    <!-- إشعارات (Android 13+) -->
-    <uses-permission
-        android:name="android.permission.POST_NOTIFICATIONS"
-        tools:targetApi="33" />
-    <!-- تشغيل وسائط كخدمة مقدّمة -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" tools:targetApi="34" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" tools:targetApi="33" />
 
-    <!-- ✅ إزالة أي أذونات إعلان قد تُضاف ترانزيتيفاً -->
-    <uses-permission
-        android:name="com.google.android.gms.permission.AD_ID"
-        tools:node="remove" />
-    <uses-permission
-        android:name="android.permission.ACCESS_ADSERVICES_AD_ID"
-        tools:node="remove" />
+    <!-- إزالة أي أذونات إعلانات قد تُسحب ترانزيتيفيًا -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" tools:node="remove" />
 
     <application
         android:name=".App"
@@ -40,47 +25,45 @@
         android:localeConfig="@xml/locales_config"
         tools:targetApi="33">
 
-        <!-- AppCompat locales للإصدارات الأقدم -->
-        <meta-data
-            android:name="androidx.appcompat.app.locale_config"
-            android:resource="@xml/locales_config" />
+        <!-- خدمة تشغيل التلاوة في المقدمة -->
+        <service
+            android:name=".helpers.AudioForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
 
-        <!-- ✅ تعطيل جمع معرّف الإعلانات داخل Firebase Analytics -->
-        <meta-data
-            android:name="google_analytics_adid_collection_enabled"
-            android:value="false" />
+        <!-- مستقبل أوامر الإشعار (Play/Pause/Stop) -->
+        <receiver
+            android:name=".helpers.AudioControlReceiver"
+            android:exported="false" />
 
-        <!-- شاشة اختيار اللغة (Launcher) -->
+        <!-- الشاشة الرئيسية -->
         <activity
-            android:name=".onboarding.LanguageSelectionActivity"
+            android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Material3.Light.NoActionBar">
+            android:theme="@style/Theme.QuranKarim">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <receiver
-            android:name=".notify.NotificationActionReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.hag.al_quran.NOTIF_TOGGLE" />
-                <action android:name="com.hag.al_quran.NOTIF_STOP" />
-            </intent-filter>
-        </receiver>
-
-        <!-- الرئيسية -->
+        <!-- اختيار اللغة (اختياري) -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+            android:name=".onboarding.LanguageSelectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
 
-        <!-- صفحة المصحف -->
+        <!-- صفحة المصحف: استخدم ثيم الأشرطة الشفافة -->
         <activity
             android:name=".QuranPageActivity"
             android:exported="true"
             android:launchMode="singleTop"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.QuranKarim.TransparentBars" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
         <!-- البحث -->
         <activity
@@ -92,18 +75,20 @@
                 android:value=".MainActivity" />
         </activity>
 
-        <!-- ===== Services ===== -->
-
-        <!-- خدمة تنزيل صفحات المصحف في الخلفية مع إشعار التقدم -->
+        <!-- خدمة تنزيل صفحات المصحف -->
         <service
             android:name=".download.PagesDownloadService"
             android:exported="false"
             android:foregroundServiceType="dataSync" />
 
-        <!-- خدمة الصوت في المقدمة -->
-        <service
-            android:name=".audio.AudioPlaybackManager$ForegroundPlaybackService"
-            android:exported="false"
-            android:foregroundServiceType="mediaPlayback" />
+        <!-- إعدادات اللغات لـ AppCompat -->
+        <meta-data
+            android:name="androidx.appcompat.app.locale_config"
+            android:resource="@xml/locales_config" />
+
+        <!-- عطّل جمع معرّف الإعلانات إن وُجد -->
+        <meta-data
+            android:name="google_analytics_adid_collection_enabled"
+            android:value="false" />
     </application>
 </manifest>

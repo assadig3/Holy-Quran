@@ -13,9 +13,42 @@
     <string name="rate_app">قيّم التطبيق</string>
     <string name="other_apps">تطبيقات أخرى</string>
     <string name="exit">خروج</string>
-    <string name="about_app_description">القرآن الكريم — قراءة واستماع مع ميزات التلاوة والبحث والمفضلة والوضع الليلي والمزيد.</string>
+    <string name="about_app_description">القرآن الكريم – مصحف شامل بـ 19 لغة وأكثر من 35 قارئ عالمي
+
+تطبيق "القرآن الكريم" هو رفيقك الأمثل للتلاوة والحفظ والتدبر. يجمع بين جمال المصحف الورقي وسهولة التكنولوجيا الحديثة، ليمنحك تجربة روحانية متكاملة.
+
+✨ أبرز المميزات:
+
+📖 عرض كامل للمصحف بالخط العثماني مع دعم التكبير والتصغير وتدوير الشاشة للقراءة المريحة في أي وضع.
+
+🎧 شريط تلاوة متحرك يرافقك أثناء الاستماع، مع تظليل الآية الجارية بشكل حيّ ومتزامن.
+
+🔁 التحفيظ وتكرار الآيات: اختر آية محددة أو مجموعة آيات للتكرار المثالي للحفظ والمراجعة.
+
+🌍 يدعم 19 لغة لتسهيل الاستخدام حول العالم.
+
+🎙️ أكثر من 35 قارئًا من أشهر القراء (العفاسي، السديس، الشريم، المعيقلي، عبد الباسط، المنشاوي، العجمي وغيرهم).
+
+🕌 تفاسير متعددة (الجلالين، السعدي، ابن كثير، القرطبي).
+
+⭐ المفضلة وآخر الصفحات: احفظ موقع قراءتك أو صفحاتك المميزة للرجوع إليها بسهولة.
+
+🔎 بحث سريع ومتطور للعثور على أي آية أو كلمة.
+
+🌙 الوضع الليلي لراحة العينين أثناء القراءة الليلية.
+
+🔔 تنبيهات يومية للتذكير بالأذكار وقراءة وِردك القرآني.
+
+💡 تجربة نقية بدون إعلانات، وتصميم أنيق وسهل الاستخدام.
+
+🌟 لماذا هذا التطبيق؟
+
+لأنه ليس مجرد مصحف إلكتروني، بل أداة متكاملة للتلاوة والحفظ والتدبر مع دعم اللغات والقراء، مما يجعله الخيار الأفضل للمسلمين في كل مكان.
+
+📲 حمّله الآن وابدأ رحلتك مع القرآن الكريم — تلاوةً وحفظًا وتدبرًا...https://play.google.com/store/apps/details?id=com.hag.al_quran
+</string>
     <string name="help_title">مساعدة</string>
-    <string name="help_content">للدعم أو الاستفسار، يرجى الرجوع إلى قسم الأسئلة الشائعة أو التواصل عبر الإعدادات.</string>
+    <string name="help_content">للدعم أو الاستفسار، يرجى التواصل عبر 121yu122@gmail.com.</string>
     <string name="app_logo">شعار التطبيق</string>
 
     <!-- Settings Screen -->
@@ -42,7 +75,6 @@
     <string name="play_error">تعذّر تشغيل التلاوة</string>
     <string name="remove_from_favorites">تمت إزالة الصفحة من المفضلة</string>
     <string name="add_to_favorites">تمت إضافة الصفحة إلى المفضلة</string>
-    <string name="repeat_settings">إعدادات التكرار</string>
     <string name="repeat_assigned">تكرار %1$s ‏(%2$d مرة)</string>
     <string name="share_tafsir">مشاركة التفسير</string>
     <string name="tafseer_surah_ayah">سورة %1$s - آية %2$d</string>
@@ -133,7 +165,7 @@
     <!-- Version -->
     <string name="version_loading">جارٍ التحقق من الإصدار…</string>
     <string name="version_format">الإصدار %1$s</string>
-    <string name="version_example">الإصدار 1.0.23</string>
+    <string name="version_example">الإصدار 1.0.35</string>
 
     <!-- Extra -->
     <string name="search">بحث</string>
@@ -278,5 +310,11 @@
     <string name="toast_repeat_ayah">تكرار الآية</string>
     <string name="audio_error">تعذّر تشغيل التلاوة</string>
     <string name="playing_online_fallback">...</string>
+    <string name="download_in_progress">جاري تنزيل الصفحات…</string>
+    <string name="download_starting">بدء التنزيل…</string>
+    <string name="download_finishing">لمسات أخيرة…</string>
+    <string name="download_complete_ready">اكتمل التنزيل — جاهز</string>
+    <string name="download_failed_try_later">فشل التنزيل، حاول لاحقًا</string>
+    <string name="canceled_by_user">أُلغي بواسطة المستخدم</string>
 
 </resources>

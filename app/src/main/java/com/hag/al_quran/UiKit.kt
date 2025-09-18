@@ -276,23 +276,6 @@ object PagesDownloadUi {
 }
 
 // ============ Repeat ============
-object RepeatUi {
-    fun show(
-        activity: AppCompatActivity,
-        currentMode: String,
-        currentCount: Int,
-        onConfirm: (mode: String, count: Int) -> Unit
-    ) {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_repeat_options, null)
-        val group = view.findViewById<RadioGroup>(R.id.repeatTypeGroup)
-        val picker = view.findViewById<NumberPicker>(R.id.repeatCountPicker)
-        picker.minValue = 1; picker.maxValue = 20; picker.value = currentCount.coerceIn(1, 20)
-        if (currentMode == "ayah") group.check(R.id.repeatAyah)
-        AlertDialog.Builder(activity).setTitle("إعدادات التكرار").setView(view)
-            .setPositiveButton("موافق") {_,_ -> onConfirm("ayah", picker.value) }
-            .setNegativeButton("إلغاء", null).show()
-    }
-}
 
 // ============ Toolbar ============
 object ToolbarUi {

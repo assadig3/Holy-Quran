@@ -186,23 +186,6 @@ class QuranSupportHelper(
             .show()
     }
 
-    fun showRepeatDialog(audio: QuranAudioHelper) {
-        val v = activity.layoutInflater.inflate(R.layout.dialog_repeat_options, null)
-        val group = v.findViewById<RadioGroup>(R.id.repeatTypeGroup)
-        val picker = v.findViewById<NumberPicker>(R.id.repeatCountPicker)
-        picker.minValue = 1; picker.maxValue = 20; picker.value = audio.repeatCount
-        if (audio.repeatMode == "ayah") group.check(R.id.repeatAyah)
-        AlertDialog.Builder(activity)
-            .setTitle("إعدادات التكرار")
-            .setView(v)
-            .setPositiveButton("موافق") { _, _ ->
-                audio.repeatCount = picker.value
-                audio.repeatMode = "ayah"
-                Toast.makeText(activity, "تم تعيين تكرار الآية (${audio.repeatCount} مرة)", Toast.LENGTH_SHORT).show()
-            }
-            .setNegativeButton("إلغاء", null)
-            .show()
-    }
 
     fun shareCurrentAyah(surah: Int, ayah: Int) {
         val text = "سورة ${getSurahNameByNumber(surah)} - آية $ayah\n\n${getAyahTextFromJson(surah, ayah)}"

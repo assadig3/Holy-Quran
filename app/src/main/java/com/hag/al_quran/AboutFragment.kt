@@ -4,14 +4,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.github.chrisbanes.photoview.BuildConfig
 
 class AboutFragment : Fragment(R.layout.fragment_about) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val tvVersion: TextView = view.findViewById(R.id.tv_version)
 
-        // هذا BuildConfig خاص بتطبيقك
+        // هذا BuildConfig خاص بالتطبيق
         val versionName = BuildConfig.VERSION_NAME
         val versionCode = BuildConfig.VERSION_CODE
 

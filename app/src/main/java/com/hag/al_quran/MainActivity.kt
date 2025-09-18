@@ -42,7 +42,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-// Play Core In-App Updates
+// ===== In-App Updates (Play Core) =====
 import com.google.android.play.core.appupdate.AppUpdateInfo
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
@@ -50,7 +50,7 @@ import com.google.android.play.core.install.InstallStateUpdatedListener
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
-import com.google.firebase.ktx.BuildConfig
+
 
 class MainActivity : BaseActivity() {
 
@@ -138,7 +138,7 @@ class MainActivity : BaseActivity() {
 
         // إبقاء الشاشة شغالة
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) // موجود سابقًا
-        findViewById<View>(android.R.id.content)?.keepScreenOn = true   // ✅ إضافة على مستوى الـ View
+        findViewById<View>(android.R.id.content)?.keepScreenOn = true   // ✅ على مستوى الـ View
 
         // Toolbar + Drawer
         setSupportActionBar(toolbar)
@@ -156,7 +156,7 @@ class MainActivity : BaseActivity() {
         header.findViewById<TextView>(R.id.header_developer).text =
             getString(R.string.header_developer_by, "Assadiq Hassan")
         header.findViewById<TextView>(R.id.gregorianDate).text = formatGregorianForAppLocale(this)
-        // ✅ التاريخ الهجري الفعلي بدل الـ placeholder
+        // ✅ التاريخ الهجري الفعلي بدل placeholder
         header.findViewById<TextView>(R.id.hijriDate).text = formatHijriForAppLocale(this)
 
         // Tabs
@@ -187,9 +187,13 @@ class MainActivity : BaseActivity() {
                 R.id.share -> {
                     val shareIntent = Intent(Intent.ACTION_SEND).apply {
                         type = "text/plain"
-                        putExtra(Intent.EXTRA_TEXT,
-                            getString(R.string.share_message,
-                                "https://play.google.com/store/apps/details?id=$packageName"))
+                        putExtra(
+                            Intent.EXTRA_TEXT,
+                            getString(
+                                R.string.share_message,
+                                "https://play.google.com/store/apps/details?id=$packageName"
+                            )
+                        )
                     }
                     startActivity(Intent.createChooser(shareIntent, getString(R.string.share_chooser_title)))
                     true
@@ -208,7 +212,6 @@ class MainActivity : BaseActivity() {
                     startActivity(intent)
                     true
                 }
-
                 R.id.nav_language -> { showLanguageDialog(); true }
                 R.id.action_exit -> { showExitDialog(); true }
                 else -> false
@@ -373,12 +376,14 @@ class MainActivity : BaseActivity() {
     private fun openAppInPlayStore() {
         val appPackageName = packageName
         try {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName"))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=${appPackageName}"))
             intent.setPackage("com.android.vending")
             startActivity(intent)
         } catch (_: Exception) {
-            val intent = Intent(Intent.ACTION_VIEW,
-                Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName"))
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://play.google.com/store/apps/details?id=${appPackageName}")
+            )
             startActivity(intent)
         }
     }
@@ -585,21 +590,30 @@ class MainActivity : BaseActivity() {
         }
 
         val inner = FrameLayout(this).apply {
-            addView(text, FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.WRAP_CONTENT,
-                FrameLayout.LayoutParams.WRAP_CONTENT
-            ).apply { gravity = Gravity.START or Gravity.CENTER_VERTICAL })
+            addView(
+                text,
+                FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.WRAP_CONTENT,
+                    FrameLayout.LayoutParams.WRAP_CONTENT
+                ).apply { gravity = Gravity.START or Gravity.CENTER_VERTICAL }
+            )
 
-            addView(progress, FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.WRAP_CONTENT,
-                FrameLayout.LayoutParams.WRAP_CONTENT
-            ).apply { gravity = Gravity.END or Gravity.CENTER_VERTICAL })
+            addView(
+                progress,
+                FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.WRAP_CONTENT,
+                    FrameLayout.LayoutParams.WRAP_CONTENT
+                ).apply { gravity = Gravity.END or Gravity.CENTER_VERTICAL }
+            )
         }
 
-        container.addView(inner, FrameLayout.LayoutParams(
-            FrameLayout.LayoutParams.MATCH_PARENT,
-            FrameLayout.LayoutParams.WRAP_CONTENT
-        ))
+        container.addView(
+            inner,
+            FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT
+            )
+        )
 
         root.addView(container)
         updateBar = container
