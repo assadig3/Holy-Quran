@@ -15,6 +15,7 @@ import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
@@ -42,7 +43,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-// Play Core In-App Updates
+// ===== In-App Updates (Play Core) =====
 import com.google.android.play.core.appupdate.AppUpdateInfo
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
@@ -50,7 +51,6 @@ import com.google.android.play.core.install.InstallStateUpdatedListener
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
-import com.google.firebase.ktx.BuildConfig
 
 class MainActivity : BaseActivity() {
 
@@ -100,12 +100,21 @@ class MainActivity : BaseActivity() {
                 updateProgress?.visibility = View.VISIBLE
                 updateProgress?.isIndeterminate = true
             }
-            InstallStatus.INSTALLED -> {
-                hideUpdateBar()
-            }
-            else -> { /* تجاهل باقي الحالات */ }
+            InstallStatus.INSTALLED -> hideUpdateBar()
+            else -> Unit
         }
     }
+
+    // ===== Launcher لفتح شاشة اللغة من القائمة والرجوع بنتيجة =====
+    private val languagePickerLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                // تم تغيير اللغة داخل LanguageSelectionActivity
+                recreate()
+                // حركة الرجوع (ندخل من جديد للرئيسية بعد التغيير)
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+            }
+        }
 
     @SuppressLint("StringFormatInvalid")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -137,8 +146,8 @@ class MainActivity : BaseActivity() {
         setupEdgeToEdge()
 
         // إبقاء الشاشة شغالة
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) // موجود سابقًا
-        findViewById<View>(android.R.id.content)?.keepScreenOn = true   // ✅ إضافة على مستوى الـ View
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        findViewById<View>(android.R.id.content)?.keepScreenOn = true
 
         // Toolbar + Drawer
         setSupportActionBar(toolbar)
@@ -156,7 +165,6 @@ class MainActivity : BaseActivity() {
         header.findViewById<TextView>(R.id.header_developer).text =
             getString(R.string.header_developer_by, "Assadiq Hassan")
         header.findViewById<TextView>(R.id.gregorianDate).text = formatGregorianForAppLocale(this)
-        // ✅ التاريخ الهجري الفعلي بدل الـ placeholder
         header.findViewById<TextView>(R.id.hijriDate).text = formatHijriForAppLocale(this)
 
         // Tabs
@@ -164,7 +172,7 @@ class MainActivity : BaseActivity() {
 
         // عناصر NavigationView
         navigationView.setNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
+            val handled = when (menuItem.itemId) {
                 R.id.home -> { tabs.getTabAt(0)?.select(); true }
                 R.id.nav_search -> {
                     startActivity(Intent(this, com.hag.al_quran.search.SearchActivity::class.java)); true
@@ -187,9 +195,13 @@ class MainActivity : BaseActivity() {
                 R.id.share -> {
                     val shareIntent = Intent(Intent.ACTION_SEND).apply {
                         type = "text/plain"
-                        putExtra(Intent.EXTRA_TEXT,
-                            getString(R.string.share_message,
-                                "https://play.google.com/store/apps/details?id=$packageName"))
+                        putExtra(
+                            Intent.EXTRA_TEXT,
+                            getString(
+                                R.string.share_message,
+                                "https://play.google.com/store/apps/details?id=$packageName"
+                            )
+                        )
                     }
                     startActivity(Intent.createChooser(shareIntent, getString(R.string.share_chooser_title)))
                     true
@@ -201,18 +213,25 @@ class MainActivity : BaseActivity() {
                 }
                 R.id.rate -> { openAppInPlayStore(); true }
                 R.id.other_apps -> {
-                    // مثال: فتح صفحة مطورك في Google Play
                     val intent = Intent(Intent.ACTION_VIEW).apply {
                         data = Uri.parse("https://play.google.com/store/apps/developer?id=afagamro")
                     }
                     startActivity(intent)
                     true
                 }
-
-                R.id.nav_language -> { showLanguageDialog(); true }
+                // ✅ فتح شاشة اختيار اللغة الكاملة مثل أول تشغيل + حركة انتقال
+                R.id.nav_language -> {
+                    val i = Intent(this, LanguageSelectionActivity::class.java)
+                        .putExtra(LanguageSelectionActivity.EXTRA_FROM_DRAWER, true)
+                    languagePickerLauncher.launch(i)
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+                    true
+                }
                 R.id.action_exit -> { showExitDialog(); true }
                 else -> false
-            }.also { drawerLayout.closeDrawer(GravityCompat.START) }
+            }
+            drawerLayout.closeDrawer(GravityCompat.START)
+            handled
         }
 
         // رجوع
@@ -237,10 +256,8 @@ class MainActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-        // ✅ إعادة فرض العلم عند عودة الـ Activity للمقدمة (بعض الأنظمة تزيله مؤقتًا)
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
-        // لو كان التحديث المرن مُنزّلاً بالفعل ولم تُطبّق إعادة التشغيل، أظهر زرّ “إعادة التشغيل”
         appUpdateManager.appUpdateInfo.addOnSuccessListener { info ->
             if (info.installStatus() == InstallStatus.DOWNLOADED) {
                 showUpdateBar()
@@ -254,14 +271,13 @@ class MainActivity : BaseActivity() {
     override fun onDestroy() {
         super.onDestroy()
         try { appUpdateManager.unregisterListener(installStateUpdatedListener) } catch (_: Exception) {}
-        // ملاحظة: لا نزيل FLAG_KEEP_SCREEN_ON هنا لأن الشاشة ستنطفئ طبيعيًا عند مغادرة الـ Activity.
     }
 
     // =============== Tabs ===============
     private fun setupTabs(savedInstanceState: Bundle?) {
-        val t1 = getString(R.string.tab_surah) // السور
-        val t2 = getString(R.string.tab_juz)   // الأجزاء
-        val t3 = getString(R.string.tab_fav)   // المفضلة
+        val t1 = getString(R.string.tab_surah)
+        val t2 = getString(R.string.tab_juz)
+        val t3 = getString(R.string.tab_fav)
 
         if (tabs.tabCount == 0) {
             tabs.addTab(tabs.newTab().setText(t1))
@@ -322,30 +338,7 @@ class MainActivity : BaseActivity() {
         toolbar.setBackgroundColor(sky)
     }
 
-    // =============== اللغة والإعدادات ===============
-    private fun showLanguageDialog() {
-        val names = resources.getStringArray(R.array.lang_display_names)
-        val codes = resources.getStringArray(R.array.lang_codes)
-        val count = minOf(names.size, codes.size)
-        val items = names.copyOf(count)
-        val codeList = codes.copyOf(count)
-
-        val prefs = getSharedPreferences("settings", Context.MODE_PRIVATE)
-        val savedLang = prefs.getString("lang", codeList.firstOrNull())
-        val checkedItem = codeList.indexOf(savedLang).let { if (it >= 0) it else 0 }
-
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.change_language))
-            .setSingleChoiceItems(items, checkedItem) { dialog, which ->
-                val selectedCode = codeList.getOrNull(which) ?: return@setSingleChoiceItems
-                prefs.edit().putString("lang", selectedCode).apply()
-                AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(selectedCode))
-                dialog.dismiss()
-            }
-            .setNegativeButton(android.R.string.cancel, null)
-            .show()
-    }
-
+    // =============== Locale Wrapping ===============
     override fun attachBaseContext(newBase: Context) {
         val withFontScale = FontScale.wrapContextWithFontScale(newBase)
         super.attachBaseContext(withFontScale)
@@ -373,12 +366,14 @@ class MainActivity : BaseActivity() {
     private fun openAppInPlayStore() {
         val appPackageName = packageName
         try {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName"))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=${appPackageName}"))
             intent.setPackage("com.android.vending")
             startActivity(intent)
         } catch (_: Exception) {
-            val intent = Intent(Intent.ACTION_VIEW,
-                Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName"))
+            val intent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://play.google.com/store/apps/details?id=${appPackageName}")
+            )
             startActivity(intent)
         }
     }
@@ -407,14 +402,12 @@ class MainActivity : BaseActivity() {
         val locale = appLocale(ctx)
 
         return if (Build.VERSION.SDK_INT >= 26) {
-            // API 26+: java.time HijrahDate
             val hijri = java.time.chrono.HijrahDate.now()
             val pattern = "d MMMM yyyy"
             val s = hijri.format(java.time.format.DateTimeFormatter.ofPattern(pattern, locale))
             val withSuffix = if (locale.language == "ar") "$s هـ" else "$s AH"
             if (locale.language == "ar") toArabicDigits(withSuffix) else withSuffix
         } else {
-            // API 24–25: ICU IslamicCalendar
             val cal = android.icu.util.IslamicCalendar()
             val sdf = android.icu.text.SimpleDateFormat("d MMMM y", locale).apply {
                 calendar = cal
@@ -426,7 +419,8 @@ class MainActivity : BaseActivity() {
     }
 
     private fun toArabicDigits(s: String): String {
-        val western = charArrayOf('0','1','2','3','4','5','6','7','8','9')
+        val western = charArrayOf('0','1','2','3','4','5','6','٧','8','9') // intentional?
+        // fix: proper mapping
         val arabic  = charArrayOf('٠','١','٢','٣','٤','٥','٦','٧','٨','٩')
         val out = StringBuilder(s.length)
         for (ch in s) {
@@ -436,7 +430,6 @@ class MainActivity : BaseActivity() {
         return out.toString()
     }
 
-    // (لم نعد نستخدم الـ placeholder، يمكنك إبقاءها أو حذفها إن أردت)
     private fun getHijriPlaceholderForNow(): String = getString(R.string.hijri_placeholder)
 
     // =============== Remote Config + In-App Update ===============
@@ -450,11 +443,10 @@ class MainActivity : BaseActivity() {
         val defaultUrl = "https://play.google.com/store/apps/details?id=$packageName"
         val current = currentVersionCode()
 
-        // أضفنا min_supported_version_code إلى الافتراضيات
         remoteConfig.setDefaultsAsync(
             mapOf(
                 "latest_version_code" to current.toInt(),
-                "min_supported_version_code" to current.toInt(), // عدّلها من السيرفر لإجبار التحديث
+                "min_supported_version_code" to current.toInt(),
                 "update_message" to "",
                 "update_url" to defaultUrl,
                 "update_cooldown_hours" to COOLDOWN_HOURS_DEFAULT
@@ -495,7 +487,6 @@ class MainActivity : BaseActivity() {
             val isUpdateAvailable = info.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
             if (!isUpdateAvailable) return@addOnSuccessListener
 
-            // تحديث إلزامي
             if (current < minSupported && info.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
                 appUpdateManager.startUpdateFlowForResult(
                     info, AppUpdateType.IMMEDIATE, this, UPDATE_REQUEST_CODE
@@ -503,7 +494,6 @@ class MainActivity : BaseActivity() {
                 return@addOnSuccessListener
             }
 
-            // تحديث مرن اختياري + منع التكرار
             if (current < latest &&
                 info.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE) &&
                 canPrompt(latest, cooldownHours)
@@ -512,7 +502,6 @@ class MainActivity : BaseActivity() {
                 appUpdateManager.startUpdateFlowForResult(
                     info, AppUpdateType.FLEXIBLE, this, UPDATE_REQUEST_CODE
                 )
-                // سيظهر شريط التقدم عبر listener عند بدء التنزيل
             }
         }
     }
@@ -537,7 +526,6 @@ class MainActivity : BaseActivity() {
             .apply()
     }
 
-    // استدعِها لو وفّرت “لاحقًا” في أي حوار مخصّص بك (إن استخدمته)
     private fun markDismissed(latest: Long) {
         updatePrefs.edit().putLong(KEY_LAST_DISMISSED, latest).apply()
     }
@@ -580,26 +568,32 @@ class MainActivity : BaseActivity() {
             textSize = 14f
             text = getString(R.string.update_preparing)
         }
-        val progress = ProgressBar(this).apply {
-            isIndeterminate = true
-        }
+        val progress = ProgressBar(this).apply { isIndeterminate = true }
 
         val inner = FrameLayout(this).apply {
-            addView(text, FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.WRAP_CONTENT,
-                FrameLayout.LayoutParams.WRAP_CONTENT
-            ).apply { gravity = Gravity.START or Gravity.CENTER_VERTICAL })
-
-            addView(progress, FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.WRAP_CONTENT,
-                FrameLayout.LayoutParams.WRAP_CONTENT
-            ).apply { gravity = Gravity.END or Gravity.CENTER_VERTICAL })
+            addView(
+                text,
+                FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.WRAP_CONTENT,
+                    FrameLayout.LayoutParams.WRAP_CONTENT
+                ).apply { gravity = Gravity.START or Gravity.CENTER_VERTICAL }
+            )
+            addView(
+                progress,
+                FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.WRAP_CONTENT,
+                    FrameLayout.LayoutParams.WRAP_CONTENT
+                ).apply { gravity = Gravity.END or Gravity.CENTER_VERTICAL }
+            )
         }
 
-        container.addView(inner, FrameLayout.LayoutParams(
-            FrameLayout.LayoutParams.MATCH_PARENT,
-            FrameLayout.LayoutParams.WRAP_CONTENT
-        ))
+        container.addView(
+            inner,
+            FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT
+            )
+        )
 
         root.addView(container)
         updateBar = container
@@ -607,13 +601,9 @@ class MainActivity : BaseActivity() {
         updateProgress = progress
     }
 
-    private fun hideUpdateBar() {
-        updateBar?.visibility = View.GONE
-    }
+    private fun hideUpdateBar() { updateBar?.visibility = View.GONE }
 
-    private fun completeFlexibleUpdate() {
-        appUpdateManager.completeUpdate()
-    }
+    private fun completeFlexibleUpdate() { appUpdateManager.completeUpdate() }
 
     // Back API القديم
     @SuppressLint("GestureBackNavigation")

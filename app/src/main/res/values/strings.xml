@@ -277,4 +277,19 @@
     <string name="audio_error">تعذّر تشغيل التلاوة</string>
     <string name="playing_online_fallback">...</string>
 
+
+    <string name="theme">المظهر</string>
+
+    <!-- الخط -->
+    <string name="font_size">حجم الخط</string>
+
+    <!-- التخزين للتلاوات -->
+    <string name="recitation_storage_title">مكان حفظ التلاوات</string>
+    <string name="recitation_storage_internal">الذاكرة الداخلية (مجلد التطبيق)</string>
+    <string name="recitation_storage_external">مجلد خارجي أختاره بنفسي</string>
+    <string name="pick_external_folder">اختر مجلدًا للتنزيلات (خارجي)</string>
+    <string name="recitation_storage_summary_internal">المكان الحالي: الذاكرة الداخلية للتطبيق (مجلد خاص).</string>
+
+    <!-- أخرى -->
+    <string name="reset_settings">إعادة ضبط الإعدادات</string>
 </resources>

@@ -1,3 +1,4 @@
+// File: app/src/main/java/com/hag/al_quran/audio/MadaniPageProvider.kt
 package com.hag.al_quran.audio
 
 import android.content.Context
@@ -29,7 +30,7 @@ class MadaniPageProvider(private val context: Context) {
 
         ids.indices.map { i ->
             val base = urls[i].let { if (it.endsWith("/")) it else "$it/" }
-            Qari(ids[i], names[i], base)
+            Qari(ids[i].trim().lowercase(), names[i], base)
         }
     }
 
@@ -37,7 +38,14 @@ class MadaniPageProvider(private val context: Context) {
     fun getQaris(): List<Qari> = qariList
 
     /** ابحث عن قارئ بالـ id */
-    fun getQariById(id: String): Qari? = qariList.find { it.id == id }
+    fun getQariById(id: String): Qari? = qariList.find { it.id == id.trim().lowercase() }
+
+    /** المسار الأساسي للقارئ (منتهي بـ /) لاستخدامه في الـ Worker */
+    fun getAudioBaseForQari(id: String): String? = getQariById(id)?.url
+
+    /** اسم الملف القياسي بدون الامتداد: SSSAAA (3 أرقام للسورة + 3 أرقام للآية) */
+    fun getFileBaseName(surah: Int, ayah: Int): String =
+        "%03d%03d".format(surah.coerceAtLeast(1), ayah.coerceAtLeast(1))
 
     /** رابط آية عبر معرّف القارئ */
     fun getAyahUrl(qariId: String, surah: Int, ayah: Int): String? {
@@ -55,7 +63,7 @@ class MadaniPageProvider(private val context: Context) {
         return "${q.url}$s$a.mp3"
     }
 
-    // ===================== دعم قوائم الصفحة =====================
+    // ===================== دعم قوائم الصفحة/السورة =====================
 
     /** تمثيل نطاق آيات ضمن الصفحة */
     data class AyahRange(val surah: Int, val start: Int, val end: Int)
@@ -64,10 +72,15 @@ class MadaniPageProvider(private val context: Context) {
      * قراءة page_ayahs_map.json من assets وإرجاع نطاقات الآيات للصفحة.
      * الصيغة المدعومة لكل عنصر:
      * { "sura":1, "start":1, "end":7 } — أو بدائل أسماء المفاتيح: surah/s, from/a1, to/a2
+     * يدعم المسارين:
+     *  - assets/pages/page_ayahs_map.json
+     *  - assets/page_ayahs_map.json (رجوع تلقائي)
      */
     private fun loadAyahRangesForPage(page: Int): List<AyahRange> {
         val out = mutableListOf<AyahRange>()
-        val jsonStr = readAsset("page_ayahs_map.json") ?: return out
+        val jsonStr = readAsset("pages/page_ayahs_map.json")
+            ?: readAsset("page_ayahs_map.json")
+            ?: return out
         try {
             val root = JSONObject(jsonStr)
             val arr: JSONArray = root.optJSONArray(page.coerceAtLeast(1).toString()) ?: JSONArray()
@@ -116,6 +129,46 @@ class MadaniPageProvider(private val context: Context) {
             }
         }
         return urls
+    }
+
+    /** ترجع الأزواج (سورة، آية) للصفحة — مفيدة إن كنت تريد تمريـرها للـ Worker مباشرة */
+    fun getPairsForPage(page: Int): List<Pair<Int, Int>> {
+        val ranges = loadAyahRangesForPage(page)
+        if (ranges.isEmpty()) return emptyList()
+        val pairs = ArrayList<Pair<Int, Int>>(64)
+        for (r in ranges) {
+            val start = r.start.coerceAtLeast(1)
+            val end = if (r.end >= start) r.end else start
+            for (a in start..end) pairs += r.surah to a
+        }
+        return pairs
+    }
+
+    /** روابط سورة كاملة للمقرئ المحدد */
+    fun getUrlsForSurah(qariId: String, surah: Int): List<String> {
+        val qari = getQariById(qariId) ?: return emptyList()
+        val total = getAyahCountInSurah(surah)
+        if (total <= 0) return emptyList()
+        val urls = ArrayList<String>(total)
+        for (a in 1..total) {
+            urls += buildAyahUrl(qari, surah, a)
+        }
+        return urls
+    }
+
+    /** عدد آيات السورة من quran.json */
+    private fun getAyahCountInSurah(surah: Int): Int {
+        return try {
+            val txt = readAsset("quran.json") ?: return 0
+            val arr = JSONArray(txt)
+            for (i in 0 until arr.length()) {
+                val sObj = arr.getJSONObject(i)
+                if (sObj.optInt("id") == surah) {
+                    return sObj.optJSONArray("verses")?.length() ?: 0
+                }
+            }
+            0
+        } catch (_: Throwable) { 0 }
     }
 
     /** قراءة ملف من assets كنص */

@@ -2,8 +2,11 @@
 package com.hag.al_quran.helpers
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.Build
 import android.text.TextUtils
 import android.view.View
@@ -14,6 +17,7 @@ import com.bumptech.glide.Glide
 import com.hag.al_quran.QuranPageActivity
 import com.hag.al_quran.R
 import com.hag.al_quran.audio.MadaniPageProvider
+import com.hag.al_quran.audio.Qari
 import com.hag.al_quran.tafsir.TafsirUtils
 import com.hag.al_quran.tafsir.TafsirUtils.downloadTafsirIfNeeded
 import org.json.JSONArray
@@ -28,6 +32,95 @@ class QuranSupportHelper(
     private val provider: MadaniPageProvider
 ) {
 
+    // ======================= تفضيل نوع الشبكة =======================
+    private companion object {
+        private const val PREF_NETWORK = "pref_network_type"
+    }
+    private enum class NetworkPref { WIFI_ONLY, ANY }
+
+    private fun getNetworkPref(): NetworkPref {
+        val v = activity.prefs.getString(PREF_NETWORK, "WIFI_ONLY") ?: "WIFI_ONLY"
+        return if (v == "ANY") NetworkPref.ANY else NetworkPref.WIFI_ONLY
+    }
+
+    private fun isNetworkPrefSet(): Boolean {
+        return activity.prefs.contains(PREF_NETWORK)
+    }
+
+    /** حوار يطلب نوع الشبكة ويحفظه، ثم ينفّذ onDone مباشرة */
+    private fun pickNetworkThen(onDone: () -> Unit) {
+        val items = arrayOf("واي-فاي فقط", "أي شبكة (واي-فاي أو بيانات)")
+        var sel = if (getNetworkPref() == NetworkPref.WIFI_ONLY) 0 else 1
+        AlertDialog.Builder(activity)
+            .setTitle("نوع الشبكة للتحميل")
+            .setSingleChoiceItems(items, sel) { _, which -> sel = which }
+            .setPositiveButton("حفظ") { d, _ ->
+                val pref = if (sel == 0) NetworkPref.WIFI_ONLY else NetworkPref.ANY
+                activity.prefs.edit()
+                    .putString(PREF_NETWORK, if (pref == NetworkPref.ANY) "ANY" else "WIFI_ONLY")
+                    .apply()
+                Toast.makeText(activity, "تم حفظ التفضيل: ${items[sel]}", Toast.LENGTH_SHORT).show()
+                d.dismiss()
+                onDone()
+            }
+            .setNegativeButton("إلغاء", null)
+            .show()
+    }
+
+    /** حوار مستقل لتغيير نوع الشبكة من الإعدادات */
+    fun showNetworkTypeDialog() {
+        val items = arrayOf("واي-فاي فقط", "أي شبكة (واي-فاي أو بيانات)")
+        var sel = if (getNetworkPref() == NetworkPref.WIFI_ONLY) 0 else 1
+        AlertDialog.Builder(activity)
+            .setTitle("نوع الشبكة للتحميل")
+            .setSingleChoiceItems(items, sel) { _, which -> sel = which }
+            .setPositiveButton("حفظ") { d, _ ->
+                val pref = if (sel == 0) NetworkPref.WIFI_ONLY else NetworkPref.ANY
+                activity.prefs.edit().putString(PREF_NETWORK, if (pref == NetworkPref.ANY) "ANY" else "WIFI_ONLY").apply()
+                Toast.makeText(activity, "تم حفظ التفضيل: ${items[sel]}", Toast.LENGTH_SHORT).show()
+                d.dismiss()
+            }
+            .setNegativeButton("إلغاء", null)
+            .show()
+    }
+
+    // ======================= فحص الاتصال ونوع الشبكة =======================
+    private fun isConnected(): Boolean {
+        val cm = activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val n = cm.activeNetwork ?: return false
+        val caps = cm.getNetworkCapabilities(n) ?: return false
+        return caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+    }
+
+    private fun isOnWifi(): Boolean {
+        val cm = activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val n = cm.activeNetwork ?: return false
+        val caps = cm.getNetworkCapabilities(n) ?: return false
+        return caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
+    }
+
+    private fun isOnMobileData(): Boolean {
+        val cm = activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val nw = cm.activeNetwork ?: return false
+        val caps = cm.getNetworkCapabilities(nw) ?: return false
+        return caps.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)
+    }
+
+    /** هل نسمح بالتحميل وفق تفضيل الشبكة الحالي؟ */
+    private fun shouldAllowDownload(showToast: Boolean = true): Boolean {
+        if (!isConnected()) {
+            if (showToast) Toast.makeText(activity, "لا يوجد اتصال بالإنترنت.", Toast.LENGTH_LONG).show()
+            return false
+        }
+        val pref = getNetworkPref()
+        if (pref == NetworkPref.WIFI_ONLY && !isOnWifi()) {
+            if (showToast) Toast.makeText(activity, "التحميل مقيّد بالواي-فاي فقط. اتصل بشبكة واي-فاي أو غيّر الإعداد.", Toast.LENGTH_LONG).show()
+            return false
+        }
+        return true
+    }
+
+    // ========= JSON ARRAYS / CACHE =========
     private val quranArr: JSONArray by lazy {
         val jsonStr = activity.assets.open("quran.json").bufferedReader().use { it.readText() }
         JSONArray(jsonStr)
@@ -42,6 +135,15 @@ class QuranSupportHelper(
         JSONObject(jsonStr)
     }
 
+    // عدد الآيات في كل سورة (1..114)
+    private val AYAH_COUNTS = intArrayOf(
+        7,286,200,176,120,165,206,75,129,109,123,111,43,52,99,128,111,110,98,135,112,78,118,64,77,227,93,88,69,60,
+        34,30,73,54,45,83,182,88,75,85,54,53,89,59,37,35,38,29,18,45,60,49,62,55,78,96,29,22,24,13,14,11,11,18,
+        12,12,30,52,52,44,28,28,20,56,40,31,50,40,46,42,29,19,36,25,22,17,19,26,30,20,15,21,11,8,8,19,5,8,8,11,
+        11,8,3,9,5,4,5,6,3,5,4,5,4,5,6
+    )
+
+    // ======================= بانر "الآن يتلى" =======================
     fun showAyahBanner(surah: Int, ayah: Int) {
         val text = try { getAyahTextFromJson(surah, ayah) } catch (_: Throwable) { "—" }
         showOrUpdateAyahBanner(surah, ayah, text)
@@ -53,7 +155,7 @@ class QuranSupportHelper(
         activity.ayahTextView?.apply {
             this.text = text
             isSelected = false
-            post { isSelected = true }
+            post { isSelected = true } // لتفعيل marquee
         }
 
         val banner = activity.ayahBanner
@@ -78,24 +180,23 @@ class QuranSupportHelper(
         activity.ayahBanner?.startAnimation(out)
     }
 
+    // ======================= شريط خيارات الآية =======================
     fun showAyahOptionsBar(surah: Int, ayah: Int, ayahText: String) {
         activity.toolbar.visibility = View.VISIBLE
         activity.audioControls.visibility = View.VISIBLE
-
         activity.ayahPreview?.text = ayahText
         activity.ayahOptionsBar.visibility = View.VISIBLE
         activity.ayahOptionsBar.alpha = 1f
-
         activity.showBarsThenAutoHide(3000)
     }
 
+    // ======================= تحكم بعرض الأشرطة =======================
     fun showToolbarAndHideAfterDelay() {
         activity.showBarsThenAutoHide(3500)
     }
 
     fun hideToolbarAndBottomBar() {
         activity.toolbar.visibility = View.GONE
-
         activity.audioControls.animate()
             .translationY(activity.audioControls.height.toFloat())
             .alpha(0f)
@@ -113,6 +214,7 @@ class QuranSupportHelper(
         }
     }
 
+    // ======================= نصوص وأسماء السور =======================
     fun getAyahTextFromJson(surah: Int, ayah: Int): String {
         for (i in 0 until quranArr.length()) {
             val sObj = quranArr.getJSONObject(i)
@@ -144,6 +246,7 @@ class QuranSupportHelper(
         return name
     }
 
+    // ======================= حدود الآيات على الصفحة =======================
     data class Seg(val x: Int, val y: Int, val w: Int, val h: Int)
     data class AyahBounds(val sura_id: Int, val aya_id: Int, val segs: List<Seg>)
 
@@ -165,8 +268,9 @@ class QuranSupportHelper(
         return res
     }
 
+    // ======================= اختيار القارئ =======================
     data class QariMini(val id: String, val name: String)
-    // استبدل هذه الدالة كاملة
+
     fun showQariPicker(onPicked: (QariMini) -> Unit) {
         val qaris = provider.getQaris()
         val names = qaris.map { it.name }.toTypedArray()
@@ -174,11 +278,9 @@ class QuranSupportHelper(
             .setTitle("اختر القارئ")
             .setItems(names) { _, which ->
                 val q = qaris[which]
-                // خزّن دائمًا في المفتاح الموحّد الذي تقرأه QuranPageActivity
                 activity.prefs.edit()
                     .putString(QuranPageActivity.KEY_QARI_ID, q.id.trim().lowercase())
                     .apply()
-
                 onPicked(QariMini(q.id, q.name))
                 Toast.makeText(activity, "تم اختيار ${q.name}", Toast.LENGTH_SHORT).show()
             }
@@ -186,24 +288,7 @@ class QuranSupportHelper(
             .show()
     }
 
-    fun showRepeatDialog(audio: QuranAudioHelper) {
-        val v = activity.layoutInflater.inflate(R.layout.dialog_repeat_options, null)
-        val group = v.findViewById<RadioGroup>(R.id.repeatTypeGroup)
-        val picker = v.findViewById<NumberPicker>(R.id.repeatCountPicker)
-        picker.minValue = 1; picker.maxValue = 20; picker.value = audio.repeatCount
-        if (audio.repeatMode == "ayah") group.check(R.id.repeatAyah)
-        AlertDialog.Builder(activity)
-            .setTitle("إعدادات التكرار")
-            .setView(v)
-            .setPositiveButton("موافق") { _, _ ->
-                audio.repeatCount = picker.value
-                audio.repeatMode = "ayah"
-                Toast.makeText(activity, "تم تعيين تكرار الآية (${audio.repeatCount} مرة)", Toast.LENGTH_SHORT).show()
-            }
-            .setNegativeButton("إلغاء", null)
-            .show()
-    }
-
+    // ======================= مشاركة آية =======================
     fun shareCurrentAyah(surah: Int, ayah: Int) {
         val text = "سورة ${getSurahNameByNumber(surah)} - آية $ayah\n\n${getAyahTextFromJson(surah, ayah)}"
         activity.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply {
@@ -211,6 +296,7 @@ class QuranSupportHelper(
         }, "مشاركة"))
     }
 
+    // ======================= التفسير =======================
     private val tafsirList = listOf(
         "تفسير ابن كثير" to "ar-tafsir-ibn-kathir.json",
         "تفسير السعدي"   to "ar-tafsir-as-saadi.json",
@@ -287,7 +373,8 @@ class QuranSupportHelper(
         tafsirAlertDialog = AlertDialog.Builder(activity).create().apply { setView(v); show() }
     }
 
-    private enum class DownloadScope { PAGE, SURAH, JUZ }
+    // ======================= تنزيل التلاوات =======================
+    private enum class DownloadScope { PAGE, SURAH, JUZ, QURAN }
 
     private val JUZ_START_PAGES = intArrayOf(
         1, 22, 42, 62, 82, 102, 121, 141, 162, 182,
@@ -296,7 +383,7 @@ class QuranSupportHelper(
     )
 
     fun showDownloadScopeDialog(currentPage: Int, currentSurah: Int, currentQariId: String) {
-        val choices = arrayOf("الصفحة", "السورة", "الجزء")
+        val choices = arrayOf("الصفحة", "السورة", "الجزء", "المصحف كامل")
         var selected = 0
         AlertDialog.Builder(activity)
             .setTitle("كم التحميل؟")
@@ -305,10 +392,26 @@ class QuranSupportHelper(
                 val scope = when (selected) {
                     1 -> DownloadScope.SURAH
                     2 -> DownloadScope.JUZ
+                    3 -> DownloadScope.QURAN
                     else -> DownloadScope.PAGE
                 }
-                startBulkDownload(scope, currentPage, currentSurah, currentQariId)
+                val qariId = currentQariId.trim().lowercase()
+
+                val start = {
+                    if (scope == DownloadScope.QURAN) {
+                        Toast.makeText(activity, "سيتم تنزيل المصحف كاملًا. قد يستغرق وقتًا طويلًا.", Toast.LENGTH_LONG).show()
+                    }
+                    startBulkDownload(scope, currentPage, currentSurah, qariId)
+                }
+
                 d.dismiss()
+
+                // أول مرة فقط: اطلب تفضيل الشبكة ثم ابدأ
+                if (!isNetworkPrefSet()) {
+                    pickNetworkThen { start() }
+                } else {
+                    start()
+                }
             }
             .setNegativeButton("إلغاء", null)
             .show()
@@ -329,30 +432,36 @@ class QuranSupportHelper(
         scope: DownloadScope,
         pageNow: Int,
         surahNow: Int,
-        qariId: String
+        qariIdRaw: String
     ): List<Pair<String, File>> {
+        val qariId = qariIdRaw.trim().lowercase()
         val qari = provider.getQariById(qariId) ?: return emptyList()
-        val pairs = mutableListOf<Pair<String, File>>()
+        val pairs = ArrayList<Pair<String, File>>(6400)
 
-        fun addFromBounds(bounds: List<AyahBounds>, surahFilter: Int? = null) {
-            for (b in bounds) {
-                if (surahFilter != null && b.sura_id != surahFilter) continue
-                val url = provider.getAyahUrl(qari, b.sura_id, b.aya_id)
-                val out = qariFile(qariId, b.sura_id, b.aya_id)
-                pairs.add(url to out)
-            }
+        fun addAyah(s: Int, a: Int) {
+            val url = provider.getAyahUrl(qari, s, a)
+            val out = qariFile(qariId, s, a)
+            pairs.add(url to out)
         }
 
         when (scope) {
-            DownloadScope.PAGE -> addFromBounds(loadAyahBoundsForPage(pageNow))
+            DownloadScope.PAGE -> {
+                for (b in loadAyahBoundsForPage(pageNow)) addAyah(b.sura_id, b.aya_id)
+            }
             DownloadScope.SURAH -> {
-                for (p in 1..604) {
-                    val bs = loadAyahBoundsForPage(p)
-                    if (bs.any { it.sura_id == surahNow }) addFromBounds(bs, surahFilter = surahNow)
-                }
+                val count = AYAH_COUNTS.getOrNull(surahNow - 1) ?: 0
+                for (a in 1..count) addAyah(surahNow, a)
             }
             DownloadScope.JUZ -> {
-                for (p in pageRangeForCurrentJuz(pageNow)) addFromBounds(loadAyahBoundsForPage(p))
+                for (p in pageRangeForCurrentJuz(pageNow)) {
+                    for (b in loadAyahBoundsForPage(p)) addAyah(b.sura_id, b.aya_id)
+                }
+            }
+            DownloadScope.QURAN -> {
+                for (s in 1..114) {
+                    val c = AYAH_COUNTS.getOrNull(s - 1) ?: continue
+                    for (a in 1..c) addAyah(s, a)
+                }
             }
         }
         return pairs.distinctBy { it.second.absolutePath }
@@ -360,46 +469,104 @@ class QuranSupportHelper(
 
     private fun startBulkDownload(scope: DownloadScope, pageNow: Int, surahNow: Int, qariId: String) {
         val qari = provider.getQariById(qariId) ?: run {
-            Toast.makeText(activity, "تعذر تحديد القارئ.", Toast.LENGTH_SHORT).show(); return
-        }
-        val items = buildUrlsFor(scope, pageNow, surahNow, qariId)
-        if (items.isEmpty()) {
-            Toast.makeText(activity, "لا توجد آيات مطابقة للنطاق المحدد.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "تعذر تحديد القارئ.", Toast.LENGTH_SHORT).show()
             return
         }
+
         val title = when (scope) {
-            DownloadScope.PAGE -> "تحميل الصفحة"
+            DownloadScope.PAGE  -> "تحميل الصفحة"
             DownloadScope.SURAH -> "تحميل السورة"
-            DownloadScope.JUZ -> "تحميل الجزء"
+            DownloadScope.JUZ   -> "تحميل الجزء"
+            DownloadScope.QURAN -> "تحميل المصحف كاملًا"
         }
+
+        // احترام تفضيل الشبكة قبل البدء
+        if (!shouldAllowDownload(showToast = true)) return
+
+        // تحذير إضافي عند بيانات الجوال (عندما السماح بأي شبكة)
+        if (isOnMobileData() && getNetworkPref() == NetworkPref.ANY) {
+            AlertDialog.Builder(activity)
+                .setTitle("تنبيه")
+                .setMessage("أنت تستخدم بيانات الهاتف. قد يستهلك التحميل حجمًا كبيرًا من الباقة.\nهل تريد المتابعة؟")
+                .setPositiveButton("متابعة") { _, _ ->
+                    proceedDownload(scope, pageNow, surahNow, qariId, qari, title)
+                }
+                .setNegativeButton("إلغاء", null)
+                .show()
+        } else {
+            proceedDownload(scope, pageNow, surahNow, qariId, qari, title)
+        }
+    }
+
+    private fun proceedDownload(
+        scope: DownloadScope,
+        pageNow: Int,
+        surahNow: Int,
+        qariId: String,
+        qari: Qari,
+        title: String
+    ) {
         showDownloadUiStarting("$title…")
+
+        // بناء القائمة والتنزيل في خيط خلفي
         thread {
+            val items = buildUrlsFor(scope, pageNow, surahNow, qariId)
+
+            if (items.isEmpty()) {
+                activity.runOnUiThread {
+                    hideDownloadUi()
+                    Toast.makeText(activity, "لا توجد آيات مطابقة للنطاق المحدد.", Toast.LENGTH_LONG).show()
+                }
+                return@thread
+            }
+
+            android.util.Log.d("QuranDL", "Downloading ${items.size} files for $title")
+
             var ok = true
             for (i in items.indices) {
-                val (url, out) = items[i]
-                val (success, _) = downloadWithProgress(url, out) { percent, known ->
+                // إعادة فحص الشبكة أثناء التحميل (خصوصًا عند QURAN)
+                if (!shouldAllowDownload(showToast = false)) {
+                    ok = false
                     activity.runOnUiThread {
-                        if (known) {
-                            activity.downloadProgress.isIndeterminate = false
-                            setProgressPercent(percent)
-                            activity.downloadLabel.text = "$title — ${i + 1} / ${items.size} — $percent%"
-                        } else {
-                            activity.downloadProgress.isIndeterminate = true
-                            activity.downloadLabel.text = "$title — ${i + 1} / ${items.size}…"
+                        hideDownloadUi()
+                        Toast.makeText(activity, "تم الإيقاف بسبب نوع الشبكة المحدد.", Toast.LENGTH_LONG).show()
+                    }
+                    return@thread
+                }
+
+                val (url, out) = items[i]
+                try {
+                    val (success, _) = downloadWithProgress(url, out) { percent, known ->
+                        activity.runOnUiThread {
+                            if (known) {
+                                activity.downloadProgress.isIndeterminate = false
+                                setProgressPercent(percent)
+                                activity.downloadLabel.text = "$title — ${i + 1} / ${items.size} — $percent%"
+                            } else {
+                                activity.downloadProgress.isIndeterminate = true
+                                activity.downloadLabel.text = "$title — ${i + 1} / ${items.size}…"
+                            }
                         }
                     }
+                    ok = ok && success
+                } catch (e: Exception) {
+                    ok = false
+                    android.util.Log.e("QuranDL", "خطأ أثناء تنزيل: $url", e)
                 }
-                ok = ok && success
             }
+
             activity.runOnUiThread {
                 hideDownloadUi()
-                val msg = if (ok) "$title اكتمل بنجاح في مجلد ${qari.id}" else "حدث خطأ أثناء $title"
+                val msg = if (ok) "$title اكتمل بنجاح في مجلد ${qari.id}"
+                else "حدث إيقاف/خطأ أثناء $title"
                 Toast.makeText(activity, msg, Toast.LENGTH_LONG).show()
             }
         }
     }
 
+    // ======================= تنزيل ملف واحد =======================
     fun downloadOneAsync(message: String, url: String, out: File) {
+        if (!shouldAllowDownload(showToast = true)) return
         showDownloadUiStarting(message)
         thread {
             downloadWithProgress(url, out) { percent, known ->
@@ -420,73 +587,13 @@ class QuranSupportHelper(
 
     // تنزيل صامت بدون واجهة
     fun downloadOneSilentInBackground(url: String, out: File) {
+        if (!shouldAllowDownload(showToast = false)) return
         thread {
             try { downloadWithProgress(url, out) { _, _ -> } } catch (_: Exception) {}
         }
     }
 
-    fun showDownloadAllPagesDialogIfNeeded() {
-        val already = activity.prefs.getBoolean("pages_downloaded", false)
-        if (already) return
-        showDownloadAllPagesDialog(activity.prefs)
-    }
-
-    private fun showDownloadAllPagesDialog(prefs: SharedPreferences) {
-        val dialogView = activity.layoutInflater.inflate(R.layout.dialog_download_pages, null)
-        dialogView.findViewById<TextView>(R.id.title)?.apply {
-            isSingleLine = true
-            ellipsize = TextUtils.TruncateAt.MARQUEE
-            marqueeRepeatLimit = -1
-            isFocusable = true
-            isFocusableInTouchMode = true
-            setHorizontallyScrolling(true)
-            isSelected = true
-        }
-        val progressBar = dialogView.findViewById<ProgressBar>(R.id.progressBar)
-        val loadingText = dialogView.findViewById<TextView>(R.id.loadingText)
-        val btnDownloadNow = dialogView.findViewById<TextView>(R.id.btnDownloadNow)
-        val btnCancel = dialogView.findViewById<TextView>(R.id.btnCancel)
-        progressBar.max = 604; progressBar.progress = 0
-        val alert = AlertDialog.Builder(activity, android.R.style.Theme_Black_NoTitleBar_Fullscreen)
-            .setView(dialogView).setCancelable(false).create()
-        alert.window?.setBackgroundDrawableResource(android.R.color.transparent)
-        alert.show()
-
-        var cancelled = false
-
-        btnDownloadNow.setOnClickListener {
-            btnDownloadNow.isEnabled = false
-            thread {
-                for (page in 1..604) {
-                    if (cancelled) break
-                    try {
-                        val url = "https://raw.githubusercontent.com/assadig3/quran-pages/main/pages/page_${page}.webp"
-                        Glide.with(activity).downloadOnly().load(url).submit().get()
-                    } catch (_: Exception) {}
-                    activity.runOnUiThread {
-                        progressBar.progress = page
-                        loadingText.text = "جاري تحميل الصفحة $page من 604..."
-                    }
-                }
-                activity.runOnUiThread {
-                    if (!cancelled) {
-                        prefs.edit().putBoolean("pages_downloaded", true).apply()
-                        alert.dismiss()
-                        Toast.makeText(activity, "تم تحميل جميع الصفحات بنجاح!", Toast.LENGTH_LONG).show()
-                    } else {
-                        btnDownloadNow.isEnabled = true
-                    }
-                }
-            }
-        }
-
-        btnCancel.setOnClickListener {
-            cancelled = true
-            alert.dismiss()
-            Toast.makeText(activity, "تم إلغاء التحميل.", Toast.LENGTH_SHORT).show()
-        }
-    }
-
+    // ======================= واجهة تقدم التنزيل =======================
     private fun showDownloadUiStarting(message: String) {
         activity.downloadRow.visibility = View.VISIBLE
         activity.downloadLabel.visibility = View.VISIBLE
@@ -553,8 +660,9 @@ class QuranSupportHelper(
         }
     }
 
-    private fun qariDir(qariId: String): File {
-        val safe = qariId.lowercase()
+    // ======================= مسارات الحفظ =======================
+    private fun qariDir(qariIdRaw: String): File {
+        val safe = qariIdRaw.trim().lowercase()
             .replace("\\s+".toRegex(), "_")
             .replace("[^a-z0-9_\\-]".toRegex(), "")
         val dir = File(activity.getExternalFilesDir(null), "recitations/$safe")
@@ -562,7 +670,8 @@ class QuranSupportHelper(
         return dir
     }
 
-    fun qariFile(qariId: String, surah: Int, ayah: Int): File {
+    fun qariFile(qariIdRaw: String, surah: Int, ayah: Int): File {
+        val qariId = qariIdRaw.trim().lowercase()
         val name = "%03d%03d.mp3".format(surah, ayah)
         return File(qariDir(qariId), name)
     }

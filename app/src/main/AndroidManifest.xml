@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- ===== Permissions ===== -->
-    <!-- اتصال وتحميل -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- منع النوم أثناء التحميل -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <!-- خدمات Foreground عامة (Android 9+) -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <!-- نوع خدمة Foreground خاص بمزامنة/تنزيل البيانات (Android 14+) -->
-    <uses-permission
-        android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"
-        tools:targetApi="34" />
-    <!-- إشعارات (Android 13+) -->
-    <uses-permission
-        android:name="android.permission.POST_NOTIFICATIONS"
-        tools:targetApi="33" />
-    <!-- تشغيل وسائط كخدمة مقدّمة -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" tools:targetApi="34" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" tools:targetApi="33" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
 
-    <!-- ✅ إزالة أي أذونات إعلان قد تُضاف ترانزيتيفاً -->
-    <uses-permission
-        android:name="com.google.android.gms.permission.AD_ID"
-        tools:node="remove" />
-    <uses-permission
-        android:name="android.permission.ACCESS_ADSERVICES_AD_ID"
-        tools:node="remove" />
+    <!-- إزالة أي أذونات إعلان قد تُضاف ترانزيتيفاً -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" tools:node="remove" />
 
     <application
         android:name=".App"
@@ -40,26 +24,29 @@
         android:localeConfig="@xml/locales_config"
         tools:targetApi="33">
 
-        <!-- AppCompat locales للإصدارات الأقدم -->
         <meta-data
             android:name="androidx.appcompat.app.locale_config"
             android:resource="@xml/locales_config" />
-
-        <!-- ✅ تعطيل جمع معرّف الإعلانات داخل Firebase Analytics -->
         <meta-data
             android:name="google_analytics_adid_collection_enabled"
             android:value="false" />
 
-        <!-- شاشة اختيار اللغة (Launcher) -->
+        <!-- ✅ launcher صار MainActivity -->
         <activity
-            android:name=".onboarding.LanguageSelectionActivity"
+            android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Material3.Light.NoActionBar">
+            android:theme="@style/Theme.QuranKarim">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- شاشة اختيار اللغة (بدون launcher) -->
+        <activity
+            android:name=".onboarding.LanguageSelectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
 
         <receiver
             android:name=".notify.NotificationActionReceiver"
@@ -70,37 +57,22 @@
             </intent-filter>
         </receiver>
 
-        <!-- الرئيسية -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-
-        <!-- صفحة المصحف -->
-        <activity
-            android:name=".QuranPageActivity"
+        <activity android:name=".QuranPageActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:parentActivityName=".MainActivity" />
 
-        <!-- البحث -->
-        <activity
-            android:name=".search.SearchActivity"
+        <activity android:name=".search.SearchActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
         </activity>
 
-        <!-- ===== Services ===== -->
-
-        <!-- خدمة تنزيل صفحات المصحف في الخلفية مع إشعار التقدم -->
         <service
             android:name=".download.PagesDownloadService"
             android:exported="false"
             android:foregroundServiceType="dataSync" />
 
-        <!-- خدمة الصوت في المقدمة -->
         <service
             android:name=".audio.AudioPlaybackManager$ForegroundPlaybackService"
             android:exported="false"

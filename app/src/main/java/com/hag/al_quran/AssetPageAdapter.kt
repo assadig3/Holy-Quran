@@ -1,3 +1,4 @@
+// File: app/src/main/java/com/hag/al_quran/AssetPageAdapter.kt
 package com.hag.al_quran
 
 import android.annotation.SuppressLint
@@ -5,7 +6,9 @@ import android.content.Context
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.RectF
+import android.os.SystemClock
 import android.view.GestureDetector
+import android.view.HapticFeedbackConstants
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -33,7 +36,7 @@ object RoiMap {
     }
 }
 
-/** قياس الأساس للحدود (العرض 290 ثابت، الارتفاع من أكبر y+h) */
+/** قياس الأساس للحدود */
 private fun baseSizeFor(boundsList: List<AyahBounds>): Pair<Float, Float> {
     if (boundsList.isEmpty()) return 290f to 428f
     var maxY = 0f
@@ -45,7 +48,7 @@ private fun baseSizeFor(boundsList: List<AyahBounds>): Pair<Float, Float> {
     return 290f to h
 }
 
-// تحويل Seg إلى مستطيل على الشاشة
+// تحويل Seg إلى مستطيل
 private fun mapSegToViewRect(
     attacher: PhotoViewAttacher,
     seg: Seg,
@@ -79,7 +82,6 @@ class AssetPageAdapter(
     private val onAyahClick: (surah: Int, ayah: Int, ayahText: String) -> Unit,
     private val onImageTap: () -> Unit,
     private val onNeedPagesDownload: () -> Unit = {},
-    /** أبقينا الحقل لعدم كسر الاستدعاءات، لكن لن نستخدمه إطلاقاً لإظهار أي Loader */
     private val loaderHost: CenterLoaderHost? = null
 ) : RecyclerView.Adapter<AssetPageAdapter.PageViewHolder>() {
 
@@ -139,7 +141,7 @@ class AssetPageAdapter(
         return PageViewHolder(scroll, photo, overlay)
     }
 
-    // مطابقة ذكية لمعالجة فرق البسملة (±1)
+    // مطابقة ذكية
     private fun resolveAyahBounds(
         boundsList: List<AyahBounds>,
         surah: Int,
@@ -157,7 +159,7 @@ class AssetPageAdapter(
         return null
     }
 
-    // ننتظر حتى تجهز displayRect
+    // انتظار حتى displayRect
     private fun waitForDisplayRect(
         pv: PhotoView,
         tries: Int = 12,
@@ -190,15 +192,14 @@ class AssetPageAdapter(
 
         holder.photoView.scaleType = ImageView.ScaleType.FIT_CENTER
 
-        // تحميل الصورة — بدون أي Overlays من هنا
         PageImageLoader.loadWithCallbacks(
             context = context,
             pageNumber = pageNumber,
             into = holder.photoView,
             mode = PageImageLoader.Mode.NORMAL,
-            onStart = { /* لا نظهر أي Loader هنا إطلاقاً */ },
-            onReady = { /* لا شيء */ },
-            onFail  = { /* لا شيء */ }
+            onStart = { },
+            onReady = { },
+            onFail  = { }
         )
 
         NightMode.applyInvert(holder.photoView, context)
@@ -208,10 +209,6 @@ class AssetPageAdapter(
 
             val att = holder.photoView.attacher
             val boundsList = ayahBoundsMap[pageNumber] ?: emptyList()
-            if (boundsList.isEmpty()) {
-                holder.overlay.setRects(emptyList())
-                return@waitForDisplayRect
-            }
 
             val (BASE_W, BASE_H) = baseSizeFor(boundsList)
             val roi = RoiMap.forPage(pageNumber)
@@ -221,7 +218,6 @@ class AssetPageAdapter(
             val highlightColor = if (isNight) Color.argb(110, 80, 220, 140) else Color.argb(100, 52, 199, 89)
             holder.overlay.setColor(highlightColor)
 
-            // ✅ هنا تم إصلاح النوع: نحول seg إلى utils.Seg قبل تمريـره
             fun toScreenRects(ab: AyahBounds?): List<RectF> =
                 ab?.segs?.map { seg -> mapSegToViewRect(att, toUtilsSeg(seg), BASE_W, BASE_H, roi) } ?: emptyList()
 
@@ -231,64 +227,71 @@ class AssetPageAdapter(
                 holder.overlay.setRects(toScreenRects(selected))
             } ?: holder.overlay.setRects(emptyList())
 
-            fun handleTap(tapX: Float, tapY: Float) {
-                val dr = att.displayRect ?: return
-                val content = RectF(
-                    dr.left + roi.l * dr.width(),
-                    dr.top + roi.t * dr.height(),
-                    dr.right - (1f - roi.r) * dr.width(),
-                    dr.bottom - (1f - roi.b) * dr.height()
-                )
-                if (!content.contains(tapX, tapY)) { onImageTap(); return }
-
-                val rx = (tapX - content.left) / content.width()
-                val ry = (tapY - content.top) / content.height()
-                val imgX = rx * BASE_W
-                val imgY = ry * BASE_H
-
-                var hit: AyahBounds? = null
-                loop@ for (ab in boundsList) {
-                    for (s in ab.segs) {
-                        if (imgX >= s.x && imgX <= s.x + s.w &&
-                            imgY >= s.y && imgY <= s.y + s.h
-                        ) { hit = ab; break@loop }
-                    }
-                }
-
-                if (hit != null) {
-                    val oldR = toScreenRects(selected)
-                    selected = hit
-                    selectionByPage[pageNumber] = hit.sura_id to hit.aya_id
-                    val newR = toScreenRects(selected)
-
-                    if (oldR.isNotEmpty() && newR.isNotEmpty() && oldR.size == newR.size)
-                        holder.overlay.animateTo(newR, 160)
-                    else
-                        holder.overlay.setRects(newR)
-
-                    onAyahClick(
-                        hit.sura_id,
-                        hit.aya_id,
-                        BoundsRepo.getAyahText(context, hit.sura_id, hit.aya_id)
-                    )
-                } else onImageTap()
-            }
-
-            holder.photoView.setOnPhotoTapListener { _, xPerc, yPerc ->
-                val dr = att.displayRect ?: return@setOnPhotoTapListener
-                val tapX = dr.left + xPerc * dr.width()
-                val tapY = dr.top + yPerc * dr.height()
-                handleTap(tapX, tapY)
-            }
-            holder.photoView.setOnViewTapListener { _, x, y -> handleTap(x, y) }
+            // === Gesture: نقرة = Toggle Bars | ضغط مطوّل = اختيار آية + Haptic ===
+            var lastToggleAt = 0L
+            val TAP_DEBOUNCE_MS = 400L
 
             val detector = GestureDetector(holder.photoView.context,
                 object : GestureDetector.SimpleOnGestureListener() {
+
                     override fun onDown(e: MotionEvent): Boolean = true
+
                     override fun onSingleTapConfirmed(e: MotionEvent): Boolean {
-                        handleTap(e.x, e.y); return true
+                        val now = SystemClock.uptimeMillis()
+                        if (now - lastToggleAt < TAP_DEBOUNCE_MS) return true
+                        lastToggleAt = now
+                        onImageTap()
+                        return true
+                    }
+
+                    override fun onLongPress(e: MotionEvent) {
+                        val dr = att.displayRect ?: return
+                        val content = RectF(
+                            dr.left + roi.l * dr.width(),
+                            dr.top + roi.t * dr.height(),
+                            dr.right - (1f - roi.r) * dr.width(),
+                            dr.bottom - (1f - roi.b) * dr.height()
+                        )
+                        if (!content.contains(e.x, e.y)) return
+
+                        val rx = (e.x - content.left) / content.width()
+                        val ry = (e.y - content.top) / content.height()
+                        val imgX = rx * BASE_W
+                        val imgY = ry * BASE_H
+
+                        var hit: AyahBounds? = null
+                        loop@ for (ab in boundsList) {
+                            for (s in ab.segs) {
+                                if (imgX >= s.x && imgX <= s.x + s.w &&
+                                    imgY >= s.y && imgY <= s.y + s.h
+                                ) { hit = ab; break@loop }
+                            }
+                        }
+                        if (hit != null) {
+                            holder.itemView.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
+
+                            val oldR = toScreenRects(selected)
+                            selected = hit
+                            selectionByPage[pageNumber] = hit.sura_id to hit.aya_id
+                            val newR = toScreenRects(selected)
+
+                            if (oldR.isNotEmpty() && newR.isNotEmpty() && oldR.size == newR.size)
+                                holder.overlay.animateTo(newR, 160)
+                            else
+                                holder.overlay.setRects(newR)
+
+                            onAyahClick(
+                                hit.sura_id,
+                                hit.aya_id,
+                                BoundsRepo.getAyahText(context, hit.sura_id, hit.aya_id)
+                            )
+                        }
                     }
                 })
+
+            holder.photoView.setOnPhotoTapListener(null)
+            holder.photoView.setOnViewTapListener(null)
+
             holder.photoView.setOnTouchListener { _, ev ->
                 detector.onTouchEvent(ev)
                 false
@@ -336,7 +339,6 @@ class AssetPageAdapter(
         private const val WRAP_CONTENT = ViewGroup.LayoutParams.WRAP_CONTENT
     }
 
-    // دالة تحويل من com.hag.al_quran.Seg إلى com.hag.al_quran.utils.Seg (لا ملفات جديدة)
     private fun toUtilsSeg(s: com.hag.al_quran.Seg): com.hag.al_quran.utils.Seg =
         com.hag.al_quran.utils.Seg(s.x, s.y, s.w, s.h)
 }

@@ -15,8 +15,8 @@ android {
         applicationId = "com.hag.al_quran"
         minSdk = 24
         targetSdk = 35
-        versionCode = 32
-        versionName = "1.0.32"
+        versionCode = 37
+        versionName = "1.0.37"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -89,6 +89,7 @@ dependencies {
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.androidx.lifecycle.process)
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     // تكامل Glide مع OkHttp (كاش شبكة)

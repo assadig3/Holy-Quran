@@ -182,6 +182,10 @@
     <color name="colorTextPrimary">#FFFFFF</color>
     <color name="colorTextSecondary">#B3FFFFFF</color>
     <color name="quran_page_bg">#FFFDF7</color>  <!-- عاجي لطيف للقراءة -->
-
+    <color name="splash_bg_color">#FFF7F7FF</color>  <!-- خلفية فاتحة قريبة من واجهتك -->
+    <color name="splash_icon_bg">#FFFFFFFF</color>   <!-- حبة بيضاء خلف الأيقونة -->
+    <color name="colorPrimaryTransparent">#804DB8FF</color>
+    <!-- اللون الأزرق السماوي للأزرار -->
+    <color name="buttonSkyBlue">#4DB8FF</color>
 
 </resources>

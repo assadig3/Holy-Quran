@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ayahBanner"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -14,7 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        tools:ignore="ExtraText">
 
         <ImageView
             android:id="@+id/surahIcon"
@@ -31,7 +33,7 @@
             android:layout_marginEnd="4dp"
             android:text="البقرة"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="13sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
@@ -52,14 +54,15 @@
             android:paddingTop="2dp"
             android:paddingBottom="2dp"
             android:gravity="center_vertical"
-            android:textColor="@color/appBackground"
-            android:textSize="13sp"
-            android:singleLine="true"
-            android:ellipsize="marquee"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:scrollHorizontally="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true" />
+            android:textColor="@color/colorPrimaryDark" />  <!-- اللون المطلوب -->
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 
         <ImageButton
             android:id="@+id/btnCloseBanner"

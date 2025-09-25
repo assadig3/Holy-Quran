@@ -81,21 +81,7 @@ class PageRecitationController(
         else { repeatedTimes = 0; lastAyah = null }
     }
 
-    fun showRepeatDialog() {
-        val v = activity.layoutInflater.inflate(R.layout.dialog_repeat_options, null)
-        val group = v.findViewById<RadioGroup>(R.id.repeatTypeGroup)
-        val picker = v.findViewById<NumberPicker>(R.id.repeatCountPicker)
-        picker.minValue = 1; picker.maxValue = 20; picker.value = repeatCount
-        group.check(R.id.repeatAyah)
-        AlertDialog.Builder(activity)
-            .setTitle("إعدادات التكرار")
-            .setView(v)
-            .setPositiveButton("موافق") { _, _ ->
-                repeatCount = picker.value
-                repeatMode = "ayah"
-                Toast.makeText(activity, "تم تعيين تكرار الآية (${repeatCount}×)", Toast.LENGTH_SHORT).show()
-            }.setNegativeButton("إلغاء", null).show()
-    }
+
 
     fun downloadPageAudio(
         page: Int,

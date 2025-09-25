@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/repeatRangeCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:padding="16dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="?attr/colorSurface"
+    app:strokeColor="@color/overlay_panel_stroke"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ===== قسم السورة ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="السورة"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="?attr/colorOnSurface"
+            android:paddingBottom="6dp"/>
+
+        <Spinner
+            android:id="@+id/spSurah"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:spinnerMode="dropdown"
+            android:popupBackground="?attr/colorSurface"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+        <!-- ===== قسم النطاق ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="النطاق (من .. إلى)"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="?attr/colorOnSurface"
+            android:paddingTop="14dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- حقلا "من" و"إلى" في صف واحد -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- من الآية -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFrom"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:boxBackgroundMode="outline"
+                app:hintEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="3"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="من الآية"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:imeOptions="actionNext"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textDirection="ltr"
+                    android:textLocale="ar"
+                    android:digits="0123456789٠١٢٣٤٥٦٧٨٩"
+                    android:importantForAutofill="no"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- إلى الآية -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:boxBackgroundMode="outline"
+                app:hintEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="3"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="إلى الآية"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:imeOptions="actionDone"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textDirection="ltr"
+                    android:textLocale="ar"
+                    android:digits="0123456789٠١٢٣٤٥٦٧٨٩"
+                    android:importantForAutofill="no"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- ===== اختصارات تعبئة سريعة ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFromCurrent"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="من الآية الحالية" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToEndPage"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="إلى نهاية الصفحة" />
+        </LinearLayout>
+
+        <!-- ===== عدد مرات التكرار ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="عدد مرات التكرار"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="?attr/colorOnSurface"
+            android:paddingTop="14dp"
+            android:paddingBottom="8dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgTimes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="1" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip10"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCustom"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مخصّص" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- إدخال العدد المخصص -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTimes"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:boxBackgroundMode="outline"
+            app:hintEnabled="true"
+            app:helperText="(1..99)"
+            app:counterEnabled="true"
+            app:counterMaxLength="2"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTimes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="عدد مخصّص"
+                android:inputType="number"
+                android:maxLength="2"
+                android:imeOptions="actionDone"
+                android:textColor="?attr/colorOnSurface"
+                android:textDirection="ltr"
+                android:textLocale="ar"
+                android:digits="0123456789٠١٢٣٤٥٦٧٨٩"
+                android:importantForAutofill="no"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- تلميح -->
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تلميح: استخدم الأزرار لتعبئة الحقول بسرعة، أو اختر (مخصّص) لعدد خاص من التكرارات."
+            android:textSize="12sp"
+            android:textColor="?attr/colorOnSurface"
+            android:alpha="0.7"
+            android:paddingTop="8dp" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
