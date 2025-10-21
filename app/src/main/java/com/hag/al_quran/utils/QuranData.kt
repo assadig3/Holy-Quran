@@ -1,8 +1,8 @@
-package com.hag.al_quran.utils
+package com.hag.al_quran2.utils
 
 import android.app.Activity
 import android.content.Context
-import com.hag.al_quran.audio.MadaniPageProvider
+import com.hag.al_quran2.audio.MadaniPageProvider
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File

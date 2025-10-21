@@ -1,15 +1,11 @@
-package com.hag.al_quran.player
+package com.hag.al_quran2.player
 
 import android.app.ProgressDialog
 import android.content.Context
 import android.media.MediaPlayer
-import android.widget.NumberPicker
-import android.widget.RadioGroup
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.hag.al_quran.R
-import com.hag.al_quran.audio.MadaniPageProvider
+import com.hag.al_quran2.audio.MadaniPageProvider
 import org.json.JSONObject
 
 class PageRecitationController(
@@ -81,21 +77,7 @@ class PageRecitationController(
         else { repeatedTimes = 0; lastAyah = null }
     }
 
-    fun showRepeatDialog() {
-        val v = activity.layoutInflater.inflate(R.layout.dialog_repeat_options, null)
-        val group = v.findViewById<RadioGroup>(R.id.repeatTypeGroup)
-        val picker = v.findViewById<NumberPicker>(R.id.repeatCountPicker)
-        picker.minValue = 1; picker.maxValue = 20; picker.value = repeatCount
-        group.check(R.id.repeatAyah)
-        AlertDialog.Builder(activity)
-            .setTitle("إعدادات التكرار")
-            .setView(v)
-            .setPositiveButton("موافق") { _, _ ->
-                repeatCount = picker.value
-                repeatMode = "ayah"
-                Toast.makeText(activity, "تم تعيين تكرار الآية (${repeatCount}×)", Toast.LENGTH_SHORT).show()
-            }.setNegativeButton("إلغاء", null).show()
-    }
+
 
     fun downloadPageAudio(
         page: Int,

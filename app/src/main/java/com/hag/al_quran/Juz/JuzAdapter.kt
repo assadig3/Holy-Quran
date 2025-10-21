@@ -1,4 +1,4 @@
-package com.hag.al_quran.Juz
+package com.hag.al_quran2.Juz
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran.R
+import com.hag.al_quran2.R
 
 /**
  * Adapter للأجزاء باستخدام ListAdapter + DiffUtil

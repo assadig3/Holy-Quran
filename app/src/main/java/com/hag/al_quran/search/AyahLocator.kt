@@ -1,7 +1,7 @@
-package com.hag.al_quran.search
+package com.hag.al_quran2.search
 
 import android.content.Context
-import com.hag.al_quran.BoundsRepo
+import com.hag.al_quran2.BoundsRepo
 
 /**
  * محدِّد صفحة موحّد يعتمد نفس مصدر التظليل (BoundsRepo) لضمان التطابق 1:1
@@ -16,7 +16,7 @@ object AyahLocator {
     fun getPageFor(context: Context, surah: Int, ayah: Int): Int {
         // 1) إن وُجدت خريطة رسمية
         try {
-            val cls = Class.forName("com.hag.al_quran.PageAyahMapLoader")
+            val cls = Class.forName("com.hag.al_quran2.PageAyahMapLoader")
             val method = cls.getMethod("getPageForAyah", Int::class.java, Int::class.java)
             val p = method.invoke(null, surah, ayah) as Int
             if (p in 1..604) return p

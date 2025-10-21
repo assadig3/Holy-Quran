@@ -1,4 +1,4 @@
-package com.hag.al_quran.audio
+package com.hag.al_quran2.audio
 
 import android.app.*
 import android.content.*
@@ -8,8 +8,8 @@ import android.os.*
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
-import com.hag.al_quran.QuranPageActivity
-import com.hag.al_quran.R
+import com.hag.al_quran2.QuranPageActivity
+import com.hag.al_quran2.R
 import java.util.concurrent.CopyOnWriteArraySet
 import java.util.regex.Pattern
 
@@ -51,11 +51,11 @@ class AudioPlaybackManager private constructor(private val appCtx: Context) {
         internal const val CHANNEL_ID = "quran_playback_channel"
         internal const val NOTIF_ID = 7701
 
-        internal const val ACTION_START  = "com.hag.al_quran.action.START"
-        internal const val ACTION_PLAY   = "com.hag.al_quran.action.PLAY"
-        internal const val ACTION_PAUSE  = "com.hag.al_quran.action.PAUSE"
-        internal const val ACTION_STOP   = "com.hag.al_quran.action.STOP"
-        internal const val ACTION_UPDATE = "com.hag.al_quran.action.UPDATE"
+        internal const val ACTION_START  = "com.hag.al_quran2.action.START"
+        internal const val ACTION_PLAY   = "com.hag.al_quran2.action.PLAY"
+        internal const val ACTION_PAUSE  = "com.hag.al_quran2.action.PAUSE"
+        internal const val ACTION_STOP   = "com.hag.al_quran2.action.STOP"
+        internal const val ACTION_UPDATE = "com.hag.al_quran2.action.UPDATE"
     }
 
     // ========= Dependencies supplied by Activity =========

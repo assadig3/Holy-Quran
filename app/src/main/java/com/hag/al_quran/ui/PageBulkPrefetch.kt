@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran/ui/PageBulkPrefetch.kt
-package com.hag.al_quran.ui
+// File: app/src/main/java/com/hag/al_quran2/ui/PageBulkPrefetch.kt
+package com.hag.al_quran2.ui
 
 import android.content.Context
 import android.os.SystemClock

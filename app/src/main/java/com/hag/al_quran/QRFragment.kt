@@ -1,4 +1,4 @@
-package com.hag.al_quran
+package com.hag.al_quran2
 
 import android.graphics.Bitmap
 import android.os.Bundle

@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran/search/SearchUtils.kt
-package com.hag.al_quran.search
+// File: app/src/main/java/com/hag/al_quran2/search/SearchUtils.kt
+package com.hag.al_quran2.search
 
 import android.content.Context
 import org.json.JSONArray
@@ -219,14 +219,14 @@ object SearchUtils {
         if (preset > 0) return preset
         // 1) AyahLocator (إن وجد)
         try {
-            val cls = Class.forName("com.hag.al_quran.search.AyahLocator")
+            val cls = Class.forName("com.hag.al_quran2.search.AyahLocator")
             val m   = cls.getMethod("getPageFor", Int::class.java, Int::class.java)
             val p   = m.invoke(null, surah, ayah) as Int
             if (p > 0) return p
         } catch (_: Throwable) {}
         // 2) PageAyahMapLoader (المشروع الأصلي)
         try {
-            val cls = Class.forName("com.hag.al_quran.PageAyahMapLoader")
+            val cls = Class.forName("com.hag.al_quran2.PageAyahMapLoader")
             val m   = cls.getMethod("getPageForAyah", Int::class.java, Int::class.java)
             val p   = m.invoke(null, surah, ayah) as Int
             if (p > 0) return p

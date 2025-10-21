@@ -1,4 +1,4 @@
-package com.hag.al_quran.notify
+package com.hag.al_quran2.notify
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -7,14 +7,14 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.hag.al_quran.R
+import com.hag.al_quran2.R
 
 class DownloadNotifier(private val context: Context) {
 
     companion object {
-        private const val CHANNEL_ID = "quran_pages_download"
-        private const val CHANNEL_NAME = "تنزيل صفحات المصحف"
-        private const val NOTIF_ID = 880604
+        private const val CHANNEL_ID   = "quran_recitation_download"
+        private const val CHANNEL_NAME = "تنزيل التلاوة"
+        private const val NOTIF_ID     = 880604
     }
 
     private val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -27,7 +27,7 @@ class DownloadNotifier(private val context: Context) {
             val ch = NotificationChannel(
                 CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_LOW
             ).apply {
-                description = "إشعار يوضح تقدم تنزيل صفحات المصحف"
+                description = "إشعار يوضح تقدم تنزيل التلاوة"
                 enableLights(false)
                 enableVibration(false)
                 setShowBadge(false)
@@ -39,9 +39,10 @@ class DownloadNotifier(private val context: Context) {
 
     private fun baseBuilder(title: String, text: String, ongoing: Boolean): NotificationCompat.Builder {
         return NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_download) // تأكد من وجود الأيقونة
+            .setSmallIcon(R.drawable.ic_download)        // تأكد من وجود الأيقونة
             .setContentTitle(title)
             .setContentText(text)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(text))
             .setOnlyAlertOnce(true)
             .setOngoing(ongoing)
             .setAutoCancel(!ongoing)
@@ -51,46 +52,57 @@ class DownloadNotifier(private val context: Context) {
     /** إظهار بداية التحميل */
     fun start(total: Int) {
         lastPercent = -1
-        val n = baseBuilder(
-            context.getString(R.string.app_name),
-            context.getString(R.string.pages_download_starting)
-            , true)
-            .setProgress(total, 0, true)
+        val title = "تنزيل التلاوة"
+        val text  = "بدء تنزيل التلاوة…"
+        val n: Notification = baseBuilder(title, text, true)
+            // في البداية نعرضها كمؤشّر غير محدد لو ما عندنا إجمالي موثوق
+            .setProgress(if (total > 0) 100 else 0, 0, total <= 0)
             .build()
         nm.notify(NOTIF_ID, n)
     }
 
     /** تحديث التقدّم */
     fun update(done: Int, total: Int, eta: String?) {
-        val p = ((done * 100f) / total).toInt().coerceIn(0, 100)
-        if (p == lastPercent) return
+        val p = if (total > 0) ((done * 100f) / total).toInt().coerceIn(0, 100) else -1
+        if (p == lastPercent && p >= 0) return
         lastPercent = p
 
-        val text = context.getString(R.string.of_pages, done, total) + (if (!eta.isNullOrEmpty()) " • $eta" else "")
-        val n = baseBuilder(
-            context.getString(R.string.app_name),
-            text, true
-        )
-            .setProgress(total, done, false)
+        val title = "تنزيل التلاوة"
+        // نص التقدّم: “الآيات X / Y • الوقت المتبقي: …” (إن توفر)
+        val progressText = buildString {
+            append("الآيات ")
+            append(done)
+            append(" / ")
+            append(total)
+            if (!eta.isNullOrBlank()) {
+                append(" • ")
+                append("الوقت المتبقي: ")
+                append(eta)
+            }
+        }
+
+        val n: Notification = baseBuilder(title, progressText, true)
+            .setProgress(if (total > 0) 100 else 0, if (total > 0) p.coerceAtLeast(0) else 0, total <= 0)
             .build()
         nm.notify(NOTIF_ID, n)
     }
 
     /** إنهاء بنجاح */
-    fun completeSuccess() {
-        val n = baseBuilder(
-            context.getString(R.string.app_name),
-            context.getString(R.string.pages_download_done), false
-        ).build()
+    fun completeSuccess(done: Int? = null, total: Int? = null) {
+        val title = "تنزيل التلاوة"
+        val text  = if (done != null && total != null)
+            "اكتمل تنزيل التلاوة: $done / $total"
+        else
+            "اكتمل تنزيل التلاوة"
+        val n: Notification = baseBuilder(title, text, false).build()
         nm.notify(NOTIF_ID, n)
     }
 
     /** إلغاء/فشل */
-    fun completeFailed() {
-        val n = baseBuilder(
-            context.getString(R.string.app_name),
-            context.getString(R.string.pages_download_failed), false
-        ).build()
+    fun completeFailed(message: String? = null) {
+        val title = "تنزيل التلاوة"
+        val text  = message ?: "تعذّر تنزيل التلاوة"
+        val n: Notification = baseBuilder(title, text, false).build()
         nm.notify(NOTIF_ID, n)
     }
 

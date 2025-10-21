@@ -1,4 +1,4 @@
-package com.hag.al_quran.pages
+package com.hag.al_quran2.pages
 
 import android.content.Context
 import kotlinx.coroutines.*
@@ -9,7 +9,6 @@ import okhttp3.Cache
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
-import java.util.Locale
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger

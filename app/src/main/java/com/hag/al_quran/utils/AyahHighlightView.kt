@@ -1,4 +1,4 @@
-package com.hag.al_quran.utils
+package com.hag.al_quran2.utils
 
 import android.content.Context
 import android.content.res.Configuration
@@ -6,7 +6,6 @@ import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
 import androidx.core.graphics.ColorUtils
-import kotlin.math.min
 
 /**
  * View بسيط لعرض تظليل الآيات على صورة الصفحة.

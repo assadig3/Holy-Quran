@@ -1,4 +1,4 @@
-package com.hag.al_quran.tafsir
+package com.hag.al_quran2.tafsir
 
 /**
  * مصدر واحد لقائمة التفاسير وروابط/أسماء الملفات.

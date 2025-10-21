@@ -1,4 +1,4 @@
-package com.hag.al_quran.Surah
+package com.hag.al_quran2.Surah
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -15,11 +15,12 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran.Juz.Juz
-import com.hag.al_quran.Juz.JuzAdapter
-import com.hag.al_quran.QuranPageActivity
-import com.hag.al_quran.R
-import com.hag.al_quran.surah.Surah
+import com.hag.al_quran2.Juz.Juz
+import com.hag.al_quran2.Juz.JuzAdapter
+import com.hag.al_quran2.QuranPageActivity
+import com.hag.al_quran2.R
+import com.hag.al_quran2.surah.Surah
+import com.hag.al_quran2.ui.ThemeManager   // <<< مهم
 
 class SurahListFragment : Fragment() {
 
@@ -51,13 +52,12 @@ class SurahListFragment : Fragment() {
             val i = Intent(requireContext(), QuranPageActivity::class.java).apply {
                 putExtra("page_number", surah.pageNumber)
                 putExtra("page", surah.pageNumber)
-                putExtra("surah_name", surah.name) // دائمًا الاسم المترجم
+                putExtra("surah_name", surah.name)
             }
             startActivity(i)
         }
         recycler.adapter = adapter
 
-        // يحمّل قائمة مترجمة من SurahUtils (يستبدل name حسب لغة التطبيق)
         allSurahs = SurahUtils.getAllSurahs(requireContext())
         adapter.submitList(allSurahs)
     }
@@ -65,6 +65,8 @@ class SurahListFragment : Fragment() {
     // ======= Menu =======
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_sections, menu)
+
+        // لوّن عناوين عناصر القائمة (إن وُجدت نصوص)
         val color = ContextCompat.getColor(requireContext(), R.color.menu_overflow_text)
         for (i in 0 until menu.size()) {
             val item = menu.getItem(i)
@@ -72,15 +74,41 @@ class SurahListFragment : Fragment() {
             span.setSpan(ForegroundColorSpan(color), 0, span.length, 0)
             item.title = span
         }
+
+        // حدّث عنوان زر التبديل (☀️ / 🌙)
+        updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
+
         super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        // تأكيد تحديث رمز زر التبديل عند كل فتح
+        updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
+        return super.onPrepareOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_jump_to_juz   -> { showJuzPickerDialog(); true }
             R.id.action_jump_to_surah -> { showSurahPickerDialog(); true }
+
+            // زر التبديل بين النهاري/الليلي
+            R.id.action_toggle_theme -> {
+                val isNight = ThemeManager.toggle(requireContext())
+                updateThemeToggleTitle(item)
+                requireActivity().recreate() // تطبيق الألوان فوراً
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun updateThemeToggleTitle(item: MenuItem?) {
+        item ?: return
+        val night = ThemeManager.isNight(requireContext())
+        // إذا الوضع ليلي فعليًا أظهر الشمس (للتحويل للنهاري)، والعكس صحيح.
+        item.title = if (night) "☀️" else "🌙"
     }
 
     private fun goToPage(page: Int) {
@@ -111,7 +139,6 @@ class SurahListFragment : Fragment() {
         recycler.adapter = dialogAdapter
         dialogAdapter.submitList(allSurahs)
 
-        // البحث: اعتمد الاسم المعروض (name) لأي لغة، مع سقوط للإنجليزي
         search.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -137,7 +164,6 @@ class SurahListFragment : Fragment() {
         val search   = view.findViewById<EditText>(R.id.juzSearchField)
         val cancel   = view.findViewById<TextView>(R.id.btnCancelJuzDialog)
 
-        // بيانات الأجزاء
         val startPages = listOf(
             1,22,42,62,82,102,121,142,162,182,
             201,222,242,262,282,302,322,342,362,382,

@@ -1,4 +1,4 @@
-package com.hag.al_quran
+package com.hag.al_quran2
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran.utils.addFavoriteAyah
-import com.hag.al_quran.utils.isFavoriteAyah
-import com.hag.al_quran.utils.removeFavoriteAyah
+import com.hag.al_quran2.utils.addFavoriteAyah
+import com.hag.al_quran2.utils.isFavoriteAyah
+import com.hag.al_quran2.utils.removeFavoriteAyah
 
 class AyahAdapter(
     private val surahNumber: Int,

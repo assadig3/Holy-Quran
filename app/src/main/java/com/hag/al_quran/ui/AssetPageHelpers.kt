@@ -1,4 +1,4 @@
-package com.hag.al_quran.ui
+package com.hag.al_quran2.ui
 
 import android.content.Context
 import android.content.res.Configuration
@@ -6,15 +6,10 @@ import android.graphics.*
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.bitmap.DownsampleStrategy
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.hag.al_quran.AyahBoundsRepo
-import com.hag.al_quran.R
 import org.json.JSONArray
 import org.json.JSONObject
-import kotlin.math.max
+
 data class PageCal(var offX: Float = 0f, var offY: Float = 0f, var scaleXFix: Float = 1f, var scaleYFix: Float = 1f)
 object CalibrationStore {
     private const val PREF = "ayah_cal"

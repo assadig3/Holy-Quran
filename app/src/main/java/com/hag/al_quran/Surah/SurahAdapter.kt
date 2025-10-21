@@ -1,4 +1,4 @@
-package com.hag.al_quran.Surah
+package com.hag.al_quran2.Surah
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran.R
-import com.hag.al_quran.surah.Surah
+import com.hag.al_quran2.R
+import com.hag.al_quran2.surah.Surah
 
 class SurahAdapter(
     private val onClick: (Surah) -> Unit

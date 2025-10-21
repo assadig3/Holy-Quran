@@ -1,4 +1,4 @@
-package com.hag.al_quran.ui
+package com.hag.al_quran2.ui
 
 import android.graphics.RenderEffect
 import android.os.Build

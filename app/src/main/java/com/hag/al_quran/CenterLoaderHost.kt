@@ -1,4 +1,4 @@
-package com.hag.al_quran
+package com.hag.al_quran2
 
 /** واجهة بسيطة لإظهار/إخفاء شريط التحميل الوسطي */
 interface CenterLoaderHost {

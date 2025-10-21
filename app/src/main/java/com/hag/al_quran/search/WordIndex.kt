@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran/search/WordIndex.kt
-package com.hag.al_quran.search
+// File: app/src/main/java/com/hag/al_quran2/search/WordIndex.kt
+package com.hag.al_quran2.search
 
 import android.content.Context
 import java.util.concurrent.ConcurrentHashMap

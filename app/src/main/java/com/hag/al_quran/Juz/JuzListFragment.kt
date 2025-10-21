@@ -1,4 +1,4 @@
-package com.hag.al_quran.Juz
+package com.hag.al_quran2.Juz
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -17,10 +17,11 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran.QuranPageActivity
-import com.hag.al_quran.R
-import com.hag.al_quran.Surah.SurahAdapter
-import com.hag.al_quran.Surah.SurahUtils
+import com.hag.al_quran2.QuranPageActivity
+import com.hag.al_quran2.R
+import com.hag.al_quran2.Surah.SurahAdapter
+import com.hag.al_quran2.Surah.SurahUtils
+import com.hag.al_quran2.ui.ThemeManager   // ✅ استدعاء مدير المظهر
 
 class JuzListFragment : Fragment() {
 
@@ -43,7 +44,17 @@ class JuzListFragment : Fragment() {
             span.setSpan(ForegroundColorSpan(color), 0, span.length, 0)
             item.title = span
         }
+
+        // ✅ تحديث زر التبديل عند إنشاء القائمة
+        updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
+
         super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        // ✅ تحديث عنوان زر التبديل عند فتح القائمة
+        updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
+        return super.onPrepareOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -58,8 +69,21 @@ class JuzListFragment : Fragment() {
                 startActivity(intent)
                 true
             }
+            R.id.action_toggle_theme -> {
+                // ✅ تبديل المظهر
+                val isNight = ThemeManager.toggle(requireContext())
+                updateThemeToggleTitle(item)
+                requireActivity().recreate()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun updateThemeToggleTitle(item: MenuItem?) {
+        item ?: return
+        val night = ThemeManager.isNight(requireContext())
+        item.title = if (night) "☀️" else "🌙"
     }
 
     fun getLastReadJuz(): Int = prefs.getInt("last_juz", 30)
@@ -80,15 +104,12 @@ class JuzListFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_juz_list, container, false)
 
-        // SharedPreferences
         prefs = requireContext().getSharedPreferences("quran_prefs", Context.MODE_PRIVATE)
 
         recyclerView = view.findViewById(R.id.juzRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        // أنشئ الـ adapter بلامبدا فقط
         adapter = JuzAdapter { selectedJuz: Juz ->
-            // حفظ آخر جزء
             prefs.edit().putInt("last_juz", selectedJuz.number).apply()
             val intent = Intent(requireContext(), QuranPageActivity::class.java)
             intent.putExtra("page_number", selectedJuz.pageNumber)
@@ -96,7 +117,6 @@ class JuzListFragment : Fragment() {
         }
         recyclerView.adapter = adapter
 
-        // حمّل القائمة ومررها للـ adapter
         juzList = getAllJuz()
         adapter.updateList(juzList)
 
@@ -133,7 +153,7 @@ class JuzListFragment : Fragment() {
             "الجزء الحادي والعشرون","الجزء الثاني والعشرون","الجزء الثالث والعشرون","الجزء الرابع والعشرون","الجزء الخامس والعشرون",
             "الجزء السادس والعشرون","الجزء السابع والعشرون","الجزء الثامن والعشرون","الجزء التاسع والعشرون","الجزء الثلاثون"
         )
-        val englishNames = List(30) { i -> "Juz ${i + 1}" } // إصلاح النصوص الإنجليزية
+        val englishNames = List(30) { i -> "Juz ${i + 1}" }
         val startPages = listOf(
             1, 22, 42, 62, 82, 102, 121, 142, 162, 182,
             201, 222, 242, 262, 282, 302, 322, 342, 362, 382,

@@ -1,4 +1,4 @@
-package com.hag.al_quran.audio
+package com.hag.al_quran2.audio
 
 import android.content.Context
 import androidx.media3.common.MediaItem

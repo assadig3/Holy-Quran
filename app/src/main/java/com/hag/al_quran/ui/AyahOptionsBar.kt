@@ -1,14 +1,14 @@
-// File: app/src/main/java/com/hag/al_quran/ui/AyahOptionsBar.kt
-package com.hag.al_quran.ui
+// File: app/src/main/java/com/hag/al_quran2/ui/AyahOptionsBar.kt
+package com.hag.al_quran2.ui
 
 import android.app.Activity
 import android.content.Context
 import android.widget.ImageButton
 import android.widget.PopupMenu
 import android.widget.TextView
-import com.hag.al_quran.R
-import com.hag.al_quran.helpers.QuranSupportHelper
-import com.hag.al_quran.tafsir.TafsirManager
+import com.hag.al_quran2.R
+import com.hag.al_quran2.helpers.QuranSupportHelper
+import com.hag.al_quran2.tafsir.TafsirManager
 
 /**
  * مُساعد بسيط للتحكم في شريط خيارات الآية داخل activity_quran_page.xml

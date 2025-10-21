@@ -1,4 +1,4 @@
-package com.hag.al_quran
+package com.hag.al_quran2
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -17,8 +17,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.hag.al_quran.audio.MadaniPageProvider
-import com.hag.al_quran.pages.PagesDownloader
+import com.hag.al_quran2.audio.MadaniPageProvider
+import com.hag.al_quran2.pages.PagesDownloader
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.concurrent.Executors
@@ -276,23 +276,6 @@ object PagesDownloadUi {
 }
 
 // ============ Repeat ============
-object RepeatUi {
-    fun show(
-        activity: AppCompatActivity,
-        currentMode: String,
-        currentCount: Int,
-        onConfirm: (mode: String, count: Int) -> Unit
-    ) {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_repeat_options, null)
-        val group = view.findViewById<RadioGroup>(R.id.repeatTypeGroup)
-        val picker = view.findViewById<NumberPicker>(R.id.repeatCountPicker)
-        picker.minValue = 1; picker.maxValue = 20; picker.value = currentCount.coerceIn(1, 20)
-        if (currentMode == "ayah") group.check(R.id.repeatAyah)
-        AlertDialog.Builder(activity).setTitle("إعدادات التكرار").setView(view)
-            .setPositiveButton("موافق") {_,_ -> onConfirm("ayah", picker.value) }
-            .setNegativeButton("إلغاء", null).show()
-    }
-}
 
 // ============ Toolbar ============
 object ToolbarUi {
@@ -328,7 +311,7 @@ object AudioBatchDownloader {
     ) {
         button.setOnClickListener {
             val qari = provider.getQariById(qariId()) ?: return@setOnClickListener
-            val bounds = com.hag.al_quran.utils.loadAyahBoundsForPage(activity, currentPage())
+            val bounds = com.hag.al_quran2.utils.loadAyahBoundsForPage(activity, currentPage())
             val urls = bounds.mapNotNull { provider.getAyahUrl(qari.id, it.sura_id, it.aya_id) }
             if (urls.isEmpty()) {
                 Toast.makeText(activity, "لا توجد روابط للتحميل.", Toast.LENGTH_SHORT).show()
@@ -339,7 +322,7 @@ object AudioBatchDownloader {
                 var success = true
                 for ((i, url) in urls.withIndex()) {
                     val fn = "s${bounds[i].sura_id}_a${bounds[i].aya_id}_${qari.id}.mp3"
-                    com.hag.al_quran.utils.downloadAyahToDownloads(activity, url, fn) { ok -> success = success && ok }
+                    com.hag.al_quran2.utils.downloadAyahToDownloads(activity, url, fn) { ok -> success = success && ok }
                     activity.runOnUiThread { dlg.setMessage("تحميل ${i + 1} / ${urls.size}") }
                 }
                 activity.runOnUiThread {
@@ -356,15 +339,15 @@ object PageIdleWorker {
     fun handle(
         activity: AppCompatActivity,
         page: Int,
-        audioManager: com.hag.al_quran.audio.AudioPlaybackManager,
+        audioManager: com.hag.al_quran2.audio.AudioPlaybackManager,
         getQariId: () -> String,
         updateBanner: (surah: Int, ayah: Int, text: String, playing: Boolean) -> Unit,
         hideBanner: () -> Unit
     ) {
         Handler(Looper.getMainLooper()).postDelayed({
             Executors.newSingleThreadExecutor().execute {
-                val first = com.hag.al_quran.utils.loadAyahBoundsForPage(activity, page).firstOrNull()
-                val text = first?.let { com.hag.al_quran.utils.getAyahTextFromJson(activity, it.sura_id, it.aya_id) }
+                val first = com.hag.al_quran2.utils.loadAyahBoundsForPage(activity, page).firstOrNull()
+                val text = first?.let { com.hag.al_quran2.utils.getAyahTextFromJson(activity, it.sura_id, it.aya_id) }
                 audioManager.setQari(getQariId())
                 activity.runOnUiThread {
                     if (first != null && text != null)

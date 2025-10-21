@@ -1,9 +1,9 @@
-// File: app/src/main/java/com/hag/al_quran/Surah/SurahUtils.kt
-package com.hag.al_quran.Surah
+// File: app/src/main/java/com/hag/al_quran2/Surah/SurahUtils.kt
+package com.hag.al_quran2.Surah
 
 import android.content.Context
-import com.hag.al_quran.R
-import com.hag.al_quran.surah.Surah
+import com.hag.al_quran2.R
+import com.hag.al_quran2.surah.Surah
 import org.json.JSONArray
 import org.json.JSONObject
 import java.nio.charset.Charset

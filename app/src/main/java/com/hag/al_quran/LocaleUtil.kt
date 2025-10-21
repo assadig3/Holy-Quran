@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran/LocaleUtil.kt
-package com.hag.al_quran
+// File: app/src/main/java/com/hag/al_quran2/LocaleUtil.kt
+package com.hag.al_quran2
 
 import android.app.Activity
 import android.content.Context

@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran/surah/Surah.kt
-package com.hag.al_quran.surah
+// File: app/src/main/java/com/hag/al_quran2/surah/Surah.kt
+package com.hag.al_quran2.surah
 
 data class Surah(
     val number: Int,

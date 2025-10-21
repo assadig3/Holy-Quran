@@ -1,8 +1,7 @@
-package com.hag.al_quran
+package com.hag.al_quran2
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
@@ -15,9 +14,10 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran.utils.getAllFavoritePages
-import com.hag.al_quran.utils.getRecentPages
-import com.hag.al_quran.utils.removeFavoritePage
+import com.hag.al_quran2.ui.ThemeManager
+import com.hag.al_quran2.utils.getAllFavoritePages
+import com.hag.al_quran2.utils.getRecentPages
+import com.hag.al_quran2.utils.removeFavoritePage
 import java.util.*
 
 class FavoritesFragment : Fragment() {
@@ -111,26 +111,27 @@ class FavoritesFragment : Fragment() {
         }
     }
 
-
-
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_favorites, menu)
 
-        // ✅ جلب لون ديناميكي (أسود في النهار، أبيض في الليل)
+        // تحديث لون النصوص
         val color = ContextCompat.getColor(requireContext(), R.color.menu_overflow_text)
         for (i in 0 until menu.size()) {
             val item = menu.getItem(i)
             val spanString = SpannableString(item.title)
-            spanString.setSpan(
-                ForegroundColorSpan(color),
-                0,
-                spanString.length,
-                0
-            )
+            spanString.setSpan(ForegroundColorSpan(color), 0, spanString.length, 0)
             item.title = spanString
         }
 
+        // ✅ تحديث زر التبديل (☀️ / 🌙)
+        updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
+
         super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
+        return super.onPrepareOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -143,8 +144,20 @@ class FavoritesFragment : Fragment() {
                 clearAllRecent()
                 true
             }
+            R.id.action_toggle_theme -> {
+                val isNight = ThemeManager.toggle(requireContext())
+                updateThemeToggleTitle(item)
+                requireActivity().recreate()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun updateThemeToggleTitle(item: MenuItem?) {
+        item ?: return
+        val night = ThemeManager.isNight(requireContext())
+        item.title = if (night) "☀️" else "🌙"
     }
 
     override fun onAttach(context: Context) {

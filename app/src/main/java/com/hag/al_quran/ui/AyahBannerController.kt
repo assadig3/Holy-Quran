@@ -1,4 +1,4 @@
-package com.hag.al_quran.ui
+package com.hag.al_quran2.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.hag.al_quran.R
+import com.hag.al_quran2.R
 
 class AyahBannerController(private val activity: AppCompatActivity) {
     private var root: ViewGroup? = null

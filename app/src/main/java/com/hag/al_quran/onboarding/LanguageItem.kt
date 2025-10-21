@@ -1,11 +1,11 @@
-package com.hag.al_quran.onboarding
+package com.hag.al_quran2.onboarding
 
 import androidx.annotation.DrawableRes
 
 data class LanguageItem(
-    val code: String,            // "ar","en",...
+    val code: String?,           // ← الآن يدعم null (لغة الجهاز)
     val label: String,           // الاسم الظاهر
     val nativeName: String,      // الاسم المحلي
     val emojiFlag: String,       // علم إيموجي افتراضي
-    @DrawableRes val flagRes: Int = 0 // بديل PNG لاحقًا (اتركه 0 الآن)
+    @DrawableRes val flagRes: Int = 0
 )

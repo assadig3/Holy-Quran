@@ -1,4 +1,4 @@
-package com.hag.al_quran.utils
+package com.hag.al_quran2.utils
 
 import android.content.Context
 import org.json.JSONObject

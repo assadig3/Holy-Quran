@@ -1,4 +1,4 @@
-package com.hag.al_quran
+package com.hag.al_quran2
 
 import org.junit.Test
 

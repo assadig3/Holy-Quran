@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran/helpers/QuranAudioHelper.kt
-package com.hag.al_quran.helpers
+// File: app/src/main/java/com/hag/al_quran2/helpers/QuranAudioHelper.kt
+package com.hag.al_quran2.helpers
 
 import android.content.Context
 import android.content.res.AssetFileDescriptor
@@ -9,15 +9,17 @@ import android.media.MediaPlayer
 import android.os.Build
 import android.os.Handler
 import android.util.Log
-import android.view.View
 import android.widget.Toast
-import com.hag.al_quran.QuranPageActivity
-import com.hag.al_quran.R
-import com.hag.al_quran.audio.MadaniPageProvider
+import com.hag.al_quran2.QuranPageActivity
+import com.hag.al_quran2.R
+import com.hag.al_quran2.audio.MadaniPageProvider
+import com.hag.al_quran2.search.AyahLocator
 import java.io.File
 import java.io.FileInputStream
 import java.util.concurrent.CopyOnWriteArrayList
 import androidx.core.content.edit
+
+private const val TAG = "RangeRepeat"
 
 class QuranAudioHelper(
     private val activity: QuranPageActivity,
@@ -42,13 +44,26 @@ class QuranAudioHelper(
     private var singleSurahPlaying: Int? = null
     private var singleAyahPlaying: Int? = null
 
-    // === التكرار ===
-    var repeatMode: String = "off"  // "off" | "page" | "ayah"
-    var repeatCount: Int = 1        // عداد تكرار الآية
-    var pageRepeatCount: Int = 1    // عداد تكرار الصفحة
+    // === التكرار الأساسي ===
+    // "off" | "page" | "ayah" | "range"
+    var repeatMode: String = "off"
+    var repeatCount: Int = 1        // عداد تكرار الآية (لنمط "ayah")
+    var pageRepeatCount: Int = 1    // عداد تكرار الصفحة (لنمط "page")
     private var currentRepeat = 0
     private var lastRepeatedAyah: Pair<Int, Int>? = null
     private var pageRepeatIteration = 0
+
+    // === تكرار النطاق (تنفيذ مستقل يضمن الترتيب التصاعدي) ===
+    private data class RangeRepeatState(
+        val surah: Int,
+        val startAyah: Int,
+        val endAyah: Int,
+        var loopsLeft: Int,
+        val qariId: String,
+        var currentAyah: Int
+    )
+    @Volatile private var rangeState: RangeRepeatState? = null
+    private var savedAutoContinueToNextPage: Boolean? = null
 
     private val prefs by lazy { activity.getSharedPreferences("quran_audio", Context.MODE_PRIVATE) }
     private fun saveLastAyah(surah: Int, ayah: Int) {
@@ -61,6 +76,24 @@ class QuranAudioHelper(
         val s = prefs.getInt("last_surah", -1)
         val a = prefs.getInt("last_ayah", -1)
         return if (s > 0 && a > 0) (s to a) else null
+    }
+
+    // حفظ/استرجاع آخر نطاق
+    data class LastRange(val surah: Int, val fromAyah: Int, val toAyah: Int, val times: Int)
+    fun saveLastRange(surah: Int, from: Int, to: Int, times: Int) {
+        prefs.edit {
+            putInt("range_surah", surah)
+            putInt("range_from",  from)
+            putInt("range_to",    to)
+            putInt("range_times", times)
+        }
+    }
+    fun loadLastRange(): LastRange? {
+        val s  = prefs.getInt("range_surah", -1)
+        val f  = prefs.getInt("range_from",  -1)
+        val t  = prefs.getInt("range_to",    -1)
+        val tm = prefs.getInt("range_times", -1)
+        return if (s > 0 && f > 0 && t > 0 && tm > 0) LastRange(s, f, t, tm) else null
     }
 
     // ===================== مصادر الصوت =====================
@@ -108,6 +141,7 @@ class QuranAudioHelper(
         mediaPlayer = null
         isPlaying = false
         isAyahPlaying = false
+        cancelRangeRepeat()
     }
 
     fun stopAll() {
@@ -126,6 +160,7 @@ class QuranAudioHelper(
         }
         singleSurahPlaying = null
         singleAyahPlaying = null
+        cancelRangeRepeat()
     }
 
     fun toggleSingleAyah(surah: Int, ayah: Int, qariId: String) {
@@ -133,12 +168,14 @@ class QuranAudioHelper(
             stopSingleAyah()
         } else {
             if (isPlaying) stopPagePlayback()
+            if (rangeState != null) cancelRangeRepeat()
             playSingleAyah(surah, ayah, qariId)
         }
     }
 
     fun playSingleAyah(surah: Int, ayah: Int, qariId: String) {
         if (isPlaying) stopSingleAyah()
+        if (rangeState != null) cancelRangeRepeat()
 
         suppressAutoNext = false
         isAyahPlaying = false
@@ -177,7 +214,7 @@ class QuranAudioHelper(
                     runCatching { activity.btnPlayAyah.setImageResource(R.drawable.ic_pause) }
                     val text = supportHelper.getAyahTextFromJson(surah, ayah)
                     supportHelper.showOrUpdateAyahBanner(surah, ayah, text)
-                    runCatching { activity.ayahOptionsBar.visibility = View.VISIBLE }
+                    runCatching { activity.ayahOptionsBar.visibility = android.view.View.VISIBLE }
                     runCatching { activity.adapter.highlightAyahOnPage(activity.currentPage, surah, ayah) }
                 }
                 saveLastAyah(surah, ayah)
@@ -228,7 +265,7 @@ class QuranAudioHelper(
         singleAyahPlaying = null
     }
 
-    // يبدأ من أول آية افتراضيًا
+    // ====== إعداد قائمة الصفحة ======
     fun prepareAudioQueueForPage(page: Int, qariId: String, fromStart: Boolean = true) {
         bgHandler.post {
             val qari = provider.getQariById(qariId) ?: return@post
@@ -262,11 +299,14 @@ class QuranAudioHelper(
         resumeFromMs = 0
         activity.btnPlayPause.setImageResource(R.drawable.ic_play)
         supportHelper.hideAyahBanner()
+        cancelRangeRepeat()
     }
 
-    // يبدأ من أول آية افتراضيًا
+    // ====== تشغيل صفحة كاملة ======
     fun startPagePlayback(page: Int, qariId: String, fromStart: Boolean = true) {
         if (isAyahPlaying) stopSingleAyah()
+        if (rangeState != null) cancelRangeRepeat()
+
         currentRepeat = 0; lastRepeatedAyah = null
         pageRepeatIteration = 0
         prepareAudioQueueForPage(page, qariId, fromStart)
@@ -335,6 +375,209 @@ class QuranAudioHelper(
             true
         }
     }
+
+    // ====== تشغيل/إلغاء تكرار نطاق آيات (من..إلى داخل سورة واحدة) ======
+    fun startRangeRepeat(surah: Int, fromAyah: Int, toAyah: Int, times: Int, qariId: String) {
+        // تصحيح الحدود لضمان الترتيب التصاعدي
+        val start = if (fromAyah <= toAyah) fromAyah else toAyah
+        val end   = if (fromAyah <= toAyah) toAyah   else fromAyah
+        val loops = times.coerceIn(1, 99)
+
+        Log.d(TAG, "startRangeRepeat s=$surah, $start..$end x$loops, qari=$qariId")
+        saveLastRange(surah, start, end, loops)
+
+        // أوقف أي تشغيل آخر
+        stopPagePlayback()
+        stopSingleAyah()
+
+        // عطّل الانتقال التلقائي بين الصفحات مؤقتًا
+        savedAutoContinueToNextPage = savedAutoContinueToNextPage ?: autoContinueToNextPage
+        autoContinueToNextPage = false
+
+        // أوقف أنماط التكرار الأخرى
+        repeatMode = "range"
+        currentRepeat = 0
+        lastRepeatedAyah = null
+
+        // جهّز الحالة وابدأ
+        rangeState = RangeRepeatState(
+            surah = surah,
+            startAyah = start,
+            endAyah = end,
+            loopsLeft = loops,
+            qariId = qariId,
+            currentAyah = start
+        )
+
+        suppressAutoNext = false
+        playToken++
+        playRangeCurrent()
+    }
+
+    fun cancelRangeRepeat() {
+        Log.d(TAG, "cancelRangeRepeat()")
+        if (rangeState == null && repeatMode != "range") return
+        rangeState = null
+        if (repeatMode == "range") repeatMode = "off"
+        savedAutoContinueToNextPage?.let { autoContinueToNextPage = it }
+        savedAutoContinueToNextPage = null
+    }
+
+    /** تشغيل آية واحدة ضمن حالة تكرار النطاق ثم اتخاذ القرار التالي تصاعديًا */
+    private fun playRangeCurrent() {
+        val st = rangeState ?: return
+        val token = ++playToken
+
+        Log.d(TAG, "playRangeCurrent ayah=${st.currentAyah}/${st.endAyah}, loopsLeft=${st.loopsLeft}")
+
+        try {
+            val mp = ensurePlayer()
+            clearListeners()
+            mp.reset()
+
+            // أوفلاين أولاً ثم أونلاين
+            when (val ds = resolveAyahDataSource(st.qariId, st.surah, st.currentAyah)) {
+                is DataSource.LocalFile -> {
+                    FileInputStream(ds.file).use { fis -> mp.setDataSource(fis.fd) }
+                }
+                is DataSource.Asset -> {
+                    mp.setDataSource(ds.afd.fileDescriptor, ds.afd.startOffset, ds.afd.length)
+                }
+                is DataSource.Remote -> {
+                    val q = provider.getQariById(st.qariId)
+                    val remoteUrl = if (q != null) provider.getAyahUrl(q, st.surah, st.currentAyah) else ""
+                    mp.setDataSource(remoteUrl)
+                    toastOnceOnline()
+                }
+            }
+
+            mp.setOnPreparedListener {
+                if (token != playToken) return@setOnPreparedListener
+                it.start()
+                isPlaying = true
+                isAyahPlaying = true
+
+                // تحديث حالة الشاشة والانتقال لصفحة الآية الحالية
+                activity.currentSurah = st.surah
+                activity.currentAyah = st.currentAyah
+                activity.runOnUiThread {
+                    runCatching { activity.btnPlayPause.setImageResource(R.drawable.ic_pause) }
+
+                    // احسب صفحة الآية وافتحها إن كانت مختلفة
+                    val page = try { AyahLocator.getPageFor(activity, st.surah, st.currentAyah) } catch (_: Throwable) { -1 }
+                    if (page in 1..604 && page != activity.currentPage) {
+                        runCatching { activity.viewPager.setCurrentItem(page - 1, true) }
+                    }
+                    // بعد انتقال الصفحة أعطِ مهلة خفيفة ثم ظلّل الآية
+                    activity.window.decorView.postDelayed({
+                        runCatching { activity.adapter.highlightAyahOnPage(activity.currentPage, st.surah, st.currentAyah) }
+                    }, 120)
+                }
+
+                val ayahText = supportHelper.getAyahTextFromJson(st.surah, st.currentAyah)
+                supportHelper.showOrUpdateAyahBanner(st.surah, st.currentAyah, ayahText)
+                supportHelper.showAyahOptionsBar(st.surah, st.currentAyah, ayahText)
+                saveLastAyah(st.surah, st.currentAyah)
+
+                if (!existsAnyLocal(st.qariId, st.surah, st.currentAyah)) {
+                    val remote = provider.getAyahUrl(provider.getQariById(st.qariId)!!, st.surah, st.currentAyah)
+                    supportHelper.downloadOneSilentInBackground(remote, preferredLocalFile(st.qariId, st.surah, st.currentAyah))
+                }
+            }
+
+            mp.setOnCompletionListener {
+                if (token != playToken) return@setOnCompletionListener
+                if (suppressAutoNext) {
+                    isPlaying = false
+                    isAyahPlaying = false
+                    return@setOnCompletionListener
+                }
+
+                val state = rangeState ?: return@setOnCompletionListener
+
+                // تقدّم تصاعديًا داخل النطاق
+                if (state.currentAyah < state.endAyah) {
+                    Log.d(TAG, "completed ayah=${state.currentAyah}, advancing...")
+                    state.currentAyah += 1
+                    playRangeCurrent()
+                    return@setOnCompletionListener
+                }
+
+                // انتهى مرور واحد على كامل النطاق
+                state.loopsLeft -= 1
+                if (state.loopsLeft > 0) {
+                    Log.d(TAG, "range loop finished, loopsLeft=${state.loopsLeft}, restarting from ${state.startAyah}")
+                    state.currentAyah = state.startAyah
+                    playRangeCurrent()
+                } else {
+                    // انتهى النطاق
+                    Log.d(TAG, "range finished ✓")
+                    rangeState = null
+                    savedAutoContinueToNextPage?.let { ac -> autoContinueToNextPage = ac }
+                    savedAutoContinueToNextPage = null
+                    repeatMode = "off"
+                    isPlaying = false
+                    isAyahPlaying = false
+                    activity.runOnUiThread {
+                        runCatching { activity.btnPlayPause.setImageResource(R.drawable.ic_play) }
+                        supportHelper.hideAyahBanner()
+                    }
+                }
+            }
+
+            mp.setOnErrorListener { _, _, _ ->
+                val state = rangeState
+                Log.w(TAG, "error while playing ayah=${state?.currentAyah}, skipping ahead")
+                if (state != null) {
+                    if (state.currentAyah < state.endAyah) {
+                        state.currentAyah += 1
+                        playRangeCurrent()
+                    } else {
+                        state.loopsLeft -= 1
+                        if (state.loopsLeft > 0) {
+                            state.currentAyah = state.startAyah
+                            playRangeCurrent()
+                        } else {
+                            rangeState = null
+                            savedAutoContinueToNextPage?.let { ac -> autoContinueToNextPage = ac }
+                            savedAutoContinueToNextPage = null
+                            repeatMode = "off"
+                            isPlaying = false
+                            isAyahPlaying = false
+                        }
+                    }
+                }
+                true
+            }
+
+            mp.prepareAsync()
+        } catch (_: Exception) {
+            // أي استثناء: طبّق نفس منطق onError
+            val state = rangeState
+            Log.w(TAG, "exception while preparing ayah=${state?.currentAyah}, skipping ahead")
+            if (state != null) {
+                if (state.currentAyah < state.endAyah) {
+                    state.currentAyah += 1
+                    playRangeCurrent()
+                } else {
+                    state.loopsLeft -= 1
+                    if (state.loopsLeft > 0) {
+                        state.currentAyah = state.startAyah
+                        playRangeCurrent()
+                    } else {
+                        rangeState = null
+                        savedAutoContinueToNextPage?.let { ac -> autoContinueToNextPage = ac }
+                        savedAutoContinueToNextPage = null
+                        repeatMode = "off"
+                        isPlaying = false
+                        isAyahPlaying = false
+                    }
+                }
+            }
+        }
+    }
+
+    // ===================== تشغيل عام (صفحات) =====================
 
     private fun playAt(index: Int, startMs: Int, qariId: String) {
         if (index !in ayahQueue.indices) {
@@ -441,7 +684,7 @@ class QuranAudioHelper(
                     return@setOnCompletionListener
                 }
 
-                // تكرار آية
+                // تكرار آية مفردة
                 if (repeatMode == "ayah") {
                     val key = s to a
                     if (lastRepeatedAyah == key) currentRepeat++ else { currentRepeat = 1; lastRepeatedAyah = key }
@@ -475,7 +718,7 @@ class QuranAudioHelper(
         }
     }
 
-    // ===================== أوفلاين أولاً (مساران + الأصول) =====================
+    // ===================== أوفلاين أولاً (مسارات + الأصول) =====================
 
     private fun resolveAyahDataSource(qariId: String, surah: Int, ayah: Int): DataSource {
         // 1) externalFilesDir/recitations/<qariId>/<SSS><AAA>.mp3
@@ -559,7 +802,6 @@ class QuranAudioHelper(
             stopAll()
         }
     }
-// داخل QuranAudioHelper
 
     fun stopAllPlaybackAndClearQueue() {
         try { pausePagePlayback() } catch (_: Exception) {}
@@ -574,6 +816,7 @@ class QuranAudioHelper(
         clearPendingQueueInternal()
         isPlaying = false
         isAyahPlaying = false
+        cancelRangeRepeat()
     }
 
     /** امسح أي قائمة انتظار/مؤشرات داخليّة لديك */

@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran/audio/QariAdapter.kt
-package com.hag.al_quran.audio
+// File: app/src/main/java/com/hag/al_quran2/audio/QariAdapter.kt
+package com.hag.al_quran2.audio
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.color.MaterialColors
-import com.hag.al_quran.R
+import com.hag.al_quran2.R
 
 /**
  * Adapter لعرض قائمة القرّاء داخل RecyclerView.

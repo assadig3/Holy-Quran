@@ -1,4 +1,4 @@
-package com.hag.al_quran.notify
+package com.hag.al_quran2.notify
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -7,8 +7,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.hag.al_quran.MainActivity
-import com.hag.al_quran.R
+import com.hag.al_quran2.MainActivity
+import com.hag.al_quran2.R
 
 object QuranNotification {
     private const val CHANNEL_ID = "quran_audio_channel"

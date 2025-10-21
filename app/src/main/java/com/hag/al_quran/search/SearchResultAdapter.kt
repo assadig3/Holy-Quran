@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran/search/SearchResultAdapter.kt
-package com.hag.al_quran.search
+// File: app/src/main/java/com/hag/al_quran2/search/SearchResultAdapter.kt
+package com.hag.al_quran2.search
 
 import android.os.SystemClock
 import android.text.Spannable
@@ -13,9 +13,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran.R
+import com.hag.al_quran2.R
 import java.text.NumberFormat
-import java.util.Locale
 
 class SearchResultAdapter(
     private val listener: Listener

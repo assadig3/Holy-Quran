@@ -1,27 +1,24 @@
-// app/src/main/java/com/hag/al_quran/App.kt
-package com.hag.al_quran
+package com.hag.al_quran2
 
 import android.app.Application
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.os.LocaleListCompat
-import com.bumptech.glide.Glide
-import com.bumptech.glide.MemoryCategory
+import com.google.firebase.FirebaseApp
+import android.util.Log
 
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
-        Glide.get(this).setMemoryCategory(MemoryCategory.HIGH) // مساحة كاش ذاكرة أكبر
 
-        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
-        val saved = prefs.getString("lang", null)
-
-        // إن لم يختر المستخدم بعد → لا نفرض لغة (نترك لغة النظام)
-        val locales = if (saved.isNullOrBlank()) {
-            LocaleListCompat.getEmptyLocaleList()
-        } else {
-            LocaleListCompat.forLanguageTags(saved)
+        try {
+            // هذا يستدعي تهيئة Firebase باستخدام google-services.json إذا كان موجوداً
+            if (FirebaseApp.getApps(this).isEmpty()) {
+                FirebaseApp.initializeApp(this)
+                Log.d("App", "FirebaseApp initialized")
+            } else {
+                Log.d("App", "FirebaseApp already initialized")
+            }
+        } catch (e: Exception) {
+            // لا نسمح لتحطم التطبيق؛ نرصد المشكلة في Logcat
+            Log.w("App", "Failed to initialize Firebase: ${e.message}")
         }
-
-        AppCompatDelegate.setApplicationLocales(locales)
     }
 }
