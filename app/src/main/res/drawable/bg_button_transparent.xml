@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <!-- 15% أبيض لشفافية خفيفة فوق الصفحة -->
+    <solid android:color="#26FFFFFF"/>
+    <corners android:radius="10dp"/>
+    <!-- حدود خفيفة جداً بلون النحاس (اختياري) -->
+    <stroke android:width="1dp" android:color="#229C5424"/>
+    <padding android:left="6dp" android:top="4dp" android:right="6dp" android:bottom="4dp"/>
+</shape>

@@ -1,4 +1,4 @@
-package com.hag.al_quran2.search
+package com.hag.al_quran.search
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

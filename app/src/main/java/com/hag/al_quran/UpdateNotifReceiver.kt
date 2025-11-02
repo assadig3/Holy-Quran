@@ -1,4 +1,4 @@
-package com.hag.al_quran2
+package com.hag.al_quran
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -38,8 +38,8 @@ class UpdateNotifReceiver : BroadcastReceiver() {
     }
 
     companion object {
-        const val ACTION_DISMISSED  = "com.hag.al_quran2.UPDATE_DISMISSED"
-        const val ACTION_OPEN_STORE = "com.hag.al_quran2.OPEN_STORE"
+        const val ACTION_DISMISSED  = "com.hag.al_quran.UPDATE_DISMISSED"
+        const val ACTION_OPEN_STORE = "com.hag.al_quran.OPEN_STORE"
 
         const val EXTRA_LATEST  = "extra_latest_version_code"
         const val EXTRA_PACKAGE = "extra_package"

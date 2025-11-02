@@ -1,4 +1,4 @@
-package com.hag.al_quran2.utils
+package com.hag.al_quran.utils
 
 import android.content.Context
 import android.content.res.Configuration

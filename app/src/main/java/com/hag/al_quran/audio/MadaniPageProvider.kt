@@ -1,8 +1,8 @@
-// File: app/src/main/java/com/hag/al_quran2/audio/MadaniPageProvider.kt
-package com.hag.al_quran2.audio
+// File: app/src/main/java/com/hag/al_quran/audio/MadaniPageProvider.kt
+package com.hag.al_quran.audio
 
 import android.content.Context
-import com.hag.al_quran2.R
+import com.hag.al_quran.R
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -169,6 +169,12 @@ class MadaniPageProvider(private val context: Context) {
             }
             0
         } catch (_: Throwable) { 0 }
+    }
+    fun getBaseUrlForQari(id: String): String {
+        // نحصل على القارئ حسب الـ id
+        val qari = getQariById(id)
+        // لو مش موجود نرجع فاضي (عشان ما ينهار الكود)
+        return qari?.url ?: ""
     }
 
     /** قراءة ملف من assets كنص */

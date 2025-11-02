@@ -8,5 +8,6 @@
     <dimen name="bar_corner_radius">16dp</dimen>
     <dimen name="bar_stroke_width">1dp</dimen>
     <dimen name="toolbar_padding_top">8dp</dimen>
+    <dimen name="banner_stroke_1dp">1dp</dimen>
 
 </resources>

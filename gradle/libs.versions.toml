@@ -14,6 +14,7 @@ playAppUpdate = "2.1.0"
 # إضافات Firebase / Google Services
 gms = "4.4.2"
 firebase-bom = "33.3.0"
+lifecycleProcess = "2.9.4"
 
 [libraries]
 play-app-update = { module = "com.google.android.play:app-update", version.ref = "playAppUpdate" }
@@ -38,6 +39,7 @@ androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview"
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
 firebase-config-ktx = { module = "com.google.firebase:firebase-config-ktx" }
 firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
+androidx-lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-process", version.ref = "lifecycleProcess" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

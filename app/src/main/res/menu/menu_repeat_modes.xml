@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/repeat_off"
+        android:title="إيقاف التكرار" />
+    <item
+        android:id="@+id/repeat_ayah"
+        android:title="تكرار آية واحدة" />
+    <item
+        android:id="@+id/repeat_page"
+        android:title="تكرار الصفحة الحالية" />
+    <item
+        android:id="@+id/repeat_range"
+        android:title="تكرار نطاق (من..إلى)" />
+</menu>

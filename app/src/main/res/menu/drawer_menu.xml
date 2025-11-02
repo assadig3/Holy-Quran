@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- الرئيسية + البحث -->
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/home"
@@ -14,54 +14,86 @@
             android:icon="@drawable/ic_search" />
     </group>
 
-    <!-- الإعدادات والدعم -->
-    <item android:title="@string/settings_and_support">
+
+    <!-- ⚙️ الإعدادات والدعم -->
+    <item
+        android:id="@+id/section_settings"
+        android:title="@string/settings_and_support"
+        android:orderInCategory="100">
         <menu>
-            <item
-                android:id="@+id/settings"
-                android:title="@string/setting"
-                android:icon="@drawable/ic_settings" />
-            <item
-                android:id="@+id/help"
-                android:title="@string/help"
-                android:icon="@drawable/ic_help" />
-            <item
-                android:id="@+id/about"
-                android:title="@string/info"
-                android:icon="@drawable/ic_info" />
-            <!-- زر واحد لتغيير اللغة -->
-            <item
-                android:id="@+id/nav_language"
-                android:title="@string/change_language"
-                android:icon="@drawable/ic_language" />
+            <group
+                android:id="@+id/group_settings"
+                android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/settings"
+                    android:icon="@drawable/ic_settings"
+                    android:title="@string/setting"
+                    android:orderInCategory="101" />
+
+                <item
+                    android:id="@+id/help"
+                    android:icon="@drawable/ic_help"
+                    android:title="@string/help"
+                    android:orderInCategory="102" />
+
+                <item
+                    android:id="@+id/about"
+                    android:icon="@drawable/ic_info"
+                    android:title="@string/info"
+                    android:orderInCategory="103" />
+
+                <item
+                    android:id="@+id/nav_language"
+                    android:icon="@drawable/ic_language"
+                    android:title="@string/change_language"
+                    android:orderInCategory="104" />
+            </group>
         </menu>
     </item>
 
-    <!-- المشاركة والتقييم -->
-    <item android:title="@string/share_and_rate">
+    <!-- 📤 المشاركة والتقييم -->
+    <item
+        android:id="@+id/section_share"
+        android:title="@string/share_and_rate"
+        android:orderInCategory="200">
         <menu>
-            <item
-                android:id="@+id/share"
-                android:title="@string/share"
-                android:icon="@drawable/ic_share" />
-            <item
-                android:id="@+id/share_qr"
-                android:title="@string/share_qr"
-                android:icon="@drawable/qr_icon" />
-            <item
-                android:id="@+id/rate"
-                android:title="@string/rate_app"
-                android:icon="@drawable/ic_star" />
-            <item
-                android:id="@+id/other_apps"
-                android:title="@string/other_apps"
-                android:icon="@drawable/ic_apps" />
+            <group
+                android:id="@+id/group_share"
+                android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/share"
+                    android:icon="@drawable/ic_share"
+                    android:title="@string/share"
+                    android:orderInCategory="201" />
+
+                <item
+                    android:id="@+id/share_qr"
+                    android:icon="@drawable/qr_icon"
+                    android:title="@string/share_qr"
+                    android:orderInCategory="202" />
+
+                <item
+                    android:id="@+id/rate"
+                    android:icon="@drawable/ic_star"
+                    android:title="@string/rate_app"
+                    android:orderInCategory="203" />
+
+                <item
+                    android:id="@+id/other_apps"
+                    android:icon="@drawable/ic_apps"
+                    android:title="@string/other_apps"
+                    android:orderInCategory="204" />
+            </group>
         </menu>
     </item>
 
-    <!-- خروج -->
+    <!-- 🚪 خروج (دائمًا في الأسفل) -->
     <item
         android:id="@+id/action_exit"
+        android:icon="@drawable/ic_exit"
         android:title="@string/exit"
-        android:icon="@drawable/ic_exit" />
+        android:orderInCategory="1000" />
+
 </menu>

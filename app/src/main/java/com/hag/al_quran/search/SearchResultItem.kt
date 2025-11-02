@@ -1,4 +1,4 @@
-package com.hag.al_quran2.search
+package com.hag.al_quran.search
 
 data class SearchResultItem(
     val surah: Int,

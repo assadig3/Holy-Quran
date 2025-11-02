@@ -1,49 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ayahBanner"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_gravity="top|center_horizontal"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="6dp"
+    android:minHeight="44dp"
     android:orientation="vertical"
     android:background="@drawable/bg_ayah_banner"
-    android:elevation="8dp"
-    android:padding="6dp">
+    android:elevation="12dp"
+    android:paddingHorizontal="8dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layoutDirection="rtl"
+    android:clipToPadding="false"
+    android:clipChildren="false">
 
+    <!-- الصف الرئيسي -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
+        <!-- أيقونة السورة: بدون tint حتى لا تختفي في النهاري -->
         <ImageView
             android:id="@+id/surahIcon"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_marginEnd="6dp"
             android:src="@drawable/icon"
-            android:importantForAccessibility="no" />
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/surahName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
-            android:text="البقرة"
-            android:textColor="@color/colorPrimaryDark"
             android:textSize="13sp"
-            android:textStyle="bold" />
+            android:textColor="@color/ayah_banner_on"
+            tools:text="البقرة" />
 
         <TextView
             android:id="@+id/ayahNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="آية 2"
-            android:textColor="@color/textSecondary"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="@color/ayah_banner_on"
+            tools:text="آية 7" />
 
-        <!-- نص الآية (Marquee) -->
         <TextView
             android:id="@+id/ayahText"
             android:layout_width="0dp"
@@ -52,25 +62,44 @@
             android:paddingTop="2dp"
             android:paddingBottom="2dp"
             android:gravity="center_vertical"
-            android:textColor="@color/appBackground"
-            android:textSize="13sp"
+            android:textSize="14sp"
+            android:textColor="@color/ayah_banner_on"
             android:singleLine="true"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
             android:focusable="true"
-            android:focusableInTouchMode="true" />
+            android:focusableInTouchMode="true"
+            tools:text="﴿إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِم…﴾" />
 
         <ImageButton
             android:id="@+id/btnCloseBanner"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:padding="6dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="6dp"
             android:background="@drawable/bg_icon_button_tonal"
-            android:src="@drawable/ic_close"
-            android:contentDescription="@string/close"
+            android:padding="6dp"
             android:scaleType="centerInside"
+            android:contentDescription="@string/close"
             android:saveEnabled="false"
-            app:tint="@color/colorPrimaryDark" />
+            android:src="@drawable/ic_close"
+            android:tint="@color/ayah_banner_on" />
     </LinearLayout>
+
+    <!-- سطر معلومات الصفحة -->
+    <TextView
+        android:id="@+id/pageInfoInline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:paddingBottom="1dp"
+        android:textSize="12sp"
+        android:textColor="@color/ayah_banner_on"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:text="الصفحة 3 • الجزء 1 • سورة البقرة" />
 </LinearLayout>

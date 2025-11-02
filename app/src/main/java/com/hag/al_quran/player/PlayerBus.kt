@@ -1,9 +1,9 @@
-package com.hag.al_quran2.player
+package com.hag.al_quran.player
 
 import android.content.Context
 import android.content.Intent
-import com.hag.al_quran2.QuranPageActivity
-import com.hag.al_quran2.helpers.QuranAudioHelper
+import com.hag.al_quran.QuranPageActivity
+import com.hag.al_quran.helpers.QuranAudioHelper
 import java.lang.ref.WeakReference
 
 /**
@@ -30,7 +30,7 @@ object PlayerBus {
             context.startActivity(
                 Intent(context, QuranPageActivity::class.java)
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    .setAction("com.hag.al_quran2.NOTIF_TOGGLE")
+                    .setAction("com.hag.al_quran.NOTIF_TOGGLE")
             )
         }
     }
@@ -43,7 +43,7 @@ object PlayerBus {
             context.startActivity(
                 Intent(context, QuranPageActivity::class.java)
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    .setAction("com.hag.al_quran2.NOTIF_STOP")
+                    .setAction("com.hag.al_quran.NOTIF_STOP")
             )
         }
     }

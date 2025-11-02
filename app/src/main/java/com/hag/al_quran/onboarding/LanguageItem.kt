@@ -1,4 +1,4 @@
-package com.hag.al_quran2.onboarding
+package com.hag.al_quran.onboarding
 
 import androidx.annotation.DrawableRes
 

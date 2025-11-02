@@ -1,8 +1,10 @@
-package com.hag.al_quran2.utils
+// File: app/src/main/java/com/hag/al_quran/utils/Utils.kt
+package com.hag.al_quran.utils
 
 import android.app.Activity
 import android.content.Context
-import com.hag.al_quran2.audio.MadaniPageProvider
+import com.bumptech.glide.Glide
+import com.hag.al_quran.audio.MadaniPageProvider
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
@@ -10,10 +12,24 @@ import java.io.FileOutputStream
 import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
+import java.util.concurrent.Executors
 
 // ===== نماذج تظليل =====
 data class Seg(val x: Int, val y: Int, val w: Int, val h: Int)
 data class AyahBounds(val sura_id: Int, val aya_id: Int, val segs: List<Seg>)
+
+// ===== إعداد “مصدر واحد فقط” للصفحات =====
+// اختر واحدًا من السطرين التاليين ثم اترك الآخر مُعلَّقًا:
+private const val REMOTE_BASE =
+    "https://raw.githubusercontent.com/assadig3/quran-pages/main/pages"
+//private const val REMOTE_BASE =
+//    "https://cdn.jsdelivr.net/gh/assadig3/quran-pages@main/pages"
+
+// لتعطيل الشبكة كليًا (تشغيل من الأصول فقط)، غيّرها إلى false
+private const val NETWORK_PAGES_ENABLED = true
+
+// كسر الكاش اختياريًا أثناء التجربة
+private const val CACHE_BUST_MINUTE = false
 
 // ===== أرقام عربية =====
 fun convertToArabicNumber(number: Int): String {
@@ -124,9 +140,15 @@ fun loadAyahBoundsForPage(context: Context, pageNumber: Int): List<AyahBounds> {
     return list
 }
 
-// ===== صفحات/تحميل =====
-fun pageUrl(page: Int) =
-    "https://raw.githubusercontent.com/assadig3/quran-pages/main/pages/page_${page}.webp"
+// ===== صفحات/تحميل (مصدر واحد فقط) =====
+fun pageUrl(page: Int): String {
+    if (!NETWORK_PAGES_ENABLED) {
+        // عند تعطيل الشبكة، استعمل الأصول فقط — أرجع مسار الأصول كمرجع منطقي
+        return "file:///android_asset/pages/page_${page}.webp"
+    }
+    val u = "$REMOTE_BASE/page_${page}.webp"
+    return if (CACHE_BUST_MINUTE) "$u?v=${System.currentTimeMillis() / 60000}" else u
+}
 
 fun arePagesCachedLocally(context: Context, minCount: Int = 600): Boolean {
     val dir = File(context.getExternalFilesDir(null), "QuranPages")
@@ -139,9 +161,12 @@ fun downloadToFile(urlStr: String, dst: File): Boolean {
     return try {
         val url = URL(urlStr)
         (url.openConnection() as HttpURLConnection).run {
+            // صلّب الاتصال قليلًا
+            instanceFollowRedirects = true
             connectTimeout = 15000
             readTimeout = 30000
             requestMethod = "GET"
+            setRequestProperty("User-Agent", "QuranPages/1.0")
             doInput = true
             connect()
             if (responseCode in 200..299) {
@@ -187,6 +212,33 @@ fun downloadAyahToDownloads(
             onDone(false)
         }
     }.start()
+}
+
+// ===== أدوات مساعدة للكاش (مسح كامل لمنع اختلاط النسخ) =====
+/**
+ * يمسح:
+ * - كاش Glide (ذاكرة + قرص)
+ * - مجلد التنزيل اليدوي للصفحات: /Android/data/.../files/QuranPages
+ * ملاحظة: نادِها عند صفحة إعدادات أو زر “إعادة ضبط” (ليس على الخيط الرئيسي لمسح القرص).
+ */
+fun clearAllPageCaches(context: Context) {
+    // Glide: امسح كاش الذاكرة فورًا
+    try { Glide.get(context).clearMemory() } catch (_: Throwable) {}
+
+    // Glide: امسح كاش القرص على خيط منفصل
+    Executors.newSingleThreadExecutor().execute {
+        try { Glide.get(context).clearDiskCache() } catch (_: Throwable) {}
+
+        // امسح مجلد تنزيل الصفحات اليدوي إن كنت تستعمله
+        val pagesDir = File(context.getExternalFilesDir(null), "QuranPages")
+        deleteQuietly(pagesDir)
+    }
+}
+
+private fun deleteQuietly(file: File?) {
+    if (file == null || !file.exists()) return
+    if (file.isDirectory) file.listFiles()?.forEach { deleteQuietly(it) }
+    try { file.delete() } catch (_: Throwable) {}
 }
 
 // ===== إكستنشن: استخراج نص الآية من رابط mp3 =====

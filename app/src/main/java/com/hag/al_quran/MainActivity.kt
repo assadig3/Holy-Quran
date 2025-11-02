@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/MainActivity.kt
-package com.hag.al_quran2
+// File: app/src/main/java/com/hag/al_quran/MainActivity.kt
+package com.hag.al_quran
 
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
@@ -29,24 +29,21 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.os.LocaleListCompat
 import androidx.core.view.GravityCompat
-import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.updatePadding
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.core.app.TaskStackBuilder
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
-import com.hag.al_quran2.onboarding.LanguageSelectionActivity
-import com.hag.al_quran2.utils.FontScale
+import com.hag.al_quran.onboarding.LanguageSelectionActivity
+import com.hag.al_quran.utils.FontScale
 import com.google.firebase.FirebaseApp
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
-import com.hag.al_quran2.Juz.JuzListFragment
-import com.hag.al_quran2.Surah.SurahListFragment
+import com.hag.al_quran.Juz.JuzListFragment
+import com.hag.al_quran.Surah.SurahListFragment
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -168,8 +165,9 @@ class MainActivity : BaseActivity() {
         appBar        = findViewById(R.id.appBar)
         tabs          = findViewById(R.id.topTabs)
 
-        // Edge-to-Edge
+        // Edge-to-Edge + توحيد ألوان الأشرطة
         setupEdgeToEdge()
+        applyBarsPalette()   // <<< مهم
 
         // إبقاء الشاشة شغالة
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
@@ -177,7 +175,22 @@ class MainActivity : BaseActivity() {
 
         // Toolbar + Drawer
         setSupportActionBar(toolbar)
-        colorizeToolbarSkyBlue()
+        applyBarsPalette()
+
+        // عنوان الشريط
+        val onPrimary = ContextCompat.getColor(this, R.color.colorOnPrimary)
+        toolbar.setTitleTextColor(onPrimary)
+
+// أيقونة الرجوع + قائمة overflow
+        toolbar.navigationIcon?.setTint(onPrimary)
+        toolbar.overflowIcon?.setTint(onPrimary)
+
+// لو عندك عناصر قائمة بآيقونات مضافة لاحقًا:
+        toolbar.menu?.let { m ->
+            for (i in 0 until m.size()) {
+                m.getItem(i)?.icon?.setTint(onPrimary)
+            }
+        }
 
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,
@@ -201,7 +214,7 @@ class MainActivity : BaseActivity() {
             val handled = when (menuItem.itemId) {
                 R.id.home -> { tabs.getTabAt(0)?.select(); true }
                 R.id.nav_search -> {
-                    startActivity(Intent(this, com.hag.al_quran2.search.SearchActivity::class.java)); true
+                    startActivity(Intent(this, com.hag.al_quran.search.SearchActivity::class.java)); true
                 }
                 R.id.settings -> {
                     supportFragmentManager.beginTransaction()
@@ -298,6 +311,8 @@ class MainActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
+        applyBarsPalette()
+
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         appUpdateManager.appUpdateInfo.addOnSuccessListener { info ->
@@ -326,13 +341,12 @@ class MainActivity : BaseActivity() {
             tabs.addTab(tabs.newTab().setText(t2))
             tabs.addTab(tabs.newTab().setText(t3))
         }
-
         tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 when (tab.position) {
-                    0 -> switchTo(SurahListFragment())
-                    1 -> switchTo(JuzListFragment())
-                    2 -> switchTo(FavoritesFragment())
+                    0 -> { switchTo(SurahListFragment()); supportActionBar?.title = getString(R.string.tab_surah) }
+                    1 -> { switchTo(JuzListFragment());   supportActionBar?.title = getString(R.string.tab_juz) }
+                    2 -> { switchTo(FavoritesFragment()); supportActionBar?.title = getString(R.string.tab_fav) }
                 }
             }
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
@@ -350,34 +364,60 @@ class MainActivity : BaseActivity() {
             .replace(R.id.main_content, fragment)
             .commit()
     }
-
-    // =============== Edge-to-Edge ===============
     private fun setupEdgeToEdge() {
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        window.statusBarColor = android.graphics.Color.TRANSPARENT
-        WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
+        // لا نجعل المحتوى تحت الأشرطة — أسهل لمطابقة الألوان
+        WindowCompat.setDecorFitsSystemWindows(window, true)
 
-        ViewCompat.setOnApplyWindowInsetsListener(appBar) { v, insets ->
-            val top = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
-            v.updatePadding(top = top)
-            insets
-        }
-        ViewCompat.requestApplyInsets(appBar)
+        // لوّن أشرطة النظام بنفس لون الشريط العلوي (يفترض وجود قيم ليلية في resources)
+        val bg = ContextCompat.getColor(this, R.color.topBarBg)
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor     = bg
+        window.navigationBarColor = bg
 
-        val mainContent = findViewById<View>(R.id.main_content)
-        ViewCompat.setOnApplyWindowInsetsListener(mainContent) { v, insets ->
-            val bottom = insets.getInsets(
-                WindowInsetsCompat.Type.navigationBars() or WindowInsetsCompat.Type.ime()
-            ).bottom
-            v.updatePadding(bottom = bottom)
-            insets
+        // 🔥 أهم سطرين: نعكس بحسب الوضع الليلي
+        val night = (resources.configuration.uiMode and
+                android.content.res.Configuration.UI_MODE_NIGHT_MASK) ==
+                android.content.res.Configuration.UI_MODE_NIGHT_YES
+
+        WindowInsetsControllerCompat(window, window.decorView).apply {
+            isAppearanceLightStatusBars = !night        // في الليل false (أيقونات فاتحة على خلفية داكنة)
+            isAppearanceLightNavigationBars = !night
         }
-        ViewCompat.requestApplyInsets(mainContent)
     }
+    private fun applyBarsPalette() {
+        // هل النظام حالياً في الوضع الليلي؟
+        val isNight = (resources.configuration.uiMode and
+                android.content.res.Configuration.UI_MODE_NIGHT_MASK) ==
+                android.content.res.Configuration.UI_MODE_NIGHT_YES
 
-    private fun colorizeToolbarSkyBlue() {
-        val sky = ContextCompat.getColor(this, R.color.skyBlue)
-        toolbar.setBackgroundColor(sky)
+        // الألوان من ملف resources المناسب (values أو values-night)
+        val bg     = ContextCompat.getColor(this, R.color.topBarBg)
+        val txt    = ContextCompat.getColor(this, R.color.tabTextDefaultStrong)
+        val txtSel = ContextCompat.getColor(this, R.color.tabTextSelectedStrong)
+        val ind    = ContextCompat.getColor(this, R.color.tabIndicatorStrong)
+
+        // تطبيق الخلفيات
+        toolbar.setBackgroundColor(bg)
+        appBar.setBackgroundColor(bg)
+        tabs.setBackgroundColor(bg)
+
+        // لون عنوان التولبار
+        toolbar.setTitleTextColor(txtSel)
+
+        // إعداد ألوان التبويبات
+        tabs.setSelectedTabIndicatorColor(ind)
+        tabs.setTabTextColors(txt, txtSel)
+        tabs.tabRippleColor = null
+
+        // 🔥 تحديث أشرطة النظام لتناسب الوضع الليلي فوراً
+        WindowInsetsControllerCompat(window, window.decorView).apply {
+            isAppearanceLightStatusBars = !isNight
+            isAppearanceLightNavigationBars = !isNight
+        }
+
+        // تحديث ألوان الأشرطة نفسها
+        window.statusBarColor = bg
+        window.navigationBarColor = bg
     }
 
     // =============== Locale Wrapping ===============
@@ -461,8 +501,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun toArabicDigits(s: String): String {
-        // NOTE: أبقيت الدالة كما هي عندك
-        val western = charArrayOf('0','1','2','3','4','5','6','٧','8','9')
+        val western = charArrayOf('0','1','2','3','4','5','6','7','8','9')
         val arabic  = charArrayOf('٠','١','٢','٣','٤','٥','٦','٧','٨','٩')
         val out = StringBuilder(s.length)
         for (ch in s) {
@@ -471,7 +510,6 @@ class MainActivity : BaseActivity() {
         }
         return out.toString()
     }
-
     private fun getHijriPlaceholderForNow(): String = getString(R.string.hijri_placeholder)
 
     // =============== Remote Config + In-App Update ===============
@@ -482,7 +520,7 @@ class MainActivity : BaseActivity() {
         }
         remoteConfig.setConfigSettingsAsync(settings)
 
-        val defaultUrl = "https://play.google.com/store/apps/details?id=$packageName"
+        val defaultUrl = "https://play.google.com/store/apps/details?id$packageName"
         val current = currentVersionCode()
 
         remoteConfig.setDefaultsAsync(
@@ -537,7 +575,6 @@ class MainActivity : BaseActivity() {
 
             // إجباري فوري؟
             if (current < minSupported && info.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
-                // (A) تحديث فوري (لن نعرض إشعار هنا لأن التدفق محجوب)
                 appUpdateManager.startUpdateFlowForResult(
                     info, AppUpdateType.IMMEDIATE, this, UPDATE_REQUEST_CODE
                 )
@@ -549,12 +586,8 @@ class MainActivity : BaseActivity() {
                 info.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE) &&
                 canPrompt(latest, cooldownHours)
             ) {
-                // (B) إظهار إشعار + بدء التدفق المرن كما هو بكودك
                 markPrompted(latest)
-                // إشعار نظام (كما طلبت)
                 postUpdateAvailableNotification(latest, updateMsg, updateUrl)
-
-                // تدفق Play Core المرن (يبقى كما هو لديك)
                 appUpdateManager.startUpdateFlowForResult(
                     info, AppUpdateType.FLEXIBLE, this, UPDATE_REQUEST_CODE
                 )

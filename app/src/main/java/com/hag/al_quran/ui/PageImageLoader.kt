@@ -1,4 +1,4 @@
-package com.hag.al_quran2.ui
+package com.hag.al_quran.ui
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -15,12 +15,13 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
-import com.hag.al_quran2.AyahBoundsRepo
-import com.hag.al_quran2.R
+import com.hag.al_quran.AyahBoundsRepo
+import com.hag.al_quran.R
 import java.util.concurrent.Executors
 import java.util.concurrent.Semaphore
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger
+import kotlin.math.min
 
 object PageImageLoader {
 

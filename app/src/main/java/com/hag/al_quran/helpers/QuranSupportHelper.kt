@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/helpers/QuranSupportHelper.kt
-package com.hag.al_quran2.helpers
+// File: app/src/main/java/com/hag/al_quran/helpers/QuranSupportHelper.kt
+package com.hag.al_quran.helpers
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -12,12 +12,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
-import com.hag.al_quran2.QuranPageActivity
-import com.hag.al_quran2.R
-import com.hag.al_quran2.audio.MadaniPageProvider
-import com.hag.al_quran2.download.PagesDownloadService
-import com.hag.al_quran2.tafsir.TafsirUtils
-import com.hag.al_quran2.tafsir.TafsirUtils.downloadTafsirIfNeeded
+import com.hag.al_quran.QuranPageActivity
+import com.hag.al_quran.R
+import com.hag.al_quran.audio.MadaniPageProvider
+import com.hag.al_quran.download.PagesDownloadService
+import com.hag.al_quran.tafsir.TafsirUtils
+import com.hag.al_quran.tafsir.TafsirUtils.downloadTafsirIfNeeded
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
@@ -34,6 +34,8 @@ class QuranSupportHelper(
     private fun View?.show() { this?.visibility = View.VISIBLE }
     private fun View?.hide() { this?.visibility = View.GONE }
     private fun TextView?.setSafeText(s: CharSequence?) { this?.text = s ?: "" }
+    var onAyahChanged: ((surah: Int, ayah: Int) -> Unit)? = null
+    var onPageFinished: (() -> Unit)? = null
 
     // ======================= تفضيل نوع الشبكة =======================
     private companion object {
@@ -48,6 +50,7 @@ class QuranSupportHelper(
             else          -> NetworkPref.WIFI_ONLY
         }
     }
+    var onAyahPlaybackStarted: ((surah: Int, ayah: Int, ayahText: String) -> Unit)? = null
 
     private fun isNetworkPrefSet(): Boolean = activity.prefs.contains(PREF_NETWORK)
 
@@ -295,6 +298,18 @@ class QuranSupportHelper(
         }
         boundsCache[page] = res
         return res
+    }
+
+    /** أول آية على الصفحة (سورة/آية) أو null إذا لا توجد حدود محفوظة */
+    fun firstAyahOnPage(page: Int): Pair<Int, Int>? {
+        val b = loadAyahBoundsForPage(page).minByOrNull { it.aya_id } ?: return null
+        return b.sura_id to b.aya_id
+    }
+
+    /** اختصار: إظهار بانر لأول آية في الصفحة الحالية */
+    fun showFirstAyahBannerForPage(page: Int) {
+        val fa = firstAyahOnPage(page)
+        if (fa != null) showAyahBanner(fa.first, fa.second)
     }
 
     // ======================= اختيار القارئ =======================

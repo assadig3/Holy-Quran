@@ -1,6 +1,5 @@
-package com.hag.al_quran2.Juz
+package com.hag.al_quran.Juz
 
-import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
@@ -17,15 +16,15 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran2.QuranPageActivity
-import com.hag.al_quran2.R
-import com.hag.al_quran2.Surah.SurahAdapter
-import com.hag.al_quran2.Surah.SurahUtils
-import com.hag.al_quran2.ui.ThemeManager   // ✅ استدعاء مدير المظهر
+import com.hag.al_quran.QuranPageActivity
+import com.hag.al_quran.R
+import com.hag.al_quran.Surah.SurahAdapter
+import com.hag.al_quran.Surah.SurahUtils
+import com.hag.al_quran.ui.ThemeManager
 
 class JuzListFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
+    private lateinit var rvJuz: RecyclerView
     private lateinit var adapter: JuzAdapter
     private lateinit var juzList: MutableList<Juz>
     private lateinit var prefs: SharedPreferences
@@ -35,8 +34,11 @@ class JuzListFragment : Fragment() {
         setHasOptionsMenu(true)
     }
 
+    // ======= القوائم =======
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_juz, menu)
+
+        // تلوين نص عناصر القائمة
         val color = ContextCompat.getColor(requireContext(), R.color.menu_overflow_text)
         for (i in 0 until menu.size()) {
             val item = menu.getItem(i)
@@ -45,33 +47,30 @@ class JuzListFragment : Fragment() {
             item.title = span
         }
 
-        // ✅ تحديث زر التبديل عند إنشاء القائمة
         updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
-
         super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {
-        // ✅ تحديث عنوان زر التبديل عند فتح القائمة
         updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
-        return super.onPrepareOptionsMenu(menu)
+        super.onPrepareOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_jump_to_juz -> { showJuzPickerDialog(); true }
+            R.id.action_jump_to_juz   -> { showJuzPickerDialog(); true }
             R.id.action_jump_to_surah -> { showSurahPickerDialog(); true }
             R.id.nav_last_read -> {
                 val lastJuz = getLastReadJuz()
-                val lastJuzPage = getFirstPageOfJuz(lastJuz)
-                val intent = Intent(requireContext(), QuranPageActivity::class.java)
-                intent.putExtra("page_number", lastJuzPage)
-                startActivity(intent)
+                val page = getFirstPageOfJuz(lastJuz)
+                startActivity(Intent(requireContext(), QuranPageActivity::class.java).apply {
+                    putExtra("page_number", page)
+                    putExtra("page", page)
+                })
                 true
             }
             R.id.action_toggle_theme -> {
-                // ✅ تبديل المظهر
-                val isNight = ThemeManager.toggle(requireContext())
+                ThemeManager.toggle(requireContext())
                 updateThemeToggleTitle(item)
                 requireActivity().recreate()
                 true
@@ -86,62 +85,54 @@ class JuzListFragment : Fragment() {
         item.title = if (night) "☀️" else "🌙"
     }
 
+    // ======= واجهة fragment =======
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
+        return inflater.inflate(R.layout.fragment_juz_list, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        prefs = requireContext().getSharedPreferences("quran_prefs", Context.MODE_PRIVATE)
+
+        // يدعم كلا الاسمين تحسبًا لنسخ قديمة من التخطيط
+        rvJuz = view.findViewById(R.id.rvJuz) ?: view.findViewById(R.id.rvJuz)
+
+        rvJuz.layoutManager = LinearLayoutManager(requireContext())
+        rvJuz.setHasFixedSize(true)
+        rvJuz.itemAnimator = null
+
+        adapter = JuzAdapter { selectedJuz ->
+            prefs.edit().putInt("last_juz", selectedJuz.number).apply()
+            startActivity(Intent(requireContext(), QuranPageActivity::class.java).apply {
+                putExtra("page_number", selectedJuz.pageNumber)
+                putExtra("page", selectedJuz.pageNumber)
+            })
+        }
+        rvJuz.adapter = adapter
+
+        juzList = getAllJuz()
+        adapter.updateList(juzList)
+    }
+
+    override fun onDestroyView() {
+        // تنظيف لمنع تسريبات
+        rvJuz.adapter = null
+        super.onDestroyView()
+    }
+
+    // ======= بيانات الأجزاء =======
     fun getLastReadJuz(): Int = prefs.getInt("last_juz", 30)
 
     fun getFirstPageOfJuz(juz: Int): Int {
-        val juzPages = intArrayOf(
+        val pages = intArrayOf(
             1, 22, 42, 62, 82, 102, 121, 142, 162, 182,
             201, 222, 242, 262, 282, 302, 322, 342, 362, 382,
             402, 422, 442, 462, 482, 502, 522, 542, 562, 582
         )
-        return juzPages.getOrElse(juz - 1) { 582 }
-    }
-
-    @SuppressLint("MissingInflatedId")
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_juz_list, container, false)
-
-        prefs = requireContext().getSharedPreferences("quran_prefs", Context.MODE_PRIVATE)
-
-        recyclerView = view.findViewById(R.id.juzRecyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
-        adapter = JuzAdapter { selectedJuz: Juz ->
-            prefs.edit().putInt("last_juz", selectedJuz.number).apply()
-            val intent = Intent(requireContext(), QuranPageActivity::class.java)
-            intent.putExtra("page_number", selectedJuz.pageNumber)
-            startActivity(intent)
-        }
-        recyclerView.adapter = adapter
-
-        juzList = getAllJuz()
-        adapter.updateList(juzList)
-
-        val searchField = view.findViewById<EditText?>(R.id.juzSearchField)
-        searchField?.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val query = s.toString().trim()
-                val locale = requireContext().resources.configuration.locales[0]
-                val filtered = if (locale.language == "ar") {
-                    juzList.filter {
-                        it.name.contains(query) || convertToArabicNumber(it.number).contains(query)
-                    }
-                } else {
-                    juzList.filter {
-                        it.englishName.contains(query, ignoreCase = true)
-                                || it.number.toString().contains(query)
-                    }
-                }
-                adapter.updateList(filtered)
-            }
-            override fun afterTextChanged(s: Editable?) {}
-        })
-
-        return view
+        return pages.getOrElse(juz - 1) { 582 }
     }
 
     private fun getAllJuz(): MutableList<Juz> {
@@ -169,92 +160,90 @@ class JuzListFragment : Fragment() {
         }
     }
 
+    // ======= حوار اختيار جزء =======
     private fun showJuzPickerDialog() {
         val dialogView = LayoutInflater.from(requireContext())
             .inflate(R.layout.dialog_jump_juz, null)
 
-        val recyclerView = dialogView.findViewById<RecyclerView>(R.id.jumpJuzRecyclerView)
+        val rv = dialogView.findViewById<RecyclerView>(R.id.jumpJuzRecyclerView)
         val searchField = dialogView.findViewById<EditText>(R.id.juzSearchField)
         val cancelButton = dialogView.findViewById<TextView>(R.id.btnCancelJuzDialog)
 
-        val dialogAdapter = JuzAdapter { selectedJuz: Juz ->
+        val dialogAdapter = JuzAdapter { selectedJuz ->
             prefs.edit().putInt("last_juz", selectedJuz.number).apply()
-            val intent = Intent(requireContext(), QuranPageActivity::class.java)
-            intent.putExtra("page_number", selectedJuz.pageNumber)
-            startActivity(intent)
+            startActivity(Intent(requireContext(), QuranPageActivity::class.java).apply {
+                putExtra("page_number", selectedJuz.pageNumber)
+                putExtra("page", selectedJuz.pageNumber)
+            })
         }
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = dialogAdapter
+
+        rv.layoutManager = LinearLayoutManager(requireContext())
+        rv.adapter = dialogAdapter
         dialogAdapter.updateList(juzList)
 
         searchField.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val query = s.toString().trim()
-                val locale = requireContext().resources.configuration.locales[0]
+                val q = s?.toString()?.trim().orEmpty()
+                val locale = resources.configuration.locales[0]
                 val filtered = if (locale.language == "ar") {
-                    juzList.filter { it.name.contains(query) || convertToArabicNumber(it.number).contains(query) }
+                    juzList.filter { it.name.contains(q) || convertToArabicNumber(it.number).contains(q) }
                 } else {
-                    juzList.filter { it.englishName.contains(query, ignoreCase = true) || it.number.toString().contains(query) }
+                    juzList.filter { it.englishName.contains(q, true) || it.number.toString().contains(q) }
                 }
-                dialogAdapter.updateList(filtered)
+                dialogAdapter.updateList(filtered.toMutableList())
             }
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        val dialog = AlertDialog.Builder(requireContext())
-            .setView(dialogView)
-            .create()
-
-        cancelButton.setOnClickListener { dialog.dismiss() }
-        dialog.show()
+        val dlg = AlertDialog.Builder(requireContext()).setView(dialogView).create()
+        cancelButton.setOnClickListener { dlg.dismiss() }
+        dlg.show()
     }
 
+    // ======= حوار اختيار سورة =======
     private fun showSurahPickerDialog() {
         val dialogView = LayoutInflater.from(requireContext())
             .inflate(R.layout.dialog_jump_surah, null)
 
-        val recyclerView = dialogView.findViewById<RecyclerView>(R.id.jumpSurahRecyclerView)
+        val rv = dialogView.findViewById<RecyclerView>(R.id.jumpSurahRecyclerView)
         val searchField = dialogView.findViewById<EditText>(R.id.surahSearchField)
         val cancelButton = dialogView.findViewById<TextView>(R.id.btnCancelSurahDialog)
 
-        val surahList = SurahUtils.getAllSurahs(requireContext()).toMutableList()
-        val surahAdapter = SurahAdapter { selectedSurah ->
-            val intent = Intent(requireContext(), QuranPageActivity::class.java)
-            intent.putExtra("page_number", selectedSurah.pageNumber)
-            startActivity(intent)
+        val surahs = SurahUtils.getAllSurahs(requireContext()).toMutableList()
+        val surahAdapter = SurahAdapter { s ->
+            startActivity(Intent(requireContext(), QuranPageActivity::class.java).apply {
+                putExtra("page_number", s.pageNumber)
+                putExtra("page", s.pageNumber)
+            })
         }
-        recyclerView.adapter = surahAdapter
-        surahAdapter.updateList(surahList)
 
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = surahAdapter
+        rv.layoutManager = LinearLayoutManager(requireContext())
+        rv.adapter = surahAdapter
+        surahAdapter.updateList(surahs)
 
         searchField.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val q = s.toString()
-                val locale = requireContext().resources.configuration.locales[0]
+                val q = s?.toString()?.trim().orEmpty()
+                val locale = resources.configuration.locales[0]
                 val filtered = if (locale.language == "ar") {
-                    surahList.filter { it.name.contains(q, ignoreCase = true) }
+                    surahs.filter { it.name.contains(q, true) }
                 } else {
-                    surahList.filter { it.englishName.contains(q, ignoreCase = true) }
+                    surahs.filter { it.englishName.contains(q, true) }
                 }
-                surahAdapter.updateList(filtered)
+                surahAdapter.updateList(filtered.toMutableList())
             }
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        val dialog = AlertDialog.Builder(requireContext())
-            .setView(dialogView)
-            .create()
-
-        cancelButton.setOnClickListener { dialog.dismiss() }
-        dialog.show()
+        val dlg = AlertDialog.Builder(requireContext()).setView(dialogView).create()
+        cancelButton.setOnClickListener { dlg.dismiss() }
+        dlg.show()
     }
 
     private fun convertToArabicNumber(number: Int): String {
-        val arabicNums = arrayOf('٠','١','٢','٣','٤','٥','٦','٧','٨','٩')
-        return number.toString().map { arabicNums[it.digitToInt()] }.joinToString("")
+        val map = charArrayOf('٠','١','٢','٣','٤','٥','٦','٧','٨','٩')
+        return number.toString().map { map[it.digitToInt()] }.joinToString("")
     }
 }

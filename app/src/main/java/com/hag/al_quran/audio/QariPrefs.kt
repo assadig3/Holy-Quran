@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/audio/QariPrefs.kt
-package com.hag.al_quran2.audio
+// File: app/src/main/java/com/hag/al_quran/audio/QariPrefs.kt
+package com.hag.al_quran.audio
 
 import android.content.Context
 import android.content.SharedPreferences

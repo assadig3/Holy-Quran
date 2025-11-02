@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/tafsir/TafsirManager.kt
-package com.hag.al_quran2.tafsir
+// File: app/src/main/java/com/hag/al_quran/tafsir/TafsirManager.kt
+package com.hag.al_quran.tafsir
 
 import android.content.Context
 import android.content.Intent
@@ -9,8 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.hag.al_quran2.R
-import com.hag.al_quran2.tafsir.TafsirUtils.downloadTafsirIfNeeded
+import com.hag.al_quran.R
+import com.hag.al_quran.tafsir.TafsirUtils.downloadTafsirIfNeeded
 import org.json.JSONArray
 
 class TafsirManager(private val ctx: Context) {

@@ -1,4 +1,4 @@
-package com.hag.al_quran2.Juz
+package com.hag.al_quran.Juz
 
 data class Juz(
     val number: Int,

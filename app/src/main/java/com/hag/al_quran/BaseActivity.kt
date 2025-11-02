@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/BaseActivity.kt
-package com.hag.al_quran2
+// File: app/src/main/java/com/hag/al_quran/BaseActivity.kt
+package com.hag.al_quran
 
 import android.content.Context
 import android.content.res.Configuration
@@ -13,7 +13,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran2.utils.FontScale
+import com.hag.al_quran.utils.FontScale
 import java.util.Locale
 
 open class BaseActivity : AppCompatActivity() {

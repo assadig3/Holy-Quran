@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- إطار -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M3,3h8v8H3zM13,3h8v8h-8zM3,13h8v8H3zM15,13h2v2h-2zM19,13h2v2h-2zM15,17h2v2h-2zM19,17h2v4h-4v-2h2z" />
+    <!-- مربعات داخلية للزينة -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M5,5h4v4H5zM15,5h4v4h-4zM5,15h4v4H5z" />
+</vector>

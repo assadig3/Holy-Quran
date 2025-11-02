@@ -1,10 +1,5 @@
-<ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="?attr/colorControlHighlight">
-    <item>
-        <shape android:shape="rectangle">
-            <!-- أغمق قليلًا وشفاف ليتوازن فوق الصفحة الداكنة -->
-            <solid android:color="@color/overlay_panel_bg" />
-            <corners android:radius="10dp" />
-        </shape>
-    </item>
-</ripple>
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#22FFFFFF"/> <!-- ~13% أبيض -->
+    <corners android:radius="14dp"/>
+</shape>

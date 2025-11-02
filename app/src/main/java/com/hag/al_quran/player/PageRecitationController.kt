@@ -1,11 +1,11 @@
-package com.hag.al_quran2.player
+package com.hag.al_quran.player
 
 import android.app.ProgressDialog
 import android.content.Context
 import android.media.MediaPlayer
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.hag.al_quran2.audio.MadaniPageProvider
+import com.hag.al_quran.audio.MadaniPageProvider
 import org.json.JSONObject
 
 class PageRecitationController(

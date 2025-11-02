@@ -1,17 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/juzListBackground"
     android:padding="12dp"
-    android:background="@color/blue_gray_100">
+    tools:ignore="ExtraText">
 
+    <!-- بطاقة معاينة (مخفية في وقت التشغيل، مرئية في المعاينة فقط) -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:cardBackgroundColor="@color/juzCardBackground"
+        app:strokeColor="@color/juzCardBorder"
+        app:strokeWidth="1dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:rippleColor="@color/juzRipple">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <!-- رقم الجزء داخل شارة -->
+            <TextView
+                android:id="@+id/sampleJuzBadge"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:background="@drawable/bg_juz_badge"
+                android:text="١"
+                android:textColor="@color/onJuzBadge"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <TextView
+                    android:id="@+id/sampleJuzTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="الجزء الأول"
+                    android:textColor="@color/juzTitleText"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/sampleJuzSub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="من سورة الفاتحة إلى سورة البقرة"
+                    android:textColor="@color/juzSubText"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_chevron_left"
+                app:tint="@color/juzIconTint" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- قائمة الأجزاء -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/juzRecyclerView"
+        android:id="@+id/rvJuz"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:scrollbarStyle="outsideOverlay"
         android:background="@android:color/transparent"
-        android:scrollbarStyle="outsideOverlay" />
+        tools:listitem="@layout/item_juz" />
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.hag.al_quran2.ui.theme
+package com.hag.al_quran.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

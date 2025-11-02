@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:gravity="center"
-    android:background="@color/cardBackground"
-    android:padding="16dp"
-    android:orientation="vertical"
-    android:textDirection="locale"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/nav_header_bg"
+    >
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/header_icon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/icon"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
         android:background="@drawable/circle_bg"
-        android:contentDescription="@string/app_logo" />
+        app:srcCompat="@drawable/icon"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_logo"
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        app:strokeColor="@color/gold_dark"
+        app:strokeWidth="2dp" />
 
     <TextView
         android:id="@+id/header_app_name"
@@ -30,7 +33,6 @@
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/textPrimary" />
 
-    <!-- يُضبط من الموارد: "By: %1$s" / "بواسطة: %1$s" -->
     <TextView
         android:id="@+id/header_developer"
         android:layout_width="wrap_content"
@@ -40,7 +42,6 @@
         android:textSize="13sp"
         android:fontFamily="sans-serif-light" />
 
-    <!-- تاريخا الميلادي/الهجري (نركّبهما برمجيًا أو بسطرين منفصلين) -->
     <TextView
         android:id="@+id/gregorianDate"
         android:layout_width="wrap_content"

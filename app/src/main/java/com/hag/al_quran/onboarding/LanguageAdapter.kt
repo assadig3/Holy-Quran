@@ -1,4 +1,4 @@
-package com.hag.al_quran2.onboarding
+package com.hag.al_quran.onboarding
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
-import com.hag.al_quran2.R
+import com.hag.al_quran.R
 
 class LanguageAdapter(
     private val items: List<LanguageItem>,

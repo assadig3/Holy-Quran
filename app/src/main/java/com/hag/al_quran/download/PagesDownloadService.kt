@@ -1,11 +1,12 @@
-// File: app/src/main/java/com/hag/al_quran2/download/PagesDownloadService.kt
-package com.hag.al_quran2.download
+// File: app/src/main/java/com/hag/al_quran/download/PagesDownloadService.kt
+package com.hag.al_quran.download
 
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -18,25 +19,26 @@ import android.os.SystemClock
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
-import com.hag.al_quran2.R
-import com.hag.al_quran2.audio.MadaniPageProvider
-import com.hag.al_quran2.audio.Qari
+import com.hag.al_quran.R
+import com.hag.al_quran.audio.MadaniPageProvider
+import com.hag.al_quran.audio.Qari
 import org.json.JSONObject
 import java.io.File
 import java.io.FileOutputStream
+import java.net.HttpURLConnection
 import java.net.URL
 import java.util.concurrent.atomic.AtomicBoolean
+import kotlin.concurrent.thread
 import kotlin.math.max
 import kotlin.math.roundToLong
-import kotlin.concurrent.thread
 
 class PagesDownloadService : Service() {
 
     companion object {
-        const val ACTION_START  = "com.hag.al_quran2.PAGES_DL_START"
-        const val ACTION_PAUSE  = "com.hag.al_quran2.PAGES_DL_PAUSE"
-        const val ACTION_RESUME = "com.hag.al_quran2.PAGES_DL_RESUME"
-        const val ACTION_CANCEL = "com.hag.al_quran2.PAGES_DL_CANCEL"
+        const val ACTION_START  = "com.hag.al_quran.PAGES_DL_START"
+        const val ACTION_PAUSE  = "com.hag.al_quran.PAGES_DL_PAUSE"
+        const val ACTION_RESUME = "com.hag.al_quran.PAGES_DL_RESUME"
+        const val ACTION_CANCEL = "com.hag.al_quran.PAGES_DL_CANCEL"
 
         const val EXTRA_SCOPE  = "extra_scope"   // "PAGE", "SURAH", "JUZ", "QURAN"
         const val EXTRA_PAGE   = "extra_page"
@@ -48,8 +50,7 @@ class PagesDownloadService : Service() {
         private const val CHANNEL_ID = "pages_download_channel"
         private const val NOTIF_ID   = 77221
 
-        // network pref key (kept in sync with QuranSupportHelper)
-        private const val PREF_NETWORK = "pref_network_type"
+        private const val PREF_NETWORK = "pref_network_type" // "WIFI_ONLY" or "ANY"
     }
 
     private enum class DownloadScope { PAGE, SURAH, JUZ, QURAN }
@@ -70,15 +71,19 @@ class PagesDownloadService : Service() {
     override fun onCreate() {
         super.onCreate()
         createChannelIfNeeded()
-        // initial minimal foreground notification (so the service won't be killed immediately)
-        startForeground(NOTIF_ID, buildNotification(paused = false, progress = 0, total = 1, etaText = "…"))
+        // إشعار مبدئي ليصبح Foreground
+        startForeground(
+            NOTIF_ID,
+            buildNotification(paused = false, progress = 0, total = 1, etaText = "…")
+        )
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
             ACTION_START -> {
                 val scopeStr = intent.getStringExtra(EXTRA_SCOPE) ?: "PAGE"
-                val scope = try { DownloadScope.valueOf(scopeStr) } catch (_: Exception) { DownloadScope.PAGE }
+                val scope = runCatching { DownloadScope.valueOf(scopeStr) }
+                    .getOrElse { DownloadScope.PAGE }
                 val page = intent.getIntExtra(EXTRA_PAGE, 1)
                 val surah = intent.getIntExtra(EXTRA_SURAH, 1)
                 val qariId = intent.getStringExtra(EXTRA_QARI) ?: "fares"
@@ -100,34 +105,31 @@ class PagesDownloadService : Service() {
             }
             ACTION_CANCEL -> {
                 isCancelled.set(true)
-                // stopForeground and stopSelf will be called when thread observes cancel
+                // سيتم إيقاف الخدمة بعد أن تلاحظ الحلقة حالة الإلغاء
             }
         }
-        // not sticky: don't restart if killed
         return START_NOT_STICKY
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        try { NotificationManagerCompat.from(this).cancel(NOTIF_ID) } catch (_: Throwable) {}
+        runCatching { NotificationManagerCompat.from(this).cancel(NOTIF_ID) }
     }
 
-    // ====== تحميل رئيسي ======
+    // ====== التحميل الرئيسي (تلاوات) ======
     private fun startDownload(scope: DownloadScope, pageNow: Int, surahNow: Int, qariId: String) {
-        thread {
-            // 1) تحقق تفضيلات الشبكة (واي-فاي فقط)
+        thread(name = "RecitationsDownloadThread") {
+            // 1) تفضيلات الشبكة
             val prefs = getSharedPreferences("settings", Context.MODE_PRIVATE)
             val prefNetwork = prefs.getString(PREF_NETWORK, "WIFI_ONLY") ?: "WIFI_ONLY"
             if (prefNetwork == "WIFI_ONLY" && !isOnWifi()) {
-                // إعلام المستخدم ثم أنهاء الخدمة
                 updateNotification(paused = true, progress = 0, total = 1, etaText = "انتظر Wi-Fi")
-                // نوقف الخدمة بعد عرض الإشعار
                 SystemClock.sleep(1200)
                 stopSelf()
                 return@thread
             }
 
-            // 2) تجهيز provider و qari
+            // 2) مزوّد وروابط القارئ
             val provider = MadaniPageProvider(applicationContext)
             val qari: Qari? = provider.getQariById(qariId)
             if (qari == null) {
@@ -137,9 +139,8 @@ class PagesDownloadService : Service() {
                 return@thread
             }
 
-            // 3) بناء قائمة العناصر للتحميل (url, outFile)
+            // 3) بناء قائمة العناصر
             val items = buildUrlsForScope(provider, qari, scope, pageNow, surahNow)
-
             if (items.isEmpty()) {
                 updateNotification(paused = true, progress = 0, total = 1, etaText = "لا ملفات")
                 SystemClock.sleep(800)
@@ -148,29 +149,26 @@ class PagesDownloadService : Service() {
             }
 
             totalItems = items.size
-            //kick notification with total
             updateNotification(paused = false, progress = 0, total = totalItems, etaText = "—")
 
-            // 4) حلقة تنزيل متسلسلة (يمكن تحسينها إلى ThreadPool إذا أردت)
+            // 4) تنزيل متتابع (يمكن لاحقًا تحويله لـ ThreadPool للـ parallelism)
             val startMs = SystemClock.elapsedRealtime()
             var done = 0
-            for ((idx, pair) in items.withIndex()) {
-                // تحقق الإلغاء
-                if (isCancelled.get()) break
+            items.forEachIndexed { idx, (url, out) ->
+                if (isCancelled.get()) return@forEachIndexed
 
-                // انتظار الإيقاف المؤقت
+                // إيقاف مؤقت
                 synchronized(pauseLock) {
                     while (isPaused.get() && !isCancelled.get()) {
-                        try { pauseLock.wait(500) } catch (_: InterruptedException) { /* */ }
+                        try { pauseLock.wait(500) } catch (_: InterruptedException) {}
                     }
                 }
-                if (isCancelled.get()) break
+                if (isCancelled.get()) return@forEachIndexed
 
-                val (url, out) = pair
-                val success = downloadSingle(url, out)
-                if (success) done++
+                val ok = downloadSingle(url, out)
+                if (ok) done++
 
-                // حساب ETA
+                // ETA
                 val elapsedSec = max(1L, ((SystemClock.elapsedRealtime() - startMs) / 1000f).roundToLong())
                 val rate = done.toFloat() / elapsedSec.toFloat()
                 val remaining = (totalItems - done).coerceAtLeast(0)
@@ -180,7 +178,7 @@ class PagesDownloadService : Service() {
                 updateNotification(paused = isPaused.get(), progress = idx + 1, total = totalItems, etaText = etaText)
             }
 
-            // 5) نهاية: إظهار نتيجة ثم إيقاف الخدمة
+            // 5) إنهاء
             val ok = !isCancelled.get()
             updateNotification(paused = false, progress = totalItems, total = totalItems, etaText = if (ok) "تم" else "أُلغي")
             SystemClock.sleep(800)
@@ -188,13 +186,20 @@ class PagesDownloadService : Service() {
         }
     }
 
-    // ======= بناء قائمة الروابط (مكرر من helper ولكن هنا في الخدمة) =======
-    private fun buildUrlsForScope(provider: MadaniPageProvider, qari: Qari, scope: DownloadScope, pageNow: Int, surahNow: Int): List<Pair<String, File>> {
+    // ======= بناء روابط التلاوات =======
+    private fun buildUrlsForScope(
+        provider: MadaniPageProvider,
+        qari: Qari,
+        scope: DownloadScope,
+        pageNow: Int,
+        surahNow: Int
+    ): List<Pair<String, File>> {
         val qariId = qari.id.trim().lowercase()
         val pairs = ArrayList<Pair<String, File>>(4096)
 
         fun addAyah(s: Int, a: Int) {
-            val url = provider.getAyahUrl(qari, s, a)
+            // ✅ الإصلاح هنا: استخدام المعرّف النصي للقارئ
+            val url = provider.getAyahUrl(qari.id, s, a) ?: return
             val out = qariFile(qariId, s, a)
             pairs.add(url to out)
         }
@@ -223,85 +228,105 @@ class PagesDownloadService : Service() {
             }
         }
 
-        return pairs.distinctBy { it.second.absolutePath }
+        return pairs
+            .filter { (_, file) -> !file.exists() || file.length() <= 1024L } // لا تعِد العناصر الموجودة
+            .distinctBy { it.second.absolutePath }
     }
 
-    // helper: data classes for bounds
+    // ====== bounds (من الأصول) ======
     private data class Seg(val x: Int, val y: Int, val w: Int, val h: Int)
     private data class AyahBounds(val sura_id: Int, val aya_id: Int, val segs: List<Seg>)
 
     private fun loadBoundsForPage(page: Int): List<AyahBounds> {
-        try {
+        return try {
             if (boundsRoot == null) {
-                val jsonStr = applicationContext.assets.open("pages/ayah_bounds_all.json").bufferedReader().use { it.readText() }
+                val jsonStr = applicationContext.assets
+                    .open("pages/ayah_bounds_all.json")
+                    .bufferedReader().use { it.readText() }
                 boundsRoot = JSONObject(jsonStr)
             }
             val arr = boundsRoot?.optJSONArray(page.toString()) ?: return emptyList()
-            val res = mutableListOf<AyahBounds>()
+            val res = ArrayList<AyahBounds>(arr.length())
             for (i in 0 until arr.length()) {
                 val o = arr.getJSONObject(i)
                 val segsArr = o.getJSONArray("segs")
-                val segs = mutableListOf<Seg>()
+                val segs = ArrayList<Seg>(segsArr.length())
                 for (j in 0 until segsArr.length()) {
                     val s = segsArr.getJSONObject(j)
                     segs.add(Seg(s.getInt("x"), s.getInt("y"), s.getInt("w"), s.getInt("h")))
                 }
                 res.add(AyahBounds(o.getInt("sura_id"), o.getInt("aya_id"), segs))
             }
-            return res
+            res
         } catch (e: Exception) {
             android.util.Log.e("PagesDownloadSvc", "Failed to load bounds", e)
-            return emptyList()
+            emptyList()
         }
     }
 
-    // ======= تنزيل ملف واحد مع كتابة إلى disk =======
-    private fun downloadSingle(url: String, out: File): Boolean {
+    // ======= تنزيل ملف واحد (آمن) =======
+    private fun downloadSingle(urlStr: String, outFile: File): Boolean {
         return try {
-            if (out.exists() && out.length() > 1024) return true
-            val conn = URL(url).openConnection()
-            conn.connect()
-            val total = conn.contentLengthLong
-            var downloaded = 0L
-            conn.getInputStream().use { input ->
-                FileOutputStream(out).use { output ->
-                    val buf = ByteArray(8 * 1024)
-                    var read: Int
+            if (outFile.exists() && outFile.length() > 1024) return true
+
+            val url = URL(urlStr)
+            val conn = (url.openConnection() as HttpURLConnection).apply {
+                connectTimeout = 15000
+                readTimeout = 30000
+                instanceFollowRedirects = true
+                setRequestProperty("User-Agent", "AlQuranApp/1.0 (Android)")
+            }
+
+            conn.inputStream.use { input ->
+                val tmp = File(outFile.parentFile, outFile.name + ".part")
+                FileOutputStream(tmp).use { output ->
+                    val buf = ByteArray(32 * 1024)
                     while (true) {
-                        // pause/cancel checks inside long reads
-                        if (isCancelled.get()) {
-                            try { output.flush() } catch (_: Throwable) {}
-                            return false
-                        }
+                        // فحوصات الإيقاف أثناء القراءة الطويلة
+                        if (isCancelled.get()) return false
                         synchronized(pauseLock) {
                             while (isPaused.get() && !isCancelled.get()) {
                                 try { pauseLock.wait(300) } catch (_: InterruptedException) {}
                             }
                         }
-                        read = input.read(buf)
-                        if (read == -1) break
-                        output.write(buf, 0, read)
-                        downloaded += read
+
+                        val r = input.read(buf)
+                        if (r == -1) break
+                        output.write(buf, 0, r)
                     }
                     output.flush()
                 }
+
+                // تحقّق الحجم قبل الاستبدال
+                val ok = runCatching { File(outFile.parentFile, outFile.name + ".part") }
+                    .map { it.exists() && it.length() > 1024 }
+                    .getOrDefault(false)
+
+                if (!ok) {
+                    runCatching { File(outFile.parentFile, outFile.name + ".part").delete() }
+                    return false
+                }
+
+                if (outFile.exists()) runCatching { outFile.delete() }
+                File(outFile.parentFile, outFile.name + ".part").renameTo(outFile)
             }
+
             true
-        } catch (e: Exception) {
-            android.util.Log.e("PagesDownloadSvc", "downloadSingle failed: $url", e)
+        } catch (t: Throwable) {
+            android.util.Log.e("PagesDownloadSvc", "downloadSingle failed: $urlStr", t)
             false
         }
     }
 
-    // ====== اشعارات البناء/تحديث ======
+    // ====== إشعارات ======
     private fun createChannelIfNeeded() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val ch = NotificationChannel(
                 CHANNEL_ID,
-                getString(R.string.app_name) + " • تنزيل الصفحات",
+                getString(R.string.app_name) + " • تنزيل التلاوات",
                 NotificationManager.IMPORTANCE_LOW
             ).apply {
-                description = "تقدّم تنزيل صفحات المصحف"
+                description = "تقدّم تنزيل تلاوات الآيات"
                 setShowBadge(false)
             }
             (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager)
@@ -311,38 +336,55 @@ class PagesDownloadService : Service() {
 
     private fun canPostNotifications(): Boolean {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+            ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) == PackageManager.PERMISSION_GRANTED
         } else true
     }
 
     @SuppressLint("MissingPermission")
-    private fun updateNotification(paused: Boolean, progress: Int? = null, total: Int = totalItems, etaText: String? = null) {
+    private fun updateNotification(
+        paused: Boolean,
+        progress: Int? = null,
+        total: Int = totalItems,
+        etaText: String? = null
+    ) {
         if (!canPostNotifications()) return
         try {
-            NotificationManagerCompat.from(this).notify(NOTIF_ID, buildNotification(paused, progress, total, etaText))
+            NotificationManagerCompat.from(this)
+                .notify(NOTIF_ID, buildNotification(paused, progress, total, etaText))
         } catch (_: SecurityException) { /* ignore */ }
     }
 
-    private fun buildNotification(paused: Boolean, progress: Int? = null, total: Int = totalItems, etaText: String? = null): Notification {
-        val title = if (paused) "التنزيل متوقف مؤقتًا" else " تنزيل تلاوة المصحف كاملة"
+    private fun buildNotification(
+        paused: Boolean,
+        progress: Int? = null,
+        total: Int = totalItems,
+        etaText: String? = null
+    ): Notification {
+        val title = if (paused) "التنزيل متوقف مؤقتًا" else "تنزيل تلاوة المصحف"
         val p = (progress ?: 0).coerceIn(0, max(1, total))
         val text = buildString {
-            append("الايات: ")
+            append("الآيات: ")
             append("$p / $total")
             if (!etaText.isNullOrBlank()) append(" • الوقت المتبقي: $etaText")
         }
 
-        // Actions: pause/resume/cancel
-        val pauseIntent = Intent(this, PagesDownloadService::class.java).setAction(ACTION_PAUSE)
+        // Actions
+        val pauseIntent  = Intent(this, PagesDownloadService::class.java).setAction(ACTION_PAUSE)
         val resumeIntent = Intent(this, PagesDownloadService::class.java).setAction(ACTION_RESUME)
         val cancelIntent = Intent(this, PagesDownloadService::class.java).setAction(ACTION_CANCEL)
 
-        val piPause = androidx.core.app.PendingIntentCompat.getService(this, 501, pauseIntent, 0, true)
-        val piResume = androidx.core.app.PendingIntentCompat.getService(this, 502, resumeIntent, 0, true)
-        val piCancel = androidx.core.app.PendingIntentCompat.getService(this, 503, cancelIntent, 0, true)
+        val flags = PendingIntent.FLAG_UPDATE_CURRENT or
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) PendingIntent.FLAG_IMMUTABLE else 0
+
+        val piPause  = PendingIntent.getService(this, 501, pauseIntent, flags)
+        val piResume = PendingIntent.getService(this, 502, resumeIntent, flags)
+        val piCancel = PendingIntent.getService(this, 503, cancelIntent, flags)
 
         val builder = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_download) // غيّرها لأيقونة موجودة لديك إن لزم
+            .setSmallIcon(R.drawable.ic_download)
             .setContentTitle(title)
             .setContentText(text)
             .setStyle(NotificationCompat.BigTextStyle().bigText(text))
@@ -351,8 +393,8 @@ class PagesDownloadService : Service() {
             .setPriority(NotificationCompat.PRIORITY_LOW)
 
         progress?.let {
-            builder.setProgress(total, it.coerceAtMost(total), false) // determinate
-        } ?: builder.setProgress(0, 0, true) // indeterminate
+            builder.setProgress(total.coerceAtLeast(1), it.coerceAtMost(total.coerceAtLeast(1)), false)
+        } ?: builder.setProgress(0, 0, true)
 
         if (paused) builder.addAction(0, "استئناف", piResume)
         else builder.addAction(0, "إيقاف مؤقت", piPause)
@@ -370,7 +412,6 @@ class PagesDownloadService : Service() {
         return if (h > 0) String.format("%d:%02d:%02d", h, m, ss) else String.format("%02d:%02d", m, ss)
     }
 
-    // مسارات حفظ الملفات مشابهه للـHelper
     private fun qariDir(qariIdRaw: String): File {
         val safe = qariIdRaw.trim().lowercase()
             .replace("\\s+".toRegex(), "_")
@@ -386,7 +427,7 @@ class PagesDownloadService : Service() {
         return File(qariDir(qariId), name)
     }
 
-    // ===== network helpers =====
+    // ===== الشبكة =====
     private fun isOnWifi(): Boolean {
         val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val n = cm.activeNetwork ?: return false
@@ -394,7 +435,7 @@ class PagesDownloadService : Service() {
         return caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
     }
 
-    // ========= static data =========
+    // ========= بيانات ثابتة =========
     private val JUZ_START_PAGES = intArrayOf(
         1, 22, 42, 62, 82, 102, 121, 141, 162, 182,
         201, 222, 242, 262, 282, 302, 322, 342, 362, 382,

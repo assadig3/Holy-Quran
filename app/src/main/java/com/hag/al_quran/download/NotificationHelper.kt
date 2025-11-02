@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/download/NotificationHelper.kt
-package com.hag.al_quran2.download
+// File: app/src/main/java/com/hag/al_quran/download/NotificationHelper.kt
+package com.hag.al_quran.download
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -14,7 +14,7 @@ import android.os.Looper
 import androidx.annotation.RequiresPermission
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.hag.al_quran2.R
+import com.hag.al_quran.R
 
 object NotificationHelper {
 

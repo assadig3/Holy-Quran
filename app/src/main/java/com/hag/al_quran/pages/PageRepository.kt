@@ -1,4 +1,4 @@
-package com.hag.al_quran2.pages
+package com.hag.al_quran.pages
 
 import android.content.Context
 import org.json.JSONObject

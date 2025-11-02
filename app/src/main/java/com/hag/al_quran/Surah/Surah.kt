@@ -1,11 +1,10 @@
-// File: app/src/main/java/com/hag/al_quran2/surah/Surah.kt
-package com.hag.al_quran2.surah
+package com.hag.al_quran.Surah
 
 data class Surah(
     val number: Int,
     val name: String,
     val englishName: String,
-    val type: String,
+    val type: String,       // "مكية" / "مدنية" أو Meccan/Medinan
     val ayahCount: Int,
     val pageNumber: Int
 )

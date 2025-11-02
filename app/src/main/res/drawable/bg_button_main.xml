@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-  
-</selector>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?attr/colorControlHighlight">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/bottomBarBg"/>
+            <corners android:radius="12dp"/>
+            <stroke android:width="1dp" android:color="@color/overlay_panel_stroke"/>
+            <padding android:left="4dp" android:top="4dp" android:right="4dp" android:bottom="4dp"/>
+        </shape>
+    </item>
+</ripple>

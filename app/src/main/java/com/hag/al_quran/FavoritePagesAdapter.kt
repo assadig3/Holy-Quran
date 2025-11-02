@@ -1,4 +1,4 @@
-package com.hag.al_quran2
+package com.hag.al_quran
 
 import android.view.LayoutInflater
 import android.view.View

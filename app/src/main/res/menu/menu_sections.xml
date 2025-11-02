@@ -15,4 +15,11 @@
         android:title="@string/menu_jump_to_surah"
         android:icon="@drawable/ic_jump"
         app:showAsAction="never" />
+
+    <!-- زر التبديل بين النهاري/الليلي -->
+    <item
+        android:id="@+id/action_toggle_theme"
+        android:title="🌙"
+        app:showAsAction="always" />
+
 </menu>

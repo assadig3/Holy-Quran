@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:background="@color/favListBackground">
+
+    <!-- عنوان آخر المتصفحات -->
+    <TextView
+        android:id="@+id/titleRecent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recent_pages_title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="6dp" />
+
+    <!-- قائمة آخر المتصفحات (تضيف العناصر برمجيًا بخلفية كبسولة) -->
+    <LinearLayout
+        android:id="@+id/recentPagesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/dividerColor" />
+
+    <!-- عنوان المفضلات -->
+    <TextView
+        android:id="@+id/titleFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/favorite_pages_title"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/favSectionTitle"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="6dp" />
+
+    <!-- قائمة المفضلات -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFavorites"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:background="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay" />
+
+</LinearLayout>

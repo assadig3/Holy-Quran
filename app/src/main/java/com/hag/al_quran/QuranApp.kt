@@ -1,7 +1,7 @@
-package com.hag.al_quran2
+package com.hag.al_quran
 
 import android.app.Application
-import com.hag.al_quran2.search.SearchEngine
+import com.hag.al_quran.search.SearchEngine
 
 class QuranApp : Application() {
     override fun onCreate() {

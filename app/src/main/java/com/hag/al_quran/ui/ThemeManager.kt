@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/ui/ThemeManager.kt
-package com.hag.al_quran2.ui
+// File: app/src/main/java/com/hag/al_quran/ui/ThemeManager.kt
+package com.hag.al_quran.ui
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate

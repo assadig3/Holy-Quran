@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- أزرق سماوي بشفافية 70% -->
+    <solid android:color="#B34DB8FF"/>  <!-- B3 = ~70% شفافية -->
+    <corners android:radius="12dp"/>
+</shape>

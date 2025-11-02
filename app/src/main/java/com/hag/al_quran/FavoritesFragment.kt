@@ -1,4 +1,4 @@
-package com.hag.al_quran2
+package com.hag.al_quran
 
 import android.content.Context
 import android.content.Intent
@@ -14,10 +14,10 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran2.ui.ThemeManager
-import com.hag.al_quran2.utils.getAllFavoritePages
-import com.hag.al_quran2.utils.getRecentPages
-import com.hag.al_quran2.utils.removeFavoritePage
+import com.hag.al_quran.ui.ThemeManager
+import com.hag.al_quran.utils.getAllFavoritePages
+import com.hag.al_quran.utils.getRecentPages
+import com.hag.al_quran.utils.removeFavoritePage
 import java.util.*
 
 class FavoritesFragment : Fragment() {

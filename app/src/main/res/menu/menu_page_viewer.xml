@@ -9,5 +9,16 @@
         android:icon="@drawable/ic_star_border"
         app:showAsAction="always" />
 
-    <!-- لو تحب لاحقًا تضيف زرًّا جديدًا، أضِفه هنا -->
+    <!-- زر التبديل بين الوضع النهاري/الليلي -->
+    <item
+        android:id="@+id/action_toggle_theme"
+        android:title="🌙"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_show_ayah_banner"
+        android:title="إظهار الشريط"
+        android:icon="@drawable/ic_banner"
+        app:showAsAction="always" />
+
+
 </menu>

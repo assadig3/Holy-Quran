@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- سماوي أفتح للخلفية خلف النص -->
+    <solid android:color="#AEE6FF"/>
+    <corners android:radius="12dp"/>
+</shape>

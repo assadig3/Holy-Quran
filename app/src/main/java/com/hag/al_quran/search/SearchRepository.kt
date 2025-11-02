@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/search/SearchRepository.kt
-package com.hag.al_quran2.search
+// File: app/src/main/java/com/hag/al_quran/search/SearchRepository.kt
+package com.hag.al_quran.search
 
 import android.content.Context
 

@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/AssetPageAdapter.kt
-package com.hag.al_quran2
+// File: app/src/main/java/com/hag/al_quran/AssetPageAdapter.kt
+package com.hag.al_quran
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -18,26 +18,18 @@ import android.widget.ScrollView
 import androidx.recyclerview.widget.RecyclerView
 import com.github.chrisbanes.photoview.PhotoView
 import com.github.chrisbanes.photoview.PhotoViewAttacher
-import com.hag.al_quran2.ui.NightMode
-import com.hag.al_quran2.ui.PageImageLoader
-import com.hag.al_quran2.utils.AyahHighlightView
-import com.hag.al_quran2.utils.Seg
+import com.hag.al_quran.ui.NightMode
+import com.hag.al_quran.ui.PageImageLoader
+import com.hag.al_quran.utils.AyahHighlightView
+import com.hag.al_quran.utils.Seg
 
 // ----- Types / Aliases -----
 typealias AyahBounds = AyahBoundsRepo
 
-// ----- ROI for each page (content crop inside page frame) -----
+// ----- ROI -----
 data class Roi(val l: Float, val t: Float, val r: Float, val b: Float)
-object RoiMap {
-    private val defaultRoi = Roi(0.045f, 0.095f, 0.955f, 0.915f)
-    fun forPage(page: Int): Roi = when (page) {
-        1 -> Roi(0.060f, 0.140f, 0.940f, 0.900f)
-        2 -> Roi(0.060f, 0.120f, 0.940f, 0.910f)
-        else -> defaultRoi
-    }
-}
 
-// قياس الأساس للحدود (لتحويل الإحداثيات)
+/** قياس الأساس للحدود (العرض 290 ثابت، الارتفاع من أكبر y+h) */
 private fun baseSizeFor(boundsList: List<AyahBounds>): Pair<Float, Float> {
     if (boundsList.isEmpty()) return 290f to 428f
     var maxY = 0f
@@ -49,7 +41,58 @@ private fun baseSizeFor(boundsList: List<AyahBounds>): Pair<Float, Float> {
     return 290f to h
 }
 
-// تحويل Seg إلى مستطيلات على الشاشة مع مراعاة ROI
+/** ROI ديناميكي من حدود الآيات، مع حالات افتراضية للصفحات الزخرفية */
+private fun roiFromBoundsOrDefault(
+    page: Int,
+    boundsList: List<AyahBounds>,
+    baseW: Float,
+    baseH: Float
+): Roi {
+    if (boundsList.isEmpty()) {
+        return when (page) {
+            1 -> Roi(0.060f, 0.140f, 0.940f, 0.900f)
+            2 -> Roi(0.060f, 0.120f, 0.940f, 0.910f)
+            else -> Roi(0.045f, 0.095f, 0.955f, 0.915f)
+        }
+    }
+
+    var minX = Float.POSITIVE_INFINITY
+    var minY = Float.POSITIVE_INFINITY
+    var maxX = Float.NEGATIVE_INFINITY
+    var maxY = Float.NEGATIVE_INFINITY
+
+    for (ab in boundsList) {
+        for (s in ab.segs) {
+            if (s.x < minX) minX = s.x.toFloat()
+            if (s.y < minY) minY = s.y.toFloat()
+            val ex = (s.x + s.w).toFloat()
+            val ey = (s.y + s.h).toFloat()
+            if (ex > maxX) maxX = ex
+            if (ey > maxY) maxY = ey
+        }
+    }
+
+    if (!minX.isFinite() || !minY.isFinite() || !maxX.isFinite() || !maxY.isFinite()) {
+        return Roi(0.045f, 0.095f, 0.955f, 0.915f)
+    }
+
+    // هامش بسيط حول النص
+    val padX = 0.02f * baseW
+    val padY = 0.02f * baseH
+    minX = (minX - padX).coerceAtLeast(0f)
+    minY = (minY - padY).coerceAtLeast(0f)
+    maxX = (maxX + padX).coerceAtMost(baseW)
+    maxY = (maxY + padY).coerceAtMost(baseH)
+
+    return Roi(
+        l = (minX / baseW),
+        t = (minY / baseH),
+        r = (maxX / baseW),
+        b = (maxY / baseH)
+    )
+}
+
+// تحويل Seg إلى مستطيل على الشاشة
 private fun mapSegToViewRect(
     attacher: PhotoViewAttacher,
     seg: Seg,
@@ -61,8 +104,8 @@ private fun mapSegToViewRect(
     val content = RectF(
         dr.left + roi.l * dr.width(),
         dr.top + roi.t * dr.height(),
-        dr.right - (1f - roi.r) * dr.width(),
-        dr.bottom - (1f - roi.b) * dr.height()
+        dr.left + roi.r * dr.width(),
+        dr.top + roi.b * dr.height()
     )
     val sx = content.width() / baseW
     val sy = content.height() / baseH
@@ -84,10 +127,10 @@ class AssetPageAdapter(
     private val onImageTap: () -> Unit,
     private val onNeedPagesDownload: () -> Unit = {},
     private val loaderHost: CenterLoaderHost? = null,
-    private var topPaddingPx: Int = 0 // 👈 مسافة ثابتة أسفل الشريط العلوي
+    private var topPaddingPx: Int = 0 // مسافة ثابتة أسفل الشريط العلوي (اختياري)
 ) : RecyclerView.Adapter<AssetPageAdapter.PageViewHolder>() {
 
-    // يمكن استدعاؤها من الـActivity لتحديث المسافة العلوية الثابتة
+    /** يمكن استدعاؤها من الـActivity لتحديث المسافة العلوية الثابتة */
     fun setFixedTopPadding(paddingPx: Int) {
         if (paddingPx != topPaddingPx) {
             topPaddingPx = paddingPx
@@ -124,7 +167,6 @@ class AssetPageAdapter(
             layoutParams = ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT)
             isFillViewport = true
             overScrollMode = View.OVER_SCROLL_NEVER
-            // 👇 padding علوي ثابت بحيث تبقى الصورة تحت الشريط العلوي دائمًا
             setPadding(0, topPaddingPx, 0, 0)
             clipToPadding = false
         }
@@ -158,7 +200,7 @@ class AssetPageAdapter(
         return PageViewHolder(scroll, photo, overlay)
     }
 
-    // مطابقة ذكية للبحث عن آية قريبة إذا لم توجد مطابقة مباشرة
+    // مطابقة ذكية لمعالجة فرق البسملة (±1)
     private fun resolveAyahBounds(
         boundsList: List<AyahBounds>,
         surah: Int,
@@ -176,7 +218,7 @@ class AssetPageAdapter(
         return null
     }
 
-    // انتظار حتى displayRect يصبح جاهزًا
+    // ننتظر حتى تجهز displayRect
     private fun waitForDisplayRect(
         pv: PhotoView,
         tries: Int = 12,
@@ -193,7 +235,7 @@ class AssetPageAdapter(
         pv.post { check(tries) }
     }
 
-    // إعادة ضبط التكبير بحيث تلائم الصورة العرض (بدون تمدد رأسي)
+    // إعادة ضبط التكبير بحيث تلائم الصورة العرض
     private fun resetScaleToFit(pv: PhotoView) {
         val att = pv.attacher
         att.setZoomable(true)
@@ -208,7 +250,6 @@ class AssetPageAdapter(
     override fun onBindViewHolder(holder: PageViewHolder, position: Int) {
         val pageNumber = if (realPageNumber == 0) position + 1 else realPageNumber
 
-        // نضمن دائمًا وضع FIT_CENTER
         holder.photoView.scaleType = ImageView.ScaleType.FIT_CENTER
 
         // تحميل الصورة
@@ -222,10 +263,8 @@ class AssetPageAdapter(
             onFail  = { }
         )
 
-        // وضع الليل إن وجد
         NightMode.applyInvert(holder.photoView, context)
 
-        // بعد أن تصبح الصورة جاهزة على الشاشة
         waitForDisplayRect(holder.photoView) {
             resetScaleToFit(holder.photoView)
 
@@ -233,7 +272,7 @@ class AssetPageAdapter(
             val boundsList = ayahBoundsMap[pageNumber] ?: emptyList()
 
             val (BASE_W, BASE_H) = baseSizeFor(boundsList)
-            val roi = RoiMap.forPage(pageNumber)
+            val roi = roiFromBoundsOrDefault(pageNumber, boundsList, BASE_W, BASE_H)
 
             val isNight = (context.resources.configuration.uiMode and
                     Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
@@ -249,7 +288,7 @@ class AssetPageAdapter(
                 holder.overlay.setRects(toScreenRects(selected))
             } ?: holder.overlay.setRects(emptyList())
 
-            // === الإيماءات: نقرة = إظهار/إخفاء الأشرطة | ضغطة مطولة = اختيار آية + Haptic ===
+            // نقرة: إظهار/إخفاء الأشرطة | ضغطة مطولة: اختيار آية + Haptic
             var lastToggleAt = 0L
             val TAP_DEBOUNCE_MS = 400L
 
@@ -271,8 +310,8 @@ class AssetPageAdapter(
                         val content = RectF(
                             dr.left + roi.l * dr.width(),
                             dr.top + roi.t * dr.height(),
-                            dr.right - (1f - roi.r) * dr.width(),
-                            dr.bottom - (1f - roi.b) * dr.height()
+                            dr.left + roi.r * dr.width(),
+                            dr.top + roi.b * dr.height()
                         )
                         if (!content.contains(e.x, e.y)) return
 
@@ -311,6 +350,7 @@ class AssetPageAdapter(
                     }
                 })
 
+            // نعتمد الكاشف أعلاه فقط
             holder.photoView.setOnPhotoTapListener(null)
             holder.photoView.setOnViewTapListener(null)
 
@@ -361,6 +401,7 @@ class AssetPageAdapter(
         private const val WRAP_CONTENT = ViewGroup.LayoutParams.WRAP_CONTENT
     }
 
-    private fun toUtilsSeg(s: com.hag.al_quran2.Seg): com.hag.al_quran2.utils.Seg =
-        com.hag.al_quran2.utils.Seg(s.x, s.y, s.w, s.h)
+    // تحويل من com.hag.al_quran.Seg إلى com.hag.al_quran.utils.Seg
+    private fun toUtilsSeg(s: com.hag.al_quran.Seg): com.hag.al_quran.utils.Seg =
+        com.hag.al_quran.utils.Seg(s.x, s.y, s.w, s.h)
 }

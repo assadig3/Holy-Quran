@@ -2,21 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- آخر قراءة -->
     <item
         android:id="@+id/nav_last_read"
         android:icon="@drawable/ic_bookmark"
         android:title="@string/menu_last_read_juz"
         app:showAsAction="never" />
 
+    <!-- زر الانتقال إلى جزء -->
     <item
         android:id="@+id/action_jump_to_juz"
         android:icon="@drawable/ic_jump"
         android:title="@string/menu_jump_to_juz"
         app:showAsAction="never" />
 
+    <!-- زر الانتقال إلى سورة -->
     <item
         android:id="@+id/action_jump_to_surah"
         android:icon="@drawable/ic_jump"
         android:title="@string/menu_jump_to_surah"
         app:showAsAction="never" />
+
+    <!-- زر التبديل بين النهاري/الليلي -->
+    <item
+        android:id="@+id/action_toggle_theme"
+        android:title="🌙"
+        app:showAsAction="always" />
+
 </menu>

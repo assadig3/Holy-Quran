@@ -6,7 +6,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.hag.al_quran2.pages.PagesDownloader
+import com.hag.al_quran.pages.PagesDownloader
 
 fun showDownloadAllPagesDialogIfNeeded(
     activity: AppCompatActivity,

@@ -1,4 +1,4 @@
-package com.hag.al_quran2.search
+package com.hag.al_quran.search
 
 import android.content.Context
 import android.os.Bundle
@@ -26,8 +26,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
-import com.hag.al_quran2.QuranPageActivity
-import com.hag.al_quran2.R
+import com.hag.al_quran.QuranPageActivity
+import com.hag.al_quran.R
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.HashSet

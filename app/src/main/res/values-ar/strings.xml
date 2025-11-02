@@ -13,9 +13,76 @@
     <string name="rate_app">قيّم التطبيق</string>
     <string name="other_apps">تطبيقات أخرى</string>
     <string name="exit">خروج</string>
-    <string name="about_app_description">القرآن الكريم — قراءة واستماع مع ميزات التلاوة والبحث والمفضلة والوضع الليلي والمزيد.</string>
+    <string name="about_app_description">القرآن الكريم – مصحف شامل بـ 19 لغة وأكثر من 35 قارئ عالمي
+
+تطبيق "القرآن الكريم" هو رفيقك الأمثل للتلاوة والحفظ والتدبر. يجمع بين جمال المصحف الورقي وسهولة التكنولوجيا الحديثة، ليمنحك تجربة روحانية متكاملة.
+
+✨ أبرز المميزات:
+
+📖 عرض كامل للمصحف بالخط العثماني مع دعم التكبير والتصغير وتدوير الشاشة للقراءة المريحة في أي وضع.
+
+🎧 شريط تلاوة متحرك يرافقك أثناء الاستماع، مع تظليل الآية الجارية بشكل حيّ ومتزامن.
+
+🔁 التحفيظ وتكرار الآيات: اختر آية محددة أو مجموعة آيات للتكرار المثالي للحفظ والمراجعة.
+
+🌍 يدعم 19 لغة لتسهيل الاستخدام حول العالم.
+
+🎙️ أكثر من 35 قارئًا من أشهر القراء (العفاسي، السديس، الشريم، المعيقلي، عبد الباسط، المنشاوي، العجمي وغيرهم).
+
+🕌 تفاسير متعددة (الجلالين، السعدي، ابن كثير، القرطبي).
+
+⭐ المفضلة وآخر الصفحات: احفظ موقع قراءتك أو صفحاتك المميزة للرجوع إليها بسهولة.
+
+🔎 بحث سريع ومتطور للعثور على أي آية أو كلمة.
+
+🌙 الوضع الليلي لراحة العينين أثناء القراءة الليلية.
+
+🔔 تنبيهات يومية للتذكير بالأذكار وقراءة وِردك القرآني.
+
+💡 تجربة نقية بدون إعلانات، وتصميم أنيق وسهل الاستخدام.
+
+🌟 لماذا هذا التطبيق؟
+
+لأنه ليس مجرد مصحف إلكتروني، بل أداة متكاملة للتلاوة والحفظ والتدبر مع دعم اللغات والقراء، مما يجعله الخيار الأفضل للمسلمين في كل مكان.
+
+📲 حمّله الآن وابدأ رحلتك مع القرآن الكريم — تلاوةً وحفظًا وتدبرًا.
+
+Holy Quran – Complete Mushaf with 19 Languages, 35+ Qaris, and Advanced Recitation Tools
+
+The “Holy Quran” app is your ultimate companion for recitation, memorization, and reflection. It combines the elegance of the Mushaf with modern technology for a complete spiritual journey.
+
+✨ Key Features:
+
+📖 Full Uthmani Mushaf with zoom and rotation support for comfortable reading in both portrait and landscape.
+
+🎧 Dynamic Recitation Bar that highlights the verse in real-time as you listen.
+
+🔁 Memorization &amp; Repetition: Repeat single verses or select a range for perfect memorization.
+
+🌍 Supports 19 Languages for users worldwide.
+
+🎙️ 35+ World-Famous Reciters (Al-Afasy, Al-Sudais, Al-Shuraim, Al-Muaiqly, Abdul Basit, Minshawi, Al-Ajmi, and more).
+
+🕌 Multiple Tafsirs (Jalalayn, Saadi, Ibn Kathir, Qurtubi).
+
+⭐ Favorites &amp; Last Pages: Save your reading progress and bookmark important pages.
+
+🔎 Powerful Search to find any verse or keyword instantly.
+
+🌙 Night Mode for stress-free reading in low light.
+
+🔔 Daily Reminders for Azkar and Quran recitation.
+
+💡 Ad-free, clean, and elegant design with smooth performance.
+
+🌟 Why this app?
+
+Because it’s more than just a digital Mushaf — it’s a complete Quran tool for recitation, memorization, and tafsir designed for Muslims everywhere.
+
+📲 Download now and start your Quran journey with real-time recitation, memorization tools, and your favorite reciters..</string>
     <string name="help_title">مساعدة</string>
-    <string name="help_content">للدعم أو الاستفسار، يرجى الرجوع إلى قسم الأسئلة الشائعة أو التواصل عبر الإعدادات.</string>
+    <string name="help_content">للدعم أو الاستفسار، يرجى الرجوع التواصل عبر البريد الاكترونى 121yu122@gmail.com
+.</string>
     <string name="app_logo">شعار التطبيق</string>
 
     <!-- Settings Screen -->
@@ -124,7 +191,6 @@
     <string name="nav_rate_app">قيّم التطبيق</string>
     <string name="nav_other_apps">تطبيقات أخرى</string>
 
-
     <!-- Exit -->
     <string name="exit_confirm_title">تأكيد الخروج</string>
     <string name="exit_confirm_message">هل تريد الخروج من التطبيق؟</string>
@@ -133,7 +199,7 @@
     <!-- Version -->
     <string name="version_loading">جارٍ التحقق من الإصدار…</string>
     <string name="version_format">الإصدار %1$s</string>
-    <string name="version_example">الإصدار 1.0.23</string>
+    <string name="version_example">الإصدار 1.0.38</string>
 
     <!-- Extra -->
     <string name="search">بحث</string>
@@ -157,7 +223,8 @@
     <string name="action_download_tafsirs">تنزيل التفاسير</string>
     <string name="action_select_tafsir">اختيار التفسير</string>
 
-    <string name="download_title">يرجى الانتظار ريثما يتم تنزيل صفحات المصحف… املأ وقتك بالاستغفار والصلاة على النبي ﷺ</string>
+    <!-- صار يتحدث عن التلاوة بدل صفحات المصحف -->
+    <string name="download_title">يرجى الانتظار ريثما يتم تنزيل التلاوة… املأ وقتك بالاستغفار والصلاة على النبي ﷺ</string>
     <string name="download_ready">جاهز للتحميل</string>
     <string name="download_progress">%1$d%%</string>
     <string name="download_now">حمّل الآن</string>
@@ -181,12 +248,12 @@
     <string name="tafsir_sample_ayah">بسم الله الرحمن الرحيم</string>
     <string name="tafsir_text_placeholder">نص التفسير هنا</string>
 
-    <!-- Pages download UI -->
-    <string name="pages_download_starting">بدء التحميل…</string>
-    <string name="pages_download_progress">تحميل الصفحة %1$d / %2$d</string>
-    <string name="pages_download_done">اكتمل التحميل.</string>
-    <string name="pages_download_failed">تعذّر التحميل.</string>
-    <string name="pages_download_canceled">تم الإلغاء.</string>
+    <!-- Pages download UI (قيم محدّثة لتدل على التلاوة) -->
+    <string name="pages_download_starting">بدء تنزيل التلاوة…</string>
+    <string name="pages_download_progress">تنزيل التلاوة — %1$d / %2$d</string>
+    <string name="pages_download_done">اكتمل تنزيل التلاوة.</string>
+    <string name="pages_download_failed">تعذّر تنزيل التلاوة.</string>
+    <string name="pages_download_canceled">تم إلغاء تنزيل التلاوة.</string>
 
     <!-- Repeat UI -->
     <string name="repeat_settings_title">إعدادات التكرار</string>
@@ -245,13 +312,12 @@
     <string name="search_hint">اكتب نصًا للبحث…</string>
     <string name="search_counter_format">عدد النتائج: %1$d</string>
     <string name="no_internet_short">لا يوجد اتصال بالإنترنت</string>
-    <!-- اسم التطبيق (عدّل حسب مشروعك) -->
 
-    <!-- عنوان الشريط المتحرّك أثناء تنزيل الصفحات -->
-    <string name="pages_download_title_marquee">الرجاء الانتظار أثناء تحميل صفحات المصحف — املأ وقتك بالذكر 🌿</string>
+    <!-- عنوان الشريط المتحرّك أثناء التنزيل -->
+    <string name="pages_download_title_marquee">الرجاء الانتظار أثناء تنزيل التلاوة — املأ وقتك بالذكر 🌿</string>
 
-    <!-- نصوص عامة قد تحتاجها (اختيارية) -->
-    <string name="downloading_quran_pages">جاري تنزيل صفحات المصحف…</string>
+    <!-- نصوص عامة -->
+    <string name="downloading_quran_pages">جاري تنزيل التلاوة…</string>
     <string name="remaining_time">الوقت المتبقي: …</string>
     <string name="please_rate_app">من فضلك قيّم التطبيق لمساعدتنا على التحسين 🌟</string>
     <string name="juz_format">Juz %1$d</string>
@@ -262,7 +328,6 @@
     <string name="loading">جارٍ التحميل…</string>
     <string name="tafsir_not_found">لم يتم العثور على التفسير.</string>
     <string name="tafsir_title_fmt">سورة %1$d - آية %2$d</string>
-    <!-- اسم التطبيق -->
     <string name="play_ayah">تشغيل الآية</string>
     <!-- النصوص المفقودة -->
     <string name="play_pause">تشغيل/إيقاف</string>
@@ -279,4 +344,35 @@
     <string name="audio_error">تعذّر تشغيل التلاوة</string>
     <string name="playing_online_fallback">...</string>
 
+    <string name="theme">المظهر</string>
+
+    <!-- الخط -->
+    <string name="font_size">حجم الخط</string>
+
+    <!-- التخزين للتلاوات -->
+    <string name="recitation_storage_title">مكان حفظ التلاوات</string>
+    <string name="recitation_storage_internal">الذاكرة الداخلية (مجلد التطبيق)</string>
+    <string name="recitation_storage_external">مجلد خارجي أختاره بنفسي</string>
+    <string name="pick_external_folder">اختر مجلدًا للتنزيلات (خارجي)</string>
+    <string name="recitation_storage_summary_internal">المكان الحالي: الذاكرة الداخلية للتطبيق (مجلد خاص).</string>
+
+    <!-- أخرى -->
+    <string name="reset_settings">إعادة ضبط الإعدادات</string>
+
+    <!-- إشعارات التنزيل -->
+    <string name="notif_download_title">تنزيل التلاوة</string>
+    <string name="notif_download_progress">الآيات %1$d / %2$d</string>
+    <string name="notif_time_left">الوقت المتبقي: %1$s</string>
+    <string name="notif_pause">إيقاف مؤقت</string>
+    <string name="notif_resume">متابعة</string>
+    <string name="notif_stop">إيقاف</string>
+    <string name="background_will_continue">سيستمر التنزيل في الخلفية.</string>
+    <string name="update_channel_name">تحديثات التطبيق</string>
+    <string name="update_channel_desc">إشعارات عند توفر إصدار جديد</string>
+    <string name="update_available_title">تحديث جديد متاح</string>
+
+    <string name="action_open_store">فتح المتجر</string>
+    <string name="click_to_open_page">اضغط لفتح الصفحة</string>
+    <string name="tap_to_open">اضغط للفتح</string>
+    <string name="delete">حذف</string>
 </resources>

@@ -2,6 +2,7 @@
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,42 +21,34 @@
             android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:fitsSystemWindows="true"
-            android:elevation="4dp">
+            android:background="@color/topBarBg"
+            android:elevation="0dp"
+            android:stateListAnimator="@null">
 
-            <!-- Toolbar -->
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@color/colorPrimary"
-                android:paddingTop="@dimen/toolbar_padding_top"
-                app:title="@string/app_name"
-                app:titleTextColor="@color/appBackground"
-                app:navigationIconTint="@color/textPrimary"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/topBarBg"
+                app:navigationIconTint="@android:color/black"
                 app:contentInsetStartWithNavigation="0dp"
-                app:titleTextAppearance="@style/ToolbarTitleLarge"
-                app:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
+                app:titleTextColor="@color/toolbar_title" />
 
-            <!-- تبويبات -->
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/topTabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
+                android:background="@color/topBarBg"
                 app:tabMode="fixed"
                 app:tabGravity="fill"
                 app:tabIndicatorFullWidth="false"
-                app:tabIndicatorHeight="2dp"
-                app:tabIndicatorColor="@color/tabIndicator"
-                app:tabSelectedTextColor="@color/tabTextSelected"
-                app:tabTextColor="@color/tabTextDefault"
-                app:tabRippleColor="@android:color/transparent"
-                app:tabPaddingStart="8dp"
-                app:tabPaddingEnd="8dp"
-                app:tabPaddingTop="4dp"
-                app:tabPaddingBottom="4dp"/>
+                app:tabIndicatorHeight="3dp"
+                app:tabIndicatorColor="@color/tabIndicatorStrong"
+                app:tabTextColor="@color/tab_text_color"
+                app:tabSelectedTextColor="@color/tab_text_selected"
+                app:tabRippleColor="@android:color/transparent"/>
         </com.google.android.material.appbar.AppBarLayout>
 
         <!-- منطقة المحتوى -->
@@ -68,14 +61,21 @@
     </LinearLayout>
 
     <!-- القائمة الجانبية -->
+    <!-- القائمة الجانبية -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/cardBackground"
-        app:itemIconTint="@color/unselectedIconTint"
-        app:itemTextColor="@color/navItemText"
+
+        android:background="@color/drawerBackground"
+        app:insetForeground="@android:color/transparent"
+
         app:headerLayout="@layout/nav_header"
-        app:menu="@menu/drawer_menu"/>
+        app:menu="@menu/drawer_menu"
+
+        app:itemBackground="@drawable/nav_item_bg"
+        app:itemIconTint="@color/nav_item_icon_tint"
+        app:itemTextColor="@color/nav_item_text_tint" />
+
 </androidx.drawerlayout.widget.DrawerLayout>

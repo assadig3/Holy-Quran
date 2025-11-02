@@ -1,4 +1,4 @@
-package com.hag.al_quran2.tafsir
+package com.hag.al_quran.tafsir
 
 import android.content.Context
 import android.util.Log

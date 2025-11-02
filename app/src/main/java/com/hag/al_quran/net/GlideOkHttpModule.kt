@@ -1,4 +1,4 @@
-package com.hag.al_quran2.net
+package com.hag.al_quran.net
 
 import android.content.Context
 import com.bumptech.glide.Glide

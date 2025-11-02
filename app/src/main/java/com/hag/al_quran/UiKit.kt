@@ -1,4 +1,4 @@
-package com.hag.al_quran2
+package com.hag.al_quran
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -17,8 +17,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.hag.al_quran2.audio.MadaniPageProvider
-import com.hag.al_quran2.pages.PagesDownloader
+import com.hag.al_quran.audio.MadaniPageProvider
+import com.hag.al_quran.pages.PagesDownloader
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.concurrent.Executors
@@ -29,55 +29,6 @@ internal fun Context.dp(v: Int): Int = (v * resources.displayMetrics.density).to
 internal fun AppCompatActivity.postDelayed(ms: Long, block: () -> Unit) =
     Handler(Looper.getMainLooper()).postDelayed({ block() }, ms)
 
-// ============ شريط الآية ============
-class AyahBannerUi(private val activity: AppCompatActivity) {
-    private var banner: View? = null
-    private var tvSurah: TextView? = null
-    private var tvAyahNo: TextView? = null
-    private var tvAyahText: TextView? = null
-
-    fun attachTo(root: ViewGroup, onClose: () -> Unit) {
-        val v = activity.layoutInflater.inflate(R.layout.ayah_now_playing, root, false)
-        banner = v
-        tvSurah = v.findViewById(R.id.surahName)
-        tvAyahNo = v.findViewById(R.id.ayahNumber)
-        tvAyahText = v.findViewById(R.id.ayahText)
-        tvAyahText?.apply {
-            isSingleLine = true
-            ellipsize = TextUtils.TruncateAt.MARQUEE
-            marqueeRepeatLimit = -1
-            isSelected = true
-            isFocusable = true
-            isFocusableInTouchMode = true
-            setHorizontallyScrolling(true)
-        }
-        v.visibility = View.GONE
-        root.addView(v)
-        v.findViewById<ImageButton>(R.id.btnCloseBanner).setOnClickListener { hide(); onClose() }
-    }
-
-    fun update(surahName: String, ayahNumberArabic: String, ayahText: String) {
-        tvSurah?.text = surahName
-        tvAyahNo?.text = "آية $ayahNumberArabic"
-        tvAyahText?.text = ayahText
-        tvAyahText?.isSelected = true
-    }
-    fun show() { banner?.visibility = View.VISIBLE }
-    fun hide() { banner?.visibility = View.GONE }
-    fun slideIn() {
-        val anim = AnimationUtils.loadAnimation(activity, R.anim.slide_in_top)
-        banner?.visibility = View.VISIBLE; banner?.startAnimation(anim)
-    }
-    fun slideOut() {
-        val out = AnimationUtils.loadAnimation(activity, R.anim.slide_out_top)
-        out.setAnimationListener(object: android.view.animation.Animation.AnimationListener {
-            override fun onAnimationStart(animation: android.view.animation.Animation?) {}
-            override fun onAnimationRepeat(animation: android.view.animation.Animation?) {}
-            override fun onAnimationEnd(animation: android.view.animation.Animation?) { banner?.visibility = View.GONE }
-        })
-        banner?.startAnimation(out)
-    }
-}
 
 // ============ حوار القارئ ============
 class QariUi(private val activity: AppCompatActivity, private val provider: MadaniPageProvider) {
@@ -275,8 +226,6 @@ object PagesDownloadUi {
     }
 }
 
-// ============ Repeat ============
-
 // ============ Toolbar ============
 object ToolbarUi {
     fun attach(toolbar: View, toolbarSpacer: View, bottomBar: View, autoHideMillis: Long = 3500L): Pair<() -> Unit, () -> Unit> {
@@ -311,7 +260,7 @@ object AudioBatchDownloader {
     ) {
         button.setOnClickListener {
             val qari = provider.getQariById(qariId()) ?: return@setOnClickListener
-            val bounds = com.hag.al_quran2.utils.loadAyahBoundsForPage(activity, currentPage())
+            val bounds = com.hag.al_quran.utils.loadAyahBoundsForPage(activity, currentPage())
             val urls = bounds.mapNotNull { provider.getAyahUrl(qari.id, it.sura_id, it.aya_id) }
             if (urls.isEmpty()) {
                 Toast.makeText(activity, "لا توجد روابط للتحميل.", Toast.LENGTH_SHORT).show()
@@ -322,7 +271,7 @@ object AudioBatchDownloader {
                 var success = true
                 for ((i, url) in urls.withIndex()) {
                     val fn = "s${bounds[i].sura_id}_a${bounds[i].aya_id}_${qari.id}.mp3"
-                    com.hag.al_quran2.utils.downloadAyahToDownloads(activity, url, fn) { ok -> success = success && ok }
+                    com.hag.al_quran.utils.downloadAyahToDownloads(activity, url, fn) { ok -> success = success && ok }
                     activity.runOnUiThread { dlg.setMessage("تحميل ${i + 1} / ${urls.size}") }
                 }
                 activity.runOnUiThread {
@@ -339,15 +288,15 @@ object PageIdleWorker {
     fun handle(
         activity: AppCompatActivity,
         page: Int,
-        audioManager: com.hag.al_quran2.audio.AudioPlaybackManager,
+        audioManager: com.hag.al_quran.audio.AudioPlaybackManager,
         getQariId: () -> String,
         updateBanner: (surah: Int, ayah: Int, text: String, playing: Boolean) -> Unit,
         hideBanner: () -> Unit
     ) {
         Handler(Looper.getMainLooper()).postDelayed({
             Executors.newSingleThreadExecutor().execute {
-                val first = com.hag.al_quran2.utils.loadAyahBoundsForPage(activity, page).firstOrNull()
-                val text = first?.let { com.hag.al_quran2.utils.getAyahTextFromJson(activity, it.sura_id, it.aya_id) }
+                val first = com.hag.al_quran.utils.loadAyahBoundsForPage(activity, page).firstOrNull()
+                val text = first?.let { com.hag.al_quran.utils.getAyahTextFromJson(activity, it.sura_id, it.aya_id) }
                 audioManager.setQari(getQariId())
                 activity.runOnUiThread {
                     if (first != null && text != null)

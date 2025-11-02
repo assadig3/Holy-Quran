@@ -1,4 +1,4 @@
-package com.hag.al_quran2.model
+package com.hag.al_quran.model
 
 data class Qari(
     val id: String,

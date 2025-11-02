@@ -1,4 +1,4 @@
-package com.hag.al_quran2.notify
+package com.hag.al_quran.notify
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -7,7 +7,7 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.hag.al_quran2.R
+import com.hag.al_quran.R
 
 class DownloadNotifier(private val context: Context) {
 

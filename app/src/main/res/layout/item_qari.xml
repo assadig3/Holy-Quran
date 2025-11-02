@@ -1,45 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="14dp"
-    app:cardUseCompatPadding="true"
-    app:cardElevation="6dp"
-    app:strokeWidth="0dp"
-    app:cardBackgroundColor="@color/qariItemBackground">
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/qariItemBackground"
+    app:strokeColor="@color/qariItemBorder"
+    app:strokeWidth="1dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/qariRipple">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackground">
+        android:padding="12dp">
 
-        <ImageView
-            android:id="@+id/qariIcon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/ic_qari"
-            android:contentDescription="@string/qari_icon"
-            android:layout_marginEnd="12dp"
-            app:tint="@color/qariIconTint" />
-
+        <!-- الشارة / الرقم -->
         <TextView
-            android:id="@+id/qariName"
+            android:id="@+id/qariBadge"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:background="@drawable/bg_qari_badge"
+            android:text="١"
+            android:textColor="@color/onQariBadge"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <!-- الاسم والوصف -->
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/qariNameColor"
-            android:ellipsize="end"
-            android:singleLine="true" />
-    </LinearLayout>
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
 
+            <TextView
+                android:id="@+id/qariName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="القارئ"
+                android:textColor="@color/qariNameColor"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/qariSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="رواية حفص عن عاصم"
+                android:textColor="@color/qariSubColor"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+
+        <!-- سهم -->
+        <ImageView
+            android:id="@+id/qariChevron"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/qariIconTint"/>
+    </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -4,15 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/blue_gray_100"
-    tools:ignore="ExtraText">   <!-- سماوي خفيف للخلفية -->
+    android:background="@color/surahListBackground"
+    tools:ignore="ExtraText">
 
+    <!-- قائمة السور -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/surahRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="12dp"
         android:clipToPadding="false"
-        android:background="@android:color/transparent"  /> <!-- خليه شفاف -->
-    android:scrollbarStyle="outsideOverlay" />
+        android:scrollbarStyle="outsideOverlay"
+        android:background="@android:color/transparent"
+        tools:listitem="@layout/item_surah" />
 </LinearLayout>

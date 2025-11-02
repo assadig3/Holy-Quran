@@ -1,5 +1,5 @@
-// File: app/src/main/java/com/hag/al_quran2/onboarding/LanguageSelectionActivity.kt
-package com.hag.al_quran2.onboarding
+// File: app/src/main/java/com/hag/al_quran/onboarding/LanguageSelectionActivity.kt
+package com.hag.al_quran.onboarding
 
 import android.content.Context
 import android.content.Intent
@@ -19,9 +19,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
-import com.hag.al_quran2.BaseActivity
-import com.hag.al_quran2.MainActivity
-import com.hag.al_quran2.R
+import com.hag.al_quran.BaseActivity
+import com.hag.al_quran.MainActivity
+import com.hag.al_quran.R
 
 class LanguageSelectionActivity : BaseActivity() {
 
@@ -195,6 +195,7 @@ class LanguageSelectionActivity : BaseActivity() {
         val appliedTag = if (applied.isEmpty) null else applied.toLanguageTags().trim().ifEmpty { null }
 
         val prefs = getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+
         val saved = prefs.getString(KEY_LANG, null)?.trim()?.ifEmpty { null }
 
         val target = appliedTag ?: saved // أولوية للمطبق فعليًا

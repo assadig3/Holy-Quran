@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- مسح العلامات المرجعية -->
     <item
         android:id="@+id/action_clear_all_bookmarks"
-        android:title="@string/menu_clear_all_bookmarks" />
+        android:title="@string/menu_clear_all_bookmarks"
+        app:showAsAction="never" />
 
+    <!-- مسح الصفحات الأخيرة -->
     <item
         android:id="@+id/action_clear_all_recent"
-        android:title="@string/menu_clear_all_recent" />
+        android:title="@string/menu_clear_all_recent"
+        app:showAsAction="never" />
+
+    <!-- زر التبديل بين النهاري/الليلي -->
+    <item
+        android:id="@+id/action_toggle_theme"
+        android:title="🌙"
+        app:showAsAction="always" />
+
 </menu>

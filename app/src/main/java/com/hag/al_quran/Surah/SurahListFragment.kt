@@ -1,4 +1,5 @@
-package com.hag.al_quran2.Surah
+// File: app/src/main/java/com/hag/al_quran/Surah/SurahListFragment.kt
+package com.hag.al_quran.Surah
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -15,12 +16,11 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hag.al_quran2.Juz.Juz
-import com.hag.al_quran2.Juz.JuzAdapter
-import com.hag.al_quran2.QuranPageActivity
-import com.hag.al_quran2.R
-import com.hag.al_quran2.surah.Surah
-import com.hag.al_quran2.ui.ThemeManager   // <<< مهم
+import com.hag.al_quran.Juz.Juz
+import com.hag.al_quran.Juz.JuzAdapter
+import com.hag.al_quran.QuranPageActivity
+import com.hag.al_quran.R
+import com.hag.al_quran.ui.ThemeManager
 
 class SurahListFragment : Fragment() {
 
@@ -34,9 +34,12 @@ class SurahListFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         val v = inflater.inflate(R.layout.fragment_surah_list, container, false)
+        // NOTE: تأكد أن الـXML يحتوي android:id="@+id/rvSurah"
         recycler = v.findViewById(R.id.surahRecyclerView)
         return v
     }
@@ -66,40 +69,34 @@ class SurahListFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_sections, menu)
 
-        // لوّن عناوين عناصر القائمة (إن وُجدت نصوص)
+        // تلوين نص عناصر القائمة
         val color = ContextCompat.getColor(requireContext(), R.color.menu_overflow_text)
         for (i in 0 until menu.size()) {
             val item = menu.getItem(i)
-            val span = SpannableString(item.title)
+            val span = SpannableString(item.title ?: "")
             span.setSpan(ForegroundColorSpan(color), 0, span.length, 0)
             item.title = span
         }
 
-        // حدّث عنوان زر التبديل (☀️ / 🌙)
         updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
-
         super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {
-        // تأكيد تحديث رمز زر التبديل عند كل فتح
         updateThemeToggleTitle(menu.findItem(R.id.action_toggle_theme))
-        return super.onPrepareOptionsMenu(menu)
+        super.onPrepareOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_jump_to_juz   -> { showJuzPickerDialog(); true }
             R.id.action_jump_to_surah -> { showSurahPickerDialog(); true }
-
-            // زر التبديل بين النهاري/الليلي
-            R.id.action_toggle_theme -> {
-                val isNight = ThemeManager.toggle(requireContext())
+            R.id.action_toggle_theme  -> {
+                ThemeManager.toggle(requireContext())
                 updateThemeToggleTitle(item)
-                requireActivity().recreate() // تطبيق الألوان فوراً
+                requireActivity().recreate()
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -107,7 +104,6 @@ class SurahListFragment : Fragment() {
     private fun updateThemeToggleTitle(item: MenuItem?) {
         item ?: return
         val night = ThemeManager.isNight(requireContext())
-        // إذا الوضع ليلي فعليًا أظهر الشمس (للتحويل للنهاري)، والعكس صحيح.
         item.title = if (night) "☀️" else "🌙"
     }
 
@@ -173,7 +169,7 @@ class SurahListFragment : Fragment() {
         val namesAr = resources.getStringArray(R.array.juz_names)
         val namesEn = (1..30).map { "Juz $it" }
         val base = (1..30).map { i ->
-            Juz(i, if (locale.language=="ar") namesAr[i-1] else namesEn[i-1], namesEn[i-1], startPages[i-1])
+            Juz(i, if (locale.language == "ar") namesAr[i - 1] else namesEn[i - 1], namesEn[i - 1], startPages[i - 1])
         }
 
         val dlg = AlertDialog.Builder(requireContext()).setView(view).create()

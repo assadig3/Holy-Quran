@@ -1,4 +1,4 @@
-package com.hag.al_quran2.search
+package com.hag.al_quran.search
 
 import android.content.Context
 import java.util.concurrent.atomic.AtomicBoolean
